@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="2" name="Failed suite [Failed suite [Failed suite [DPC]]]" allow-return-values="true">
+  <test name="Grouping(failed)(failed)(failed)">
+    <classes>
+      <class name="com.desktopWeb.scripts.sprint.TC_134_Verify_Project_Sub_Page_Version_Approve_Cm">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC134_Verify_Project_Sub_Page_Version_Approve_Cm" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+          <include name="setupSuite"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.sprint.TC_134_Verify_Project_Sub_Page_Version_Approve_Cm -->
+      <class name="com.desktopWeb.scripts.dashboard.TC_111_Verify_DashBoard_Sitemap_Links">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC111_Verify_DashBoard_Sitemap_Links" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.dashboard.TC_111_Verify_DashBoard_Sitemap_Links -->
+      <class name="com.desktopWeb.scripts.sprint.TC_138_Verify_Project_Sub_Page_Delete_Pa">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.sprint.TC_138_Verify_Project_Sub_Page_Delete_Pa -->
+      <class name="com.desktopWeb.scripts.page.TC_77_SEO_Site_Sub_Page_Name">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC77_SEO_Site_Sub_Page_Name" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.page.TC_77_SEO_Site_Sub_Page_Name -->
+      <class name="com.desktopWeb.scripts.sprint.TC_166_Design_Page_News_Page_Template_Pa">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC166_Design_Page_News_Page_Template_Pa" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.sprint.TC_166_Design_Page_News_Page_Template_Pa -->
+      <class name="com.desktopWeb.scripts.tools.TC_47_Add_Feature">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC47_Add_Feature" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_47_Add_Feature -->
+      <class name="com.desktopWeb.scripts.sprint.TC_164_Verify_Page_News_Page_Version_Approve_Pa">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC164_Verify_Page_News_Page_Version_Approve_Pa" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.sprint.TC_164_Verify_Page_News_Page_Version_Approve_Pa -->
+      <class name="com.desktopWeb.scripts.tools.TC_48_Add_Accodion">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_48_Add_Accodion -->
+      <class name="com.desktopWeb.scripts.page.TC_81_Verify_Site_Sub_Page_Delete">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.page.TC_81_Verify_Site_Sub_Page_Delete -->
+      <class name="com.desktopWeb.scripts.tools.TC_19_Add_Content">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_19_Add_Content -->
+      <class name="com.desktopWeb.scripts.page.TC_94_Verify_Page_Sitemap_Links">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC94_Verify_Page_Sitemap_Links" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.page.TC_94_Verify_Page_Sitemap_Links -->
+      <class name="com.desktopWeb.scripts.tools.TC_35_Add_Conversation">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_35_Add_Conversation -->
+      <class name="com.desktopWeb.scripts.sprint.TC_114_WCCP_451_Verify_View_Edit_Draft_Page">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.sprint.TC_114_WCCP_451_Verify_View_Edit_Draft_Page -->
+      <class name="com.desktopWeb.scripts.page.TC_71_SEO_Project_Sub_Page_Name">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC71_SEO_Project_Sub_Page_Name" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.page.TC_71_SEO_Project_Sub_Page_Name -->
+      <class name="com.desktopWeb.scripts.page.TC_90_Design_Page_News_Page_Template">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC90_Design_Page_News_Page_Template" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.page.TC_90_Design_Page_News_Page_Template -->
+      <class name="com.desktopWeb.scripts.sprint.TC_116_WCCP_446_Verify_PM_Dept_Agency_Permission_To_En_Manager">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.sprint.TC_116_WCCP_446_Verify_PM_Dept_Agency_Permission_To_En_Manager -->
+      <class name="com.desktopWeb.scripts.tools.TC_46_Add_News_Feed">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_46_Add_News_Feed -->
+      <class name="com.desktopWeb.scripts.tools.TC_44_Add_Timelines">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC44_Add_Timelines" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_44_Add_Timelines -->
+      <class name="com.desktopWeb.scripts.sprint.TC_161_Verify_Project_Sub_Page_Delete_Cm">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.sprint.TC_161_Verify_Project_Sub_Page_Delete_Cm -->
+      <class name="com.desktopWeb.scripts.setting.TC_57_Detail_Setting_Project_Desc">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC52_Detail_Update_Project_Desc" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.setting.TC_57_Detail_Setting_Project_Desc -->
+      <class name="com.desktopWeb.scripts.sprint.TC_157_Verify_Page_News_Page_Version_Approve_Cm">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC152_Verify_Page_News_Page_Version_Approve_Cm" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.sprint.TC_157_Verify_Page_News_Page_Version_Approve_Cm -->
+      <class name="com.desktopWeb.scripts.setting.TC_59_Design_Setting_Template">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC53_Design_Update_Template" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.setting.TC_59_Design_Setting_Template -->
+      <class name="com.desktopWeb.scripts.tools.TC_42_Add_Key_Dates">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_42_Add_Key_Dates -->
+      <class name="com.desktopWeb.scripts.sprint.TC_145_Detail_Page_News_Page_Project_En">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.sprint.TC_145_Detail_Page_News_Page_Project_En -->
+      <class name="com.desktopWeb.scripts.tools.TC_43_Add_Links">
+        <methods>
+          <include name="TC43_Add_Links" invocation-numbers="0"/>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_43_Add_Links -->
+      <class name="com.desktopWeb.scripts.tools.TC_20_Add_HTML">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC20_Add_HTML" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_20_Add_HTML -->
+      <class name="com.desktopWeb.scripts.tools.TC_34_Add_Quick_Poll">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC34_Add_Quick_Poll" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_34_Add_Quick_Poll -->
+      <class name="com.desktopWeb.scripts.page.TC_83_Design_Site_Sub_Page_Template">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC83_Design_Site_Sub_Page_Template" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.page.TC_83_Design_Site_Sub_Page_Template -->
+      <class name="com.desktopWeb.scripts.common.TC_11_HelpmeFindCons_SiteAdmin">
+        <methods>
+          <include name="TC11_HelpmeFindCons_SiteAdmin" invocation-numbers="0"/>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.common.TC_11_HelpmeFindCons_SiteAdmin -->
+      <class name="com.desktopWeb.scripts.page.TC_85_Create_New_Project_Page_New_Project">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC84_Detail_Site_Sub_Page_Project" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.page.TC_85_Create_New_Project_Page_New_Project -->
+      <class name="com.desktopWeb.scripts.tools.TC_40_Add_Document_Library">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC40_Add_Document_Library" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_40_Add_Document_Library -->
+      <class name="com.desktopWeb.scripts.sprint.TC_152_Verify_Page_News_Page_Version_Approve_En">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC152_Verify_Page_News_Page_Version_Approve_En" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.sprint.TC_152_Verify_Page_News_Page_Version_Approve_En -->
+      <class name="com.desktopWeb.scripts.edit.TC_49_Verify_Authoring_Edit_Banner">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC49_Verify_Authoring_tools_Edit_Banner" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.edit.TC_49_Verify_Authoring_Edit_Banner -->
+      <class name="com.desktopWeb.scripts.setting.TC_60_Location_Setting_Location">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC55_Location_Update_Location" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.setting.TC_60_Location_Setting_Location -->
+      <class name="com.desktopWeb.scripts.tools.TC_33_Add_Form">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC33_Add_Form" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_33_Add_Form -->
+      <class name="com.desktopWeb.scripts.common.TC_06_loginviaFooter_CommonCheck_FooterLinks_SearchSite_CommunityUser">
+        <methods>
+          <include name="TC06_loginviaFooter_CommonCheck_FooterLinks_SearchSite_CommunityUser" invocation-numbers="0"/>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.common.TC_06_loginviaFooter_CommonCheck_FooterLinks_SearchSite_CommunityUser -->
+      <class name="com.desktopWeb.scripts.page.TC_93_Detail_Page_News_Page_Project">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.page.TC_93_Detail_Page_News_Page_Project -->
+      <class name="com.desktopWeb.scripts.tools.TC_37_Add_Visioner_Input">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_37_Add_Visioner_Input -->
+      <class name="com.desktopWeb.scripts.tools.TC_30_Add_Image_Slider">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC30_Add_Image_Slider" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_30_Add_Image_Slider -->
+      <class name="com.desktopWeb.scripts.setting.TC_65_Verify_Setting_Version_Approve">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.setting.TC_65_Verify_Setting_Version_Approve -->
+      <class name="com.desktopWeb.scripts.tools.TC_29_Add_Image_Gallary">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_29_Add_Image_Gallary -->
+      <class name="com.desktopWeb.scripts.tools.TC_41_Add_FAQ">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC41_Add_FAQ" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_41_Add_FAQ -->
+      <class name="com.desktopWeb.scripts.page.TC_87_SEO_Page_News_Page_Name">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.page.TC_87_SEO_Page_News_Page_Name -->
+      <class name="com.desktopWeb.scripts.dashboard.TC_105_Verify_Dashboard_Moderation_Refer_Approve">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC105_Verify_Dashboard_Moderation_Refer_Approve" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.dashboard.TC_105_Verify_Dashboard_Moderation_Refer_Approve -->
+      <class name="com.desktopWeb.scripts.tools.TC_38_Add_Visioner_Result">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.tools.TC_38_Add_Visioner_Result -->
+      <class name="com.desktopWeb.scripts.page.TC_70_Design_Project_Sub_Page_Template">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.page.TC_70_Design_Project_Sub_Page_Template -->
+      <class name="com.desktopWeb.scripts.common.TC_02_CommonChecks_HomePage_HamburgerMenu_Login_Signout_CommunityUser">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC02_CommonChecks_HomePage_HambergerMenu_Login_Signout_CommunityUser" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.common.TC_02_CommonChecks_HomePage_HamburgerMenu_Login_Signout_CommunityUser -->
+      <class name="com.desktopWeb.scripts.common.TC_05_loginviaFooter_CommonCheck_FooterLinks_SearchSite_SiteAdmin">
+        <methods>
+          <include name="TC05_loginviaFooter_CommonCheck_FooterLinks_SearchSite_SiteAdmin" invocation-numbers="0"/>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.common.TC_05_loginviaFooter_CommonCheck_FooterLinks_SearchSite_SiteAdmin -->
+      <class name="com.desktopWeb.scripts.dashboard.TC_107_Create_New_Project_Dashboard_Project">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC107_Create_New_Project_Dashboard_Project" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.dashboard.TC_107_Create_New_Project_Dashboard_Project -->
+      <class name="com.desktopWeb.scripts.setting.TC_58_SEO_Setting_Name">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.setting.TC_58_SEO_Setting_Name -->
+    </classes>
+  </test> <!-- Grouping(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [DPC]]] -->

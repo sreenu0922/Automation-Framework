@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [DBS]" allow-return-values="true">
+  <test name="Grouping(failed)">
+    <classes>
+      <class name="com.desktopWeb.scripts.TC_08_ActiveConsultation_SiteAdmin">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC04_ActiveConsultation" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_08_ActiveConsultation_SiteAdmin -->
+      <class name="com.desktopWeb.scripts.TC_17_Contactus_CommunityUser">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC06_Contactus" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_17_Contactus_CommunityUser -->
+      <class name="com.desktopWeb.scripts.TC_05_loginviaFooter_CommonCheck_FooterLinks_SearchSite_SiteAdmin">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC02_loginviaFooter_CommonCheck_FooterLinks_SearchSite" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_05_loginviaFooter_CommonCheck_FooterLinks_SearchSite_SiteAdmin -->
+      <class name="com.desktopWeb.scripts.TC_04_ForgotPwdChangePwd_SiteAdmin">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_04_ForgotPwdChangePwd_SiteAdmin -->
+      <class name="com.desktopWeb.scripts.TC_11_HelpmeFindCons_SiteAdmin">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC08_HelpmeFindCons" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_11_HelpmeFindCons_SiteAdmin -->
+      <class name="com.desktopWeb.scripts.TC_13_HelpmeFindCons_GuestUser">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC08_HelpmeFindCons" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_13_HelpmeFindCons_GuestUser -->
+      <class name="com.desktopWeb.scripts.TC_07_loginviaFooter_CommonCheck_FooterLinks_SearchSite_GuestUSer">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC02_loginviaFooter_CommonCheck_FooterLinks_SearchSite" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_07_loginviaFooter_CommonCheck_FooterLinks_SearchSite_GuestUSer -->
+      <class name="com.desktopWeb.scripts.TC_18_Contactus_GuestUser">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC06_Contactus" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_18_Contactus_GuestUser -->
+      <class name="com.desktopWeb.scripts.TC_12_HelpmeFindCons_CommunityUser">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="TC08_HelpmeFindCons" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_12_HelpmeFindCons_CommunityUser -->
+      <class name="com.desktopWeb.scripts.TC_15_CommonChecks_InvalidEmailIDPWD">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_15_CommonChecks_InvalidEmailIDPWD -->
+      <class name="com.desktopWeb.scripts.TC_10_ActiveConsultation_GuestUser">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC04_ActiveConsultation" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_10_ActiveConsultation_GuestUser -->
+      <class name="com.desktopWeb.scripts.TC_14_Signup_from_Menu_Footer">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC07_Signup_from_Menu_Footer" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_14_Signup_from_Menu_Footer -->
+      <class name="com.desktopWeb.scripts.TC_06_loginviaFooter_CommonCheck_FooterLinks_SearchSite_CommunityUser">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC02_loginviaFooter_CommonCheck_FooterLinks_SearchSite" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_06_loginviaFooter_CommonCheck_FooterLinks_SearchSite_CommunityUser -->
+      <class name="com.desktopWeb.scripts.TC_02_CommonChecks_HomePage_HambergerMenu_Login_Signout_CommunityUser">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC01_CommonChecks_HomePage_HambergerMenu_Login_Signout" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_02_CommonChecks_HomePage_HambergerMenu_Login_Signout_CommunityUser -->
+      <class name="com.desktopWeb.scripts.TC_09_ActiveConsultation_CommunityUser">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="TC04_ActiveConsultation" invocation-numbers="0"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_09_ActiveConsultation_CommunityUser -->
+      <class name="com.desktopWeb.scripts.TC_16_Contactus_SiteAdmin">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_16_Contactus_SiteAdmin -->
+      <class name="com.desktopWeb.scripts.TC_03_CommonChecks_HomePage_HambergerMenu_Login_Signout_GuestUser">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_03_CommonChecks_HomePage_HambergerMenu_Login_Signout_GuestUser -->
+      <class name="com.desktopWeb.scripts.TC_01_CommonChecks_HomePage_HambergerMenu_Login_Signout_SiteAdmin">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="setupSuite"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_01_CommonChecks_HomePage_HambergerMenu_Login_Signout_SiteAdmin -->
+    </classes>
+  </test> <!-- Grouping(failed) -->
+</suite> <!-- Failed suite [DBS] -->

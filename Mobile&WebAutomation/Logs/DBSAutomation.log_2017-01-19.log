@@ -1,0 +1,1593 @@
+2017-01-19 21:17:46-main--INFO -com.ctaf.accelerators.TestEngine:Starting browser : chrome
+2017-01-19 21:18:18-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC01_CommonChecks_HomePage_HambergerMenu_Login_Signout_SiteAdmin
+2017-01-19 21:18:18-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:18:20-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:18:20-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:18:20-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:18:21-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:18:21-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:18:31-main--INFO -com.ctaf.accelerators.TestEngine:in verifyWebElementHomePage
+2017-01-19 21:18:53-main--INFO -com.ctaf.accelerators.TestEngine:in verifyHamburger
+2017-01-19 21:19:13-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:19:17-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:19:42-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC100_Verify_Dashboard_Moderation_Recently_ApprovetoReject
+2017-01-19 21:19:42-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 21:19:42-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:19:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:19:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:19:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:19:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:19:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:19:48-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:20:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:20:23-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='Smart Planning internal consultation'] is present
+2017-01-19 21:20:24-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation TestingbRWXlE in Project Comment
+2017-01-19 21:20:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbmit
+2017-01-19 21:20:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 21:20:36-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Moderation
+2017-01-19 21:20:41-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='awaiting']/div[1]/div[3]/p .Expected text Automation TestingbRWXlE is present
+2017-01-19 21:20:41-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 21:20:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Approve Comment
+2017-01-19 21:20:47-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div/span/b .Expected text APPROVED is present
+2017-01-19 21:20:47-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div[3]/p .Expected text Automation TestingbRWXlE is present
+2017-01-19 21:20:47-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 21:20:47-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Reject
+2017-01-19 21:20:47-main--INFO -com.ctaf.accelerators.TestEngine:Select Inappropriate from Reason for rejection
+2017-01-19 21:20:50-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbit
+2017-01-19 21:20:55-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div/span/b .Expected text REJECTED is present
+2017-01-19 21:20:55-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div[3]/p .Expected text Automation TestingbRWXlE is present
+2017-01-19 21:21:18-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC49_Verify_Authoring_tools_Edit_Banner
+2017-01-19 21:21:18-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:21:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:21:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:21:18-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:21:18-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:21:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:21:29-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:21:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:22:01-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 21:22:01-main--INFO -com.ctaf.accelerators.TestEngine:in verifyEditToolsBanner
+2017-01-19 21:22:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Edit Page
+2017-01-19 21:23:16-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:23:41-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC69_Detail_Project_Sub_Page_Project
+2017-01-19 21:23:41-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:23:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:23:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:23:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:23:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:23:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:23:52-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:24:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:24:24-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 21:24:24-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 21:24:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 21:25:00-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 21:25:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Details
+2017-01-19 21:25:24-main--INFO -com.ctaf.accelerators.TestEngine:Type  New Project for Test Execution in Project Name
+2017-01-19 21:25:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit
+2017-01-19 21:25:34-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 21:25:34-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 21:25:34-main--INFO -com.ctaf.accelerators.TestEngine:in sumbitWorkflow
+2017-01-19 21:25:39-main--INFO -com.ctaf.accelerators.TestEngine:Type  workflow in Version Comment
+2017-01-19 21:25:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit to Change
+2017-01-19 21:25:50-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 21:25:50-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:25:54-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:26:18-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC51_Verify_Authoring_Setting_Options
+2017-01-19 21:26:18-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:26:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:26:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:26:19-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:26:19-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:26:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:26:29-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:26:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:26:59-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 21:26:59-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 21:26:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 21:26:59-main--INFO -com.ctaf.accelerators.TestEngine:in verifySettingToolsOptions
+2017-01-19 21:27:29-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC114_WCCP_451_Verify_View_Edit_Draft_Page
+2017-01-19 21:27:29-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 21:27:29-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:27:30-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:27:30-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:27:31-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoconmanager@harvestdp.com in Email address
+2017-01-19 21:27:31-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:27:31-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:27:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 21:30:05-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:30:34-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC19_Add_Content
+2017-01-19 21:30:34-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:30:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:30:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:30:35-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:30:35-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:30:36-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:30:46-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:31:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:31:21-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 21:31:31-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 21:31:36-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:31:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 21:31:52-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 21:31:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 21:33:02-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:33:29-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC02_CommonChecks_HomePage_HambergerMenu_Login_Signout_CommunityUser
+2017-01-19 21:33:29-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:33:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:33:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:33:30-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosu2017@gmail.com in Email address
+2017-01-19 21:33:30-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:33:30-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:33:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:33:51-main--INFO -com.ctaf.accelerators.TestEngine:in verifyWebElementHomePage
+2017-01-19 21:33:53-main--INFO -com.ctaf.accelerators.TestEngine:in verifyHamburger
+2017-01-19 21:34:13-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:34:17-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:34:38-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC101_Verify_Dashboard_Moderation_Recently_ApprovetoApprove
+2017-01-19 21:34:38-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 21:34:38-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:34:38-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:34:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:34:39-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:34:39-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:34:40-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:34:45-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:35:15-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:35:21-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='Smart Planning internal consultation'] is present
+2017-01-19 21:35:21-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation TestingpuWSpg in Project Comment
+2017-01-19 21:35:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbmit
+2017-01-19 21:35:27-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 21:35:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Moderation
+2017-01-19 21:35:39-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='awaiting']/div[1]/div[3]/p .Expected text Automation TestingpuWSpg is present
+2017-01-19 21:35:39-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 21:35:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Approve Comment
+2017-01-19 21:35:45-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div/span/b .Expected text APPROVED is present
+2017-01-19 21:35:45-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div[3]/p .Expected text Automation TestingpuWSpg is present
+2017-01-19 21:35:45-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 21:35:45-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Approve Comment
+2017-01-19 21:35:51-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div/span/b .Expected text APPROVED is present
+2017-01-19 21:35:51-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div[3]/p .Expected text Automation TestingpuWSpg is present
+2017-01-19 21:36:17-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC70_Design_Project_Sub_Page_Template
+2017-01-19 21:36:17-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:36:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:36:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:36:17-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:36:17-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:36:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:36:28-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:36:58-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:37:04-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 21:37:04-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 21:37:04-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 21:37:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 21:37:44-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Design
+2017-01-19 21:37:55-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:38:16-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC52_Detail_Update_Project_Desc
+2017-01-19 21:38:16-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:38:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:38:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:38:17-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:38:17-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:38:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:38:27-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:38:55-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:39:00-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 21:39:10-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 21:39:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 21:39:10-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 21:39:12-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Details
+2017-01-19 21:39:19-main--INFO -com.ctaf.accelerators.TestEngine:Type  New Project for Test Execution-ENEX - kj in Project Desc
+2017-01-19 21:39:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit
+2017-01-19 21:40:19-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:40:42-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC115_WCCP_450_Verify_View_Project_CM
+2017-01-19 21:40:42-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:40:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:40:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:40:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoconmanager@harvestdp.com in Email address
+2017-01-19 21:40:43-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:40:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:41:02-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 21:41:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Project
+2017-01-19 21:41:36-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC20_Add_HTML
+2017-01-19 21:41:36-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:41:36-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:41:36-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:41:36-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:41:37-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:41:37-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:42:11-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:42:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:42:27-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 21:42:27-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 21:42:32-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:42:45-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 21:42:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 21:42:54-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 21:42:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on HTML
+2017-01-19 21:43:07-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on HTML text
+2017-01-19 21:43:13-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:43:38-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC03_CommonChecks_HomePage_HambergerMenu_Login_Signout_GuestUser
+2017-01-19 21:43:43-main--INFO -com.ctaf.accelerators.TestEngine:in verifyWebElementHomePage
+2017-01-19 21:43:45-main--INFO -com.ctaf.accelerators.TestEngine:in verifyHamburger
+2017-01-19 21:43:55-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:43:58-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 21:44:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu/Home
+2017-01-19 21:44:23-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //div[contains(@style, 'background-image:url(/application/files/3214/8118/3884/FAMILY_Small.jpg);')] is present
+2017-01-19 21:44:33-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:44:36-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 21:44:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/About
+2017-01-19 21:44:58-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'About')] is present
+2017-01-19 21:44:58-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 21:44:58-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:45:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 21:45:20-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:45:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 21:45:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Consultation
+2017-01-19 21:45:44-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Consultations')] is present
+2017-01-19 21:45:44-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 21:45:44-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:45:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 21:46:07-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:46:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 21:46:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Contact us
+2017-01-19 21:46:28-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Contact us')] is present
+2017-01-19 21:46:28-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 21:46:28-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:46:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 21:46:49-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:46:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 21:47:03-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:47:03-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[text()='Welcome back'] is present
+2017-01-19 21:47:04-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Close login window
+2017-01-19 21:47:25-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC102_Verify_Dashboard_Moderation_Recently_RejecttoApprove
+2017-01-19 21:47:25-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 21:47:25-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:47:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:47:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:47:25-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:47:25-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:47:26-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:47:31-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:47:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:48:04-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='Smart Planning internal consultation'] is present
+2017-01-19 21:48:05-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation TestingmpimnW in Project Comment
+2017-01-19 21:48:05-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbmit
+2017-01-19 21:48:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 21:48:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Moderation
+2017-01-19 21:48:22-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='awaiting']/div[1]/div[3]/p .Expected text Automation TestingmpimnW is present
+2017-01-19 21:48:22-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 21:48:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Reject
+2017-01-19 21:48:22-main--INFO -com.ctaf.accelerators.TestEngine:Select Inappropriate from Reason for rejection
+2017-01-19 21:48:23-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbit
+2017-01-19 21:48:28-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div/span/b .Expected text REJECTED is present
+2017-01-19 21:48:28-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div[3]/p .Expected text Automation TestingmpimnW is present
+2017-01-19 21:48:28-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 21:48:28-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Approve Comment
+2017-01-19 21:48:33-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div/span/b .Expected text APPROVED is present
+2017-01-19 21:48:33-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div[3]/p .Expected text Automation TestingmpimnW is present
+2017-01-19 21:48:56-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC71_SEO_Project_Sub_Page_Name
+2017-01-19 21:48:56-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:48:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:48:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:48:57-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:48:57-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:48:58-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:49:08-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:49:36-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:49:41-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 21:49:41-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 21:49:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 21:50:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 21:50:20-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on SEO
+2017-01-19 21:50:20-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 21:50:33-main--INFO -com.ctaf.accelerators.TestEngine:Type  New DescKWOB in SEO Name
+2017-01-19 21:50:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Changes
+2017-01-19 21:50:47-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save
+2017-01-19 21:50:47-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 21:50:47-main--INFO -com.ctaf.accelerators.TestEngine:in sumbitWorkflow
+2017-01-19 21:50:53-main--INFO -com.ctaf.accelerators.TestEngine:Type  Edit Design in Version Comment
+2017-01-19 21:51:54-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:52:15-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC54_SEO_Update_Name
+2017-01-19 21:52:15-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:52:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:52:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:52:16-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:52:16-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:52:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:52:26-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:52:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:52:58-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 21:53:09-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 21:53:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 21:53:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on SEO
+2017-01-19 21:53:11-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 21:53:13-main--INFO -com.ctaf.accelerators.TestEngine:Type  New DescVSqQ in SEO Name
+2017-01-19 21:53:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Changes
+2017-01-19 21:54:26-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:54:48-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC116_WCCP_446_Verify_PM_Dept_Agency_Permission_To_En_Manager
+2017-01-19 21:54:48-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:54:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:54:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:54:48-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:54:48-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:54:49-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:55:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 21:55:21-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Memebers
+2017-01-19 21:55:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Site User
+2017-01-19 21:55:25-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoenmanager@harvestdp.com in Email Id
+2017-01-19 21:55:26-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Search
+2017-01-19 21:55:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on User
+2017-01-19 21:55:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Select Group
+2017-01-19 21:55:37-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Department
+2017-01-19 21:55:40-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Okay
+2017-01-19 21:55:46-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:56:07-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC21_Add_Block_Quote
+2017-01-19 21:56:07-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:56:07-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:56:08-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:56:08-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:56:08-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:56:08-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:56:18-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 21:56:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 21:56:46-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 21:56:56-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 21:57:01-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:57:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 21:57:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 21:57:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 21:57:27-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Block Quote
+2017-01-19 21:57:33-main--INFO -com.ctaf.accelerators.TestEngine:Type  Be Good. Do Good in Quote
+2017-01-19 21:57:38-main--INFO -com.ctaf.accelerators.TestEngine:Type  Misc in Author
+2017-01-19 21:57:38-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add
+2017-01-19 21:57:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 21:57:48-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 21:57:48-main--INFO -com.ctaf.accelerators.TestEngine:in sumbitWorkflow
+2017-01-19 21:57:53-main--INFO -com.ctaf.accelerators.TestEngine:Type  Added Quote on page in Version Comment
+2017-01-19 21:57:54-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit to Change
+2017-01-19 21:58:14-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 21:58:14-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 21:58:18-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 21:58:40-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC04_ForgotPwdChangePwd_SiteAdmin
+2017-01-19 21:58:40-main--INFO -com.ctaf.accelerators.TestEngine:in forgotPassword
+2017-01-19 21:58:40-main--INFO -com.ctaf.accelerators.TestEngine:in resetpasswordLinktoEmail
+2017-01-19 21:58:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:58:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu/Login
+2017-01-19 21:58:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Forgot password
+2017-01-19 21:58:41-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:58:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Reset and Email Password
+2017-01-19 21:58:47-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@class='error-message alert alert-success'] .Expected text If there is an account associated with this email, instructions for resetting your password have been sent. is present
+2017-01-19 21:58:47-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Close window
+2017-01-19 21:58:47-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:58:57-main--INFO -com.ctaf.accelerators.TestEngine:in changePassword
+2017-01-19 21:58:57-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:58:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:58:58-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:58:58-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:58:58-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:58:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 21:59:20-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Select Dashboard
+2017-01-19 21:59:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Profile
+2017-01-19 21:59:30-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Edit Profile
+2017-01-19 21:59:30-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in New password
+2017-01-19 21:59:31-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in New password
+2017-01-19 21:59:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save button
+2017-01-19 21:59:56-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC103_Verify_Dashboard_Moderation_Recently_RejecttoReject
+2017-01-19 21:59:56-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 21:59:56-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 21:59:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 21:59:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 21:59:57-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 21:59:57-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 21:59:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:00:02-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:00:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:00:40-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='Smart Planning internal consultation'] is present
+2017-01-19 22:00:41-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation TestingyLiZdI in Project Comment
+2017-01-19 22:00:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbmit
+2017-01-19 22:00:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 22:00:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Moderation
+2017-01-19 22:00:58-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='awaiting']/div[1]/div[3]/p .Expected text Automation TestingyLiZdI is present
+2017-01-19 22:00:59-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 22:00:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Reject
+2017-01-19 22:00:59-main--INFO -com.ctaf.accelerators.TestEngine:Select Inappropriate from Reason for rejection
+2017-01-19 22:01:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbit
+2017-01-19 22:01:06-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div/span/b .Expected text REJECTED is present
+2017-01-19 22:01:06-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div[3]/p .Expected text Automation TestingyLiZdI is present
+2017-01-19 22:01:06-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 22:01:06-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Reject
+2017-01-19 22:01:06-main--INFO -com.ctaf.accelerators.TestEngine:Select Inappropriate from Reason for rejection
+2017-01-19 22:01:07-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbit
+2017-01-19 22:01:12-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div/span/b .Expected text REJECTED is present
+2017-01-19 22:01:13-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div[3]/p .Expected text Automation TestingyLiZdI is present
+2017-01-19 22:01:39-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC72_Location_Page_Location
+2017-01-19 22:01:39-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:01:40-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:01:40-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:01:40-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:01:40-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:01:40-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:01:50-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:02:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:02:24-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:02:24-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 22:02:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 22:03:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 22:03:02-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Location
+2017-01-19 22:03:15-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Location
+2017-01-19 22:03:36-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Home
+2017-01-19 22:03:37-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Changes
+2017-01-19 22:03:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 22:03:42-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 22:03:47-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //nav[@class='breadcrumb']/ol/li[1]/a .Expected text Home is present
+2017-01-19 22:03:47-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 22:03:47-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:03:50-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:04:14-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC53_Design_Update_Template
+2017-01-19 22:04:14-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:04:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:04:15-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:04:15-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:04:15-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:04:15-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:04:25-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:04:50-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:04:55-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:05:05-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 22:05:05-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 22:05:07-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Design
+2017-01-19 22:05:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Expand
+2017-01-19 22:05:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Full
+2017-01-19 22:05:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Changes
+2017-01-19 22:06:21-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:06:49-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC117_Detail_Project_Sub_Page_Project_En
+2017-01-19 22:06:49-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:06:49-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:06:50-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:06:50-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoenmanager@harvestdp.com in Email address
+2017-01-19 22:06:51-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:06:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:07:01-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 22:07:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 22:07:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 22:07:30-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Details
+2017-01-19 22:07:38-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation Testing in Project Name
+2017-01-19 22:07:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit
+2017-01-19 22:07:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 22:07:46-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 22:08:21-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC22_Add_Heading
+2017-01-19 22:08:21-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:08:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:08:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:08:22-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:08:23-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:08:23-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:08:33-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:09:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:09:06-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:09:16-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 22:09:21-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:09:34-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:09:38-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 22:09:38-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Block
+2017-01-19 22:09:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 22:09:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 22:09:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add Heading
+2017-01-19 22:10:04-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation Testing in Heading
+2017-01-19 22:10:04-main--INFO -com.ctaf.accelerators.TestEngine:Select Heading Level 2 from Heading Level
+2017-01-19 22:10:04-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add
+2017-01-19 22:10:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 22:10:14-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 22:10:14-main--INFO -com.ctaf.accelerators.TestEngine:in sumbitWorkflow
+2017-01-19 22:10:20-main--INFO -com.ctaf.accelerators.TestEngine:Type  Added Heading on page in Version Comment
+2017-01-19 22:10:20-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit to Change
+2017-01-19 22:10:25-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@class='hive-block-heading']/h2 .Expected text Automation Testing is present
+2017-01-19 22:10:25-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 22:10:25-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:10:34-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:10:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu/Sign Out
+2017-01-19 22:11:11-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC05_loginviaFooter_CommonCheck_FooterLinks_SearchSite_SiteAdmin
+2017-01-19 22:11:11-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:11:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Link to login from footer
+2017-01-19 22:11:11-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:11:12-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:11:12-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:11:27-main--INFO -com.ctaf.accelerators.TestEngine:in searchConsultation
+2017-01-19 22:11:32-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:11:42-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:12:06-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC104_Verify_Dashboard_Moderation_Recently_RejecttoRefer
+2017-01-19 22:12:06-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 22:12:06-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:12:06-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:12:06-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:12:07-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:12:07-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:12:07-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:12:12-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:12:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:12:48-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='Smart Planning internal consultation'] is present
+2017-01-19 22:12:48-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation TestingcNqJTy in Project Comment
+2017-01-19 22:12:49-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbmit
+2017-01-19 22:12:54-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 22:12:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Moderation
+2017-01-19 22:13:01-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='awaiting']/div[1]/div[3]/p .Expected text Automation TestingcNqJTy is present
+2017-01-19 22:13:02-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 22:13:02-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Reject
+2017-01-19 22:13:02-main--INFO -com.ctaf.accelerators.TestEngine:Select Inappropriate from Reason for rejection
+2017-01-19 22:13:03-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbit
+2017-01-19 22:13:08-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div/span/b .Expected text REJECTED is present
+2017-01-19 22:13:08-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div[3]/p .Expected text Automation TestingcNqJTy is present
+2017-01-19 22:13:08-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 22:13:08-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Refer
+2017-01-19 22:13:08-main--INFO -com.ctaf.accelerators.TestEngine:Select Inappropriate from Reason for refer
+2017-01-19 22:13:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbit
+2017-01-19 22:13:14-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='review']/div[1]/div/span/b .Expected text REFERRED is present
+2017-01-19 22:13:14-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='review']/div[1]/div[3]/p .Expected text Automation TestingcNqJTy is present
+2017-01-19 22:13:39-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC73_Verify_Project_Sub_Page_Version_Approve
+2017-01-19 22:13:39-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:13:40-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:13:40-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:13:40-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:13:40-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:13:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:13:51-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:14:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:14:22-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:14:22-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 22:14:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 22:14:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 22:15:00-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version
+2017-01-19 22:15:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version 1
+2017-01-19 22:15:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Approve
+2017-01-19 22:15:18-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 22:15:18-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:15:21-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:15:47-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC55_Location_Update_Location
+2017-01-19 22:15:47-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:15:47-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:15:47-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:15:48-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:15:48-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:15:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:15:58-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:16:28-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:16:33-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:16:33-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 22:16:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 22:16:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Location
+2017-01-19 22:16:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Location
+2017-01-19 22:16:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Home
+2017-01-19 22:16:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Changes
+2017-01-19 22:17:49-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:18:15-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC118_Design_Project_Sub_Page_Template_en
+2017-01-19 22:18:15-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:18:15-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:18:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:18:16-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoenmanager@harvestdp.com in Email address
+2017-01-19 22:18:16-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:18:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:18:26-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 22:18:36-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 22:18:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 22:19:02-main--INFO -com.ctaf.accelerators.TestEngine:Type  Testing Design in Project Name
+2017-01-19 22:19:02-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Design
+2017-01-19 22:19:05-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Expand
+2017-01-19 22:19:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Full
+2017-01-19 22:19:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Changes
+2017-01-19 22:19:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 22:19:24-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 22:19:24-main--INFO -com.ctaf.accelerators.TestEngine:in saveChanges
+2017-01-19 22:19:26-main--INFO -com.ctaf.accelerators.TestEngine:Type  Test Design in Version Comment
+2017-01-19 22:19:26-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Change
+2017-01-19 22:19:32-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //h3[text()='Page Draft.'] .Expected text Page Draft. is present
+2017-01-19 22:19:54-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC23_Add_Divider
+2017-01-19 22:19:54-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:19:54-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:19:55-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:19:55-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:19:55-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:19:55-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:20:05-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:20:31-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:20:36-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:20:47-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 22:20:52-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:21:04-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:21:07-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 22:21:07-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Block
+2017-01-19 22:21:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 22:21:23-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 22:21:28-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add Divider
+2017-01-19 22:21:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add
+2017-01-19 22:21:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 22:21:40-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 22:21:40-main--INFO -com.ctaf.accelerators.TestEngine:in sumbitWorkflow
+2017-01-19 22:21:45-main--INFO -com.ctaf.accelerators.TestEngine:Type  Added Heading on page in Version Comment
+2017-01-19 22:21:45-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit to Change
+2017-01-19 22:21:50-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 22:21:50-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:21:58-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:21:58-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu/Sign Out
+2017-01-19 22:22:23-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC06_loginviaFooter_CommonCheck_FooterLinks_SearchSite_CommunityUser
+2017-01-19 22:22:23-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:22:23-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Link to login from footer
+2017-01-19 22:22:24-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosu2017@gmail.com in Email address
+2017-01-19 22:22:24-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:22:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:22:39-main--INFO -com.ctaf.accelerators.TestEngine:in searchConsultation
+2017-01-19 22:22:44-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:22:49-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:23:10-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC105_Verify_Dashboard_Moderation_Refer_Approve
+2017-01-19 22:23:10-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 22:23:10-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:23:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:23:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:23:11-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:23:11-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:23:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:23:16-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:23:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:23:51-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='Smart Planning internal consultation'] is present
+2017-01-19 22:23:52-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation TestingIPYQmz in Project Comment
+2017-01-19 22:23:52-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbmit
+2017-01-19 22:23:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 22:24:05-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Moderation
+2017-01-19 22:24:10-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='awaiting']/div[1]/div[3]/p .Expected text Automation TestingIPYQmz is present
+2017-01-19 22:24:10-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 22:24:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Refer
+2017-01-19 22:24:10-main--INFO -com.ctaf.accelerators.TestEngine:Select Inappropriate from Reason for refer
+2017-01-19 22:24:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbit
+2017-01-19 22:24:17-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='review']/div[1]/div/span/b .Expected text REFERRED is present
+2017-01-19 22:24:17-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='review']/div[1]/div[3]/p .Expected text Automation TestingIPYQmz is present
+2017-01-19 22:24:17-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 22:24:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Approve
+2017-01-19 22:24:22-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:24:43-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC74_Verify_Project_Sub_Page_Version_Duplicate
+2017-01-19 22:24:43-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:24:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:24:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:24:44-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:24:44-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:24:44-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:24:54-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:25:06-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:25:17-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:25:17-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 22:25:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 22:25:55-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 22:25:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version
+2017-01-19 22:26:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version option
+2017-01-19 22:26:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Duplicate Version
+2017-01-19 22:26:16-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 22:26:16-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:26:20-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:26:41-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC56_Verify_Mobile_Preview
+2017-01-19 22:26:41-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:26:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:26:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:26:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:26:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:26:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:26:52-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:27:20-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:27:25-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:27:25-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 22:27:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 22:27:27-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Mobile Perivew
+2017-01-19 22:27:32-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on iPhone6
+2017-01-19 22:27:44-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Landscape
+2017-01-19 22:27:44-main--INFO -com.ctaf.accelerators.TestEngine:Assert style of Mobile Frame. Equal
+2017-01-19 22:27:49-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Portrait
+2017-01-19 22:27:49-main--INFO -com.ctaf.accelerators.TestEngine:Assert style of Mobile Frame. Equal
+2017-01-19 22:27:50-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page Setting
+2017-01-19 22:28:10-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC119_SEO_Project_Sub_Page_Name_En
+2017-01-19 22:28:10-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:28:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:28:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:28:11-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoenmanager@harvestdp.com in Email address
+2017-01-19 22:28:11-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:28:12-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:28:22-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 22:28:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 22:28:38-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 22:28:55-main--INFO -com.ctaf.accelerators.TestEngine:Type  Testing SEO in Project Name
+2017-01-19 22:29:00-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on SEO
+2017-01-19 22:29:00-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 22:29:03-main--INFO -com.ctaf.accelerators.TestEngine:Type  New DescasSI in SEO Name
+2017-01-19 22:29:04-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Changes
+2017-01-19 22:29:15-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save
+2017-01-19 22:29:15-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 22:29:15-main--INFO -com.ctaf.accelerators.TestEngine:in saveChanges
+2017-01-19 22:29:16-main--INFO -com.ctaf.accelerators.TestEngine:Type  Edit Design in Version Comment
+2017-01-19 22:29:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Change
+2017-01-19 22:29:16-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 22:29:16-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:29:19-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:29:41-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC24_Add_Image
+2017-01-19 22:29:41-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:29:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:29:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:29:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:29:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:29:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:29:52-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:30:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:30:24-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:30:34-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 22:30:39-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:30:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:30:55-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 22:30:55-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Block
+2017-01-19 22:31:05-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 22:31:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 22:31:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add Image
+2017-01-19 22:31:21-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Select Image
+2017-01-19 22:31:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Select first image
+2017-01-19 22:31:47-main--INFO -com.ctaf.accelerators.TestEngine:Type  thisisaltdescription in Image Alternative Description
+2017-01-19 22:31:48-main--INFO -com.ctaf.accelerators.TestEngine:Type  imagecaption1 in Image Caption
+2017-01-19 22:31:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add
+2017-01-19 22:31:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 22:31:53-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 22:31:53-main--INFO -com.ctaf.accelerators.TestEngine:in sumbitWorkflow
+2017-01-19 22:31:58-main--INFO -com.ctaf.accelerators.TestEngine:Type  Added Image on page in Version Comment
+2017-01-19 22:31:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit to Change
+2017-01-19 22:32:11-main--INFO -com.ctaf.accelerators.TestEngine:Assert alt of Image. Equal
+2017-01-19 22:32:11-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //figcaption/em/p .Expected text imagecaption1 is present
+2017-01-19 22:32:11-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 22:32:11-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:32:14-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:32:37-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC07_loginviaFooter_CommonCheck_FooterLinks_SearchSite_GuestUSer
+2017-01-19 22:32:37-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:32:47-main--INFO -com.ctaf.accelerators.TestEngine:in searchConsultation
+2017-01-19 22:32:52-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:32:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:33:08-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu/Consultation
+2017-01-19 22:33:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Clicked on search button
+2017-01-19 22:33:18-main--INFO -com.ctaf.accelerators.TestEngine:in verifySearchResult
+2017-01-19 22:33:23-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Consultations')] is present
+2017-01-19 22:33:23-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 22:33:23-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:33:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:33:35-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:33:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:33:49-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='Aboriginal Representative Body'] is present
+2017-01-19 22:33:49-main--INFO -com.ctaf.accelerators.TestEngine:in verifySearchSite
+2017-01-19 22:33:49-main--INFO -com.ctaf.accelerators.TestEngine:Type  Wimmera in Search String
+2017-01-19 22:33:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Seach button
+2017-01-19 22:34:02-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Search')] is present
+2017-01-19 22:34:02-main--INFO -com.ctaf.accelerators.TestEngine:Assert value of Query Textbox. Equal
+2017-01-19 22:34:02-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 22:34:02-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:34:13-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:34:13-main--INFO -com.ctaf.accelerators.TestEngine:in verifyFooterLinks
+2017-01-19 22:34:20-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Footer/Copyright
+2017-01-19 22:34:25-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Copyright')] is present
+2017-01-19 22:34:25-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 22:34:25-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:34:37-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:34:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Footer/Privacy
+2017-01-19 22:34:47-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[@class='mod-lg' and contains(text(),'Privacy Policy')] is present
+2017-01-19 22:34:47-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 22:34:47-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:34:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:35:04-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Footer/Term of Use
+2017-01-19 22:35:09-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Terms of Use')] is present
+2017-01-19 22:35:09-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 22:35:09-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:35:21-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:35:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Footer/Accessibility
+2017-01-19 22:35:31-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Accessibility')] is present
+2017-01-19 22:35:31-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 22:35:31-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:35:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:35:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Footer/Moderation
+2017-01-19 22:35:48-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Moderation Policy')] is present
+2017-01-19 22:35:48-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 22:35:48-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:35:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:36:04-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Footer/Community Guidelines
+2017-01-19 22:36:09-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Community Guidelines')] is present
+2017-01-19 22:36:09-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 22:36:09-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:36:21-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:36:26-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Footer/About Us
+2017-01-19 22:36:32-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'About')] is present
+2017-01-19 22:36:32-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 22:36:32-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:36:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:36:44-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Footer/Contact Us
+2017-01-19 22:36:50-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Contact us')] is present
+2017-01-19 22:36:50-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 22:36:50-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:37:03-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:37:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Footer/Site Map
+2017-01-19 22:37:15-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Site map')] is present
+2017-01-19 22:37:15-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 22:37:15-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:37:27-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:37:28-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Footer/The State Government of Victoria.
+2017-01-19 22:37:28-main--INFO -com.ctaf.accelerators.TestEngine:in switchWindowByTitle
+2017-01-19 22:37:49-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //a[text()='Vic.gov.au'] is present
+2017-01-19 22:37:49-main--INFO -com.ctaf.accelerators.TestEngine:in switchWindowByTitle
+2017-01-19 22:37:50-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on The Hive
+2017-01-19 22:37:50-main--INFO -com.ctaf.accelerators.TestEngine:in switchWindowByTitle
+2017-01-19 22:38:06-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //img[@id='the-hive-logo'] is present
+2017-01-19 22:38:28-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC106_Verify_Dashboard_Moderation_Refer_Reject
+2017-01-19 22:38:28-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 22:38:28-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:38:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:38:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:38:29-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:38:30-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:38:30-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:38:35-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:39:05-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:39:10-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='Smart Planning internal consultation'] is present
+2017-01-19 22:39:11-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation TestingAinBqt in Project Comment
+2017-01-19 22:39:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbmit
+2017-01-19 22:39:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 22:39:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Moderation
+2017-01-19 22:39:23-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='awaiting']/div[1]/div[3]/p .Expected text Automation TestingAinBqt is present
+2017-01-19 22:39:23-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 22:39:23-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Refer
+2017-01-19 22:39:23-main--INFO -com.ctaf.accelerators.TestEngine:Select Inappropriate from Reason for refer
+2017-01-19 22:39:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbit
+2017-01-19 22:39:30-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='review']/div[1]/div/span/b .Expected text REFERRED is present
+2017-01-19 22:39:30-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='review']/div[1]/div[3]/p .Expected text Automation TestingAinBqt is present
+2017-01-19 22:39:30-main--INFO -com.ctaf.accelerators.TestEngine:Assert data-feedbackid of Comment ID. Equal
+2017-01-19 22:39:31-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Reject
+2017-01-19 22:39:31-main--INFO -com.ctaf.accelerators.TestEngine:Select Inappropriate from Reason for rejection
+2017-01-19 22:39:32-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sumbit
+2017-01-19 22:39:38-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div/span/b .Expected text REJECTED is present
+2017-01-19 22:39:38-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@id='recent']/div[1]/div[3]/p .Expected text Automation TestingAinBqt is present
+2017-01-19 22:39:59-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC75_Verify_Project_Sub_Page_Mobile_Preview
+2017-01-19 22:39:59-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:39:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:40:00-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:40:00-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:40:01-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:40:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:40:11-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:40:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:40:41-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:40:41-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 22:40:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 22:41:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 22:41:21-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Mobile Perivew
+2017-01-19 22:41:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on iPhone6
+2017-01-19 22:41:45-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Landscape
+2017-01-19 22:41:45-main--INFO -com.ctaf.accelerators.TestEngine:Assert style of Mobile Frame. Equal
+2017-01-19 22:41:50-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Portrait
+2017-01-19 22:41:50-main--INFO -com.ctaf.accelerators.TestEngine:Assert style of Mobile Frame. Equal
+2017-01-19 22:41:50-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page Setting
+2017-01-19 22:41:50-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 22:41:50-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:41:54-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:42:16-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC62_Verify_Setting_Delete
+2017-01-19 22:42:16-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:42:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:42:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:42:17-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:42:17-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:42:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:42:27-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:42:55-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:43:00-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:43:00-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 22:43:00-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 22:43:02-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete
+2017-01-19 22:43:53-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:44:17-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC120_Location_Project_Sub_Page_Location_En
+2017-01-19 22:44:17-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:44:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:44:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:44:18-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoenmanager@harvestdp.com in Email address
+2017-01-19 22:44:18-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:44:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:44:28-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 22:44:38-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 22:44:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 22:45:04-main--INFO -com.ctaf.accelerators.TestEngine:Type  Testing Change Location in Project Name
+2017-01-19 22:45:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Location
+2017-01-19 22:45:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Location
+2017-01-19 22:45:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Home
+2017-01-19 22:45:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Changes
+2017-01-19 22:45:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 22:45:24-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 22:45:24-main--INFO -com.ctaf.accelerators.TestEngine:in saveChanges
+2017-01-19 22:45:26-main--INFO -com.ctaf.accelerators.TestEngine:Type  Change Location in Version Comment
+2017-01-19 22:45:26-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Change
+2017-01-19 22:45:32-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //nav[@class='breadcrumb']/ol/li[1]/a .Expected text Home is present
+2017-01-19 22:45:32-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 22:45:32-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:45:36-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:45:58-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC25_Add_Flexi
+2017-01-19 22:45:58-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:45:58-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:45:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:45:59-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:45:59-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:46:00-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:46:10-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:46:21-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:46:32-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:46:42-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 22:46:47-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:46:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:47:03-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 22:47:03-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Block
+2017-01-19 22:47:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 22:47:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 22:47:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add Flexi
+2017-01-19 22:47:29-main--INFO -com.ctaf.accelerators.TestEngine:Type  flexititle in Flexi Title
+2017-01-19 22:47:30-main--INFO -com.ctaf.accelerators.TestEngine:Type  flexicontent in Flexi Content
+2017-01-19 22:47:30-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add
+2017-01-19 22:47:38-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 22:47:38-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 22:47:38-main--INFO -com.ctaf.accelerators.TestEngine:in sumbitWorkflow
+2017-01-19 22:47:43-main--INFO -com.ctaf.accelerators.TestEngine:Type  Added Image on page in Version Comment
+2017-01-19 22:47:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit to Change
+2017-01-19 22:47:57-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@class='hive-block-flexi-content hive-block']/div/h3 .Expected text flexititle is present
+2017-01-19 22:47:57-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@class='hive-block-flexi-content hive-block']/div/div/p .Expected text flexicontent is present
+2017-01-19 22:48:18-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC08_ActiveConsultation_SiteAdmin
+2017-01-19 22:48:18-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:48:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Link to login from footer
+2017-01-19 22:48:19-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:48:19-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:48:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:48:29-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:48:55-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:49:00-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:49:24-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC107_Create_New_Project_Dashboard_Project
+2017-01-19 22:49:24-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:49:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:49:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:49:25-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:49:25-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:49:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:49:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 22:50:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Project
+2017-01-19 22:50:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Launch New Project
+2017-01-19 22:50:15-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation Project in Project Name
+2017-01-19 22:50:15-main--INFO -com.ctaf.accelerators.TestEngine:Type  New Automation Project in Project Description
+2017-01-19 22:50:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Next Button
+2017-01-19 22:50:22-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:50:26-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:50:50-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC76_Verify_Project_Sub_Page_Delete
+2017-01-19 22:50:50-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:50:50-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:50:50-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:50:50-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:50:50-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:50:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:51:01-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:51:27-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:51:32-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:51:32-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 22:51:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 22:52:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 22:52:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete
+2017-01-19 22:52:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Page
+2017-01-19 22:52:22-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 22:52:22-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:52:34-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:52:44-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu/Sign Out
+2017-01-19 22:53:10-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC65_Verify_Setting_Version_Approve
+2017-01-19 22:53:10-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:53:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:53:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:53:10-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:53:11-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:53:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:53:21-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:53:44-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:53:50-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:53:50-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 22:53:50-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 22:53:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version
+2017-01-19 22:53:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version 1
+2017-01-19 22:54:46-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 22:55:09-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC121_Verify_Project_Sub_Page_Version_Duplicate_En
+2017-01-19 22:55:09-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:55:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:55:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:55:10-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoenmanager@harvestdp.com in Email address
+2017-01-19 22:55:10-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:55:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:55:21-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 22:55:32-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 22:55:54-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 22:55:54-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Details
+2017-01-19 22:56:02-main--INFO -com.ctaf.accelerators.TestEngine:Type  Testing Version Duplicate in Project Name
+2017-01-19 22:56:03-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit
+2017-01-19 22:56:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 22:56:10-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 22:56:10-main--INFO -com.ctaf.accelerators.TestEngine:in saveChanges
+2017-01-19 22:56:11-main--INFO -com.ctaf.accelerators.TestEngine:Type  workflow in Version Comment
+2017-01-19 22:56:12-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Change
+2017-01-19 22:56:32-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 22:56:32-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 22:56:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version
+2017-01-19 22:56:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version option
+2017-01-19 22:56:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Duplicate Version
+2017-01-19 22:57:11-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC26_Add_Tabs_Start
+2017-01-19 22:57:11-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:57:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 22:57:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 22:57:11-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 22:57:11-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:57:12-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:57:22-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 22:57:50-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 22:57:56-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 22:58:06-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 22:58:11-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 22:58:23-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 22:58:26-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 22:58:26-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Block
+2017-01-19 22:58:37-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 22:58:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 22:58:47-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Tabs Start
+2017-01-19 22:58:53-main--INFO -com.ctaf.accelerators.TestEngine:Type  Tabheading in Tab Heading
+2017-01-19 22:58:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add
+2017-01-19 22:58:58-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 22:58:58-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 22:58:58-main--INFO -com.ctaf.accelerators.TestEngine:in sumbitWorkflow
+2017-01-19 22:59:03-main--INFO -com.ctaf.accelerators.TestEngine:Type  Added Image on page in Version Comment
+2017-01-19 22:59:03-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit to Change
+2017-01-19 22:59:17-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //a[@role='tab'] .Expected text Tabheading is present
+2017-01-19 22:59:43-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC09_ActiveConsultation_CommunityUser
+2017-01-19 22:59:43-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 22:59:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Link to login from footer
+2017-01-19 22:59:43-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosu2017@gmail.com in Email address
+2017-01-19 22:59:44-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 22:59:44-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 22:59:54-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:00:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:00:15-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='Aboriginal Representative Body'] is present
+2017-01-19 23:00:43-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC108_Verify_Dashboard_Create_Site_User
+2017-01-19 23:00:43-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:00:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:00:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:00:44-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:00:44-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:00:44-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:01:07-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:01:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Memebers
+2017-01-19 23:01:14-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:01:14-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:01:14-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:01:14-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:01:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add User
+2017-01-19 23:01:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Community User
+2017-01-19 23:01:19-main--INFO -com.ctaf.accelerators.TestEngine:Type  aEPffnaWOTVa in User Name
+2017-01-19 23:01:19-main--INFO -com.ctaf.accelerators.TestEngine:Type  NwMiLeMQ@gmail.com in Email ID
+2017-01-19 23:01:19-main--INFO -com.ctaf.accelerators.TestEngine:Type  AutomationUser2017 in Password
+2017-01-19 23:01:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add User
+2017-01-19 23:01:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete User
+2017-01-19 23:01:45-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Activate User
+2017-01-19 23:02:57-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC77_SEO_Site_Sub_Page_Name
+2017-01-19 23:02:57-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:02:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:02:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:02:58-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:02:58-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:02:58-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:03:08-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:03:37-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:03:42-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:03:42-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSiteSubPage
+2017-01-19 23:03:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 23:04:52-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:05:16-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC66_Verify_Setting_Version_Duplicate
+2017-01-19 23:05:16-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:05:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:05:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:05:17-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:05:17-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:05:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:05:27-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:05:55-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:06:01-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:06:01-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 23:06:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 23:06:02-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version
+2017-01-19 23:06:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version option
+2017-01-19 23:06:12-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Duplicate Version
+2017-01-19 23:06:42-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC122_Verify_Project_Sub_Page_Version_NewPage_En
+2017-01-19 23:06:42-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:06:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:06:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:06:43-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoenmanager@harvestdp.com in Email address
+2017-01-19 23:06:43-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:06:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:06:53-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 23:07:02-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 23:07:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 23:07:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Details
+2017-01-19 23:07:33-main--INFO -com.ctaf.accelerators.TestEngine:Type  Testing Version New Page in Project Name
+2017-01-19 23:07:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit
+2017-01-19 23:07:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 23:07:41-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 23:07:41-main--INFO -com.ctaf.accelerators.TestEngine:in saveChanges
+2017-01-19 23:07:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  workflow in Version Comment
+2017-01-19 23:07:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Change
+2017-01-19 23:08:03-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 23:08:03-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 23:08:05-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version
+2017-01-19 23:08:12-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version option
+2017-01-19 23:08:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on New Page
+2017-01-19 23:08:34-main--INFO -com.ctaf.accelerators.TestEngine:Assert Value of Page Name. Equal
+2017-01-19 23:09:00-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC27_Add_Button
+2017-01-19 23:09:00-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:09:00-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:09:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:09:01-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:09:01-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:09:02-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:09:07-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:09:38-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:09:43-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:09:53-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 23:09:58-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 23:10:10-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 23:10:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 23:10:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Block
+2017-01-19 23:10:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 23:10:30-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 23:10:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add Button
+2017-01-19 23:10:41-main--INFO -com.ctaf.accelerators.TestEngine:Type  Button1 in Button Text
+2017-01-19 23:10:41-main--INFO -com.ctaf.accelerators.TestEngine:Type  http://www.google.com in Button URL
+2017-01-19 23:10:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add
+2017-01-19 23:10:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 23:10:47-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 23:10:47-main--INFO -com.ctaf.accelerators.TestEngine:in sumbitWorkflow
+2017-01-19 23:10:52-main--INFO -com.ctaf.accelerators.TestEngine:Type  Added Image on page in Version Comment
+2017-01-19 23:10:52-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit to Change
+2017-01-19 23:11:05-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@class='hive-block-button text-left']/a .Expected text Button1 is present
+2017-01-19 23:11:05-main--INFO -com.ctaf.accelerators.TestEngine:Assert href of Button. Equal
+2017-01-19 23:11:27-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC10_ActiveConsultation_GuestUser
+2017-01-19 23:11:27-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:11:32-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:11:47-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:11:52-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='Aboriginal Representative Body'] is present
+2017-01-19 23:12:15-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC109_Verify_Dashboard_Create_Site_User_SiteAdmin
+2017-01-19 23:12:15-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:12:15-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:12:15-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:12:15-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:12:16-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:12:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:12:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:12:49-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Memebers
+2017-01-19 23:12:49-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:12:49-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:12:49-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:12:49-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:12:49-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add User
+2017-01-19 23:12:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Community User
+2017-01-19 23:12:53-main--INFO -com.ctaf.accelerators.TestEngine:Type  FrPHOgwZKWDH in User Name
+2017-01-19 23:12:54-main--INFO -com.ctaf.accelerators.TestEngine:Type  RhuVqGHz@gmail.com in Email ID
+2017-01-19 23:12:54-main--INFO -com.ctaf.accelerators.TestEngine:Type  AutomationUser2017 in Password
+2017-01-19 23:12:59-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add User
+2017-01-19 23:13:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete User
+2017-01-19 23:13:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Activate User
+2017-01-19 23:14:33-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC78_Verify_Site_Sub_Page_Version_Duplicate
+2017-01-19 23:14:33-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:14:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:14:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:14:33-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:14:33-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:14:34-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:14:44-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:15:08-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:15:13-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:15:13-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSiteSubPage
+2017-01-19 23:15:13-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 23:16:23-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:16:45-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC123_Verify_Project_Sub_Page_Mobile_Preview_En
+2017-01-19 23:16:45-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:16:45-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:16:45-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:16:45-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoenmanager@harvestdp.com in Email address
+2017-01-19 23:16:46-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:16:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:16:51-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 23:17:05-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 23:17:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 23:17:27-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Mobile Perivew
+2017-01-19 23:17:32-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on iPhone6
+2017-01-19 23:17:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Landscape
+2017-01-19 23:17:43-main--INFO -com.ctaf.accelerators.TestEngine:Assert style of Mobile Frame. Equal
+2017-01-19 23:17:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Portrait
+2017-01-19 23:17:49-main--INFO -com.ctaf.accelerators.TestEngine:Assert style of Mobile Frame. Equal
+2017-01-19 23:17:49-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page Setting
+2017-01-19 23:18:14-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC28_Add_Web_Map
+2017-01-19 23:18:14-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:18:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:18:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:18:14-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:18:15-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:18:15-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:18:25-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:18:54-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:18:59-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:19:09-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 23:19:14-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 23:19:28-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 23:19:31-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 23:19:31-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Block
+2017-01-19 23:19:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 23:19:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 23:19:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add WebMap
+2017-01-19 23:20:00-main--INFO -com.ctaf.accelerators.TestEngine:Type  Victoria, Australia in Location
+2017-01-19 23:20:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add
+2017-01-19 23:20:06-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 23:20:06-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 23:20:06-main--INFO -com.ctaf.accelerators.TestEngine:in sumbitWorkflow
+2017-01-19 23:20:11-main--INFO -com.ctaf.accelerators.TestEngine:Type  Added WebMap on page in Version Comment
+2017-01-19 23:20:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit to Change
+2017-01-19 23:20:27-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 23:20:27-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 23:20:30-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:20:56-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC11_HelpmeFindCons_SiteAdmin
+2017-01-19 23:20:56-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:20:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:20:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:20:56-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:20:57-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:20:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:21:02-main--INFO -com.ctaf.accelerators.TestEngine:in helpMeFoundConsultation
+2017-01-19 23:21:02-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 23:21:24-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:21:46-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC110_Verify_Dashboard_Create_Community_User
+2017-01-19 23:21:46-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:21:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:21:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:21:47-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:21:47-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:21:47-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:22:11-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:22:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Memebers
+2017-01-19 23:22:18-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:22:18-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:22:18-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:22:18-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:22:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add User
+2017-01-19 23:22:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Community User
+2017-01-19 23:22:23-main--INFO -com.ctaf.accelerators.TestEngine:Type  sBPjSKotRBSN in User Name
+2017-01-19 23:22:23-main--INFO -com.ctaf.accelerators.TestEngine:Type  vcPgkgoh@gmail.com in Email ID
+2017-01-19 23:22:23-main--INFO -com.ctaf.accelerators.TestEngine:Type  AutomationUser2017 in Password
+2017-01-19 23:22:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add User
+2017-01-19 23:22:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete User
+2017-01-19 23:22:49-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Activate User
+2017-01-19 23:24:05-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC79_Location_Site_Sub_Page_Location
+2017-01-19 23:24:05-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:24:05-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:24:05-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:24:05-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:24:05-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:24:05-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:24:15-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:24:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:24:48-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:24:48-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSiteSubPage
+2017-01-19 23:24:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 23:25:59-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:26:24-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC124_Verify_Project_Sub_Page_Delete_En
+2017-01-19 23:26:24-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:26:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:26:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:26:25-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:26:25-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:26:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:26:35-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 23:26:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 23:27:30-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 23:27:31-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete
+2017-01-19 23:27:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Page
+2017-01-19 23:28:08-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC29_Add_Image_Gallary
+2017-01-19 23:28:08-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:28:08-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:28:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:28:09-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:28:09-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:28:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:28:19-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:28:49-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:28:54-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:29:04-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 23:29:09-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 23:29:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 23:29:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 23:29:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Block
+2017-01-19 23:29:36-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 23:29:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 23:29:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add Image Galary
+2017-01-19 23:29:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add Item
+2017-01-19 23:29:52-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Select Image
+2017-01-19 23:30:15-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on 
+2017-01-19 23:31:15-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:31:41-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC12_HelpmeFindCons_CommunityUser
+2017-01-19 23:31:41-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:31:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:31:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:31:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosu2017@gmail.com in Email address
+2017-01-19 23:31:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:31:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:31:47-main--INFO -com.ctaf.accelerators.TestEngine:in helpMeFoundConsultation
+2017-01-19 23:31:47-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 23:32:04-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:32:29-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC111_Verify_DashBoard_Sitemap_Links
+2017-01-19 23:32:29-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:32:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:32:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:32:30-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:32:30-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:32:30-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:32:55-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:33:02-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Sitemap
+2017-01-19 23:33:21-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Expand Sitemap
+2017-01-19 23:33:21-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page/Sitemap/Home
+2017-01-19 23:33:31-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Visit
+2017-01-19 23:33:37-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:33:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Sitemap
+2017-01-19 23:34:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page/Sitemap/Privacy
+2017-01-19 23:34:09-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Visit
+2017-01-19 23:34:14-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[@class='mod-lg' and contains(text(),'Privacy Policy')] is present
+2017-01-19 23:34:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:34:20-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Sitemap
+2017-01-19 23:34:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page/Sitemap/Term of Use
+2017-01-19 23:34:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Visit
+2017-01-19 23:34:51-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Terms of Use')] is present
+2017-01-19 23:34:52-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:34:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Sitemap
+2017-01-19 23:35:16-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page/Sitemap/Accessibility
+2017-01-19 23:35:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Visit
+2017-01-19 23:35:29-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Accessibility')] is present
+2017-01-19 23:35:29-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:35:34-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Sitemap
+2017-01-19 23:35:54-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page/Sitemap/Moderation
+2017-01-19 23:36:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Visit
+2017-01-19 23:36:07-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Moderation Policy')] is present
+2017-01-19 23:36:07-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:36:12-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Sitemap
+2017-01-19 23:36:32-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page/Sitemap/Community Guidelines
+2017-01-19 23:36:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Visit
+2017-01-19 23:36:44-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Community Guidelines')] is present
+2017-01-19 23:36:44-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:36:49-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Sitemap
+2017-01-19 23:37:34-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:37:56-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC80_Verify_Site_Sub_Page_Mobile_Preview
+2017-01-19 23:37:56-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:37:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:37:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:37:57-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:37:57-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:37:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:38:07-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:38:34-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:38:39-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:38:39-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSiteSubPage
+2017-01-19 23:38:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 23:39:50-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:40:12-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC125_WCCP_450_Verify_View_Project_En
+2017-01-19 23:40:12-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:40:12-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:40:12-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:40:13-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoenmanager@harvestdp.com in Email address
+2017-01-19 23:40:13-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:40:13-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:40:31-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:40:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Project
+2017-01-19 23:41:02-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC30_Add_Image_Slider
+2017-01-19 23:41:02-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:41:03-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:41:03-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:41:03-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:41:04-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:41:04-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:41:14-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:41:40-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:41:45-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:41:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save
+2017-01-19 23:41:51-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 23:41:51-main--INFO -com.ctaf.accelerators.TestEngine:in disgardChanges
+2017-01-19 23:41:52-main--INFO -com.ctaf.accelerators.TestEngine:Type  Disgard Changes in Version Comment
+2017-01-19 23:41:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Disgard Change
+2017-01-19 23:41:53-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 23:41:58-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 23:42:18-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 23:42:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 23:42:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Block
+2017-01-19 23:42:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 23:42:38-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 23:42:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add Image Slider
+2017-01-19 23:42:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add Item
+2017-01-19 23:43:52-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:44:17-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC13_HelpmeFindCons_GuestUser
+2017-01-19 23:44:17-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:44:17-main--INFO -com.ctaf.accelerators.TestEngine:in helpMeFoundConsultation
+2017-01-19 23:44:17-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 23:44:20-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 23:44:25-main--INFO -com.ctaf.accelerators.TestEngine:Type  Wimmera in Entered Consultation keyword
+2017-01-19 23:44:26-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Location
+2017-01-19 23:44:26-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Location
+2017-01-19 23:44:26-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Category
+2017-01-19 23:44:27-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Category
+2017-01-19 23:44:27-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected departement
+2017-01-19 23:44:27-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on departement
+2017-01-19 23:44:28-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected project group
+2017-01-19 23:44:28-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on project group
+2017-01-19 23:44:28-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Active as status
+2017-01-19 23:44:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Search button
+2017-01-19 23:44:39-main--INFO -com.ctaf.accelerators.TestEngine:in verifySearchResult
+2017-01-19 23:44:44-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //h1[contains(text(),'Consultations')] is present
+2017-01-19 23:44:44-main--INFO -com.ctaf.accelerators.TestEngine:in clickOnBreadcrumbs
+2017-01-19 23:44:44-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 23:44:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 23:45:22-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC112_Verify_DashBoard_HiveSetting_Moderation_Method_Add_Delete
+2017-01-19 23:45:22-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:45:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:45:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:45:22-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:45:22-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:45:23-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:45:49-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:45:54-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard/Hive Setting
+2017-01-19 23:45:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Moderation Method
+2017-01-19 23:45:57-main--INFO -com.ctaf.accelerators.TestEngine:Type  Use of Banned Word in Reason
+2017-01-19 23:45:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add
+2017-01-19 23:45:57-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete
+2017-01-19 23:46:23-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC81_Verify_Site_Sub_Page_Delete
+2017-01-19 23:46:23-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:46:23-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:46:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:46:24-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:46:24-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:46:25-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:46:35-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:47:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:47:07-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:47:07-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSiteSubPage
+2017-01-19 23:47:07-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 23:48:17-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:48:41-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC126_Verify_Project_Sub_Page_Version_NewPage_Cm
+2017-01-19 23:48:41-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:48:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:48:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:48:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoconmanager@harvestdp.com in Email address
+2017-01-19 23:48:43-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:48:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:48:53-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 23:49:00-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 23:49:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 23:49:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Details
+2017-01-19 23:49:23-main--INFO -com.ctaf.accelerators.TestEngine:Type  Testing Version New Page in Project Name
+2017-01-19 23:49:24-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit
+2017-01-19 23:49:31-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 23:49:31-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 23:49:31-main--INFO -com.ctaf.accelerators.TestEngine:in saveChanges
+2017-01-19 23:49:32-main--INFO -com.ctaf.accelerators.TestEngine:Type  workflow in Version Comment
+2017-01-19 23:49:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Change
+2017-01-19 23:49:53-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSettingt
+2017-01-19 23:49:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Settings
+2017-01-19 23:49:54-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version
+2017-01-19 23:50:02-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Version option
+2017-01-19 23:50:04-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on New Page
+2017-01-19 23:50:24-main--INFO -com.ctaf.accelerators.TestEngine:Assert Value of Page Name. Equal
+2017-01-19 23:50:50-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC31_Add_Video
+2017-01-19 23:50:50-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:50:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:50:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:50:51-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:50:51-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:50:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:51:01-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:51:27-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:51:32-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:51:38-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save
+2017-01-19 23:51:38-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 23:51:38-main--INFO -com.ctaf.accelerators.TestEngine:in disgardChanges
+2017-01-19 23:51:39-main--INFO -com.ctaf.accelerators.TestEngine:Type  Disgard Changes in Version Comment
+2017-01-19 23:51:39-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Disgard Change
+2017-01-19 23:51:39-main--INFO -com.ctaf.accelerators.TestEngine:In openTools
+2017-01-19 23:51:44-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 23:52:03-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 23:52:06-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 23:52:07-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Delete Block
+2017-01-19 23:52:17-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Main Area
+2017-01-19 23:52:22-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add block
+2017-01-19 23:52:28-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add Video
+2017-01-19 23:52:31-main--INFO -com.ctaf.accelerators.TestEngine:Type  Video1 in Video Title
+2017-01-19 23:52:32-main--INFO -com.ctaf.accelerators.TestEngine:Type  http://youtu.be/hu3IfIwSjgM in Video URL
+2017-01-19 23:52:32-main--INFO -com.ctaf.accelerators.TestEngine:Select YouTube from Player Type
+2017-01-19 23:52:32-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Add
+2017-01-19 23:52:37-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 23:52:42-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 23:52:42-main--INFO -com.ctaf.accelerators.TestEngine:in sumbitWorkflow
+2017-01-19 23:52:47-main--INFO -com.ctaf.accelerators.TestEngine:Type  Added Image on page in Version Comment
+2017-01-19 23:52:48-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit to Change
+2017-01-19 23:52:53-main--INFO -com.ctaf.accelerators.TestEngine:Assert text of By.xpath: //div[@class='hive-video-wrapper hive-block']/div/h3 .Expected text Video1 is present
+2017-01-19 23:53:18-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC14_Signup_from_Menu_Footer
+2017-01-19 23:53:18-main--INFO -com.ctaf.accelerators.TestEngine:in signup
+2017-01-19 23:53:18-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:53:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:53:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login
+2017-01-19 23:53:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sign in
+2017-01-19 23:53:19-main--INFO -com.ctaf.accelerators.TestEngine:Type  XmmlcRRQiE in Screen name
+2017-01-19 23:53:20-main--INFO -com.ctaf.accelerators.TestEngine:Type  XmmlcRRQiE@login in Email id
+2017-01-19 23:53:20-main--INFO -com.ctaf.accelerators.TestEngine:Type  passworD4321 in Password
+2017-01-19 23:53:20-main--INFO -com.ctaf.accelerators.TestEngine:Type  3000 in Postcode
+2017-01-19 23:53:20-main--INFO -com.ctaf.accelerators.TestEngine:Type  All categories in Interest
+2017-01-19 23:53:21-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Interest
+2017-01-19 23:53:21-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Create Account
+2017-01-19 23:53:26-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Close button
+2017-01-19 23:53:32-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:53:32-main--INFO -com.ctaf.accelerators.TestEngine:in signOut
+2017-01-19 23:53:32-main--INFO -com.ctaf.accelerators.TestEngine:in scrollandClick
+2017-01-19 23:53:44-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Scroll and Click
+2017-01-19 23:53:44-main--INFO -com.ctaf.accelerators.TestEngine:in signup
+2017-01-19 23:53:44-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:53:44-main--INFO -com.ctaf.accelerators.TestEngine:Type  XBfvXqEJRM@login in Email id
+2017-01-19 23:53:44-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Sign up button
+2017-01-19 23:53:44-main--INFO -com.ctaf.accelerators.TestEngine:Type  XBfvXqEJRM in Screen name
+2017-01-19 23:53:45-main--INFO -com.ctaf.accelerators.TestEngine:Type  XBfvXqEJRM@login in Email id
+2017-01-19 23:53:45-main--INFO -com.ctaf.accelerators.TestEngine:Type  passworD4321 in Password
+2017-01-19 23:53:45-main--INFO -com.ctaf.accelerators.TestEngine:Type  3000 in Postcode
+2017-01-19 23:53:46-main--INFO -com.ctaf.accelerators.TestEngine:Type  All categories in Interest
+2017-01-19 23:53:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Interest
+2017-01-19 23:53:46-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Create Account
+2017-01-19 23:53:51-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Close button
+2017-01-19 23:53:56-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:54:19-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC113_Verify_DashBoard_Result_Form_OpenPage
+2017-01-19 23:54:19-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:54:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:54:19-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:54:19-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:54:19-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:54:20-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:54:30-main--INFO -com.ctaf.accelerators.TestEngine:in verifyContactUs
+2017-01-19 23:54:30-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:54:30-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:54:30-main--INFO -com.ctaf.accelerators.TestEngine:in getRandomString
+2017-01-19 23:54:30-main--INFO -com.ctaf.accelerators.TestEngine:in randomNumber
+2017-01-19 23:54:45-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Dashboard
+2017-01-19 23:55:30-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:55:52-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC82_Verify_Site_Sub_Page_Version_Approve
+2017-01-19 23:55:52-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:55:52-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:55:52-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:55:52-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:55:53-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:55:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:56:03-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation
+2017-01-19 23:56:33-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Selected Project
+2017-01-19 23:56:38-main--INFO -com.ctaf.accelerators.TestEngine:Element By.xpath: //li[text()='New Project for Test Execution'] is present
+2017-01-19 23:56:38-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToSiteSubPage
+2017-01-19 23:56:38-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 23:57:48-main--INFO -com.ctaf.accelerators.TestEngine: Able to get TscreenShot
+2017-01-19 23:58:13-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC127_Detail_Project_Sub_Page_Project_Cm
+2017-01-19 23:58:13-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:58:13-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:58:13-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:58:14-main--INFO -com.ctaf.accelerators.TestEngine:Type  autoconmanager@harvestdp.com in Email address
+2017-01-19 23:58:14-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:58:14-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:58:24-main--INFO -com.ctaf.accelerators.TestEngine:in navigateToProjectSubPage
+2017-01-19 23:58:35-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Page
+2017-01-19 23:58:53-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Project Sub Page
+2017-01-19 23:58:54-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Details
+2017-01-19 23:59:00-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation Testing in Project Name
+2017-01-19 23:59:01-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Submit
+2017-01-19 23:59:08-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Save Page
+2017-01-19 23:59:08-main--INFO -com.ctaf.accelerators.TestEngine:in workflow
+2017-01-19 23:59:41-main--INFO -com.ctaf.accelerators.TestEngine:Current Test : TC32_Add_Swipe
+2017-01-19 23:59:41-main--INFO -com.ctaf.accelerators.TestEngine:in login
+2017-01-19 23:59:41-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Menu
+2017-01-19 23:59:42-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Click on Menu/Login
+2017-01-19 23:59:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  autosm2017@gmail.com in Email address
+2017-01-19 23:59:42-main--INFO -com.ctaf.accelerators.TestEngine:Type  Automation2017 in Password
+2017-01-19 23:59:43-main--INFO -com.ctaf.accelerators.TestEngine:Successfully click on Login button
+2017-01-19 23:59:53-main--INFO -com.ctaf.accelerators.TestEngine:in navigateConsultation

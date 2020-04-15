@@ -1,0 +1,1434 @@
+<html>
+<head>
+<title>TestNG:  Grouping</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Grouping</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>34/5/72</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Feb 02 23:53:23 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>6537 seconds (6537841 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.desktopWeb.scripts.addUpdate.TC_67_Verify_Update_Version_Duplicate.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.addUpdate.TC_67_Verify_Update_Version_Duplicate<br>Parameters: public void com.desktopWeb.scripts.addUpdate.TC_67_Verify_Update_Version_Duplicate.TC67_Verify_Update_Version_Duplicate(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.Throwable</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: timeout: cannot determine loading status
+from timeout: Timed out receiving message from renderer: -0.028
+  (Session info: chrome=56.0.2924.76)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 300.04 seconds
+Build info: version: &apos;3.0.0&apos;, revision: &apos;350cf60&apos;, time: &apos;2016-10-13 10:48:57 -0700&apos;
+System info: host: &apos;HW1315&apos;, ip: &apos;192.168.3.22&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\E002917\AppData\Local\Temp\scoped_dir10236_1354}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.76, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 5c0b5a8bc84bb45e540a5f1292a3b140
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:322)
+	at com.ctaf.accelerators.TestEngine.reportHeader(TestEngine.java:490)
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div><a href='#' onClick='toggleBox("stack-trace990226843", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace990226843'><pre>org.openqa.selenium.TimeoutException: timeout: cannot determine loading status
+from timeout: Timed out receiving message from renderer: -0.028
+  (Session info: chrome=56.0.2924.76)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 300.04 seconds
+Build info: version: &apos;3.0.0&apos;, revision: &apos;350cf60&apos;, time: &apos;2016-10-13 10:48:57 -0700&apos;
+System info: host: &apos;HW1315&apos;, ip: &apos;192.168.3.22&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\E002917\AppData\Local\Temp\scoped_dir10236_1354}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.76, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 5c0b5a8bc84bb45e540a5f1292a3b140
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:322)
+	at com.ctaf.accelerators.TestEngine.reportHeader(TestEngine.java:490)
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.addUpdate.TC_67_Verify_Update_Version_Duplicate@4562e04d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_178_WCCP_418_1.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_178_WCCP_418_1</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint2.TC_178_WCCP_418_1@6b2ea799</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_122_Verify_Project_Sub_Page_Version_NewPage_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_122_Verify_Project_Sub_Page_Version_NewPage_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_122_Verify_Project_Sub_Page_Version_NewPage_En@6cf0e0ba</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_77_SEO_Site_Sub_Page_Name.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_77_SEO_Site_Sub_Page_Name</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_77_SEO_Site_Sub_Page_Name@3754a4bf</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.setting.TC_66_Verify_Setting_Version_Duplicate.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.setting.TC_66_Verify_Setting_Version_Duplicate</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.setting.TC_66_Verify_Setting_Version_Duplicate@408d971b</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.addUpdate.TC_68_Verify_Authoring_Update_Options.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.addUpdate.TC_68_Verify_Authoring_Update_Options</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.addUpdate.TC_68_Verify_Authoring_Update_Options@36fc695d</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_179_WCCP_418_2.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_179_WCCP_418_2</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint2.TC_179_WCCP_418_2@1bb5a082</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_123_Verify_Project_Sub_Page_Mobile_Preview_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_123_Verify_Project_Sub_Page_Mobile_Preview_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_123_Verify_Project_Sub_Page_Mobile_Preview_En@73a1e9a9</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_78_Verify_Site_Sub_Page_Version_Duplicate.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_78_Verify_Site_Sub_Page_Version_Duplicate</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_78_Verify_Site_Sub_Page_Version_Duplicate@409bf450</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_180_WCCP_417_1.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_180_WCCP_417_1</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint2.TC_180_WCCP_417_1@7b2bbc3</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_124_Verify_Project_Sub_Page_Delete_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_124_Verify_Project_Sub_Page_Delete_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_124_Verify_Project_Sub_Page_Delete_En@130d63be</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_79_Location_Site_Sub_Page_Location.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_79_Location_Site_Sub_Page_Location</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_79_Location_Site_Sub_Page_Location@55182842</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_125_WCCP_450_Verify_View_Project_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_125_WCCP_450_Verify_View_Project_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_125_WCCP_450_Verify_View_Project_En@48f2bd5b</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_80_Verify_Site_Sub_Page_Mobile_Preview.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_80_Verify_Site_Sub_Page_Mobile_Preview</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_80_Verify_Site_Sub_Page_Mobile_Preview@776aec5c</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_126_Verify_Project_Sub_Page_Version_NewPage_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_126_Verify_Project_Sub_Page_Version_NewPage_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_126_Verify_Project_Sub_Page_Version_NewPage_Cm@78691363</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_81_Verify_Site_Sub_Page_Delete.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_81_Verify_Site_Sub_Page_Delete</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_81_Verify_Site_Sub_Page_Delete@2b71e916</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_127_Detail_Project_Sub_Page_Project_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_127_Detail_Project_Sub_Page_Project_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_127_Detail_Project_Sub_Page_Project_Cm@3023df74</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_82_Verify_Site_Sub_Page_Version_Approve.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_82_Verify_Site_Sub_Page_Version_Approve</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_82_Verify_Site_Sub_Page_Version_Approve@689604d9</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_128_Verify_Project_Sub_Page_Version_Duplicate_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_128_Verify_Project_Sub_Page_Version_Duplicate_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_128_Verify_Project_Sub_Page_Version_Duplicate_Cm@3349e9bb</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_83_Design_Site_Sub_Page_Template.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_83_Design_Site_Sub_Page_Template</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_83_Design_Site_Sub_Page_Template@3270d194</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_129_Verify_Project_Sub_Page_Delete_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_129_Verify_Project_Sub_Page_Delete_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_129_Verify_Project_Sub_Page_Delete_Cm@77888435</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_84_Detail_Site_Sub_Page_Project.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_84_Detail_Site_Sub_Page_Project</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_84_Detail_Site_Sub_Page_Project@c730b35</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_130_Design_Project_Sub_Page_Template_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_130_Design_Project_Sub_Page_Template_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_130_Design_Project_Sub_Page_Template_Cm@557caf28</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_85_Create_New_Project_Page_New_Project.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_85_Create_New_Project_Page_New_Project</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_85_Create_New_Project_Page_New_Project@41d477ed</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_131_SEO_Project_Sub_Page_Name_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_131_SEO_Project_Sub_Page_Name_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_131_SEO_Project_Sub_Page_Name_Cm@49e53c76</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_86_Verify_Page_News_Page_Delete.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_86_Verify_Page_News_Page_Delete</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_86_Verify_Page_News_Page_Delete@6f1de4c7</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_132_Location_Project_Sub_Page_Location_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_132_Location_Project_Sub_Page_Location_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_132_Location_Project_Sub_Page_Location_Cm@71d44a3</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_87_SEO_Page_News_Page_Name.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_87_SEO_Page_News_Page_Name</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_87_SEO_Page_News_Page_Name@42a48628</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_133_Verify_Project_Sub_Page_Mobile_Preview_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_133_Verify_Project_Sub_Page_Mobile_Preview_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_133_Verify_Project_Sub_Page_Mobile_Preview_Cm@459e9125</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_88_Verify_Page_News_Page_Version_Duplicate.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_88_Verify_Page_News_Page_Version_Duplicate</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_88_Verify_Page_News_Page_Version_Duplicate@411f53a0</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_134_Verify_Project_Sub_Page_Version_Approve_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_134_Verify_Project_Sub_Page_Version_Approve_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_134_Verify_Project_Sub_Page_Version_Approve_Cm@7b98f307</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_89_Verify_Page_News_Page_Mobile_Preview.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_89_Verify_Page_News_Page_Mobile_Preview</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_89_Verify_Page_News_Page_Mobile_Preview@4802796d</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_135_Verify_Project_Sub_Page_Version_NewPage_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_135_Verify_Project_Sub_Page_Version_NewPage_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_135_Verify_Project_Sub_Page_Version_NewPage_Pa@1283bb96</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_90_Design_Page_News_Page_Template.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_90_Design_Page_News_Page_Template</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_90_Design_Page_News_Page_Template@34123d65</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_136_WCCP_450_Verify_View_Project_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_136_WCCP_450_Verify_View_Project_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_136_WCCP_450_Verify_View_Project_Pa@5c6648b0</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_91_Location_Page_News_Page_Location.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_91_Location_Page_News_Page_Location</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_91_Location_Page_News_Page_Location@1d296da</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_137_Verify_Project_Sub_Page_Version_Duplicate_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_137_Verify_Project_Sub_Page_Version_Duplicate_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_137_Verify_Project_Sub_Page_Version_Duplicate_Pa@5fe94a96</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_92_Verify_Page_News_Page_Version_Approve.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_92_Verify_Page_News_Page_Version_Approve</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_92_Verify_Page_News_Page_Version_Approve@74235045</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_138_Verify_Project_Sub_Page_Delete_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_138_Verify_Project_Sub_Page_Delete_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_138_Verify_Project_Sub_Page_Delete_Pa@31304f14</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_93_Detail_Page_News_Page_Project.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_93_Detail_Page_News_Page_Project</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_93_Detail_Page_News_Page_Project@2d3379b4</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_139_Design_Project_Sub_Page_Template_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_139_Design_Project_Sub_Page_Template_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_139_Design_Project_Sub_Page_Template_Pa@1b7cc17c</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_94_Verify_Page_Sitemap_Links.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.page.TC_94_Verify_Page_Sitemap_Links</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_94_Verify_Page_Sitemap_Links@1aafa419</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_140_SEO_Project_Sub_Page_Name_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_140_SEO_Project_Sub_Page_Name_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_140_SEO_Project_Sub_Page_Name_Pa@799f10e1</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_141_Location_Project_Sub_Page_Location_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_141_Location_Project_Sub_Page_Location_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_141_Location_Project_Sub_Page_Location_Pa@4135c3b</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_142_Verify_Project_Sub_Page_Mobile_Preview_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_142_Verify_Project_Sub_Page_Mobile_Preview_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_142_Verify_Project_Sub_Page_Mobile_Preview_Pa@7c7a06ec</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_143_Verify_Project_Sub_Page_Version_Approve_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_143_Verify_Project_Sub_Page_Version_Approve_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_143_Verify_Project_Sub_Page_Version_Approve_Pa@692f203f</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_144_Detail_Project_Sub_Page_Project_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_144_Detail_Project_Sub_Page_Project_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_144_Detail_Project_Sub_Page_Project_Pa@292b08d6</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_145_Detail_Page_News_Page_Project_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_145_Detail_Page_News_Page_Project_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_145_Detail_Page_News_Page_Project_En@313ac989</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_146_Verify_Page_News_Page_Delete_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_146_Verify_Page_News_Page_Delete_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_146_Verify_Page_News_Page_Delete_En@3c19aaa5</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_147_SEO_Page_News_Page_Name_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_147_SEO_Page_News_Page_Name_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_147_SEO_Page_News_Page_Name_En@36ebc363</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_148_Verify_Page_News_Page_Version_Duplicate_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_148_Verify_Page_News_Page_Version_Duplicate_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_148_Verify_Page_News_Page_Version_Duplicate_En@145f66e3</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_149_Verify_Page_News_Page_Mobile_Preview_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_149_Verify_Page_News_Page_Mobile_Preview_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_149_Verify_Page_News_Page_Mobile_Preview_En@f6efaab</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_150_Design_Page_News_Page_Template_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_150_Design_Page_News_Page_Template_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_150_Design_Page_News_Page_Template_En@75d4a5c2</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_151_Location_Page_News_Page_Location_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_151_Location_Page_News_Page_Location_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_151_Location_Page_News_Page_Location_En@38d8f54a</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_152_Verify_Page_News_Page_Version_Approve_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_152_Verify_Page_News_Page_Version_Approve_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_152_Verify_Page_News_Page_Version_Approve_En@293a5bf6</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_153_Verify_Page_News_Page_Version_NewPage_En.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_153_Verify_Page_News_Page_Version_NewPage_En</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_153_Verify_Page_News_Page_Version_NewPage_En@51399530</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_154_Verify_Page_News_Page_Version_Duplicate_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_154_Verify_Page_News_Page_Version_Duplicate_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_154_Verify_Page_News_Page_Version_Duplicate_Cm@351d00c0</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_155_Verify_Page_News_Page_Mobile_Preview_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_155_Verify_Page_News_Page_Mobile_Preview_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_155_Verify_Page_News_Page_Mobile_Preview_Cm@a1153bc</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_156_Design_Page_News_Page_Template_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_156_Design_Page_News_Page_Template_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_156_Design_Page_News_Page_Template_Cm@368f2016</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_157_Verify_Page_News_Page_Version_Approve_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_157_Verify_Page_News_Page_Version_Approve_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_157_Verify_Page_News_Page_Version_Approve_Cm@6771beb3</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_158_Location_Page_News_Page_Location_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_158_Location_Page_News_Page_Location_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_158_Location_Page_News_Page_Location_Cm@59474f18</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_159_Detail_Page_News_Page_Project_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_159_Detail_Page_News_Page_Project_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_159_Detail_Page_News_Page_Project_Cm@3e694b3f</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_160_Verify_Page_News_Page_Version_NewPage_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_160_Verify_Page_News_Page_Version_NewPage_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_160_Verify_Page_News_Page_Version_NewPage_Cm@618b19ad</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_161_Verify_Project_Sub_Page_Delete_Cm.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_161_Verify_Project_Sub_Page_Delete_Cm</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_161_Verify_Project_Sub_Page_Delete_Cm@74f0ea28</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_162_Verify_Page_News_Page_Version_Duplicate_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_162_Verify_Page_News_Page_Version_Duplicate_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_162_Verify_Page_News_Page_Version_Duplicate_Pa@6aeb35e6</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_163_Verify_Page_News_Page_Mobile_Preview_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_163_Verify_Page_News_Page_Mobile_Preview_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_163_Verify_Page_News_Page_Mobile_Preview_Pa@3c41ed1d</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_164_Verify_Page_News_Page_Version_Approve_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_164_Verify_Page_News_Page_Version_Approve_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_164_Verify_Page_News_Page_Version_Approve_Pa@34a3d150</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_165_Location_Page_News_Page_Location_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_165_Location_Page_News_Page_Location_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_165_Location_Page_News_Page_Location_Pa@2a3b5b47</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_166_Design_Page_News_Page_Template_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_166_Design_Page_News_Page_Template_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_166_Design_Page_News_Page_Template_Pa@4c583ecf</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_167_Verify_Page_News_Page_Version_NewPage_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_167_Verify_Page_News_Page_Version_NewPage_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_167_Verify_Page_News_Page_Version_NewPage_Pa@7cc0cdad</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_168_Verify_Project_Sub_Page_Delete_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_168_Verify_Project_Sub_Page_Delete_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_168_Verify_Project_Sub_Page_Delete_Pa@4218d6a3</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_169_Detail_Page_News_Page_Project_Pa.reportHeader()'><b>reportHeader</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_169_Detail_Page_News_Page_Project_Pa</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_169_Detail_Page_News_Page_Project_Pa@65fb9ffc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_172_Detail_Project_Dashboard_Project_Pa.TC172_Detail_Project_Dashboard_Project_Pa()'><b>TC172_Detail_Project_Dashboard_Project_Pa</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_172_Detail_Project_Dashboard_Project_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, New Project for Test Execution, ignore, Verify Dashboard/Project/EDit Project by Cosultation Manager</td>
+<td><div><pre>java.lang.AssertionError: Step TC172_Detail_Project_Dashboard_Project_Pa Failed with description Failed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.ctaf.support.HtmlReportSupport.onFailure(HtmlReportSupport.java:778)
+	at com.ctaf.utilities.Reporter.failureReport(Reporter.java:91)
+	at com.desktopWeb.scripts.sprint2.TC_172_Detail_Project_Dashboard_Project_Pa.TC172_Detail_Project_Dashboard_Project_Pa(TC_172_Detail_Project_Dashboard_Project_Pa.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div><a href='#' onClick='toggleBox("stack-trace754072705", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace754072705'><pre>java.lang.AssertionError: Step TC172_Detail_Project_Dashboard_Project_Pa Failed with description Failed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.ctaf.support.HtmlReportSupport.onFailure(HtmlReportSupport.java:778)
+	at com.ctaf.utilities.Reporter.failureReport(Reporter.java:91)
+	at com.desktopWeb.scripts.sprint2.TC_172_Detail_Project_Dashboard_Project_Pa.TC172_Detail_Project_Dashboard_Project_Pa(TC_172_Detail_Project_Dashboard_Project_Pa.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>243</td>
+<td>com.desktopWeb.scripts.sprint2.TC_172_Detail_Project_Dashboard_Project_Pa@13c9d689</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_173_Detail_Project_Dashboard_Project_SiteAdmin.TC173_Detail_Project_Dashboard_Project_SiteAdmin()'><b>TC173_Detail_Project_Dashboard_Project_SiteAdmin</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_173_Detail_Project_Dashboard_Project_SiteAdmin<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, New Project for Test Execution, ignore, Verify Dashboard/Project/EDit Project by Site Admin</td>
+<td><div><pre>java.lang.AssertionError: Step TC173_Detail_Project_Dashboard_Project_SiteAdmin Failed with description Failed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.ctaf.support.HtmlReportSupport.onFailure(HtmlReportSupport.java:778)
+	at com.ctaf.utilities.Reporter.failureReport(Reporter.java:91)
+	at com.desktopWeb.scripts.sprint2.TC_173_Detail_Project_Dashboard_Project_SiteAdmin.TC173_Detail_Project_Dashboard_Project_SiteAdmin(TC_173_Detail_Project_Dashboard_Project_SiteAdmin.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div><a href='#' onClick='toggleBox("stack-trace203409950", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace203409950'><pre>java.lang.AssertionError: Step TC173_Detail_Project_Dashboard_Project_SiteAdmin Failed with description Failed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.ctaf.support.HtmlReportSupport.onFailure(HtmlReportSupport.java:778)
+	at com.ctaf.utilities.Reporter.failureReport(Reporter.java:91)
+	at com.desktopWeb.scripts.sprint2.TC_173_Detail_Project_Dashboard_Project_SiteAdmin.TC173_Detail_Project_Dashboard_Project_SiteAdmin(TC_173_Detail_Project_Dashboard_Project_SiteAdmin.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>273</td>
+<td>com.desktopWeb.scripts.sprint2.TC_173_Detail_Project_Dashboard_Project_SiteAdmin@639c2c1d</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_174_Verify_Field_Enable_ToEdit_Dashoard_Project_En.TC174_Verify_Field_Enable_ToEdit_Dashoard_Project_En()'><b>TC174_Verify_Field_Enable_ToEdit_Dashoard_Project_En</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_174_Verify_Field_Enable_ToEdit_Dashoard_Project_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Dashboard/Project/Fields to be editable by Engagement Manager</td>
+<td><div><pre>java.lang.AssertionError: Step IsEnabled  Failed with description Project Type is not Enabled expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.ctaf.support.HtmlReportSupport.onFailure(HtmlReportSupport.java:778)
+	at com.ctaf.utilities.Reporter.failureReport(Reporter.java:91)
+	at com.ctaf.accelerators.ActionEngine.isEnabled(ActionEngine.java:1161)
+	at com.desktopWeb.workflows.HelperClass.VerifyFieldsEnableToEditOnProjectPage(HelperClass.java:2330)
+	at com.desktopWeb.scripts.sprint2.TC_174_Verify_Field_Enable_ToEdit_Dashoard_Project_En.TC174_Verify_Field_Enable_ToEdit_Dashoard_Project_En(TC_174_Verify_Field_Enable_ToEdit_Dashoard_Project_En.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1405055124", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1405055124'><pre>java.lang.AssertionError: Step IsEnabled  Failed with description Project Type is not Enabled expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.ctaf.support.HtmlReportSupport.onFailure(HtmlReportSupport.java:778)
+	at com.ctaf.utilities.Reporter.failureReport(Reporter.java:91)
+	at com.ctaf.accelerators.ActionEngine.isEnabled(ActionEngine.java:1161)
+	at com.desktopWeb.workflows.HelperClass.VerifyFieldsEnableToEditOnProjectPage(HelperClass.java:2330)
+	at com.desktopWeb.scripts.sprint2.TC_174_Verify_Field_Enable_ToEdit_Dashoard_Project_En.TC174_Verify_Field_Enable_ToEdit_Dashoard_Project_En(TC_174_Verify_Field_Enable_ToEdit_Dashoard_Project_En.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>115</td>
+<td>com.desktopWeb.scripts.sprint2.TC_174_Verify_Field_Enable_ToEdit_Dashoard_Project_En@5656be13</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.setting.TC_57_Detail_Setting_Project_Desc.TC52_Detail_Update_Project_Desc()'><b>TC52_Detail_Update_Project_Desc</b><br>Test class: com.desktopWeb.scripts.setting.TC_57_Detail_Setting_Project_Desc<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, New Project for Test Execution-ENEX, submittoworkflow, Verify Authoring/Setting/Details Funtionality</td>
+<td><div><pre>java.lang.AssertionError: Step TC52_Detail_Update_Project_Desc Failed with description Failed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.ctaf.support.HtmlReportSupport.onFailure(HtmlReportSupport.java:778)
+	at com.ctaf.utilities.Reporter.failureReport(Reporter.java:91)
+	at com.desktopWeb.scripts.setting.TC_57_Detail_Setting_Project_Desc.TC52_Detail_Update_Project_Desc(TC_57_Detail_Setting_Project_Desc.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div><a href='#' onClick='toggleBox("stack-trace500885941", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace500885941'><pre>java.lang.AssertionError: Step TC52_Detail_Update_Project_Desc Failed with description Failed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.ctaf.support.HtmlReportSupport.onFailure(HtmlReportSupport.java:778)
+	at com.ctaf.utilities.Reporter.failureReport(Reporter.java:91)
+	at com.desktopWeb.scripts.setting.TC_57_Detail_Setting_Project_Desc.TC52_Detail_Update_Project_Desc(TC_57_Detail_Setting_Project_Desc.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>255</td>
+<td>com.desktopWeb.scripts.setting.TC_57_Detail_Setting_Project_Desc@45752059</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.setting.TC_65_Verify_Setting_Version_Approve.TC65_Verify_Setting_Version_Approve()'><b>TC65_Verify_Setting_Version_Approve</b><br>Test class: com.desktopWeb.scripts.setting.TC_65_Verify_Setting_Version_Approve<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Setting/Version Approve Funtionality</td>
+<td><div><pre>java.lang.AssertionError: Step TC65_Verify_Setting_Version_Approve Failed with description Failed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.ctaf.support.HtmlReportSupport.onFailure(HtmlReportSupport.java:778)
+	at com.ctaf.utilities.Reporter.failureReport(Reporter.java:91)
+	at com.desktopWeb.scripts.setting.TC_65_Verify_Setting_Version_Approve.TC65_Verify_Setting_Version_Approve(TC_65_Verify_Setting_Version_Approve.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1171713907", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1171713907'><pre>java.lang.AssertionError: Step TC65_Verify_Setting_Version_Approve Failed with description Failed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.ctaf.support.HtmlReportSupport.onFailure(HtmlReportSupport.java:778)
+	at com.ctaf.utilities.Reporter.failureReport(Reporter.java:91)
+	at com.desktopWeb.scripts.setting.TC_65_Verify_Setting_Version_Approve.TC65_Verify_Setting_Version_Approve(TC_65_Verify_Setting_Version_Approve.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>265</td>
+<td>com.desktopWeb.scripts.setting.TC_65_Verify_Setting_Version_Approve@765d7657</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_114_WCCP_451_Verify_View_Edit_Draft_Page.TC114_WCCP_451_Verify_View_Edit_Draft_Page()'><b>TC114_WCCP_451_Verify_View_Edit_Draft_Page</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_114_WCCP_451_Verify_View_Edit_Draft_Page<br>Parameters: autoconmanager@harvestdp.com, Automation2017, For automation only draft page for consultation Manager, Draft Page for Consultation Manager, savechanges, For automation only draft page for en manager, For automation only draft page for project author, WCCP-451 Verify View and edit draft page</td>
+<td></td>
+<td>132</td>
+<td>com.desktopWeb.scripts.sprint1.TC_114_WCCP_451_Verify_View_Edit_Draft_Page@55141def</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_115_WCCP_450_Verify_View_Project_CM.TC115_WCCP_450_Verify_View_Project_CM()'><b>TC115_WCCP_450_Verify_View_Project_CM</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_115_WCCP_450_Verify_View_Project_CM<br>Parameters: autoconmanager@harvestdp.com, Automation2017, asdA, New Project for Test Execution, WCCP-450 Verify View Projects in Dashboard/Project/Project List for Consultation Manager</td>
+<td></td>
+<td>120</td>
+<td>com.desktopWeb.scripts.sprint1.TC_115_WCCP_450_Verify_View_Project_CM@14cd1699</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_116_WCCP_446_Verify_PM_Dept_Agency_Permission_To_En_Manager.TC116_WCCP_446_Verify_PM_Dept_Agency_Permission_To_En_Manager()'><b>TC116_WCCP_446_Verify_PM_Dept_Agency_Permission_To_En_Manager</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_116_WCCP_446_Verify_PM_Dept_Agency_Permission_To_En_Manager<br>Parameters: autosm2017@gmail.com, Automation2017, Site User, autoenmanager@harvestdp.com, Department of Education & Training, WCCP-446 Verify Product Manager assign Dept/Agency to En Manager</td>
+<td></td>
+<td>68</td>
+<td>com.desktopWeb.scripts.sprint1.TC_116_WCCP_446_Verify_PM_Dept_Agency_Permission_To_En_Manager@2a65fe7c</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_117_Detail_Project_Sub_Page_Project_En.TC117_Detail_Project_Sub_Page_Project_En()'><b>TC117_Detail_Project_Sub_Page_Project_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_117_Detail_Project_Sub_Page_Project_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, New Project for Test Execution, ignore, Verify Authoring/Page/Project_Sub_Page/Details by Engagement Manager Funtionality</td>
+<td></td>
+<td>93</td>
+<td>com.desktopWeb.scripts.sprint1.TC_117_Detail_Project_Sub_Page_Project_En@22555ebf</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_118_Design_Project_Sub_Page_Template_En.TC118_Design_Project_Sub_Page_Template_en()'><b>TC118_Design_Project_Sub_Page_Template_en</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_118_Design_Project_Sub_Page_Template_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, full, savechanges, Verify Authoring/Page/Project_Sub_Page/Design by Engage Manager Funtionality</td>
+<td></td>
+<td>108</td>
+<td>com.desktopWeb.scripts.sprint1.TC_118_Design_Project_Sub_Page_Template_En@30c15d8b</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_119_SEO_Project_Sub_Page_Name_En.TC119_SEO_Project_Sub_Page_Name_En()'><b>TC119_SEO_Project_Sub_Page_Name_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_119_SEO_Project_Sub_Page_Name_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, New Desc, savechanges, Verify Authoring/Page/Project_Sub_Page/SEO Funtionality by Engagement Manager</td>
+<td></td>
+<td>127</td>
+<td>com.desktopWeb.scripts.sprint1.TC_119_SEO_Project_Sub_Page_Name_En@2a4fb17b</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_120_Location_Project_Sub_Page_Location_En.TC120_Location_Project_Sub_Page_Location_En()'><b>TC120_Location_Project_Sub_Page_Location_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_120_Location_Project_Sub_Page_Location_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, savechanges, Verify Authoring/Page/Project_Sub_Page/Location by Engagement Manager Funtionality</td>
+<td></td>
+<td>120</td>
+<td>com.desktopWeb.scripts.sprint1.TC_120_Location_Project_Sub_Page_Location_En@397fbdb</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_121_Verify_Project_Sub_Page_Version_Duplicate_En.TC121_Verify_Project_Sub_Page_Version_Duplicate_En()'><b>TC121_Verify_Project_Sub_Page_Version_Duplicate_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_121_Verify_Project_Sub_Page_Version_Duplicate_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Version Duplicate by Engagement Manager</td>
+<td></td>
+<td>112</td>
+<td>com.desktopWeb.scripts.sprint1.TC_121_Verify_Project_Sub_Page_Version_Duplicate_En@4d5d943d</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_170_Detail_Project_Dashboard_Project_En.TC170_Detail_Project_Dashboard_Project_En()'><b>TC170_Detail_Project_Dashboard_Project_En</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_170_Detail_Project_Dashboard_Project_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, New Project for Test Execution, ignore, Verify Dashboard/Project/EDit Project by Engagement Manager</td>
+<td></td>
+<td>213</td>
+<td>com.desktopWeb.scripts.sprint2.TC_170_Detail_Project_Dashboard_Project_En@3590fc5b</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_171_Detail_Project_Dashboard_Project_Cm.TC171_Detail_Project_Dashboard_Project_Cm()'><b>TC171_Detail_Project_Dashboard_Project_Cm</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_171_Detail_Project_Dashboard_Project_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, New Project for Test Execution, ignore, Verify Dashboard/Project/EDit Project by Cosultation Manager</td>
+<td></td>
+<td>61</td>
+<td>com.desktopWeb.scripts.sprint2.TC_171_Detail_Project_Dashboard_Project_Cm@235834f2</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_175_Verify_Field_Enable_ToEdit_Dashoard_Project_Cm.TC175_Verify_Field_Enable_ToEdit_Dashoard_Project_Cm()'><b>TC175_Verify_Field_Enable_ToEdit_Dashoard_Project_Cm</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_175_Verify_Field_Enable_ToEdit_Dashoard_Project_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Dashboard/Project/Fields to be editable by Consultation Manager</td>
+<td></td>
+<td>88</td>
+<td>com.desktopWeb.scripts.sprint2.TC_175_Verify_Field_Enable_ToEdit_Dashoard_Project_Cm@35d019a3</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_176_Verify_Field_Enable_ToEdit_Dashoard_Project_Pa.TC176_Verify_Field_Enable_ToEdit_Dashoard_Project_Pa()'><b>TC176_Verify_Field_Enable_ToEdit_Dashoard_Project_Pa</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_176_Verify_Field_Enable_ToEdit_Dashoard_Project_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, Verify Dashboard/Project/Fields to be editable by Project Author</td>
+<td></td>
+<td>69</td>
+<td>com.desktopWeb.scripts.sprint2.TC_176_Verify_Field_Enable_ToEdit_Dashoard_Project_Pa@18078bef</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_177_Verify_Field_Enable_ToEdit_Dashoard_Project_SiteAdmin.TC177_Verify_Field_Enable_ToEdit_Dashoard_Project_SiteAdmin()'><b>TC177_Verify_Field_Enable_ToEdit_Dashoard_Project_SiteAdmin</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_177_Verify_Field_Enable_ToEdit_Dashoard_Project_SiteAdmin<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Dashboard/Project/Fields to be editable by Sitt Adminr</td>
+<td></td>
+<td>89</td>
+<td>com.desktopWeb.scripts.sprint2.TC_177_Verify_Field_Enable_ToEdit_Dashoard_Project_SiteAdmin@4afcd809</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.setting.TC_51_Verify_Authoring_Setting_Options.TC51_Verify_Authoring_Setting_Options()'><b>TC51_Verify_Authoring_Setting_Options</b><br>Test class: com.desktopWeb.scripts.setting.TC_51_Verify_Authoring_Setting_Options<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page Setting Options</td>
+<td></td>
+<td>52</td>
+<td>com.desktopWeb.scripts.setting.TC_51_Verify_Authoring_Setting_Options@7d8995e</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.addUpdate.TC_52_Detail_Update_Project.TC52_Detail_Update_Project()'><b>TC52_Detail_Update_Project</b><br>Test class: com.desktopWeb.scripts.addUpdate.TC_52_Detail_Update_Project<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, New Project for Test Execution, submittoworkflow, Verify Authoring/Update/Details Funtionality</td>
+<td></td>
+<td>100</td>
+<td>com.desktopWeb.scripts.addUpdate.TC_52_Detail_Update_Project@4c371370</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.addUpdate.TC_53_Design_Update_Template.TC53_Design_Update_Template()'><b>TC53_Design_Update_Template</b><br>Test class: com.desktopWeb.scripts.addUpdate.TC_53_Design_Update_Template<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, news full, submittoworkflow, Verify Authoring/Update/Design Funtionality</td>
+<td></td>
+<td>120</td>
+<td>com.desktopWeb.scripts.addUpdate.TC_53_Design_Update_Template@62379589</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.setting.TC_59_Design_Setting_Template.TC53_Design_Update_Template()'><b>TC53_Design_Update_Template</b><br>Test class: com.desktopWeb.scripts.setting.TC_59_Design_Setting_Template<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, full, submittoworkflow, Verify Authoring/Setting/Design Funtionality</td>
+<td></td>
+<td>99</td>
+<td>com.desktopWeb.scripts.setting.TC_59_Design_Setting_Template@3c46e67a</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.setting.TC_58_SEO_Setting_Name.TC54_SEO_Update_Name()'><b>TC54_SEO_Update_Name</b><br>Test class: com.desktopWeb.scripts.setting.TC_58_SEO_Setting_Name<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, New Desc, submittoworkflow, Verify Authoring/Setting/SEO Funtionality</td>
+<td></td>
+<td>88</td>
+<td>com.desktopWeb.scripts.setting.TC_58_SEO_Setting_Name@7c7b252e</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.addUpdate.TC_54_SEO_Update_Name.TC54_SEO_Update_Name()'><b>TC54_SEO_Update_Name</b><br>Test class: com.desktopWeb.scripts.addUpdate.TC_54_SEO_Update_Name<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Value 1, submittoworkflow, Verify Authoring/Update/SEO Funtionality</td>
+<td></td>
+<td>99</td>
+<td>com.desktopWeb.scripts.addUpdate.TC_54_SEO_Update_Name@47eaca72</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.addUpdate.TC_55_Location_Update_Location.TC55_Location_Update_Location()'><b>TC55_Location_Update_Location</b><br>Test class: com.desktopWeb.scripts.addUpdate.TC_55_Location_Update_Location<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, submittoworkflow, approve, Verify Authoring/Update/Location Funtionality</td>
+<td></td>
+<td>144</td>
+<td>com.desktopWeb.scripts.addUpdate.TC_55_Location_Update_Location@76505305</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.setting.TC_60_Location_Setting_Location.TC55_Location_Update_Location()'><b>TC55_Location_Update_Location</b><br>Test class: com.desktopWeb.scripts.setting.TC_60_Location_Setting_Location<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, submittoworkflow, approve, Verify Authoring/Setting/Location Funtionality</td>
+<td></td>
+<td>132</td>
+<td>com.desktopWeb.scripts.setting.TC_60_Location_Setting_Location@175c2241</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.addUpdate.TC_56_Verify_Update_Mobile_Preview.TC56_Verify_Mobile_Preview()'><b>TC56_Verify_Mobile_Preview</b><br>Test class: com.desktopWeb.scripts.addUpdate.TC_56_Verify_Update_Mobile_Preview<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Setting/Mobile Preview Funtionality</td>
+<td></td>
+<td>223</td>
+<td>com.desktopWeb.scripts.addUpdate.TC_56_Verify_Update_Mobile_Preview@6302bbb1</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.setting.TC_61_Verify_Setting_Mobile_Preview.TC56_Verify_Mobile_Preview()'><b>TC56_Verify_Mobile_Preview</b><br>Test class: com.desktopWeb.scripts.setting.TC_61_Verify_Setting_Mobile_Preview<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Setting/Mobile Preview Funtionality</td>
+<td></td>
+<td>93</td>
+<td>com.desktopWeb.scripts.setting.TC_61_Verify_Setting_Mobile_Preview@55b699ef</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.setting.TC_62_Verify_Setting_Delete.TC62_Verify_Setting_Delete()'><b>TC62_Verify_Setting_Delete</b><br>Test class: com.desktopWeb.scripts.setting.TC_62_Verify_Setting_Delete<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Setting/Delete Funtionality</td>
+<td></td>
+<td>59</td>
+<td>com.desktopWeb.scripts.setting.TC_62_Verify_Setting_Delete@6c6cb480</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.addUpdate.TC_63_Verify_Update_Delete.TC63_Verify_Update_Delete()'><b>TC63_Verify_Update_Delete</b><br>Test class: com.desktopWeb.scripts.addUpdate.TC_63_Verify_Update_Delete<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Update/Delete Funtionality</td>
+<td></td>
+<td>76</td>
+<td>com.desktopWeb.scripts.addUpdate.TC_63_Verify_Update_Delete@28701274</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.addUpdate.TC_64_Verify_Update_Version_Approve.TC64_Verify_Update_Version_Approve()'><b>TC64_Verify_Update_Version_Approve</b><br>Test class: com.desktopWeb.scripts.addUpdate.TC_64_Verify_Update_Version_Approve<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Update/Version Approve Funtionality</td>
+<td></td>
+<td>82</td>
+<td>com.desktopWeb.scripts.addUpdate.TC_64_Verify_Update_Version_Approve@5bf0d49</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_69_Detail_Project_Sub_Page_Project.TC69_Detail_Project_Sub_Page_Project()'><b>TC69_Detail_Project_Sub_Page_Project</b><br>Test class: com.desktopWeb.scripts.page.TC_69_Detail_Project_Sub_Page_Project<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, New Project for Test Execution, submittoworkflow, Verify Authoring/Page/Project_Sub_Page/Details Funtionality</td>
+<td></td>
+<td>149</td>
+<td>com.desktopWeb.scripts.page.TC_69_Detail_Project_Sub_Page_Project@515c6049</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_70_Design_Project_Sub_Page_Template.TC70_Design_Project_Sub_Page_Template()'><b>TC70_Design_Project_Sub_Page_Template</b><br>Test class: com.desktopWeb.scripts.page.TC_70_Design_Project_Sub_Page_Template<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, full, submittoworkflow, Verify Authoring/Page/Project_Sub_Page/Design Funtionality</td>
+<td></td>
+<td>162</td>
+<td>com.desktopWeb.scripts.page.TC_70_Design_Project_Sub_Page_Template@33d512c1</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_71_SEO_Project_Sub_Page_Name.TC71_SEO_Project_Sub_Page_Name()'><b>TC71_SEO_Project_Sub_Page_Name</b><br>Test class: com.desktopWeb.scripts.page.TC_71_SEO_Project_Sub_Page_Name<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, New Desc, submittoworkflow, Verify Authoring/Page/Project_Sub_Page/SEO Funtionality</td>
+<td></td>
+<td>152</td>
+<td>com.desktopWeb.scripts.page.TC_71_SEO_Project_Sub_Page_Name@206a70ef</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_72_Location_Project_Sub_Page_Location.TC72_Location_Page_Location()'><b>TC72_Location_Page_Location</b><br>Test class: com.desktopWeb.scripts.page.TC_72_Location_Project_Sub_Page_Location<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, approve, Verify Authoring/Page/Project_Sub_Page/Location Funtionality</td>
+<td></td>
+<td>184</td>
+<td>com.desktopWeb.scripts.page.TC_72_Location_Project_Sub_Page_Location@128d2484</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_73_Verify_Project_Sub_Page_Version_Approve.TC73_Verify_Project_Sub_Page_Version_Approve()'><b>TC73_Verify_Project_Sub_Page_Version_Approve</b><br>Test class: com.desktopWeb.scripts.page.TC_73_Verify_Project_Sub_Page_Version_Approve<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_PageVersion Approve Funtionality</td>
+<td></td>
+<td>108</td>
+<td>com.desktopWeb.scripts.page.TC_73_Verify_Project_Sub_Page_Version_Approve@34e9fd99</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_74_Verify_Project_Sub_Page_Version_Duplicate.TC74_Verify_Project_Sub_Page_Version_Duplicate()'><b>TC74_Verify_Project_Sub_Page_Version_Duplicate</b><br>Test class: com.desktopWeb.scripts.page.TC_74_Verify_Project_Sub_Page_Version_Duplicate<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Version Duplicate Funtionality</td>
+<td></td>
+<td>114</td>
+<td>com.desktopWeb.scripts.page.TC_74_Verify_Project_Sub_Page_Version_Duplicate@5b7a5baa</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_75_Verify_Project_Sub_Page_Mobile_Preview.TC75_Verify_Project_Sub_Page_Mobile_Preview()'><b>TC75_Verify_Project_Sub_Page_Mobile_Preview</b><br>Test class: com.desktopWeb.scripts.page.TC_75_Verify_Project_Sub_Page_Mobile_Preview<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Mobile Preview Funtionality</td>
+<td></td>
+<td>136</td>
+<td>com.desktopWeb.scripts.page.TC_75_Verify_Project_Sub_Page_Mobile_Preview@443118b0</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_76_Verify_Project_Sub_Page_Delete.TC76_Verify_Project_Sub_Page_Delete()'><b>TC76_Verify_Project_Sub_Page_Delete</b><br>Test class: com.desktopWeb.scripts.page.TC_76_Verify_Project_Sub_Page_Delete<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Delete Funtionality</td>
+<td></td>
+<td>98</td>
+<td>com.desktopWeb.scripts.page.TC_76_Verify_Project_Sub_Page_Delete@5e0e82ae</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_122_Verify_Project_Sub_Page_Version_NewPage_En.TC122_Verify_Project_Sub_Page_Version_NewPage_En()'><b>TC122_Verify_Project_Sub_Page_Version_NewPage_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_122_Verify_Project_Sub_Page_Version_NewPage_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Version New Page by Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_122_Verify_Project_Sub_Page_Version_NewPage_En@6cf0e0ba</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_123_Verify_Project_Sub_Page_Mobile_Preview_En.TC123_Verify_Project_Sub_Page_Mobile_Preview_En()'><b>TC123_Verify_Project_Sub_Page_Mobile_Preview_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_123_Verify_Project_Sub_Page_Mobile_Preview_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Mobile Preview by Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_123_Verify_Project_Sub_Page_Mobile_Preview_En@73a1e9a9</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_124_Verify_Project_Sub_Page_Delete_En.TC124_Verify_Project_Sub_Page_Delete_En()'><b>TC124_Verify_Project_Sub_Page_Delete_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_124_Verify_Project_Sub_Page_Delete_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Delete by Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_124_Verify_Project_Sub_Page_Delete_En@130d63be</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_125_WCCP_450_Verify_View_Project_En.TC125_WCCP_450_Verify_View_Project_En()'><b>TC125_WCCP_450_Verify_View_Project_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_125_WCCP_450_Verify_View_Project_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, asdA, New Project for Test Execution, WCCP-450 Verify View Projects in Dashboard/Project/Project List for Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_125_WCCP_450_Verify_View_Project_En@48f2bd5b</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_136_WCCP_450_Verify_View_Project_Pa.TC125_WCCP_450_Verify_View_Project_En()'><b>TC125_WCCP_450_Verify_View_Project_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_136_WCCP_450_Verify_View_Project_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, , , WCCP-450 Verify View Projects in Dashboard/Project/Project List for Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_136_WCCP_450_Verify_View_Project_Pa@5c6648b0</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_126_Verify_Project_Sub_Page_Version_NewPage_Cm.TC126_Verify_Project_Sub_Page_Version_NewPage_Cm()'><b>TC126_Verify_Project_Sub_Page_Version_NewPage_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_126_Verify_Project_Sub_Page_Version_NewPage_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Version New Page by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_126_Verify_Project_Sub_Page_Version_NewPage_Cm@78691363</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_127_Detail_Project_Sub_Page_Project_Cm.TC127_Detail_Project_Sub_Page_Project_Cm()'><b>TC127_Detail_Project_Sub_Page_Project_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_127_Detail_Project_Sub_Page_Project_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, New Project for Test Execution, ignore, Verify Authoring/Page/Project_Sub_Page/Details by Consultation Manager Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_127_Detail_Project_Sub_Page_Project_Cm@3023df74</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_128_Verify_Project_Sub_Page_Version_Duplicate_Cm.TC128_Verify_Project_Sub_Page_Version_Duplicate_Cm()'><b>TC128_Verify_Project_Sub_Page_Version_Duplicate_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_128_Verify_Project_Sub_Page_Version_Duplicate_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Version Duplicate by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_128_Verify_Project_Sub_Page_Version_Duplicate_Cm@3349e9bb</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_129_Verify_Project_Sub_Page_Delete_Cm.TC129_Verify_Project_Sub_Page_Delete_Cm()'><b>TC129_Verify_Project_Sub_Page_Delete_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_129_Verify_Project_Sub_Page_Delete_Cm<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Delete by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_129_Verify_Project_Sub_Page_Delete_Cm@77888435</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_130_Design_Project_Sub_Page_Template_Cm.TC130_Design_Project_Sub_Page_Template_Cm()'><b>TC130_Design_Project_Sub_Page_Template_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_130_Design_Project_Sub_Page_Template_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, rightslider, savechanges, Verify Authoring/Page/Project_Sub_Page/Design by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_130_Design_Project_Sub_Page_Template_Cm@557caf28</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_131_SEO_Project_Sub_Page_Name_Cm.TC131_SEO_Project_Sub_Page_Name_Cm()'><b>TC131_SEO_Project_Sub_Page_Name_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_131_SEO_Project_Sub_Page_Name_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, New Desc, savechanges, Verify Authoring/Page/Project_Sub_Page/SEO Funtionality by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_131_SEO_Project_Sub_Page_Name_Cm@49e53c76</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_132_Location_Project_Sub_Page_Location_Cm.TC132_Location_Project_Sub_Page_Location_Cm()'><b>TC132_Location_Project_Sub_Page_Location_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_132_Location_Project_Sub_Page_Location_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, savechanges, Verify Authoring/Page/Project_Sub_Page/Location by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_132_Location_Project_Sub_Page_Location_Cm@71d44a3</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_133_Verify_Project_Sub_Page_Mobile_Preview_Cm.TC133_Verify_Project_Sub_Page_Mobile_Preview_Cm()'><b>TC133_Verify_Project_Sub_Page_Mobile_Preview_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_133_Verify_Project_Sub_Page_Mobile_Preview_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Mobile Preview by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_133_Verify_Project_Sub_Page_Mobile_Preview_Cm@459e9125</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_134_Verify_Project_Sub_Page_Version_Approve_Cm.TC134_Verify_Project_Sub_Page_Version_Approve_Cm()'><b>TC134_Verify_Project_Sub_Page_Version_Approve_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_134_Verify_Project_Sub_Page_Version_Approve_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_PageVersion Approve by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_134_Verify_Project_Sub_Page_Version_Approve_Cm@7b98f307</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_135_Verify_Project_Sub_Page_Version_NewPage_Pa.TC135_Verify_Project_Sub_Page_Version_NewPage_Pa()'><b>TC135_Verify_Project_Sub_Page_Version_NewPage_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_135_Verify_Project_Sub_Page_Version_NewPage_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Version New Page by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_135_Verify_Project_Sub_Page_Version_NewPage_Pa@1283bb96</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_137_Verify_Project_Sub_Page_Version_Duplicate_Pa.TC137_Verify_Project_Sub_Page_Version_Duplicate_Pa()'><b>TC137_Verify_Project_Sub_Page_Version_Duplicate_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_137_Verify_Project_Sub_Page_Version_Duplicate_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Version Duplicate by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_137_Verify_Project_Sub_Page_Version_Duplicate_Pa@5fe94a96</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_138_Verify_Project_Sub_Page_Delete_Pa.TC138_Verify_Project_Sub_Page_Delete_Pa()'><b>TC138_Verify_Project_Sub_Page_Delete_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_138_Verify_Project_Sub_Page_Delete_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Delete by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_138_Verify_Project_Sub_Page_Delete_Pa@31304f14</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_139_Design_Project_Sub_Page_Template_Pa.TC139_Design_Project_Sub_Page_Template_Pa()'><b>TC139_Design_Project_Sub_Page_Template_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_139_Design_Project_Sub_Page_Template_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, narrow, savechanges, Verify Authoring/Page/Project_Sub_Page/Design by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_139_Design_Project_Sub_Page_Template_Pa@1b7cc17c</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_140_SEO_Project_Sub_Page_Name_Pa.TC140_SEO_Project_Sub_Page_Name_Pa()'><b>TC140_SEO_Project_Sub_Page_Name_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_140_SEO_Project_Sub_Page_Name_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, New Desc, savechanges, Verify Authoring/Page/Project_Sub_Page/SEO Funtionality by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_140_SEO_Project_Sub_Page_Name_Pa@799f10e1</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_141_Location_Project_Sub_Page_Location_Pa.TC141_Location_Project_Sub_Page_Location_Pa()'><b>TC141_Location_Project_Sub_Page_Location_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_141_Location_Project_Sub_Page_Location_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, savechanges, Verify Authoring/Page/Project_Sub_Page/Location by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_141_Location_Project_Sub_Page_Location_Pa@4135c3b</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_142_Verify_Project_Sub_Page_Mobile_Preview_Pa.TC142_Verify_Project_Sub_Page_Mobile_Preview_Pa()'><b>TC142_Verify_Project_Sub_Page_Mobile_Preview_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_142_Verify_Project_Sub_Page_Mobile_Preview_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Mobile Preview by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_142_Verify_Project_Sub_Page_Mobile_Preview_Pa@7c7a06ec</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_143_Verify_Project_Sub_Page_Version_Approve_Pa.TC143_Verify_Project_Sub_Page_Version_Approve_Pa()'><b>TC143_Verify_Project_Sub_Page_Version_Approve_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_143_Verify_Project_Sub_Page_Version_Approve_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_PageVersion Approve by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_143_Verify_Project_Sub_Page_Version_Approve_Pa@692f203f</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_144_Detail_Project_Sub_Page_Project_Pa.TC144_Detail_Project_Sub_Page_Project_Pa()'><b>TC144_Detail_Project_Sub_Page_Project_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_144_Detail_Project_Sub_Page_Project_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, New Project for Test Execution, ignore, Verify Authoring/Page/Project_Sub_Page/Details by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_144_Detail_Project_Sub_Page_Project_Pa@292b08d6</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_145_Detail_Page_News_Page_Project_En.TC145_Detail_Page_News_Page_Project_En()'><b>TC145_Detail_Page_News_Page_Project_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_145_Detail_Page_News_Page_Project_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, New Project for Test Execution, savechanges, Verify Authoring/Page/News_Page/Details funtionality by Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_145_Detail_Page_News_Page_Project_En@313ac989</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_146_Verify_Page_News_Page_Delete_En.TC146_Verify_Page_News_Page_Delete_En()'><b>TC146_Verify_Page_News_Page_Delete_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_146_Verify_Page_News_Page_Delete_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page/Delete funtionality for Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_146_Verify_Page_News_Page_Delete_En@3c19aaa5</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_147_SEO_Page_News_Page_Name_En.TC147_SEO_Page_News_Page_Name_En()'><b>TC147_SEO_Page_News_Page_Name_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_147_SEO_Page_News_Page_Name_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, New Desc, savechanges, Verify Authoring/Page/News_Page/SEO Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_147_SEO_Page_News_Page_Name_En@36ebc363</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_148_Verify_Page_News_Page_Version_Duplicate_En.TC148_Verify_Page_News_Page_Version_Duplicate_En()'><b>TC148_Verify_Page_News_Page_Version_Duplicate_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_148_Verify_Page_News_Page_Version_Duplicate_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page/Version Duplicate functionality by Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_148_Verify_Page_News_Page_Version_Duplicate_En@145f66e3</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_149_Verify_Page_News_Page_Mobile_Preview_En.TC149_Verify_Page_News_Page_Mobile_Preview_En()'><b>TC149_Verify_Page_News_Page_Mobile_Preview_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_149_Verify_Page_News_Page_Mobile_Preview_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page/Mobile Preview by Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_149_Verify_Page_News_Page_Mobile_Preview_En@f6efaab</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_150_Design_Page_News_Page_Template_En.TC150_Design_Page_News_Page_Template_En()'><b>TC150_Design_Page_News_Page_Template_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_150_Design_Page_News_Page_Template_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, full, savechanges, Verify Authoring/Page/News_Page/Design funtionality by Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_150_Design_Page_News_Page_Template_En@75d4a5c2</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_151_Location_Page_News_Page_Location_En.TC151_Location_Page_News_Page_Location_En()'><b>TC151_Location_Page_News_Page_Location_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_151_Location_Page_News_Page_Location_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, savechanges, Value 1, Verify Authoring/Page/News_Page/Location funtionality for Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_151_Location_Page_News_Page_Location_En@38d8f54a</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_157_Verify_Page_News_Page_Version_Approve_Cm.TC152_Verify_Page_News_Page_Version_Approve_Cm()'><b>TC152_Verify_Page_News_Page_Version_Approve_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_157_Verify_Page_News_Page_Version_Approve_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page_Version Approve funtionality by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_157_Verify_Page_News_Page_Version_Approve_Cm@6771beb3</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_152_Verify_Page_News_Page_Version_Approve_En.TC152_Verify_Page_News_Page_Version_Approve_En()'><b>TC152_Verify_Page_News_Page_Version_Approve_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_152_Verify_Page_News_Page_Version_Approve_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page_Version Approve funtionality by Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_152_Verify_Page_News_Page_Version_Approve_En@293a5bf6</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_153_Verify_Page_News_Page_Version_NewPage_En.TC153_Verify_Page_News_Page_Version_NewPage_En()'><b>TC153_Verify_Page_News_Page_Version_NewPage_En</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_153_Verify_Page_News_Page_Version_NewPage_En<br>Parameters: autoenmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Version New Page by Engagement Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_153_Verify_Page_News_Page_Version_NewPage_En@51399530</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_154_Verify_Page_News_Page_Version_Duplicate_Cm.TC154_Verify_Page_News_Page_Version_Duplicate_Cm()'><b>TC154_Verify_Page_News_Page_Version_Duplicate_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_154_Verify_Page_News_Page_Version_Duplicate_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page/Version Duplicate functionality by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_154_Verify_Page_News_Page_Version_Duplicate_Cm@351d00c0</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_155_Verify_Page_News_Page_Mobile_Preview_Cm.TC155_Verify_Page_News_Page_Mobile_Preview_Cm()'><b>TC155_Verify_Page_News_Page_Mobile_Preview_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_155_Verify_Page_News_Page_Mobile_Preview_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page/Mobile Preview by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_155_Verify_Page_News_Page_Mobile_Preview_Cm@a1153bc</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_156_Design_Page_News_Page_Template_Cm.TC156_Design_Page_News_Page_Template_Cm()'><b>TC156_Design_Page_News_Page_Template_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_156_Design_Page_News_Page_Template_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, rightslider, savechanges, Verify Authoring/Page/News_Page/Design funtionality by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_156_Design_Page_News_Page_Template_Cm@368f2016</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_158_Location_Page_News_Page_Location_Cm.TC158_Location_Page_News_Page_Location_Cm()'><b>TC158_Location_Page_News_Page_Location_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_158_Location_Page_News_Page_Location_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, savechanges, Value 2, Verify Authoring/Page/News_Page/Location funtionality for Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_158_Location_Page_News_Page_Location_Cm@59474f18</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_159_Detail_Page_News_Page_Project_Cm.TC159_Detail_Page_News_Page_Project_Cm()'><b>TC159_Detail_Page_News_Page_Project_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_159_Detail_Page_News_Page_Project_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, New Project for Test Execution, savechanges, Verify Authoring/Page/News_Page/Details funtionality by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_159_Detail_Page_News_Page_Project_Cm@3e694b3f</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_160_Verify_Page_News_Page_Version_NewPage_Cm.TC160_Verify_Page_News_Page_Version_NewPage_Cm()'><b>TC160_Verify_Page_News_Page_Version_NewPage_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_160_Verify_Page_News_Page_Version_NewPage_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Version New Page by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_160_Verify_Page_News_Page_Version_NewPage_Cm@618b19ad</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_161_Verify_Project_Sub_Page_Delete_Cm.TC161_Verify_Project_Sub_Page_Delete_Cm()'><b>TC161_Verify_Project_Sub_Page_Delete_Cm</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_161_Verify_Project_Sub_Page_Delete_Cm<br>Parameters: autoconmanager@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Delete by Consultation Manager</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_161_Verify_Project_Sub_Page_Delete_Cm@74f0ea28</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_162_Verify_Page_News_Page_Version_Duplicate_Pa.TC162_Verify_Page_News_Page_Version_Duplicate_Pa()'><b>TC162_Verify_Page_News_Page_Version_Duplicate_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_162_Verify_Page_News_Page_Version_Duplicate_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page/Version Duplicate functionality by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_162_Verify_Page_News_Page_Version_Duplicate_Pa@6aeb35e6</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_163_Verify_Page_News_Page_Mobile_Preview_Pa.TC163_Verify_Page_News_Page_Mobile_Preview_Pa()'><b>TC163_Verify_Page_News_Page_Mobile_Preview_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_163_Verify_Page_News_Page_Mobile_Preview_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page/Mobile Preview by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_163_Verify_Page_News_Page_Mobile_Preview_Pa@3c41ed1d</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_164_Verify_Page_News_Page_Version_Approve_Pa.TC164_Verify_Page_News_Page_Version_Approve_Pa()'><b>TC164_Verify_Page_News_Page_Version_Approve_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_164_Verify_Page_News_Page_Version_Approve_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page_Version Approve funtionality by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_164_Verify_Page_News_Page_Version_Approve_Pa@34a3d150</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_165_Location_Page_News_Page_Location_Pa.TC165_Location_Page_News_Page_Location_Pa()'><b>TC165_Location_Page_News_Page_Location_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_165_Location_Page_News_Page_Location_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, savechanges, Value 3, Verify Authoring/Page/News_Page/Location funtionality for Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_165_Location_Page_News_Page_Location_Pa@2a3b5b47</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_166_Design_Page_News_Page_Template_Pa.TC166_Design_Page_News_Page_Template_Pa()'><b>TC166_Design_Page_News_Page_Template_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_166_Design_Page_News_Page_Template_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, news full, savechanges, Verify Authoring/Page/News_Page/Design funtionality by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_166_Design_Page_News_Page_Template_Pa@4c583ecf</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_167_Verify_Page_News_Page_Version_NewPage_Pa.TC167_Verify_Page_News_Page_Version_NewPage_Pa()'><b>TC167_Verify_Page_News_Page_Version_NewPage_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_167_Verify_Page_News_Page_Version_NewPage_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Version New Page by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_167_Verify_Page_News_Page_Version_NewPage_Pa@7cc0cdad</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_168_Verify_Project_Sub_Page_Delete_Pa.TC168_Verify_Project_Sub_Page_Delete_Pa()'><b>TC168_Verify_Project_Sub_Page_Delete_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_168_Verify_Project_Sub_Page_Delete_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Project_Sub_Page/Delete by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_168_Verify_Project_Sub_Page_Delete_Pa@4218d6a3</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint1.TC_169_Detail_Page_News_Page_Project_Pa.TC169_Detail_Page_News_Page_Project_Pa()'><b>TC169_Detail_Page_News_Page_Project_Pa</b><br>Test class: com.desktopWeb.scripts.sprint1.TC_169_Detail_Page_News_Page_Project_Pa<br>Parameters: autoprauthor@harvestdp.com, Automation2017, New Project for Test Execution, New Project for Test Execution, savechanges, Verify Authoring/Page/News_Page/Details funtionality by Project Author</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint1.TC_169_Detail_Page_News_Page_Project_Pa@65fb9ffc</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_178_WCCP_418_1.TC178_WCCP_418_1()'><b>TC178_WCCP_418_1</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_178_WCCP_418_1<br>Parameters: autosm2017@gmail.com, Automation2017, autoenmanager@harvestdp.com, autoconmanager@harvestdp.com, Automation Project, New Automation Project, Department of Economic Development, Jobs, Transport & Resources, Public, Active, autoconmanager,autoprauthor, Consultation Manager,Project Author, Yes, Verify TC178_WCCP_418</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint2.TC_178_WCCP_418_1@6b2ea799</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_179_WCCP_418_2.TC179_WCCP_418_2()'><b>TC179_WCCP_418_2</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_179_WCCP_418_2<br>Parameters: autosm2017@gmail.com, Automation2017, autoenmanager@harvestdp.com, autoprauthor@harvestdp.com, Automation Project, New Automation Project, Department of Economic Development, Jobs, Transport & Resources, Public, Active, autoconmanager,autoprauthor, Consultation Manager,Project Author, Yes, Verify TC_179_WCCP_418_2</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint2.TC_179_WCCP_418_2@1bb5a082</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.sprint2.TC_180_WCCP_417_1.TC180_WCCP_417_414()'><b>TC180_WCCP_417_414</b><br>Test class: com.desktopWeb.scripts.sprint2.TC_180_WCCP_417_1<br>Parameters: autosm2017@gmail.com, Automation2017, autoenmanager@harvestdp.com, autoprauthor@harvestdp.com, Automation Project, New Automation Project, Department of Economic Development, Jobs, Transport & Resources, Public, Active, autoconmanager,autoprauthor, Consultation Manager,Project Author, Yes, Verify TC180_WCCP_417_414</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.sprint2.TC_180_WCCP_417_1@7b2bbc3</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.setting.TC_66_Verify_Setting_Version_Duplicate.TC66_Verify_Setting_Version_Duplicate()'><b>TC66_Verify_Setting_Version_Duplicate</b><br>Test class: com.desktopWeb.scripts.setting.TC_66_Verify_Setting_Version_Duplicate<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Setting/Version Duplicate Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.setting.TC_66_Verify_Setting_Version_Duplicate@408d971b</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.addUpdate.TC_67_Verify_Update_Version_Duplicate.TC67_Verify_Update_Version_Duplicate()'><b>TC67_Verify_Update_Version_Duplicate</b><br>Test class: com.desktopWeb.scripts.addUpdate.TC_67_Verify_Update_Version_Duplicate<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Update/Version Duplicate Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.addUpdate.TC_67_Verify_Update_Version_Duplicate@4562e04d</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.addUpdate.TC_68_Verify_Authoring_Update_Options.TC68_Verify_Authoring_Update_Options()'><b>TC68_Verify_Authoring_Update_Options</b><br>Test class: com.desktopWeb.scripts.addUpdate.TC_68_Verify_Authoring_Update_Options<br>Parameters: autosm2017@gmail.com, Automation2017, Verify Authoring/Update Options</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.addUpdate.TC_68_Verify_Authoring_Update_Options@36fc695d</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_77_SEO_Site_Sub_Page_Name.TC77_SEO_Site_Sub_Page_Name()'><b>TC77_SEO_Site_Sub_Page_Name</b><br>Test class: com.desktopWeb.scripts.page.TC_77_SEO_Site_Sub_Page_Name<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, New Desc, submittoworkflow, Verify Authoring/Page/Site_Sub_Page/SEO Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_77_SEO_Site_Sub_Page_Name@3754a4bf</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_78_Verify_Site_Sub_Page_Version_Duplicate.TC78_Verify_Site_Sub_Page_Version_Duplicate()'><b>TC78_Verify_Site_Sub_Page_Version_Duplicate</b><br>Test class: com.desktopWeb.scripts.page.TC_78_Verify_Site_Sub_Page_Version_Duplicate<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Site_Sub_Page/Version Duplicate Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_78_Verify_Site_Sub_Page_Version_Duplicate@409bf450</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_79_Location_Site_Sub_Page_Location.TC79_Location_Site_Sub_Page_Location()'><b>TC79_Location_Site_Sub_Page_Location</b><br>Test class: com.desktopWeb.scripts.page.TC_79_Location_Site_Sub_Page_Location<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, submittoworkflow, approve, Verify Authoring/Page/Site_Sub_Page/Location Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_79_Location_Site_Sub_Page_Location@55182842</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_80_Verify_Site_Sub_Page_Mobile_Preview.TC80_Verify_Site_Sub_Page_Mobile_Preview()'><b>TC80_Verify_Site_Sub_Page_Mobile_Preview</b><br>Test class: com.desktopWeb.scripts.page.TC_80_Verify_Site_Sub_Page_Mobile_Preview<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Site_Sub_Page/Mobile Preview Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_80_Verify_Site_Sub_Page_Mobile_Preview@776aec5c</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_81_Verify_Site_Sub_Page_Delete.TC81_Verify_Site_Sub_Page_Delete()'><b>TC81_Verify_Site_Sub_Page_Delete</b><br>Test class: com.desktopWeb.scripts.page.TC_81_Verify_Site_Sub_Page_Delete<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Site_Sub_Page/Delete Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_81_Verify_Site_Sub_Page_Delete@2b71e916</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_82_Verify_Site_Sub_Page_Version_Approve.TC82_Verify_Site_Sub_Page_Version_Approve()'><b>TC82_Verify_Site_Sub_Page_Version_Approve</b><br>Test class: com.desktopWeb.scripts.page.TC_82_Verify_Site_Sub_Page_Version_Approve<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/Site_Sub_PageVersion Approve Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_82_Verify_Site_Sub_Page_Version_Approve@689604d9</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_83_Design_Site_Sub_Page_Template.TC83_Design_Site_Sub_Page_Template()'><b>TC83_Design_Site_Sub_Page_Template</b><br>Test class: com.desktopWeb.scripts.page.TC_83_Design_Site_Sub_Page_Template<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, full, submittoworkflow, Verify Authoring/Page/Site_Sub_Page/Design Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_83_Design_Site_Sub_Page_Template@3270d194</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_84_Detail_Site_Sub_Page_Project.TC84_Detail_Site_Sub_Page_Project()'><b>TC84_Detail_Site_Sub_Page_Project</b><br>Test class: com.desktopWeb.scripts.page.TC_84_Detail_Site_Sub_Page_Project<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, New Project for Test Execution, submittoworkflow, Verify Authoring/Page/Site_Sub_Page/Details Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_84_Detail_Site_Sub_Page_Project@c730b35</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_85_Create_New_Project_Page_New_Project.TC84_Detail_Site_Sub_Page_Project()'><b>TC84_Detail_Site_Sub_Page_Project</b><br>Test class: com.desktopWeb.scripts.page.TC_85_Create_New_Project_Page_New_Project<br>Parameters: autosm2017@gmail.com, Automation2017, Automation Project, New Automation Project, Department of Education & Training, Public, Active, autoconmanager,autoprauthor, Consultation Manager,Project Author, Yes, Verify Authoring/Page/Site_Sub_Page/Details Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_85_Create_New_Project_Page_New_Project@41d477ed</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_86_Verify_Page_News_Page_Delete.TC86_Verify_Page_News_Page_Delete()'><b>TC86_Verify_Page_News_Page_Delete</b><br>Test class: com.desktopWeb.scripts.page.TC_86_Verify_Page_News_Page_Delete<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page/Delete Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_86_Verify_Page_News_Page_Delete@6f1de4c7</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_87_SEO_Page_News_Page_Name.TC87_SEO_Page_News_Page_Name()'><b>TC87_SEO_Page_News_Page_Name</b><br>Test class: com.desktopWeb.scripts.page.TC_87_SEO_Page_News_Page_Name<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, New Desc, submittoworkflow, Verify Authoring/Page/News_Page/SEO Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_87_SEO_Page_News_Page_Name@42a48628</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_88_Verify_Page_News_Page_Version_Duplicate.TC88_Verify_Page_News_Page_Version_Duplicate()'><b>TC88_Verify_Page_News_Page_Version_Duplicate</b><br>Test class: com.desktopWeb.scripts.page.TC_88_Verify_Page_News_Page_Version_Duplicate<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page/Version Duplicate Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_88_Verify_Page_News_Page_Version_Duplicate@411f53a0</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_89_Verify_Page_News_Page_Mobile_Preview.TC89_Verify_Page_News_Page_Mobile_Preview()'><b>TC89_Verify_Page_News_Page_Mobile_Preview</b><br>Test class: com.desktopWeb.scripts.page.TC_89_Verify_Page_News_Page_Mobile_Preview<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page/Mobile Preview Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_89_Verify_Page_News_Page_Mobile_Preview@4802796d</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_90_Design_Page_News_Page_Template.TC90_Design_Page_News_Page_Template()'><b>TC90_Design_Page_News_Page_Template</b><br>Test class: com.desktopWeb.scripts.page.TC_90_Design_Page_News_Page_Template<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, news full, submittoworkflow, Verify Authoring/Page/News_Page/Design Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_90_Design_Page_News_Page_Template@34123d65</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_91_Location_Page_News_Page_Location.TC91_Location_Page_News_Page_Location()'><b>TC91_Location_Page_News_Page_Location</b><br>Test class: com.desktopWeb.scripts.page.TC_91_Location_Page_News_Page_Location<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, submittoworkflow, approve, Verify Authoring/Page/News_Page/Location Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_91_Location_Page_News_Page_Location@1d296da</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_92_Verify_Page_News_Page_Version_Approve.TC92_Verify_Page_News_Page_Version_Approve()'><b>TC92_Verify_Page_News_Page_Version_Approve</b><br>Test class: com.desktopWeb.scripts.page.TC_92_Verify_Page_News_Page_Version_Approve<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, Verify Authoring/Page/News_Page_Version Approve Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_92_Verify_Page_News_Page_Version_Approve@74235045</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_93_Detail_Page_News_Page_Project.TC93_Detail_Page_News_Page_Project()'><b>TC93_Detail_Page_News_Page_Project</b><br>Test class: com.desktopWeb.scripts.page.TC_93_Detail_Page_News_Page_Project<br>Parameters: autosm2017@gmail.com, Automation2017, New Project for Test Execution, New Project for Test Execution, submittoworkflow, Verify Authoring/Page/News_Page/Details Funtionality</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_93_Detail_Page_News_Page_Project@2d3379b4</td></tr>
+<tr>
+<td title='com.desktopWeb.scripts.page.TC_94_Verify_Page_Sitemap_Links.TC94_Verify_Page_Sitemap_Links()'><b>TC94_Verify_Page_Sitemap_Links</b><br>Test class: com.desktopWeb.scripts.page.TC_94_Verify_Page_Sitemap_Links<br>Parameters: autosm2017@gmail.com, Automation2017, Verify Page/Sitemap Links</td>
+<td></td>
+<td>0</td>
+<td>com.desktopWeb.scripts.page.TC_94_Verify_Page_Sitemap_Links@1aafa419</td></tr>
+</table><p>
+</body>
+</html>

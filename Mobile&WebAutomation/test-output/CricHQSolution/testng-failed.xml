@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [CricHQSolution]" allow-return-values="true">
+  <test name="Grouping(failed)">
+    <classes>
+      <class name="com.desktopWeb.scripts.TC_01_Join_CricHQ">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="tearDownMethod"/>
+          <include name="setupSuite"/>
+          <include name="Tc_01_Join_CricHQ"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_01_Join_CricHQ -->
+      <class name="com.desktopWeb.scripts.TC_02_Ground_Creation">
+        <methods>
+          <include name="reportHeader"/>
+          <include name="Tc_02_Ground_Creation"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TC_02_Ground_Creation -->
+      <class name="com.desktopWeb.scripts.TestSuitForDBSSlider">
+        <methods>
+          <include name="DigiBankBanner"/>
+        </methods>
+      </class> <!-- com.desktopWeb.scripts.TestSuitForDBSSlider -->
+    </classes>
+  </test> <!-- Grouping(failed) -->
+</suite> <!-- Failed suite [CricHQSolution] -->

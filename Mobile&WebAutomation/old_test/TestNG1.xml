@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="DPC" allow-return-values="true" verbose="2">
+	<test name="Chrome" preserve-order="true">
+		<classes>
+        	 <class name="com.desktopWeb.scripts.common.TC_18_Contactus_GuestUser"/>
+      	</classes>
+  	</test>
+</suite>
