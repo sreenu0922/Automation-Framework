@@ -9,6 +9,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
@@ -118,7 +120,11 @@ public class TestEngine extends HtmlReportSupport{
 			//Ranga 
 		}
 		else if(browserType=="Edge") {
-			//Sangeetha
+			//sangeetha
+			System.setProperty("webdriver.edge.driver", filePath());
+			WebDriver driver = new EdgeDriver();
+			driver.get(url);
+			driver.manage().window().maximize();
 		}
 		else if(browserType=="Safari") {
 			//Archana
