@@ -7,37 +7,37 @@ import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import javax.imageio.ImageIO;
 
+import io.appium.java_client.MobileElement;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.*;
 
-import support.Reporter;
-import support.Logger;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ActionEngine extends TestEngine{
-	
-	
-	public static boolean flag = false;
-	static boolean b = true;
-	
-	/*
-	
-	example -- Click
-	*/
-	@SuppressWarnings("finally")
-	public static boolean click(By locator, String locatorName) throws Throwable {
-		Thread.sleep(2000);
-		boolean flag = false;
-		try {
-			driver.findElement(locator).click();
-			flag = true;
-		} catch (Exception e) {
-			e.printStackTrace();
-		} /*finally {
+public class ActionEngine extends TestEngine {
+    public WebDriverWait wait;
+
+    public static boolean flag = false;
+    static boolean b = true;
+
+    /*
+
+    example -- Click
+    */
+    @SuppressWarnings("finally")
+    public static boolean click(By locator, String locatorName) throws Throwable {
+        Thread.sleep(2000);
+        boolean flag = false;
+        try {
+            driver.findElement(locator).click();
+            flag = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } /*finally {
 			if (!flag) {
 				Reporter.failureReport("Click", "Unable to click on " + locatorName);
 				return flag;
@@ -45,8 +45,8 @@ public class ActionEngine extends TestEngine{
 				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
 
 		}*/
-		return flag;
-	}
+        return flag;
+    }
 	 
 
 	/*
@@ -69,39 +69,40 @@ public class ActionEngine extends TestEngine{
 	*/
 
 
+    public static void screenShot(String fileName) throws Throwable {
+        File scrFile = ((TakesScreenshot) driver)
+                .getScreenshotAs(OutputType.FILE);
+        try {
+            // Now you can do whatever you need to do with it, for example copy
+            // somewhere
+            FileUtils.copyFile(scrFile, new File(fileName));
+            flag = true;
+        } catch (IOException e) {
+            //Assert.assertTrue(flag,"Unable to take Screenshot");
+            e.printStackTrace();
+        } finally {
+            if (!flag) {
+                //Reporter.failureReport("screenShot ", " Unable to get screenShot ");
+                System.out.println(" Unable to get TscreenShot");
+            } else if (b && flag) {
+                //Reporter.SuccessReport("screenShot ", " Able to get TscreenShot");
+                System.out.println(" Able to get TscreenShot");
+            }
+        }
+    }
+
+    public static void fullScreenShot(String fileName) throws Exception {
+
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        Rectangle screenRectangle = new Rectangle(screenSize);
+        Robot robot = new Robot();
+        BufferedImage image = robot.createScreenCapture(screenRectangle);
+        ImageIO.write(image, "jpeg", new File(fileName));
+
+    }
 
 
 
 
-public static void screenShot(String fileName) throws Throwable {
-	File scrFile = ((TakesScreenshot) driver)
-			.getScreenshotAs(OutputType.FILE);
-	try {
-		// Now you can do whatever you need to do with it, for example copy
-		// somewhere
-		FileUtils.copyFile(scrFile, new File(fileName));
-		flag=true;
-	} catch (IOException e) {
-		//Assert.assertTrue(flag,"Unable to take Screenshot");
-		e.printStackTrace();
-	}finally {
-		if (!flag) {
-			//Reporter.failureReport("screenShot ", " Unable to get screenShot ");
-			System.out.println(" Unable to get TscreenShot");
-		} else if (b && flag) {
-			//Reporter.SuccessReport("screenShot ", " Able to get TscreenShot");
-			System.out.println(" Able to get TscreenShot");
-		}
-	}
-}
 
-public static void fullScreenShot(String fileName) throws Exception {
-	 
-	   Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-	   Rectangle screenRectangle = new Rectangle(screenSize);
-	   Robot robot = new Robot();
-	   BufferedImage image = robot.createScreenCapture(screenRectangle);
-	   ImageIO.write(image, "jpeg", new File(fileName));
-	 
-	}
 }
