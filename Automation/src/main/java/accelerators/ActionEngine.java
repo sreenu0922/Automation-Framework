@@ -29,33 +29,27 @@ public class ActionEngine extends TestEngine{
 	example -- Click
 	*/
 	@SuppressWarnings("finally")
-	public static boolean click(By locator, String locatorName)
-			throws Throwable {
-		//explicityWait(locator, locatorName);
+	public static boolean click(By locator, String locatorName) throws Throwable {
+		Thread.sleep(2000);
 		boolean flag = false;
 		try {
 			driver.findElement(locator).click();
 			flag = true;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
+		} /*finally {
 			if (!flag) {
-				Reporter.failureReport("Click", "Unable to click on "
-						+ locatorName);
+				Reporter.failureReport("Click", "Unable to click on " + locatorName);
 				return flag;
 			} else if (b && flag) {
-				Reporter.SuccessReport("Click", "Successfully click on "
-						+ locatorName);
-				
-		}
+				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
+
+		}*/
 		return flag;
 	}
 	 
-	/* 
-	 * 
-	 * 
-	 * 
-	 * 
+
+	/*
 	 * use ActionClass
 	 * 
 	Tab(By Locator) AND Tab(using coordinates) -- Vinay
@@ -74,7 +68,7 @@ public class ActionEngine extends TestEngine{
 	clikcOnAlert -- Sangeetha
 	*/
 
-}
+
 
 
 
