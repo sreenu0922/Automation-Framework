@@ -120,7 +120,7 @@ public class TestEngine extends HtmlReportSupport{
 			//Ranga 
 		}
 		else if(browserType=="Edge") {
-			//sangeetha
+			//@author by sangeethanulu
 			System.setProperty("webdriver.edge.driver", filePath());
 			WebDriver driver = new EdgeDriver();
 			driver.get(url);
