@@ -131,18 +131,21 @@ public class TestEngine extends HtmlReportSupport{
 			driver.get(url);
 		}
 		else if(browserType.equalsIgnoreCase("macChrome")) {
-			System.setProperty("webdriver.chrome.driver", "/Users/archana/Downloads/SampleWavelabsAutoProject/AutomationFramework/Automation/Drivers/chromedriver");
+			String driverPath = configProps.getProperty("macChromeDriverPath");
+			String browserPath = System.getProperty("user.dir")+driverPath;
+			System.setProperty("webdriver.chrome.driver", browserPath);
 			ChromeOptions chromeOptions=new ChromeOptions();
 			chromeOptions.setAcceptInsecureCerts(true);
 			driver = (new ChromeDriver(chromeOptions));
-
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 			driver.get(url);
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 		}
 		else if(browserType.equalsIgnoreCase("macFirefox")){
-			System.setProperty("webdriver.gecko.driver", "/Users/archana/Downloads/SampleWavelabsAutoProject/AutomationFramework/Automation/Drivers/geckodriver");
+			String driverPath = configProps.getProperty("macFirefoxDriverPath");
+			String browserPath = System.getProperty("user.dir")+driverPath;
+			System.setProperty("webdriver.gecko.driver", browserPath);
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
