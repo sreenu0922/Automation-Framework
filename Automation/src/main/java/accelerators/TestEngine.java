@@ -117,10 +117,11 @@ public class TestEngine extends HtmlReportSupport{
 		else if(browserType=="WinFirefox") {
 			//Ranga
 
-			System.setProperty("webdriver.gecko.driver", driverPath+"geckodriver.exe");
-			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-			capabilities.setCapability("marionette",true);
-			WebDriver driver = new FirefoxDriver(capabilities);
+			System.setProperty("webdriver.gecko.driver", filePath());
+			WebDriver driver = new FirefoxDriver();
+			driver.get(url);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
 		}
 		else if(browserType=="Edge") {
