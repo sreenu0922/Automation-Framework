@@ -18,8 +18,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class ActionEngine extends TestEngine{
-	
-	
+
 	public static boolean flag = false;
 	public static WebDriverWait wait;
 	static boolean b = true;
@@ -52,32 +51,8 @@ public class ActionEngine extends TestEngine{
 */        return flag;
 		}
 	}
-		public static boolean mouseHoverByJavaScript(By locator, String locatorName) throws Throwable {
 
-			try {
-				WebElement mo = driver.findElement(locator);
-				String javaScript = "var evObj = document.createEvent('MouseEvents');"
-						+ "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);"
-						+ "arguments[0].dispatchEvent(evObj);";
-				JavascriptExecutor js = (JavascriptExecutor) driver;
-				js.executeScript(javaScript, mo);
-				flag = true;
-				return flag;
-			} catch (Exception e) {
-
-				return flag;
-			} finally {
-				/*if (!flag) {
-					Reporter.failureReport("MouseOver ",
-							" MouseOver action is not perform on " + locatorName);
-				} else if (b && flag) {
-					Reporter.SuccessReport("MouseOver ",
-							" MouserOver Action is Done on " + locatorName);
-				}*/
-			}
-
-		}
-
+	//@author:Archana Dasari
 	public static boolean waitForElementPresent(By by, String locator)
 			throws Throwable {
 
@@ -107,11 +82,11 @@ public class ActionEngine extends TestEngine{
 						"Successfully located element " + locator);
 			}*/
 		}
-
 		return flag;
 
 	}
 
+	//@author:Archana Dasari
 	public static boolean type(By locator, String testdata, String locatorName) throws Throwable {
 		explicityWait(locator, locatorName);
 		try {
@@ -135,7 +110,7 @@ public class ActionEngine extends TestEngine{
 		}
 		return flag;
 	}
-
+	//@author:Archana Dasari
 	public static void explicityWait(By Locator, String locatorName) throws InterruptedException {
 		WebDriverWait wdw = new WebDriverWait(driver, 180);
 		WebElement ele = null;

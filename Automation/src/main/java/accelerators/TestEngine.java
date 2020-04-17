@@ -124,6 +124,7 @@ public class TestEngine extends HtmlReportSupport{
 			//Sangeetha
 		}
 		else if(browserType.equalsIgnoreCase("safari")){
+			//@author: Archana Dasari
 			//enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver.
 			driver  = new SafariDriver();
 			driver.manage().window().maximize();
@@ -131,6 +132,7 @@ public class TestEngine extends HtmlReportSupport{
 			driver.get(url);
 		}
 		else if(browserType.equalsIgnoreCase("macChrome")) {
+			//@author: Archana Dasari
 			String driverPath = configProps.getProperty("macChromeDriverPath");
 			String browserPath = System.getProperty("user.dir")+driverPath;
 			System.setProperty("webdriver.chrome.driver", browserPath);
@@ -143,6 +145,7 @@ public class TestEngine extends HtmlReportSupport{
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 		}
 		else if(browserType.equalsIgnoreCase("macFirefox")){
+			//@author: Archana Dasari
 			String driverPath = configProps.getProperty("macFirefoxDriverPath");
 			String browserPath = System.getProperty("user.dir")+driverPath;
 			System.setProperty("webdriver.gecko.driver", browserPath);
@@ -151,7 +154,6 @@ public class TestEngine extends HtmlReportSupport{
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 			driver.get(url);
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-
 		}
 	}
 

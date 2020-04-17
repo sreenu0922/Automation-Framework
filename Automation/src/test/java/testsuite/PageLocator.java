@@ -5,6 +5,7 @@ import accelerators.ActionEngine;
 
 public class PageLocator extends ActionEngine{
 
+	//@author: Archana dasari
 	//Amazon signIN locators
 	public static By signIn = By.xpath("//div[@id='nav-flyout-ya-signin']/a/span[contains(text(),'Sign in')]");
 	public static By email = By.xpath("//input[@id='ap_email']");
