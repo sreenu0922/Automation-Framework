@@ -7,7 +7,6 @@ import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 import javax.imageio.ImageIO;
 
@@ -100,9 +99,5 @@ public class ActionEngine extends TestEngine {
         ImageIO.write(image, "jpeg", new File(fileName));
 
     }
-
-
-
-
 
 }

@@ -86,7 +86,11 @@ public class TestEngine extends HtmlReportSupport {
             driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
 
 
-        } else if (browserType.equalsIgnoreCase("iOS")) {
+        }
+         /*
+        Author Sravan Reddy
+        */
+        else if (browserType.equalsIgnoreCase("iOS")) {
             try {
                 //Sravan add for iOS
                 System.out.println("In iphone block");
@@ -133,7 +137,11 @@ public class TestEngine extends HtmlReportSupport {
         } else if (browserType == "AndroidChrome") {
             //Jagadish add for AndroidChrome
 
-        } else if (browserType.equalsIgnoreCase("iOSSafari")) {
+        }
+        /*
+        Author Sravan Reddy
+        */
+        else if (browserType.equalsIgnoreCase("iOSSafari")) {
             try {
                 //Sravan add for iOS
                 System.out.println("In iphone browser block");
@@ -182,6 +190,9 @@ public class TestEngine extends HtmlReportSupport {
         } else if (browserType == "MacFirefox") {
             //Archana
         }
+         /*
+        Author Sravan Reddy
+        */
         else if ((browserType.equalsIgnoreCase("AndroidChrome")) | (browserType.equalsIgnoreCase("iOSSafari"))) {
             driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
             driver.get(url);
