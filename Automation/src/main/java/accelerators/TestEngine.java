@@ -115,7 +115,13 @@ public class TestEngine extends HtmlReportSupport{
 			//Pravalika
 		}
 		else if(browserType=="WinFirefox") {
-			//Ranga 
+			//Ranga
+
+			System.setProperty("webdriver.gecko.driver", driverPath+"geckodriver.exe");
+			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+			capabilities.setCapability("marionette",true);
+			WebDriver driver = new FirefoxDriver(capabilities);
+
 		}
 		else if(browserType=="Edge") {
 			//Sangeetha
