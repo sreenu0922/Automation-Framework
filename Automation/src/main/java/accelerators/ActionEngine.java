@@ -14,6 +14,10 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import support.Reporter;
 import support.Logger;
@@ -75,6 +79,18 @@ public class ActionEngine extends TestEngine{
 	*/
 
 }
+	//waitforelement code by Bhavya
+	
+	public  static void  waitForMobileElement( By element, long duration , WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		
+        try {
+        	new WebDriverWait(driver,20).until(ExpectedConditions.visibilityOfElementLocated(element));
+        } catch (Exception e) {
+            System.out.println("Unable to find the element " + element);
+           
+        }
+    }
 
 
 
@@ -101,6 +117,8 @@ public static void screenShot(String fileName) throws Throwable {
 	}
 }
 
+
+
 public static void fullScreenShot(String fileName) throws Exception {
 	 
 	   Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -110,4 +128,6 @@ public static void fullScreenShot(String fileName) throws Exception {
 	   ImageIO.write(image, "jpeg", new File(fileName));
 	 
 	}
+
+
 }
