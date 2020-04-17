@@ -1,5 +1,10 @@
 package accelerators;
 
+import io.appium.java_client.PerformsTouchActions;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
+import org.openqa.selenium.interactions.HasTouchScreen;
 import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.awt.Robot;
@@ -7,6 +12,8 @@ import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.sql.DriverManager;
+import java.time.Duration;
 import java.util.List;
 
 import javax.imageio.ImageIO;
@@ -15,8 +22,12 @@ import io.appium.java_client.MobileElement;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static io.appium.java_client.touch.WaitOptions.waitOptions;
 
 public class ActionEngine extends TestEngine {
     public WebDriverWait wait;
@@ -101,8 +112,26 @@ public class ActionEngine extends TestEngine {
 
     }
 
+    //Author Vinay Gajula
 
+    public static void singletTap(By locator) throws Exception {
+        TouchActions actions=new TouchActions(driver);
+        MobileElement ele = ((MobileElement) driver.findElement(locator));
+        actions.singleTap(ele).perform();
 
+    }
 
+    //Author Vinay Gajula
+       public void longPress(By locator) {
+            Actions actions = new Actions(driver);
+            MobileElement ele = ((MobileElement) driver.findElement(locator));
+            actions.clickAndHold(ele).perform();
+        }
+
+    //Author Vinay Gajula
+    public void pressByCoordinates (int x, int y) {
+        new TouchAction((PerformsTouchActions) driver).press(PointOption.point(x,y)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L))).release().perform();
+
+    }
 
 }
