@@ -120,7 +120,7 @@ public static void fullScreenShot(String fileName) throws Exception {
 
 
 
-/*
+/*@author srinivas n 17th Apr 2020.
  * Swipe up 
 	Swipe down 
 	Swipe left 
