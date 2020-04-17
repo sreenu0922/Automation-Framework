@@ -1,5 +1,10 @@
 package accelerators;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import support.ConfiguratorSupport;
 
 import java.io.File;
@@ -69,13 +74,12 @@ public class TestEngine extends HtmlReportSupport{
 	
 	public static AppiumDriver AndroidDriver = null;
 	public static AppiumDriver Iosdriver = null;
-	static RemoteWebDriver driver ;
-	
-	
+	public static WebDriver driver;
+
 	@BeforeSuite
 	public static void setupSuite() throws Throwable {
 		
-		if(browserType=="Android") {
+		if(browserType.equalsIgnoreCase("Android")) {
 			
 			DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
 			capabilitiesForAppium.setCapability("deviceName",DeviceName);
@@ -92,42 +96,59 @@ public class TestEngine extends HtmlReportSupport{
 
 
 		}
-		else if(browserType=="iOS") {
+		else if(browserType.equalsIgnoreCase("iOS")) {
 			//Sravan add for iOS
 			
 		}
 		
-		else if(browserType=="AndroidChrome") {
+		else if(browserType.equalsIgnoreCase("AndroidChrome")) {
 			//Jagadish add for AndroidChrome
 			
 		}
 		
-		else if(browserType=="iOSSafari") {
+		else if(browserType.equalsIgnoreCase("iOSSafari")) {
 			//Sravan
 		}
 	}
-	
-	
+
 	@BeforeMethod(alwaysRun = true)
 	public void setBrowerDriver() throws Throwable {
 		
-		if(browserType=="WinChrome") {
+		if(browserType.equalsIgnoreCase("WinChrome")) {
 			//Pravalika
 		}
-		else if(browserType=="WinFirefox") {
+		else if(browserType.equalsIgnoreCase("WinFirefox")) {
 			//Ranga 
 		}
-		else if(browserType=="Edge") {
+		else if(browserType.equalsIgnoreCase("Edge")) {
 			//Sangeetha
 		}
-		else if(browserType=="Safari") {
-			//Archana
+		else if(browserType.equalsIgnoreCase("safari")){
+			//enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver.
+			driver  = new SafariDriver();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+			driver.get(url);
 		}
-		else if(browserType=="MacChrome") {
-			//Archana
+		else if(browserType.equalsIgnoreCase("macChrome")) {
+			System.setProperty("webdriver.chrome.driver", "/Users/archana/Downloads/SampleWavelabsAutoProject/AutomationFramework/Automation/Drivers/chromedriver");
+			ChromeOptions chromeOptions=new ChromeOptions();
+			chromeOptions.setAcceptInsecureCerts(true);
+			driver = (new ChromeDriver(chromeOptions));
+
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+			driver.get(url);
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 		}
-		else if(browserType=="MacFirefox") {
-			//Archana
+		else if(browserType.equalsIgnoreCase("macFirefox")){
+			System.setProperty("webdriver.gecko.driver", "/Users/archana/Downloads/SampleWavelabsAutoProject/AutomationFramework/Automation/Drivers/geckodriver");
+			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+			driver.get(url);
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+
 		}
 	}
 
@@ -195,8 +216,8 @@ public class TestEngine extends HtmlReportSupport{
 				//AndroidDriver2.closeApp();
 				
 			}else{
-				driver.quit();
-				/*driver.close();*/
+				//driver.quit();
+				driver.close();
 			}
 		}
 	}
