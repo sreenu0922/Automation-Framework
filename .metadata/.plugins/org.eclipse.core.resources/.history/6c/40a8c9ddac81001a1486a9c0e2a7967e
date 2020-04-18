@@ -10,7 +10,7 @@
 
 #AndroidChrome for android web browser
 #iOSSafari for iOS web browser
-#browserType=iOSSafari
+browserType=iOSSafari
 
 browserType=macChrome
 macFirefoxDriverPath=/Drivers/geckodriver
