@@ -3,15 +3,14 @@ package testsuite;
 import org.testng.annotations.Test;
 
 public class TestClass extends HelperClass{
-	
-		/*
-		 Add test method here to test your code
-			@Test
-			public void TestSeacrh(String UserName, String Password, String Criteria) {
-		 	Login();
-		 	Search();
-		 	}
-		 */
-	
 
+
+    //@author: Archana Dasari
+    @Test
+    public void validateSignInAmazon() throws Throwable {
+
+        String password = "@lt12345";
+        String email = "8897741110";
+        amazonSignIn(url, email, password);
+    }
 }
