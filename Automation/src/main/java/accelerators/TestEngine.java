@@ -117,7 +117,14 @@ public class TestEngine extends HtmlReportSupport{
 			//Pravalika
 		}
 		else if(browserType=="WinFirefox") {
-			//Ranga 
+			//Ranga
+
+			System.setProperty("webdriver.gecko.driver", filePath());
+			WebDriver driver = new FirefoxDriver();
+			driver.get(url);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+
 		}
 		else if(browserType=="Edge") {
 			//@author by sangeethanulu
