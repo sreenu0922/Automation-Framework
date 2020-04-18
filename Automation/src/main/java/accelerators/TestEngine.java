@@ -14,6 +14,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
@@ -117,11 +119,30 @@ public class TestEngine extends HtmlReportSupport{
 		if(browserType.equalsIgnoreCase("WinChrome")) {
 			//Pravalika
 		}
+
 		else if(browserType.equalsIgnoreCase("WinFirefox")) {
 			//Ranga 
 		}
 		else if(browserType.equalsIgnoreCase("Edge")) {
 			//Sangeetha
+
+		else if(browserType=="WinFirefox") {
+			//Ranga
+
+			System.setProperty("webdriver.gecko.driver", filePath());
+			WebDriver driver = new FirefoxDriver();
+			driver.get(url);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+
+		}
+		else if(browserType=="Edge") {
+			//@author by sangeethanulu
+			System.setProperty("webdriver.edge.driver", filePath());
+			WebDriver driver = new EdgeDriver();
+			driver.get(url);
+			driver.manage().window().maximize();
+
 		}
 		else if(browserType.equalsIgnoreCase("safari")){
 			//@author: Archana Dasari
