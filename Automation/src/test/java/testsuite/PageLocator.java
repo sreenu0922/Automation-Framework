@@ -6,6 +6,11 @@ import accelerators.ActionEngine;
 
 public class PageLocator extends ActionEngine {
 	
-	public static By menu = By.xpath("//a[@aria-label='navigation menu']");
+	/*
+	 Add locators here
+	 public static By menu = By.xpath("XPATH");
 
+	 
+	 */
+			
 }

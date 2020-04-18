@@ -4,19 +4,17 @@ import org.openqa.selenium.By;
 
 public class HelperClass extends PageLocator {
 	
-	public void Login(String UserName, String Password) throws Throwable {
-		
-		click(menu, "menu option");
-		
-	}
 	
-	/*Search
+	
+	/*Add business logic and navigation method here
 	 * 
-	 * click(searchBox, "Search Box"
-	 * SendKey(searchBox, "criteria"
-	 * click(searchButton, "Search Button")
-	 * 
-	 * 
+	 Search(String Criteria){
+	 
+	 	click(searchBox, "Search Box"
+	 	SendKey(searchBox, "criteria"
+	 	click(searchButton, "Search Button")
+	 }
+	  
 	 */
 	
 	//Create user
