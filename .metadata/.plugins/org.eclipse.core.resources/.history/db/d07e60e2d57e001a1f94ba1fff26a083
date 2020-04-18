@@ -1,0 +1,17 @@
+package com.airports.malaysia;
+
+import org.openqa.selenium.By;
+
+import com.ctaf.accelerators.ActionEngine;
+
+public class helperClass extends pageLocator{
+	
+	public void Login(String userName, String Password) {
+		
+		
+		
+	}
+	
+	
+
+}

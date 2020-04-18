@@ -34,6 +34,7 @@ import java.time.Duration;
 
 import javax.imageio.ImageIO;
 
+import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import org.apache.commons.io.FileUtils;
 
@@ -47,63 +48,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 
 public class ActionEngine extends TestEngine {
-    public WebDriverWait wait;
+    public static WebDriverWait wait;
 
     public static boolean flag = false;
     static boolean b = true;
 
-    /*
-
-    example -- Click
-    */
-    @SuppressWarnings("finally")
-    public static boolean click(By locator, String locatorName) throws Throwable {
-        Thread.sleep(2000);
-        boolean flag = false;
-        try {
-            driver.findElement(locator).click();
-            flag = true;
-        } catch (Exception e) {
-            e.printStackTrace();
-        } /*finally {
-			if (!flag) {
-				Reporter.failureReport("Click", "Unable to click on " + locatorName);
-				return flag;
-			} else if (b && flag) {
-				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
-
-		}*/
-        return flag;
-    }
-	 
-
-	/*
-
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.Dimension;
-
-import io.appium.java_client.MobileDriver;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.PointOption;
-import rough.SecondClass.DIRECTION;
-import support.Reporter;
-
-
-public class ActionEngine extends TestEngine{
-
-	public static boolean flag = false;
-	public static WebDriverWait wait;
-	static boolean b = true;
-	
 	/*
 	
 	example -- Click
@@ -198,64 +147,7 @@ public class ActionEngine extends TestEngine{
 		ele = wdw.until(ExpectedConditions.elementToBeClickable(Locator));
 	}
 
-	/* 
-	 * 
-	 * 
-	 * 
-	 * 
-
-	 * use ActionClass
-	 * 
-	Tab(By Locator) AND Tab(using coordinates) -- Vinay
-	LongpressTab (By Locator)AND (using Coordinates  -- Vinay
-	DoubleTab -- Jagadishwar
-	ScrollToElement -- Jagadishwar
-	Swipe up -- Srinivas N
-	Swipe down -- Srinivas N
-	Swipe left -- Srinivas N
-	Swipe Right -- Srinivas N
-	sendKey -- Ranga
-	isElementDisplay -- Pravalika
-	WaitforElement -- Bhavya
-	draganddrop --Pravalika
-	switchWindowByTitle --Sangeetha
-	clikcOnAlert -- Sangeetha
-	*/
-
-
-
-    public static void screenShot(String fileName) throws Throwable {
-        File scrFile = ((TakesScreenshot) driver)
-                .getScreenshotAs(OutputType.FILE);
-        try {
-            // Now you can do whatever you need to do with it, for example copy
-            // somewhere
-            FileUtils.copyFile(scrFile, new File(fileName));
-            flag = true;
-        } catch (IOException e) {
-            //Assert.assertTrue(flag,"Unable to take Screenshot");
-            e.printStackTrace();
-        } finally {
-            if (!flag) {
-                //Reporter.failureReport("screenShot ", " Unable to get screenShot ");
-                System.out.println(" Unable to get TscreenShot");
-            } else if (b && flag) {
-                //Reporter.SuccessReport("screenShot ", " Able to get TscreenShot");
-                System.out.println(" Able to get TscreenShot");
-            }
-        }
-    }
-
-    public static void fullScreenShot(String fileName) throws Exception {
-
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        Rectangle screenRectangle = new Rectangle(screenSize);
-        Robot robot = new Robot();
-        BufferedImage image = robot.createScreenCapture(screenRectangle);
-        ImageIO.write(image, "jpeg", new File(fileName));
-
-    }
-
+	
     //Author Vinay Gajula
 
     public static void singletTap(By locator) throws Exception {
@@ -279,14 +171,14 @@ public class ActionEngine extends TestEngine{
 
     }
 
-}
+
 	
 	/*@author sangeethanulu
 	 
 	  SWITCH TO WINDOW BY TITLE
 	 */
 	
-	public static boolean switchWindowByTitle(String windowTitle, int count)
+	public static void switchWindowByTitle(String windowTitle, int count)
 			throws Throwable {
 		boolean flag = false;
 		try {
@@ -299,10 +191,13 @@ public class ActionEngine extends TestEngine{
 	
 			
 		} catch (Exception e) {
+		    System.out.println("Unable to switch window with title: " + windowTitle); 
+		}
+	}
       
 	//waitforelement code by Bhavya
 	
-	public  static void  waitForMobileElement( By element, long duration , WebDriver driver) {
+	public static void waitForMobileElement(By element,long duration,WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,20);
 		
         try {
@@ -313,9 +208,6 @@ public class ActionEngine extends TestEngine{
         }
     }
 
-			} 
-	return flag;
-	}
 	
 	/**
 	 * @author sangeethan
@@ -376,8 +268,6 @@ public class ActionEngine extends TestEngine{
 	}
    }
 
-   public static void fullScreenShot(String fileName) throws Exception {
-
     public static void fullScreenShot(String fileName) throws Exception {
 	 
 	   Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -387,7 +277,7 @@ public class ActionEngine extends TestEngine{
 	   ImageIO.write(image, "jpeg", new File(fileName));
 	 
 	}
-  }
+ 
 
 
 /*@author srinivas n 17th Apr 2020.
@@ -411,7 +301,7 @@ public enum DIRECTION {
 public static void swipe(MobileDriver driver, DIRECTION direction) {
    
 	
-	Dimension size = driver.manage().window().getSize();
+	org.openqa.selenium.Dimension size = driver.manage().window().getSize();
 
     int startX = 0;
     int endX = 0;

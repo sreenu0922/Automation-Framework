@@ -1,0 +1,18 @@
+package testsuite;
+
+import org.openqa.selenium.By;
+import accelerators.ActionEngine;
+
+public class PageLocator extends ActionEngine {
+<<<<<<< HEAD
+
+=======
+	
+	/*
+	 Add locators here
+	 public static By menu = By.xpath("XPATH");
+	 
+	 */
+>>>>>>> b57bf602ddaf377f8fcb4eb59bb6102c65b4057e
+			
+}

@@ -1,0 +1,60 @@
+package accelerators;
+
+import org.openqa.selenium.By;
+
+import com.ctaf.utilities.Reporter;
+
+public class ActionEngine extends TestEngine{
+	
+	/*
+	
+	example -- Click
+	*/
+	public static boolean click(By locator, String locatorName)
+			throws Throwable {
+		//explicityWait(locator, locatorName);
+		boolean flag = false;
+		try {
+			driver.findElement(locator).click();
+			flag = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (!flag) {
+				Reporter.failureReport("Click", "Unable to click on "
+						+ locatorName);
+				logger.info("Unable to click on "+ locatorName);
+				return flag;
+			} else if (b && flag) {
+				Reporter.SuccessReport("Click", "Successfully click on "
+						+ locatorName);
+				logger.info("Successfully click on "+ locatorName);
+			}
+		}
+		return flag;
+	}
+	 
+	/* 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * use ActionClass
+	 * 
+	Tab(By Locator) AND Tab(using coordinates) -- Vinay
+	LongpressTab (By Locator)AND (using Coordinates  -- Vinay
+	DoubleTab -- Jagadishwar
+	ScrollToElement -- Jagadishwar
+	Swipe up -- Srinivas N
+	Swipe down -- Srinivas N
+	Swipe left -- Srinivas N
+	Swipe Right -- Srinivas N
+	sendKey -- Ranga
+	isElementDisplay -- Pravalika
+	WaitforElement -- Bhavya
+	draganddrop --Pravalika
+	switchWindowByTitle --Sangeetha
+	clikcOnAlert -- Sangeetha
+	*/
+
+}

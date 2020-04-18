@@ -1,0 +1,8 @@
+package all.automation;
+
+public class TestClass extends HelperClass{
+	
+	
+	
+
+}

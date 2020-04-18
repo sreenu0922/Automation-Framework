@@ -1,0 +1,12 @@
+package all.automation;
+
+import support.ConfiguratorSupport;
+
+public class TestEngine{
+	
+	public static ConfiguratorSupport configProps = new ConfiguratorSupport("config.properties");
+	
+	
+	
+
+}

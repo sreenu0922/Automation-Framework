@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;bluetester-wavelabs-taf-e6fdb404dcfb&apos;" deleteContents="true" description="Delete resource &apos;bluetester-wavelabs-taf-e6fdb404dcfb&apos;" element1="/bluetester-wavelabs-taf-e6fdb404dcfb" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1562845264456"/>
+</session>
