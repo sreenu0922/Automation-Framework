@@ -7,12 +7,15 @@ import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Set;
 import java.time.Duration;
 
 import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -85,6 +88,26 @@ public class ActionEngine extends TestEngine{
 	*/
 
 }
+	
+	/*@author sangeethanulu
+	 
+	  SWITCH TO WINDOW BY TITLE
+	 */
+	
+	public static boolean switchWindowByTitle(String windowTitle, int count)
+			throws Throwable {
+		boolean flag = false;
+		try {
+			Set<String> s=driver.getWindowHandles();
+			if(s.size()>1)
+			{
+				driver.switchTo().window(windowTitle);	
+				flag = true;
+			}
+	
+			
+		} catch (Exception e) {
+      
 	//waitforelement code by Bhavya
 	
 	public  static void  waitForMobileElement( By element, long duration , WebDriver driver) {
@@ -98,7 +121,46 @@ public class ActionEngine extends TestEngine{
         }
     }
 
+			} 
+	return flag;
+	}
+	
+	/**
+	 * @author sangeethan
+	 * Verify alert present or not 
+	 * 
+	 */
+	public static boolean Alert(String par) throws Throwable {
+		boolean flag = false;
+		
+		Alert alert = driver.switchTo().alert();
 
+		try {
+             
+			if(par.equalsIgnoreCase("accept"))
+			{
+			
+			// if present consume the alert
+			alert.accept();
+			flag = true;
+			}
+			else if(par.equalsIgnoreCase("dismiss"))
+			{
+				//
+				alert.dismiss();
+				flag = true;
+			}
+			
+		} catch (NoAlertPresentException ex) {
+			// Alert present; set the flag
+
+			// Alert not present
+			ex.printStackTrace();
+		} 
+
+		return flag;
+	}
+	
 
 
 public static void screenShot(String fileName) throws Throwable {
