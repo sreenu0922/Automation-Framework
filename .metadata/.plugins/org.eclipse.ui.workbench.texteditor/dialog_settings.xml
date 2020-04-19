@@ -8,6 +8,11 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="chrome"/>
+			<item value="dpc"/>
+			<item value="bhavya"/>
+			<item value="modelversion"/>
+			<item value="mavenversion"/>
 			<item value="org.apache.log4j"/>
 			<item value="log"/>
 			<item value="logger"/>
@@ -18,11 +23,6 @@
 			<item value="testResults"/>
 			<item value="testengine.tes"/>
 			<item value="browser"/>
-			<item value="exc"/>
-			<item value="scroll"/>
-			<item value="reportportal"/>
-			<item value="androidchrome"/>
-			<item value="img"/>
 		</list>
 		<list key="replacehistory">
 			<item value="browserType"/>

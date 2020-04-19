@@ -70,6 +70,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/paramjeetsingh/eclipse-workspace/untitled folder/Automation"/>
 			<item value="/Applications/Eclipse.app/Contents/workspace/"/>
 			<item value="/Applications/Eclipse.app/Contents/workspace/Automation/wavelabs-mobile-automation-framework-master"/>
 			<item value="/Applications/Eclipse.app/Contents/workspace/wavelabs-taf"/>

@@ -407,7 +407,7 @@ public static boolean ScrollToElement(By locator, String locatorName) throws Thr
 		while((!temp) && (i<30)){
 		swipeVertical(0.8,0.1,0.9, 2000);
 		Thread.sleep(500);
-		temp = isElementPresent(locator, locatorName);
+		temp = isElementPresent(locator);
 		System.out.println(temp);
 		i++;
 		}
@@ -447,7 +447,7 @@ public static void swipeVertical(double startPercentage, double finalPercentage,
 }
 
 
-public static Boolean isElementPresent(By locator, String locatorName) {
+public static Boolean isElementPresent(By locator) {
 	Boolean flag = false;
 	try {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -458,16 +458,16 @@ public static Boolean isElementPresent(By locator, String locatorName) {
 		// e.printStackTrace();
 	} finally {
 		if (!flag) {
-			System.out.println("Element is not present: "+locatorName);
+			System.out.println("Element is not present");
 		} else {
-			System.out.println("Element is present: " +locatorName);
+			System.out.println("Element is present");
 		}
 	}
 
 	return flag;
 }
 
-public static Boolean isElementDisplayed(By locator, String locatorName) {
+public static Boolean isElementDisplayed(By locator) {
 	Boolean flag = false;
 	try {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -478,9 +478,9 @@ public static Boolean isElementDisplayed(By locator, String locatorName) {
 		// e.printStackTrace();
 	} finally {
 		if (!flag) {
-			System.out.println("Element is not display: " +locatorName);
+			System.out.println("Element is not display");
 		} else {
-			System.out.println("Element is display "+ locatorName);
+			System.out.println("Element is display");
 		}
 	}
 
