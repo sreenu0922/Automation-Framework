@@ -294,6 +294,17 @@ public class ActionEngine extends TestEngine {
         new TouchAction((PerformsTouchActions) driver).press(PointOption.point(x,y)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L))).release().perform();
 
     }
+    
+    //Author Sreeranga
+	public void sendkey(WebElement w, String text) {
+		try {
+			w.click();
+			w.clear();
+			w.sendKeys(text);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 
 	
