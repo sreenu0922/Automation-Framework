@@ -2,6 +2,7 @@ package accelerators;
 
 
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.MobilePlatform;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +13,7 @@ import support.ConfiguratorSupport;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -19,6 +21,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
@@ -144,10 +147,27 @@ public class TestEngine extends HtmlReportSupport {
                 e.printStackTrace();
                 System.out.println("Failed launching app......");
             }
-        } else if (browserType == "AndroidChrome") {
-            //Jagadish add for AndroidChrome
+        } else if (browserType.equalsIgnoreCase("AndroidChrome")) {
 
-        }
+			try {
+				DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
+				capabilitiesForAppium.setCapability("deviceName", DeviceName);
+				capabilitiesForAppium.setCapability(CapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
+				capabilitiesForAppium.setCapability("platformVersion", AndroidplatformVersion);
+				//capabilitiesForAppium.setCapability(MobileCapabilityType.BROWSER_NAME, BrowserType.CHROME);
+				capabilitiesForAppium.setCapability("appPackage", "com.android.chrome");
+				capabilitiesForAppium.setCapability("appActivity", "com.google.android.apps.chrome.Main");
+				AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
+						capabilitiesForAppium);
+				driver = (AndroidDriver);
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
         /*
         Author Sravan Reddy
         */
@@ -189,13 +209,10 @@ public class TestEngine extends HtmlReportSupport {
 
         if (browserType == "WinChrome") {
             //Pravalika
-        } else if (browserType == "WinFirefox") {
-            //Ranga
-        } else if (browserType == "Edge") {
+        }else if (browserType == "Edge") {
             //Sangeetha
-        }
-		else if(browserType=="WinFirefox") {
-			//Ranga
+        }else if(browserType=="WinFirefox") {
+			//@author by Ranga
 
 			System.setProperty("webdriver.gecko.driver", filePath());
 			WebDriver driver = new FirefoxDriver();
