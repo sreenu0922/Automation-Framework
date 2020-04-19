@@ -178,7 +178,6 @@ public class ActionEngine extends TestEngine {
 			w.clear();
 			w.sendKeys(text);
 		} catch (Exception e) {
-			
 			e.printStackTrace();
 		}
 	}
