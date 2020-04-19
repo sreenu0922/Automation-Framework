@@ -1,0 +1,36 @@
+package all.automation;
+
+
+
+public class ActionEngine {
+	
+	/*
+	
+	example -- Click
+	public static boolean click(By locator, String locatorName)
+			throws Throwable {
+		explicityWait(locator, locatorName);
+		try {
+			driver.findElement(locator).click();
+			flag = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+	}
+	 
+	 
+	Tab --
+	Longpress --
+	DoubleTab --
+	ScrollToElement ---
+	Swipe --
+	sendKey --
+	isElementDisplay --
+	WaitforElement ---
+	draganddrop ---
+	switchWindowByTitle --
+	clikcOnAlert ---
+
+	*/
+
+}

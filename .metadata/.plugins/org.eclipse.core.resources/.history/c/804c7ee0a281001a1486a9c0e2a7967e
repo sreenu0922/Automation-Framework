@@ -1,0 +1,26 @@
+package testsuite;
+
+import org.openqa.selenium.By;
+
+public class HelperClass extends PageLocator {
+<<<<<<< HEAD
+	
+	
+	
+	/*Add business logic and navigation method here
+	 * 
+	 Search(String Criteria){
+	 
+	 	click(searchBox, "Search Box"
+	 	SendKey(searchBox, "criteria"
+	 	click(searchButton, "Search Button")
+	 }
+	  
+	 */
+	
+	//Create user
+	
+=======
+>>>>>>> 85b4378de8e086213bddb771d9be214b0aa6b072
+
+}
