@@ -5,8 +5,10 @@ import org.testng.annotations.Test;
 public class TestClass extends HelperClass{
 
 @Test
-public void test() {
-	
+public void test() throws Throwable {
+ //Written by Vinay Gajula
+ Care();
+
 }
- 
+
 }
