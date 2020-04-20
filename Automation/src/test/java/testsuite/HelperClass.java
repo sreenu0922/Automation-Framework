@@ -7,7 +7,7 @@ public class HelperClass extends PageLocator {
 	// Navigate to use my backup days
 	public void navigatetousemybackupdays() throws Throwable {
 		click(BackUpDays,"Backupdays");
-
+		
 	}
 	
 	// NAvigate to Book Now Button
