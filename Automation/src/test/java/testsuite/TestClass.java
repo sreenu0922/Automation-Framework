@@ -7,7 +7,11 @@ public class TestClass extends HelperClass{
 @Test
 public void test() throws Throwable {
  //Written by Vinay Gajula
- Care();
+ SelectChild();
+
+ CareReason();
+
+ CareType();
 
 }
 
