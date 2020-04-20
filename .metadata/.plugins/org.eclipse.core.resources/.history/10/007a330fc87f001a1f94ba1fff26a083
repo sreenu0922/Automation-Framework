@@ -1,0 +1,15 @@
+package all.automation;
+
+public class TestClass extends HelperClass{
+	
+	@Test
+	public void TestSeacrh(String UserName, String Password, String Criteria) {
+		/*
+		 * Login();
+		 * Search();
+		 */
+		
+		
+	}
+
+}

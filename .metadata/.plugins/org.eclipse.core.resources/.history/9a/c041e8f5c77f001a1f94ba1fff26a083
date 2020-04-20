@@ -1,0 +1,14 @@
+package all.automation;
+
+import org.openqa.selenium.By;
+
+public class HelperClass extends PageLocator {
+	
+	public void Login(String UserName, String Password) throws Throwable {
+		
+		click(menu, "menu option");
+		
+	}
+	
+
+}
