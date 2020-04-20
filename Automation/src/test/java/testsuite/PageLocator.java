@@ -12,6 +12,7 @@ public class PageLocator extends ActionEngine {
 	//select BookNow Button
 	public static By BookNow = By.id("ctabutton");
 	
+	
 	}
 
 
