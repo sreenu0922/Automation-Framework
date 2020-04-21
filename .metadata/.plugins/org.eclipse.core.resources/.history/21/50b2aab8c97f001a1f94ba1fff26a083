@@ -1,0 +1,107 @@
+package all.automation;
+
+import support.ConfiguratorSupport;
+
+import java.lang.reflect.Method;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.ITestContext;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
+
+public class TestEngine{
+	
+	public static ConfiguratorSupport configProps = new ConfiguratorSupport("config.properties");
+	
+	public static String url = configProps.getProperty("DeviceName");
+	public static String browserType = configProps.getProperty("browserType");
+	public static String iOSDeviceName = configProps.getProperty("iOSDeviceName");
+	public static String iOSplatformName = configProps.getProperty("iOSplatformName");
+	public static String iOSplatformVersion = configProps.getProperty("iOSplatformVersion");
+	public static String UDID = configProps.getProperty("UDID");
+	public static String iOSappPath = configProps.getProperty("iOSappPath");
+	public static String AndroidDeviceName = configProps.getProperty("AndroidDeviceName");
+	public static String AndroidplatformName = configProps.getProperty("AndroidplatformName");
+	public static String AndroidplatformVersion = configProps.getProperty("AndroidplatformVersion");
+	public static String appPackage = configProps.getProperty("appPackage");
+	public static String appActivity = configProps.getProperty("appActivity");
+	public static String apkPath = configProps.getProperty("apkPath");
+	
+	public static AppiumDriver AndroidDriver = null;
+	public static AppiumDriver Iosdriver = null;
+	static RemoteWebDriver driver ;
+	
+	
+	
+	@BeforeSuite
+	public static void setupSuite() throws Throwable {
+		
+		if(browserType=="Android") {
+			
+			DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
+			capabilitiesForAppium.setCapability("deviceName",AndroidDeviceName);
+			capabilitiesForAppium.setCapability("platformName","AndroidplatformName");
+			capabilitiesForAppium.setCapability("platformVersion",AndroidplatformVersion);
+			capabilitiesForAppium.setCapability("deviceName",AndroidDeviceName);
+			capabilitiesForAppium.setCapability("appPackage", appPackage);
+			capabilitiesForAppium.setCapability("appActivity", appActivity);
+			capabilitiesForAppium.setCapability("app",apkPath);
+			
+			AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
+					capabilitiesForAppium);
+			driver = (AndroidDriver);
+			driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
+
+
+		}
+		else if(browserType=="iOS") {
+			//Sravan add for iOS
+			
+		}
+		
+		else if(browserType=="AndroidChrome") {
+			//Jagadish add for AndroidChrome
+			
+		}
+		
+		else if(browserType=="iOSSafari") {
+			//Sravan
+		}
+	}
+	
+	
+	@BeforeMethod(alwaysRun = true)
+	public void setBrowerDriver() throws Throwable {
+		
+		if(browserType=="WinChrome") {
+			//Pravalika
+		}
+		else if(browserType=="WinFirefox") {
+			//Srinivas nelluri 
+		}
+		else if(browserType=="Edge") {
+			//Sangeetha
+		}
+		else if(browserType=="Safari") {
+			//Archana
+		}
+		else if(browserType=="MacChrome") {
+			//Archana
+		}
+		else if(browserType=="MacFirefox") {
+			//Archana
+		}
+	}
+
+	
+
+}

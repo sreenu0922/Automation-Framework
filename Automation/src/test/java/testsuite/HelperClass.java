@@ -1,25 +1,20 @@
 package testsuite;
 
-import org.openqa.selenium.By;
-
 public class HelperClass extends PageLocator {
+
 	
-	public void Login(String UserName, String Password) throws Throwable {
-		
-		click(menu, "menu option");
+	//Author Sreeranga
+	// Navigate to use my backup days
+	public void navigatetousemybackupdays() throws Throwable {
+		click(BackUpDays,"Backupdays");
 		
 	}
 	
-	/*Search
-	 * 
-	 * click(searchBox, "Search Box"
-	 * SendKey(searchBox, "criteria"
-	 * click(searchButton, "Search Button")
-	 * 
-	 * 
-	 */
-	
-	//Create user
-	
+	// NAvigate to Book Now Button
+	public void navigatetoBookNow() throws Throwable {
+
+		click(BookNow , "BookNowButton");
+
+	}
 
 }

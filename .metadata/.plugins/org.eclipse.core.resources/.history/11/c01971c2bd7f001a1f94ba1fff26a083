@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.automation.all</groupId>
+  <artifactId>all.automation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+	<dependencies>
+	
+	
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>4.1.2</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi-ooxml</artifactId>
+	    <version>4.1.2</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
+	<dependency>
+	    <groupId>org.apache.xmlbeans</groupId>
+	    <artifactId>xmlbeans</artifactId>
+	    <version>3.1.0</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
+	<dependency>
+	    <groupId>net.sourceforge.jexcelapi</groupId>
+	    <artifactId>jxl</artifactId>
+	    <version>2.6.12</version>
+	</dependency>
+
+	
+	</dependencies>
+	
+
+  
+  
+</project>
