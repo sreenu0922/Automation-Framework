@@ -49,101 +49,79 @@ public class HelperClass extends PageLocator {
 	 * Question(String titel,boolean flag,String description)
 	 * describe
 	 */
-	public void navigateToPreferredCenters()
+	public void navigateToPreferredCenters() 
 	{
-		try{
+		
 		click(lsChoseCareCenterType1,"A Care@Work Backup Care center");
 			
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
 		}
-	
-	public void navigateToAboutYourCenter()
+	//@author srinivas n 22nd April 2020
+	public void navigateToAboutYourCenter() 
 	{
-		try{
+		
 		click(lsChooseCareCenterType2,"A child care center of my choosing");
 			
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+	
 		}
-	public void networkCenter(String BussinessName,String Zipcode,String PhoneNumber,String Totaldailycost){
-		try {
+	
+	//@author srinivas n 22nd April 2020
+	public void addNetworkCenter(String BussinessName,String Zipcode,String PhoneNumber,String Totaldailycost){
+		
 			type(txtBusineesName,BussinessName,"Bussiness Name");
 			type(txtZipcode,Zipcode,"Zipcode");
 			type(txtPhonenumber,PhoneNumber,"Phone Number ");
 			type(txtTotalDailyCost,Totaldailycost,"Totaldaily cost ");
 			
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
+	
+	//@author srinivas n 22nd April 2020
+	public void navigateToReviewYourClaim()
+	{
+	
+		click(btnNext1,"Next button in Tell us about your center");
 		
 	}
 	
-	public void navigateToReviewYourClaim()
-	{
-		try{
-		click(btnNext1,"Next button in Tell us about your center");
-			
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	}
+	//@author srinivas n 22nd April 2020
 	public void navigateToYouAreAllSet()
 	{
-		try{
+		
 		click(chkConfirm,"Check mark for confirm");
 		
 		click(btnSubmit,"Submit button in Review your claim");
 			
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
 	}
 	
+	//@author srinivas n 22nd April 2020
 	public void navigateBackToHome()
 	{
-		try{
+		
 				
 		click(btnGoBackToHome,"Go back to home button in You're all set");
 			
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+	
 	}
 	
+	
+	//@author srinivas n 22nd April 2020
 	// Refresh preferred centers list based on location and radius
 	
 	public void refreshPreferedCenters(String location,String radius)
 	{
-		try{
+		
 				
 		click(btnRefine,"Refine buutton");
 		type(frmLocation,location,"loation zipcode");
 		
 		type(frmSearchRadius,radius,"Radius in miles");
 		
-		//click(frmSearchRadius,"Search Radius");
-		
-		//type(milespDropdown,radius,"Radius in miles");
-		
-		//click(btnMilesDone,"Done in miles dropdown");
-		
+				
 		click(BtnDone,"Done button");
 			
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
 	}
 	
+	
+	//@author srinivas n 22nd April 2020
 public void selectCareCenter(int index)
 	
 	{
@@ -151,37 +129,32 @@ public void selectCareCenter(int index)
 		elements.get(index).click();
 	}
 	
+//@author srinivas n 22nd April 2020
 	// Navigate to Add emergency contacts screen
-	public void navigateEmergenyContact()
+	public void navigateToEmergenyContact()
 	{
-		try{
+		
 				
 		click(btnNext,"Next button");
 			
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
 	}
 	
-	
+	//@author srinivas n 22nd April 2020
 	//relationship is : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
-	public void primmaryContact(String phoneNumber,String relationship){
-		try {
+	public void addPrimmaryContact(String phoneNumber,String relationship){
+		
 			type(txtYourPhoneNumber,phoneNumber,"Phone Number");
 			type(ddlPrimaryContactRelationship,relationship,"Relationship to child");
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 	
 	
 	
-	
+	//@author srinivas n 22nd April 2020
 	//"Relationship to child : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
-	public void backupContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String city,String relationship,Boolean b){
-		try {
+	//@param Boolean flag = true then select checkbox can pickup/drop off child
+	public void addBackupContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String city,String relationship,Boolean flag){
+	
 			type(txtFirstName,firstName,"FirstName");
 			type(txtLastName,lastName,"LastName");
 			type(txtPhoneNumber,phoneNumber,"Phone Number");
@@ -189,51 +162,43 @@ public void selectCareCenter(int index)
 			type(txtAddressLine2,phoneNumber,"Phone Number");
 			type(txtCityState,relationship,"Relationship to child");
 			type(ddlRelationshipToChild,phoneNumber,"Phone Number");
-			if(b)
+			if(flag)
 			click(rdoCanPickupChild,"Relationship to child");
 			
 			click(btnBackupContactDone1,"Done");
 			
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 	
-	
+	//@author srinivas n 22nd April 2020
 // navigate to pediatrician & insurance information
 	
-	public void navigatePediatrician()
+	public void navigateToPediatrician()
 	{
-		try{
+		
 				
 		click(btnBackupContactsNext,"Next button");
 			
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+	
 	}
 	
-	
+	//@author srinivas n 22nd April 2020
 	//Date Of Last Visit:date format DD/MM/YYYY eg: 21/10/2019
-	public void pediatricianInfo(String pediatricianName,String numeber,String Date){
+	public void addPediatricianInfo(String pediatricianName,String numeber,String Date){
 		
-		try {
+		
 		type(txtPediatricianName,pediatricianName,"Pediatrician Name");
 		
-			type(txtPediatricianPhoneNumber,numeber,"Pediatrician Phone Number");
+		type(txtPediatricianPhoneNumber,numeber,"Pediatrician Phone Number");
 		
 		type(txtDateOfLastVisit,Date,"Date Of Last Visit");
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 	
-public void hospitalInfo(String hospitalName,String address,String address1,String zipcode){
+	//@author srinivas n 22nd April 2020
+public void addHospitalInfo(String hospitalName,String address,String address1,String zipcode){
 		
-		try {
+		
 			type(txtHospitalName,hospitalName,"Hospital Name");
 		
 			type(txtHospitalAddressLine1,address,"Hospital Address Line1");
@@ -241,63 +206,50 @@ public void hospitalInfo(String hospitalName,String address,String address1,Stri
 			type(txtHospitalAddressLine2,address1,"Hospital Address Line2");
 		
 			type(txtHospitalZip,zipcode,"Hospital Zip code");
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-public void insuranceInfo(String insuranceCompany,String policyNumber){
-	
-	try {
 		
+	}
+//@author srinivas n 22nd April 2020
+public void addInsuranceInfo(String insuranceCompany,String policyNumber){
+	
 		type(txtInsuranceCompanyName,insuranceCompany,"Insurance Company Name");
 	
 		type(txtInsurancePolicyNumber,policyNumber,"Insurance Policy Number");
 	
-		} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
 	}
-}
 
+//@author srinivas n 22nd April 2020
 //Navigation for  history of allergies? question screen
 
-public void navigateAllergiesQuestion()
+public void navigateToAllergiesQuestion()
 {
-	try{
+	
 			
 	click(btnPediationNext,"Next button");
 		
-} catch (Throwable e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
+
 }
 
 
-public void Question(String titel,boolean flag)
+public void selectQuestion(String titel,boolean flag)
 {
-	try {
+	
 	if(flag)
 		
 			click(btnYesButton,"Yes button");
 		
 	else
 		click(btnNoButton,"No button");
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+	
 }
 
 
 
 	
-public void allergyInfo(int option,String allergyDetails, String reactionDetail)
+public void addAllergyInfo(int option,String allergyDetails, String reactionDetail)
 {
-	try {
-		switch(option){
+	
+	switch(option){
+	
 	case 1:
 		
 			click(chkMedications,"Medications");
@@ -334,18 +286,13 @@ public void allergyInfo(int option,String allergyDetails, String reactionDetail)
 		System.out.println("There is no value");
 		}
 	
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		
 	}
-}
 
 //Special needs information 1-12 options available
-public void specialNeedInfo(int option)
+public void selectSpecialNeedInfo(int option)
 {
-	try {
-		switch(option){
+	switch(option){
+	
 	case 1:
 		
 			click(chkPhysical,"Physical therapy");
@@ -395,47 +342,33 @@ public void specialNeedInfo(int option)
 		System.out.println("There is no value");
 		}
 	
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		
-	}
 	
-	try {
+
 		click(btnSpecialNeedNext,"Special Need Next");
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+
 }
 
 
-public void Question(String titel,boolean flag,String description)
+public void selectQuestion(String titel,boolean flag,String description)
 {
-	try {
+
 	if(flag)
 	{
 			click(btnYesButton,"Yes button");
-	describe(description);
+	addDescribe(description);
 	}	
 	else
 		click(btnNoButton,"No button");
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+	
 }
 
-public void describe(String description)
+public void addDescribe(String description)
 {
-	try {
+	
 		type(txtDescriptio,description,"type description");
 		
 		click(btnDescriptionNext,"Next button");
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+	
 	
 }
 }
