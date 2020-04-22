@@ -1,6 +1,8 @@
 package testsuite;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import accelerators.ActionEngine;
 
 public class PageLocator extends ActionEngine {
@@ -8,7 +10,8 @@ public class PageLocator extends ActionEngine {
 	/*@author : sangeethan
 	page locators for activate your account
 	*/
-	public static By birthdate = By.xpath("//*[contains(@resource-id,'dynamic_view_layout')]");
+	public static By birthdate = By.xpath("//*[contains(@resource-id,'date_edit_text')]");
+	public static By okdate = By.xpath("//*[contains(@resource-id,'ok')]");
 	public static By firstname = By.xpath("//*[contains(@resource-id,'first_name')]");
 	public static By lastname = By.xpath("//*[contains(@resource-id,'last_name')]");
 	public static By homeaddress = By.xpath("//*[contains(@resource-id,'address')]");
