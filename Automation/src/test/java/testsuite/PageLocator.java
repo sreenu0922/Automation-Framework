@@ -27,7 +27,7 @@ public class PageLocator extends ActionEngine {
 	
 
 	//select care center type 2(tell us about your center) app displaying list of care centers
-	By txtBusineesName = By.id("full_name_edt");
+	public static By txtBusineesName = By.id("full_name_edt");
 	public static By txtZipcode= By.id("city_state_zip");
 	public static By txtPhonenumber=By.id("phone_number");
 	public static By txtTotalDailyCost=By.id("dolar_rate");
@@ -140,6 +140,9 @@ public class PageLocator extends ActionEngine {
 	By chkRespiratory = By.xpath("(//*[@class='android.widget.CheckBox'])[3]");
 	By chkBeesting = By.xpath("(//*[@class='android.widget.CheckBox'])[4]");
 	By chkOtherr = By.xpath("(//*[@class='android.widget.CheckBox'])[5]");
+	
+	By txtAllergyDetail = By.id("allergy_detail");
+	By txtReactionDetail = By.id("reaction_detail");
 	
 	//Special needs information
 	public static By txtSpecialNeedsTitle = By.id("title");
