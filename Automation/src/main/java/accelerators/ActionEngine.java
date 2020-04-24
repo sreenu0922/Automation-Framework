@@ -56,8 +56,15 @@ public class ActionEngine extends TestEngine {
 	 * example -- Click
 	 */
 	@SuppressWarnings("finally")
+
+	//comment removed throws Throwable @srinivas
+	public static boolean click(By locator, String locatorName)
+			 {
+		//explicityWait(locator, locatorName);
+
 	public static boolean click(By locator, String locatorName) throws Throwable {
 		// explicityWait(locator, locatorName);
+
 		boolean flag = false;
 		try {
 			driver.findElement(locator).click();
@@ -193,7 +200,8 @@ public class ActionEngine extends TestEngine {
 	}
 
 	//@author:Archana Dasari
-	public static boolean type(By locator, String testdata, String locatorName) throws Throwable {
+	//comment removed throws Throwable @srinivas
+	public static boolean type(By locator, String testdata, String locatorName)  {
 		explicityWait(locator, locatorName);
 		try {
 			WebElement we = driver.findElement(locator);
@@ -217,7 +225,7 @@ public class ActionEngine extends TestEngine {
 		return flag;
 	}
 	//@author:Archana Dasari
-	public static void explicityWait(By Locator, String locatorName) throws InterruptedException {
+	public static void explicityWait(By Locator, String locatorName)  {
 		WebDriverWait wdw = new WebDriverWait(driver, 180);
 		WebElement ele = null;
 		ele = wdw.until(ExpectedConditions.elementToBeClickable(Locator));
@@ -524,10 +532,12 @@ public static Boolean isElementDisplayed(By locator, String locatorName) {
 	return flag;
 }
 
+
 public static void scrollTo(String selector, int typ) {
 	((FindsByAndroidUIAutomator<MobileElement>) driver)
 			.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + typ
 					+ ")).scrollIntoView(new UiSelector().text(\"" + selector + "\").instance(0))");
 
 }
+
 }
