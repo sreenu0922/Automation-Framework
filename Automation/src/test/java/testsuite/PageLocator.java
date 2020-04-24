@@ -23,6 +23,10 @@ public class PageLocator extends ActionEngine {
 		public static  By year(String year) {
 			return  By.xpath("//*[@text='"+year+"']");
 			}
+		public static By date1(String month, String day) {
+			return By.xpath("//*[contains(@text,'"+month+" "+day+"')]");
+		}
+		public static String date = "//*[contains(@text,'#')]";
 		public static By dateOk = By.xpath("//*[contains(@text,'OK')]");
 		public static By datecontinue = By.xpath("//*[contains(@text,'Continue')]");
 		
