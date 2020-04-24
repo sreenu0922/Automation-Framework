@@ -19,6 +19,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.CapabilityType;
@@ -37,10 +39,11 @@ import support.ReportStampSupport;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.remote.MobilePlatform;
 
 
-
-public class TestEngine extends HtmlReportSupport {
+	public class TestEngine extends HtmlReportSupport {
 
     public static int stepNum = 0;
     public static int PassNum = 0;
@@ -87,6 +90,7 @@ public class TestEngine extends HtmlReportSupport {
         if (browserType.equalsIgnoreCase("Android")) {
 
             DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
+            System.out.println(DeviceName);
             capabilitiesForAppium.setCapability("deviceName", DeviceName);
             capabilitiesForAppium.setCapability("platformName", AndroidplatformName);
             capabilitiesForAppium.setCapability("platformVersion", AndroidplatformVersion);
@@ -260,6 +264,7 @@ public class TestEngine extends HtmlReportSupport {
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 			driver.get(url);
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+
 		}
 		else if ((browserType.equalsIgnoreCase("AndroidChrome")) | (browserType.equalsIgnoreCase("iOSSafari"))) {
             driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
@@ -268,72 +273,66 @@ public class TestEngine extends HtmlReportSupport {
 	}
 
 	public static String filePath() {
-		String strDirectoy = "";		
+		String strDirectoy = "";
 		if (browserType.equalsIgnoreCase("ie")) {
-			strDirectoy = "IE"+File.separator+"IE";
+			strDirectoy = "IE" + File.separator + "IE";
 		} else if (browserType.equalsIgnoreCase("firefox")) {
-			strDirectoy = "Firefox"+File.separator+"Firefox";
-		} else if(browserType.equalsIgnoreCase("chrome")){
-			strDirectoy = "Chrome"+File.separator+"Chrome";
-		}else if(browserType.equalsIgnoreCase("edge")){
-			strDirectoy = "Edge"+File.separator+"Edge";
-		}else if(browserType.equalsIgnoreCase("Android")){
-			strDirectoy = "Android"+File.separator+"Android";
-		}else if(browserType.equalsIgnoreCase("iphone")){
-			strDirectoy = "iPhone"+File.separator+"iPhone";
-		}else if(browserType.equalsIgnoreCase("AndroidChrome")){
-			strDirectoy = "AndroidChrome"+File.separator+"AndroidChrome";
-		}else if(browserType.equalsIgnoreCase("iPhoneSafari")){
-			strDirectoy = "iPhoneSafari"+File.separator+"iPhoneSafari";
+			strDirectoy = "Firefox" + File.separator + "Firefox";
+		} else if (browserType.equalsIgnoreCase("chrome")) {
+			strDirectoy = "Chrome" + File.separator + "Chrome";
+		} else if (browserType.equalsIgnoreCase("edge")) {
+			strDirectoy = "Edge" + File.separator + "Edge";
+		} else if (browserType.equalsIgnoreCase("Android")) {
+			strDirectoy = "Android" + File.separator + "Android";
+		} else if (browserType.equalsIgnoreCase("iphone")) {
+			strDirectoy = "iPhone" + File.separator + "iPhone";
+		} else if (browserType.equalsIgnoreCase("AndroidChrome")) {
+			strDirectoy = "AndroidChrome" + File.separator + "AndroidChrome";
+		} else if (browserType.equalsIgnoreCase("iPhoneSafari")) {
+			strDirectoy = "iPhoneSafari" + File.separator + "iPhoneSafari";
 		}
 
-	if (strDirectoy != "") {
-		new File(configProps.getProperty("screenShotPath") + strDirectoy
-				+ "_" + timeStamp).mkdirs();
+		if (strDirectoy != "") {
+			new File(configProps.getProperty("screenShotPath") + strDirectoy + "_" + timeStamp).mkdirs();
+		}
+
+		File results = new File(configProps.getProperty("screenShotPath") + strDirectoy + "_" + timeStamp
+				+ File.separator + "Screenshots");
+		if (!results.exists()) {
+			results.mkdir();
+			HtmlReportSupport.copyLogos();
+		}
+
+		return configProps.getProperty("screenShotPath") + strDirectoy + "_" + timeStamp + File.separator;
+
 	}
 
-	File results = new File(configProps.getProperty("screenShotPath") + strDirectoy
-		+ "_" + timeStamp+File.separator+"Screenshots");
-	if(!results.exists())
-	{
-		results.mkdir();
-		HtmlReportSupport.copyLogos();
-	}
-
-	return configProps.getProperty("screenShotPath") + strDirectoy + "_"
-			+ timeStamp + File.separator;
-
-}
-	
-	
 	@AfterMethod(alwaysRun = true)
-	public static void tearDownMethod() throws Throwable
-	{
-		try{
-		ReportStampSupport.calculateTestCaseExecutionTime();
-		closeDetailedReport();
-		if(FailNum!=0)
-		{
-			failCounter=failCounter+1;
-			testResults.put(HtmlReportSupport.tc_name, "FAIL");
-		}
-		else
-		{
-			testResults.put(HtmlReportSupport.tc_name, "PASS");
-			passCounter=passCounter+1;
-		}
-		}catch(Exception e){
+	public static void tearDownMethod() throws Throwable {
+		try {
+			ReportStampSupport.calculateTestCaseExecutionTime();
+			closeDetailedReport();
+			if (FailNum != 0) {
+				failCounter = failCounter + 1;
+				testResults.put(HtmlReportSupport.tc_name, "FAIL");
+			} else {
+				testResults.put(HtmlReportSupport.tc_name, "PASS");
+				passCounter = passCounter + 1;
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			if ((browserType.toLowerCase().contains("iphone"))) {
-				//Iosdriver.closeApp();
-			}else if(browserType.toLowerCase().contains("android")){ 
-				//AndroidDriver2.closeApp();
-				
-			}else{
-				//driver.quit();
-				driver.close();
+
+				// Iosdriver.closeApp();
+			} else if (browserType.toLowerCase().contains("android")) {
+				// AndroidDriver2.closeApp();
+
+			} else {
+				driver.quit();
+				/* driver.close(); */
 			}
+
 		}
 	}
 
