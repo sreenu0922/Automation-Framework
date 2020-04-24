@@ -87,6 +87,7 @@ public class TestEngine extends HtmlReportSupport {
         if (browserType.equalsIgnoreCase("Android")) {
 
             DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
+            System.out.println(DeviceName);
             capabilitiesForAppium.setCapability("deviceName", DeviceName);
             capabilitiesForAppium.setCapability("platformName", AndroidplatformName);
             capabilitiesForAppium.setCapability("platformVersion", AndroidplatformVersion);
