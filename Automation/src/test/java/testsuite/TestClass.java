@@ -7,12 +7,6 @@ public class TestClass extends HelperClass{
 @Test
 public void testAppointment() {
 	
-	/*
-	 
-	 navigateToMyKId();
-	 scheduleAppointment(); 
-	  
-	 */
 	
 }
  
