@@ -1,7 +1,0 @@
-package all.automation;
-
-public class PageLocator extends ActionEngine {
-	
-
-
-}
