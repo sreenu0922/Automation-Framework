@@ -27,7 +27,6 @@
 <fullyQualifiedTypeName name="org.junit.rules.Timeout"/>
 <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.safari.SafariDriver"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.remote.CapabilityType"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="com.ctaf.accelerators.ActionEngine"/>
 <fullyQualifiedTypeName name="support.ConfiguratorSupport"/>
@@ -36,4 +35,7 @@
 <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
 <fullyQualifiedTypeName name="testsuite.HelperClass"/>
 <fullyQualifiedTypeName name="io.appium.java_client.MobileDriver"/>
+<fullyQualifiedTypeName name="java.net.MalformedURLException"/>
+<fullyQualifiedTypeName name="io.appium.java_client.remote.MobilePlatform"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.remote.CapabilityType"/>
 </qualifiedTypeNameHistroy>

@@ -4,15 +4,13 @@ import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
-import org.openqa.selenium.interactions.HasTouchScreen;
+import support.Reporter;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import support.Reporter;
 
 import javax.imageio.ImageIO;
 import java.awt.Dimension;
@@ -23,29 +21,29 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-import java.sql.DriverManager;
 import java.time.Duration;
 import java.util.List;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.Set;
-import java.time.Duration;
 
 
-import javax.imageio.ImageIO;
-
+import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
-import org.apache.commons.io.FileUtils;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.*;
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.touch.TouchActions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import static io.appium.java_client.touch.WaitOptions.waitOptions;
 
 public class ActionEngine extends TestEngine {
     public static WebDriverWait wait;
@@ -54,14 +52,17 @@ public class ActionEngine extends TestEngine {
     static boolean b = true;
 
 	/*
-	
-	example -- Click
-	*/
+	 * 
+	 * example -- Click
+	 */
 	@SuppressWarnings("finally")
+
 	//comment removed throws Throwable @srinivas
 	public static boolean click(By locator, String locatorName)
 			 {
 		//explicityWait(locator, locatorName);
+	
+
 		boolean flag = false;
 		try {
 			driver.findElement(locator).click();
@@ -70,17 +71,96 @@ public class ActionEngine extends TestEngine {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			/*if (!flag) {
-				Reporter.failureReport("Click", "Unable to click on "
-						+ locatorName);
+
+			if (!flag) {
+				//Reporter.failureReport("Click", "Unable to click on " + locatorName);
 				return flag;
 			} else if (b && flag) {
-				Reporter.SuccessReport("Click", "Successfully click on "
-						+ locatorName);
+				//Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
 
 			}
-*/        return flag;
+			return flag;
 		}
+	}
+
+	
+	
+
+	//Jagadish
+	public static boolean ScrollToElement(By locator, String locatorName) throws Throwable {
+		// explicityWait(locator, locatorName);
+		boolean flag = false;
+		boolean temp;
+		try {	
+			int i=1;
+			temp =  isElementDisplayed(locator,locatorName);
+			System.out.println(temp);
+			while((!temp) && (i<30)){
+			swipeVertical(0.8,0.1,0.9, 2000);
+			Thread.sleep(500);
+			temp = isElementPresent(locator, locatorName);
+			System.out.println(temp);
+			i++;
+			}
+			if(i==30) {
+				flag = false;
+			}else {
+				flag = true;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			/*if (!flag) {
+				Reporter.failureReport("Click", "Unable to click on " + locatorName);
+				return flag;
+			} else if (b && flag) {
+				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
+			}*/
+			
+		}
+		return flag;
+	}
+	
+
+	public static void screenShot(String fileName) throws Throwable {
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		try {
+			// Now you can do whatever you need to do with it, for example copy
+			// somewhere
+			FileUtils.copyFile(scrFile, new File(fileName));
+			flag = true;
+		} catch (IOException e) {
+			// Assert.assertTrue(flag,"Unable to take Screenshot");
+			e.printStackTrace();
+		} finally {
+		if (!flag) {
+	 Reporter.failureReport("screenShot ", " Unable to get screenShot ");
+				System.out.println(" Unable to get TscreenShot");
+			} else if (b && flag) {
+				// Reporter.SuccessReport("screenShot ", " Able to get TscreenShot");
+				System.out.println(" Able to get TscreenShot");
+			}
+		}
+	}
+
+		public static void fullScreenShot(String fileName) throws Exception {
+
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		Rectangle screenRectangle = new Rectangle(screenSize);
+		Robot robot = new Robot();
+		BufferedImage image = robot.createScreenCapture(screenRectangle);
+		ImageIO.write(image, "jpeg", new File(fileName));
+		}	
+	
+	
+	
+	//@author :bhavya for acme droppdown
+	
+	public void clickByCondindates(int x, int y) {
+		TouchAction touchAction = new TouchAction((MobileDriver) driver);
+		touchAction.tap(PointOption.point(x, y)).perform();
 	}
 
 	//@author:Archana Dasari
@@ -172,6 +252,20 @@ public class ActionEngine extends TestEngine {
         new TouchAction((PerformsTouchActions) driver).press(PointOption.point(x,y)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L))).release().perform();
 
     }
+
+	//Author Vinay Gajula
+// Generating the random number between 2 values
+	public static int randomNumber(int min, int max) {
+		Random r = new Random();
+		int result = r.nextInt(max - min) + min;
+		return result;
+	}
+
+	//Author Vinay Gajula
+	public List<WebElement> LocatorStrategy(WebElement elementByXPath) {
+		List<WebElement> links = (List<WebElement>) driver.findElement(By.xpath("LocatorValue"));
+		return links;
+	}
     
 
 
@@ -222,6 +316,8 @@ public class ActionEngine extends TestEngine {
            
         }
     }
+	
+	
 
 	
 	/**
@@ -260,40 +356,7 @@ public class ActionEngine extends TestEngine {
 		return flag;
 	}
 	
-
-   public static void screenShot(String fileName) throws Throwable {
-	File scrFile = ((TakesScreenshot) driver)
-			.getScreenshotAs(OutputType.FILE);
-	try {
-		// Now you can do whatever you need to do with it, for example copy
-		// somewhere
-		FileUtils.copyFile(scrFile, new File(fileName));
-		flag=true;
-	} catch (IOException e) {
-		//Assert.assertTrue(flag,"Unable to take Screenshot");
-		e.printStackTrace();
-	}finally {
-		/*if (!flag) {
-			//Reporter.failureReport("screenShot ", " Unable to get screenShot ");
-			System.out.println(" Unable to get TscreenShot");
-		} else if (b && flag) {
-			//Reporter.SuccessReport("screenShot ", " Able to get TscreenShot");
-			System.out.println(" Able to get TscreenShot");
-		}*/
-	}
-   }
-
-    public static void fullScreenShot(String fileName) throws Exception {
-	 
-	   Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-	   Rectangle screenRectangle = new Rectangle(screenSize);
-	   Robot robot = new Robot();
-	   BufferedImage image = robot.createScreenCapture(screenRectangle);
-	   ImageIO.write(image, "jpeg", new File(fileName));
-	 
-	}
  
-
 
 /*@author srinivas n 17th Apr 2020.
  * Swipe up 
@@ -380,72 +443,37 @@ public static void swipe(MobileDriver driver, DIRECTION direction) {
             break;
 
     }
-    
-    
+
     
 }
 
 
-//Jagadish
+
+@SuppressWarnings("finally")
 public static boolean DoubleTab(By locator, String locatorName) throws Throwable {
 	// explicityWait(locator, locatorName);
 	boolean flag = false;
 	try {
 		WebElement we = driver.findElement(locator);
 		Actions actions = new Actions(driver);
-		actions.doubleClick(we).perform();
+		actions.doubleClick(we).build().perform();
 		flag = true;
 	} catch (Exception e) {
 		e.printStackTrace();
 	} finally {
-		/*if (!flag) {
+		if (!flag) {
 			Reporter.failureReport("Click", "Unable to click on " + locatorName);
 			return flag;
 		} else if (b && flag) {
 			Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
-		}*/
-		
+
+		}
+		return flag;
 	}
-	return flag;
+	
 }
 
 
-//Jagadish
-public static boolean ScrollToElement(By locator, String locatorName) throws Throwable {
-	// explicityWait(locator, locatorName);
-	boolean flag = false;
-	boolean temp;
-	try {	
-		int i=1;
-		temp =  isElementDisplayed(locator,locatorName);
-		System.out.println(temp);
-		while((!temp) && (i<30)){
-		swipeVertical(0.8,0.1,0.9, 2000);
-		Thread.sleep(500);
-		temp = isElementPresent(locator, locatorName);
-		System.out.println(temp);
-		i++;
-		}
-		if(i==30) {
-			flag = false;
-		}else {
-			flag = true;
-		}
-		
-	} catch (Exception e) {
-		e.printStackTrace();
-		
-	} finally {
-		/*if (!flag) {
-			Reporter.failureReport("Click", "Unable to click on " + locatorName);
-			return flag;
-		} else if (b && flag) {
-			Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
-		}*/
-		
-	}
-	return flag;
-}
 
 //Jagadish
 public static void swipeVertical(double startPercentage, double finalPercentage, double anchorPercentage,
@@ -505,5 +533,14 @@ public static Boolean isElementDisplayed(By locator, String locatorName) {
 
 
 
+
+
+
+public static void scrollTo(String selector, int typ) {
+	((FindsByAndroidUIAutomator<MobileElement>) driver)
+			.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + typ
+					+ ")).scrollIntoView(new UiSelector().text(\"" + selector + "\").instance(0))");
+
+}
 
 }
