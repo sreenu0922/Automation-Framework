@@ -111,10 +111,10 @@ public class HelperClass extends PageLocator {
 		click(companysearch1 , "company_search");
 		Thread.sleep(2000);
 		type(companysearch,"acme","companysearch");
+		Thread.sleep(10000);
+		type(emailfield,"bhavya444@care.com","d");
 		Thread.sleep(2000);
-		sendkey((WebElement)emailfield,"bhavya444@care.com");
-		Thread.sleep(2000);
-		sendkey((WebElement)passwordfield,"letmein1");
+		type(passwordfield,"letmein1","");
 		Thread.sleep(2000);
 		click(login1 , "loginbutton1");
 		
@@ -523,16 +523,25 @@ public void addDescribe(String description) throws Throwable
 	 *created On : 21-04-2020  
 	 */
 	public static void selectdate(String month, String day, String year) throws Throwable {
-		click(choosedate, "choosedate");
-		scrollTo(year, 2);
-		scrollTo(day, 1);
-		scrollTo(month, 0);
-		if (isElementDisplayed(boy, "childexist")) {
-			click(done, "done");
-		} else {
-			click(dateOk, "dateOk");
+		if(isElementDisplayed(By.xpath(date.replace("#",month+" "+day)), "searching date exists")) {
+			click(By.xpath(date.replace("#",month+" "+day))," clickin on date");
 			click(datecontinue, "datecontinue");
+		}else {
+			if(isElementDisplayed(choosedate, "choosedate")) {
+				click(choosedate, "choosedate");
+			}
+			scrollTo(year, 2);
+			scrollTo(day, 1);
+			scrollTo(month, 0);
+			if (isElementDisplayed(boy, "childexist")) {
+				click(done, "done");
+			} else {
+				click(dateOk, "dateOk");
+				click(datecontinue, "datecontinue");
+			}
 		}
+		
+		
 	}
 	
 	
@@ -571,10 +580,14 @@ public void addDescribe(String description) throws Throwable
 	public static void selectchild() throws Throwable {
 		if (isElementDisplayed(boy, "childexist")) {
 			click(boy, "clicked");
-			type(childfirstname, "test123", "firstname");
+			type(childfirstname, "testtest", "firstname");
 			type(childlastname, "dummy", "lastname");
 			click(birthday, "birthday");
-			selectdate("2016", "11", "14");
+			scrollTo("2015", 0);
+			scrollTo("09", 1);
+			scrollTo("14", 2);
+			click(done, "done");
+			click(timenext,"next");
 		} else {
 			click(existingchild, "existingchild");
 			click(done, "done");
