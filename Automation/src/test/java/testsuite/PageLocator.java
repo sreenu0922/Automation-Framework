@@ -1,6 +1,8 @@
 package testsuite;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import accelerators.ActionEngine;
 
 public class PageLocator extends ActionEngine {
@@ -30,6 +32,47 @@ public class PageLocator extends ActionEngine {
 		public static By login1 = By.xpath("//*[contains(@text,'LOGIN')]");
 		
 		
+	//author Sreeranga
+	
+	//Select Use my backUp days
+	public static By  BackUpDays= By.id("use_my_backup_days");
+	//select BookNow Button
+	public static By BookNow = By.id("ctabutton");
+	
+	
+	}
 
 
+	/*@author : sangeethan
+	page locators for activate your account
+	*/
+	public static By birthdate = By.xpath("//*[contains(@resource-id,'date_edit_text')]");
+	public static By okdate = By.xpath("//*[contains(@resource-id,'ok')]");
+	public static By firstname = By.xpath("//*[contains(@resource-id,'first_name')]");
+	public static By lastname = By.xpath("//*[contains(@resource-id,'last_name')]");
+	public static By homeaddress = By.xpath("//*[contains(@resource-id,'address')]");
+	public static By zip = By.xpath("//*[contains(@resource-id,'city_state_zip')]");
+	public static By email = By.xpath("//*[contains(@resource-id,'email')]");
+	public static By password = By.xpath("//*[contains(@resource-id,'password')]");
+	public static By enrollbutton = By.xpath("//*[contains(@resource-id,'done_button')]");
+	
+	
+	/*@author : sangeethan
+	page locators for "please help us to protect the health of all families and care providers"
+	*/
+	public static By nobutton = By.xpath("//*[contains(@resource-id,'no_cta')]");
+	public static By yesbutton = By.xpath("//*[contains(@resource-id,'yes_cta')]");
+	
+	
+	/*@author : sangeethan
+	 * page locators for billing page
+     */
+	public static By creditcard = By.xpath("//*[contains(@resource-id,'cc_edit_1')]");
+	public static By month = By.xpath("//*[contains(@resource-id,'cc_cvv_2')]");
+	public static By cvv = By.xpath("//*[contains(@resource-id,'cc_cvv_3')]");
+	public static By zip1 = By.xpath("//*[contains(@resource-id,'cc_cvv_4')]");
+	public static By submitrequest = By.xpath("//*[contains(@resource-id,'submit_button')]");
+	
+	
 }
+

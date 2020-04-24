@@ -34,6 +34,7 @@ import java.time.Duration;
 
 import javax.imageio.ImageIO;
 
+import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import org.apache.commons.io.FileUtils;
@@ -177,6 +178,8 @@ public class ActionEngine extends TestEngine {
 
     }
     
+
+
     //Author Sreeranga
 	public void sendkey(WebElement w, String text) {
 		try {
@@ -504,6 +507,13 @@ public static Boolean isElementDisplayed(By locator, String locatorName) {
 	}
 
 	return flag;
+}
+
+public static void scrollTo(String selector, int typ) {
+	((FindsByAndroidUIAutomator<MobileElement>) driver)
+			.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + typ
+					+ ")).scrollIntoView(new UiSelector().text(\"" + selector + "\").instance(0))");
+
 }
 
 }
