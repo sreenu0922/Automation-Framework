@@ -58,7 +58,9 @@ public class ActionEngine extends TestEngine {
 	@SuppressWarnings("finally")
 
 	//comment removed throws Throwable @srinivas
-
+	public static boolean click(By locator, String locatorName)
+			 {
+		//explicityWait(locator, locatorName);
 
 	public static boolean click(By locator, String locatorName) throws Throwable {
 		// explicityWait(locator, locatorName);
