@@ -6,6 +6,16 @@ import org.openqa.selenium.WebElement;
 import accelerators.ActionEngine;
 
 public class PageLocator extends ActionEngine {
+	
+	//author Sreeranga
+	
+	//Select Use my backUp days
+	public static By  BackUpDays= By.id("use_my_backup_days");
+	//select BookNow Button
+	public static By BookNow = By.id("ctabutton");
+	
+	
+	}
 
 	/*@author : sangeethan
 	page locators for activate your account
@@ -38,10 +48,5 @@ public class PageLocator extends ActionEngine {
 	public static By submitrequest = By.xpath("//*[contains(@resource-id,'submit_button')]");
 	
 	
-	
-	
-	
-	
-	
-	
 }
+

@@ -3,7 +3,6 @@ package testsuite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-
 public class HelperClass extends PageLocator {
 	
 	
@@ -37,6 +36,7 @@ public class HelperClass extends PageLocator {
 		click(nobutton, "no");
 	}
 
+
 	public void clickyes() throws Throwable
 	{
 		click(yesbutton, "yes");
@@ -55,7 +55,18 @@ public class HelperClass extends PageLocator {
 			
 	}
 	
+	//Author Sreeranga
+	// Navigate to use my backup days
+	public void navigatetousemybackupdays() throws Throwable {
+		click(BackUpDays,"Backupdays");
+		
+	}
 	
-	
-	
+	// NAvigate to Book Now Button
+	public void navigatetoBookNow() throws Throwable {
+
+		click(BookNow , "BookNowButton");
+
+	}
+
 }
