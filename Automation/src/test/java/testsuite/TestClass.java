@@ -5,7 +5,14 @@ import org.testng.annotations.Test;
 public class TestClass extends HelperClass{
 
 @Test
-public void test() {
+public void testAppointment() {
+	
+	/*
+	 
+	 navigateToMyKId();
+	 scheduleAppointment(); 
+	  
+	 */
 	
 }
  
