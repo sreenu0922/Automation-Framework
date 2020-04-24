@@ -437,7 +437,8 @@ public static void swipe(MobileDriver driver, DIRECTION direction) {
             break;
 
     }
-
+    
+    
     
 }
 
