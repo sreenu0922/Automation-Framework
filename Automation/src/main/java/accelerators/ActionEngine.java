@@ -28,6 +28,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.Set;
 
 
+import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 
@@ -67,6 +68,12 @@ public class ActionEngine extends TestEngine {
 			}
 */        return flag;
 		}
+	}
+	//@author :bhavya for acme droppdown
+	
+	public void clickByCondindates(int x, int y) {
+		TouchAction touchAction = new TouchAction((MobileDriver) driver);
+		touchAction.tap(PointOption.point(x, y)).perform();
 	}
 
 	//@author:Archana Dasari
@@ -172,6 +179,8 @@ public class ActionEngine extends TestEngine {
 		return links;
 	}
     
+
+
     //Author Sreeranga
 	public void sendkey(WebElement w, String text) {
 		try {
@@ -219,6 +228,8 @@ public class ActionEngine extends TestEngine {
            
         }
     }
+	
+	
 
 	
 	/**
@@ -496,6 +507,13 @@ public static Boolean isElementDisplayed(By locator, String locatorName) {
 	}
 
 	return flag;
+}
+
+public static void scrollTo(String selector, int typ) {
+	((FindsByAndroidUIAutomator<MobileElement>) driver)
+			.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + typ
+					+ ")).scrollIntoView(new UiSelector().text(\"" + selector + "\").instance(0))");
+
 }
 
 }
