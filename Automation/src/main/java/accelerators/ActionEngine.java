@@ -4,15 +4,12 @@ import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
-import org.openqa.selenium.interactions.HasTouchScreen;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import support.Reporter;
 
 import javax.imageio.ImageIO;
 import java.awt.Dimension;
@@ -23,30 +20,20 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-import java.sql.DriverManager;
 import java.time.Duration;
 import java.util.List;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.Set;
-import java.time.Duration;
 
-
-import javax.imageio.ImageIO;
 
 import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
-import org.apache.commons.io.FileUtils;
-
-import org.openqa.selenium.*;
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.touch.TouchActions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import static io.appium.java_client.touch.WaitOptions.waitOptions;
 
 public class ActionEngine extends TestEngine {
     public static WebDriverWait wait;
@@ -177,6 +164,20 @@ public class ActionEngine extends TestEngine {
         new TouchAction((PerformsTouchActions) driver).press(PointOption.point(x,y)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L))).release().perform();
 
     }
+
+	//Author Vinay Gajula
+// Generating the random number between 2 values
+	public static int randomNumber(int min, int max) {
+		Random r = new Random();
+		int result = r.nextInt(max - min) + min;
+		return result;
+	}
+
+	//Author Vinay Gajula
+	public List<WebElement> LocatorStrategy(WebElement elementByXPath) {
+		List<WebElement> links = (List<WebElement>) driver.findElement(By.xpath("LocatorValue"));
+		return links;
+	}
     
 
 
@@ -415,7 +416,6 @@ public static boolean DoubleTab(By locator, String locatorName) throws Throwable
 	}
 	return flag;
 }
-
 
 //Jagadish
 public static boolean ScrollToElement(By locator, String locatorName) throws Throwable {
