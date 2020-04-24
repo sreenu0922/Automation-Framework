@@ -59,7 +59,6 @@ public class PageLocator extends ActionEngine {
 	//created on : 20-04-2020
 	
 
-
 	public static By menu = By.xpath("//a[@aria-label='navigation menu']");
 	
 	

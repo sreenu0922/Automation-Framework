@@ -1,8 +1,9 @@
 package testsuite;
 
 
+import java.util.List;
 
-
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -12,7 +13,6 @@ import java.util.Random;
 
 import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileElement;
-
 
 public class HelperClass extends PageLocator {
 	
@@ -205,16 +205,20 @@ public class HelperClass extends PageLocator {
 	 * Question(String titel,boolean flag,String description)
 	 * describe
 	 */
-	public void navigateToPreferredCenters() throws Throwable 
+	public void navigateToPreferredCenters() 
 	{
-		click(lsChoseCareCenterType1,"A Care@Work Backup Care center");		
-	}
-	
+		
+		click(lsChoseCareCenterType1,"A Care@Work Backup Care center");
+			
+		}
 	//@author srinivas n 22nd April 2020
-	public void navigateToAboutYourCenter() throws Throwable 
+	public void navigateToAboutYourCenter() 
 	{
-		click(lsChooseCareCenterType2,"A child care center of my choosing");		
-	}
+		
+		click(lsChooseCareCenterType2,"A child care center of my choosing");
+			
+	
+		}
 	
 	//@author srinivas n 22nd April 2020
 	public void addNetworkCenter(String BussinessName,String Zipcode,String PhoneNumber,String Totaldailycost){
@@ -227,7 +231,7 @@ public class HelperClass extends PageLocator {
 		}
 	
 	//@author srinivas n 22nd April 2020
-	public void navigateToReviewYourClaim() throws Throwable
+	public void navigateToReviewYourClaim()
 	{
 	
 		click(btnNext1,"Next button in Tell us about your center");
@@ -235,7 +239,7 @@ public class HelperClass extends PageLocator {
 	}
 	
 	//@author srinivas n 22nd April 2020
-	public void navigateToYouAreAllSet() throws Throwable
+	public void navigateToYouAreAllSet()
 	{
 		
 		click(chkConfirm,"Check mark for confirm");
@@ -245,10 +249,12 @@ public class HelperClass extends PageLocator {
 	}
 	
 	//@author srinivas n 22nd April 2020
-	public void navigateBackToHome() throws Throwable
+	public void navigateBackToHome()
 	{
+		
 				
-		click(btnGoBackToHome,"Go back to home button in You're all set");		
+		click(btnGoBackToHome,"Go back to home button in You're all set");
+			
 	
 	}
 	
@@ -256,7 +262,7 @@ public class HelperClass extends PageLocator {
 	//@author srinivas n 22nd April 2020
 	// Refresh preferred centers list based on location and radius
 	
-	public void refreshPreferedCenters(String location,String radius) throws Throwable
+	public void refreshPreferedCenters(String location,String radius)
 	{
 		
 				
@@ -264,7 +270,8 @@ public class HelperClass extends PageLocator {
 		type(frmLocation,location,"loation zipcode");
 		
 		type(frmSearchRadius,radius,"Radius in miles");
-			
+		
+				
 		click(BtnDone,"Done button");
 			
 	}
@@ -280,8 +287,9 @@ public void selectCareCenter(int index)
 	
 //@author srinivas n 22nd April 2020
 	// Navigate to Add emergency contacts screen
-	public void navigateToEmergenyContact() throws Throwable
+	public void navigateToEmergenyContact()
 	{
+		
 				
 		click(btnNext,"Next button");
 			
@@ -301,7 +309,7 @@ public void selectCareCenter(int index)
 	//@author srinivas n 22nd April 2020
 	//"Relationship to child : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
 	//@param Boolean flag = true then select checkbox can pickup/drop off child
-	public void addBackupContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String city,String relationship,Boolean flag) throws Throwable{
+	public void addBackupContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String city,String relationship,Boolean flag){
 	
 			type(txtFirstName,firstName,"FirstName");
 			type(txtLastName,lastName,"LastName");
@@ -321,7 +329,7 @@ public void selectCareCenter(int index)
 	//@author srinivas n 22nd April 2020
 // navigate to pediatrician & insurance information
 	
-	public void navigateToPediatrician() throws Throwable
+	public void navigateToPediatrician()
 	{
 		
 				
@@ -368,26 +376,32 @@ public void addInsuranceInfo(String insuranceCompany,String policyNumber){
 //@author srinivas n 22nd April 2020
 //Navigation for  history of allergies? question screen
 
-public void navigateToAllergiesQuestion() throws Throwable
+public void navigateToAllergiesQuestion()
 {
-	click(btnPediationNext,"Next button");	
+	
+			
+	click(btnPediationNext,"Next button");
+		
+
 }
 
 
-public void selectQuestion(String titel,boolean flag) throws Throwable
+public void selectQuestion(String titel,boolean flag)
 {
+	
 	if(flag)
 		
-		click(btnYesButton,"Yes button");
+			click(btnYesButton,"Yes button");
 		
 	else
-		click(btnNoButton,"No button");	
+		click(btnNoButton,"No button");
+	
 }
 
 
 
 	
-public void addAllergyInfo(int option,String allergyDetails, String reactionDetail) throws Throwable
+public void addAllergyInfo(int option,String allergyDetails, String reactionDetail)
 {
 	
 	switch(option){
@@ -431,7 +445,7 @@ public void addAllergyInfo(int option,String allergyDetails, String reactionDeta
 	}
 
 //Special needs information 1-12 options available
-public void selectSpecialNeedInfo(int option) throws Throwable
+public void selectSpecialNeedInfo(int option)
 {
 	switch(option){
 	
@@ -491,25 +505,26 @@ public void selectSpecialNeedInfo(int option) throws Throwable
 }
 
 
-public void selectQuestion(String titel,boolean flag,String description) throws Throwable
+public void selectQuestion(String titel,boolean flag,String description)
 {
 
 	if(flag)
 	{
-		click(btnYesButton,"Yes button");
-		addDescribe(description);
+			click(btnYesButton,"Yes button");
+	addDescribe(description);
 	}	
 	else
 		click(btnNoButton,"No button");
 	
 }
 
-public void addDescribe(String description) throws Throwable
+public void addDescribe(String description)
 {
 	
 		type(txtDescriptio,description,"type description");
 		
 		click(btnDescriptionNext,"Next button");
+	
 	
 }
 
