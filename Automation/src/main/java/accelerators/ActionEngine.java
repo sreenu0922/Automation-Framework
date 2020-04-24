@@ -82,6 +82,12 @@ public class ActionEngine extends TestEngine {
 */        return flag;
 		}
 	}
+	//@author :bhavya for acme droppdown
+	
+	public void clickByCondindates(int x, int y) {
+		TouchAction touchAction = new TouchAction((MobileDriver) driver);
+		touchAction.tap(PointOption.point(x, y)).perform();
+	}
 
 	//@author:Archana Dasari
 	public static boolean waitForElementPresent(By by, String locator)
@@ -221,6 +227,8 @@ public class ActionEngine extends TestEngine {
            
         }
     }
+	
+	
 
 	
 	/**
