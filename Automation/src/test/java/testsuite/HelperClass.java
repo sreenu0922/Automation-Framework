@@ -86,10 +86,29 @@ public class HelperClass extends PageLocator {
 	Thread.sleep(2000);
 	
 	}
+	
+	 public void selectCompanyforenroll(String companyname) throws Throwable {
+	        //click(companysearch , "company_search");
+	        Thread.sleep(2000);
+	        type(companysearch, companyname, "companysearch");
+
+	        WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
+	        int leftX = dropDownLoc.getLocation().getX();
+	        int rightX = leftX + dropDownLoc.getSize().getWidth();
+	        int middleX = (rightX + leftX) / 2;
+	        int upperY = dropDownLoc.getLocation().getY();
+	        int lowerY = upperY + dropDownLoc.getSize().getHeight();
+	        int middleY = (upperY + lowerY) / 2;
+
+	        AndroidDriver.hideKeyboard();
+	        int x = leftX + 80;
+	        int y = middleY + 150;
+	        clickByCondindates(x, y);
+	    }
 	//@author by Bhavya
 	//created on : 21-04-2020
 	//select company serach as acme
-	public void selectCompanyforenroll(String companyname) throws Throwable {
+/*	public void selectCompanyforenroll(String companyname) throws Throwable {
 	//click(companysearch , "company_search");
 	Thread.sleep(2000);
 	type(companysearch, companyname ,"companysearch");
@@ -101,7 +120,7 @@ public class HelperClass extends PageLocator {
 	
 	}
 	
-	//@author by Bhavya
+*/	//@author by Bhavya
 	//created on : 21-04-2020
 	//login flow with email and password
 	public void login()throws Throwable{
@@ -125,18 +144,17 @@ public class HelperClass extends PageLocator {
 	
 	public void enroll() throws Throwable
 	{
-		
-		selectdate("may", "27", "1990");
-		sendkey((WebElement)firstname, "sangeetha");
-		Thread.sleep(2000);
-		sendkey((WebElement)lastname, "nulu");
-		sendkey((WebElement) homeaddress, "P.O.Box 100");
-		sendkey((WebElement)zip, "02451");
-		sendkey((WebElement)email, "sangeethan@gmail.cm");
-		sendkey((WebElement)password, "Letmein1");
-		click(enrollbutton, "clickonenrollbutton");
+	type(birthdate,"04/22/1992","select dob");
+	//selectdate("May", "27", "1990");
+	type(firstname, "sangeetha","firstname");
+	Thread.sleep(2000);
+	type(lastname, "nulu","lastname");
+	type(homeaddress, "P.O.Box 100","address");
+	type(zip, "02451","zip");
+	type(email, "sangeethan@gmail.cm","mail");
+	type(password, "123456789","pass");
+	click(enrollbutton, "clickonenrollbutton");
 	}
-	
 	
 	public void clickno() throws Throwable
 	{
@@ -297,19 +315,30 @@ public void selectCareCenter(int index)
 	}
 	
 	
+	//@param number ==1 backup contact 1 other wise backup contact 2
+	//@author srinivas n 28th April 2020
+			
+	public void selectBackupContact(int number){
+		
+		if (number==1){
+			click(cboChooseBackupContact1,"Backup contact 1");
+		}else{
+			click(cboChooseBackupContact2,"Backup contact 2");
+		}
+	}
 	
 	//@author srinivas n 22nd April 2020
 	//"Relationship to child : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
 	//@param Boolean flag = true then select checkbox can pickup/drop off child
-	public void addBackupContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String city,String relationship,Boolean flag) throws Throwable{
+	public void addBackupContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String zipcode,String relationship,Boolean flag) throws Throwable{
 	
 			type(txtFirstName,firstName,"FirstName");
 			type(txtLastName,lastName,"LastName");
 			type(txtPhoneNumber,phoneNumber,"Phone Number");
-			type(txtAddressLine1,relationship,"Relationship to child");
-			type(txtAddressLine2,phoneNumber,"Phone Number");
-			type(txtCityState,relationship,"Relationship to child");
-			type(ddlRelationshipToChild,phoneNumber,"Phone Number");
+			type(txtAddressLine1,address1,"Address line 1");
+			type(txtAddressLine2,address2,"Address line 2");
+			type(txtCityState,zipcode,"City state");
+			type(ddlRelationshipToChild,relationship,"Relationship To Child");
 			if(flag)
 			click(rdoCanPickupChild,"Relationship to child");
 			
@@ -581,5 +610,6 @@ public void addDescribe(String description) throws Throwable
 		}
 	}
 
+	
 }
 

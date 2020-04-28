@@ -127,8 +127,8 @@ public class PageLocator extends ActionEngine {
 	public static By txtLastName = By.id("last_name");
 	public static By txtPhoneNumber = By.id("phone_number");
 	public static By txtAddressLine1 = By.id("address_line_1");
-	public static By txtAddressLine2 = By.id("address_line_1");
-	public static By txtCityState = By.id("address_line_1");
+	public static By txtAddressLine2 = By.id("address_line_2");
+	public static By txtCityState = By.id("city_state_zip");
 	public static By ddlRelationshipToChild = By.id("relationship_to_child");
 	public static By ddlSelectionRelationType = By.xpath("//*[@class='android.widget.TextView']");
 	public static By btnDDLSelectionDone = By.id("cta");
@@ -145,8 +145,8 @@ public class PageLocator extends ActionEngine {
 		public static By txtLastName2 = By.id("last_name");
 		public static By txtPhoneNumber2 = By.id("phone_number");
 		public static By txtAddressLine12 = By.id("address_line_1");
-		public static By txtAddressLine22 = By.id("address_line_1");
-		public static By txtCityState2 = By.id("address_line_1");
+		public static By txtAddressLine22 = By.id("address_line_2");
+		public static By txtCityState2 = By.id("city_state_zip");
 		public static By ddlRelationshipToChild2 = By.id("relationship_to_child");
 		public static By ddlSelectionRelationType2 = By.xpath("//*[@class='android.widget.TextView']");
 		public static By btnDDLSelectionDone2 = By.id("cta");
