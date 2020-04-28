@@ -60,18 +60,13 @@ public class PageLocator extends ActionEngine {
     public static String Symptoms="//*[contains(@text,'#')]";
     public static String TypeofCare="//*[contains(@text,'#')]";
 
-	
 	//@author by Bhavya
 	//created on : 20-04-2020
-	
 
 	public static By menu = By.xpath("//a[@aria-label='navigation menu']");
-	
-	
-	
-	
-	
-	
+	public static By Selectingmykid=By.id("my_kids");
+	public static By Unauthorised=By.id("done");
+
 	/*@author srinivas n 20th April 2020
 	 * adding elements for incenter care selection
 	 * 

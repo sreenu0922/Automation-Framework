@@ -21,6 +21,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+import java.sql.DriverManager;
 import java.time.Duration;
 import java.util.List;
 
@@ -72,19 +73,18 @@ public class ActionEngine extends TestEngine {
 			e.printStackTrace();
 		} finally {
 
-			if (!flag) {
+			/*if (!flag) {
 				Reporter.failureReport("Click", "Unable to click on " + locatorName);
 				return flag;
 			} else if (b && flag) {
 				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
 
-			}
+			}*/
 			return flag;
 		}
 	}
 
-	
-	
+
 
 	//Jagadish
 	public static boolean ScrollToElement(By locator, String locatorName) throws Throwable {
@@ -537,5 +537,13 @@ public static void scrollTo(String selector, int typ) {
 					+ ")).scrollIntoView(new UiSelector().text(\"" + selector + "\").instance(0))");
 
 }
+    //@author : Archana D
+	public void hideKeyboard() {
+		AndroidDriver.hideKeyboard();
+	}
 
+	//@author : Archana D
+	public void launchKeyboard() {
+		AndroidDriver.getKeyboard();
+	}
 }
