@@ -59,10 +59,14 @@ public class ActionEngine extends TestEngine {
 
 	//comment removed throws Throwable @srinivas
 
+	public static boolean click(By locator, String locatorName)
+			 {
+		//explicityWait(locator, locatorName);
+	
 
-	public static boolean click(By locator, String locatorName) throws Throwable {
-		// explicityWait(locator, locatorName);
 
+
+	
 		boolean flag = false;
 		try {
 			driver.findElement(locator).click();
@@ -73,10 +77,10 @@ public class ActionEngine extends TestEngine {
 		} finally {
 
 			if (!flag) {
-				Reporter.failureReport("Click", "Unable to click on " + locatorName);
+				//Reporter.failureReport("Click", "Unable to click on " + locatorName);
 				return flag;
 			} else if (b && flag) {
-				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
+				//Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
 
 			}
 			return flag;
@@ -529,6 +533,12 @@ public static Boolean isElementDisplayed(By locator, String locatorName) {
 
 	return flag;
 }
+
+
+
+
+
+
 
 
 public static void scrollTo(String selector, int typ) {
