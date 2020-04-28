@@ -96,7 +96,7 @@ import io.appium.java_client.remote.MobilePlatform;
             capabilitiesForAppium.setCapability("platformVersion", AndroidplatformVersion);
             capabilitiesForAppium.setCapability("appPackage", appPackage);
             capabilitiesForAppium.setCapability("appActivity", appActivity);
-            capabilitiesForAppium.setCapability("app", apkPath);
+            capabilitiesForAppium.setCapability("app", System.getProperty("user.dir")+apkPath);
 
             AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
             driver = (AndroidDriver);
