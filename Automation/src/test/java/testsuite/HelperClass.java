@@ -1,8 +1,5 @@
 package testsuite;
 
-
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -15,23 +12,6 @@ import io.appium.java_client.MobileElement;
 
 
 public class HelperClass extends PageLocator {
-	
-	
-
-	/*MethodName: scrollTo(String text, int index)
-	 * Description: scroll up and down the application until particular text is visible at particular dcroll view index
-	 * input parameters: text : which is string Eg - "2020" for finding the year
-	 *					index : if there are three scroll view , mentions which scroll view need to be searched
-	 *Output parameters: Null
-	 *created By : Jagadish
-	 *created On : 21-04-2020  
-	 */
-	public static void scrollTo(String text, int index) {
-		((FindsByAndroidUIAutomator<MobileElement>) driver)
-				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + index
-						+ ")).scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))");
-
-	}
   
     //Written by Vinay Gajula
     public void SelectChild() throws Throwable {
@@ -179,12 +159,12 @@ public class HelperClass extends PageLocator {
 	
 	public void billing() throws Throwable
 	{
-		
-		
-		sendkey((WebElement) creditcard, "4111 1111 1111 1111");
-		sendkey((WebElement)month, "0523");
-		sendkey((WebElement)cvv, "123");
-		sendkey((WebElement)zip1, "02451");
+		Thread.sleep(4000);
+		swipeVertical(0.8,0.2,0.5, 2000);
+		type(creditcard, "4111111111111111","details");
+		type(month, "0523","expirt");
+		type(cvv, "123","cvv");
+		type(zip1, "02451","zip");
 		click(submitrequest, "click on submit ");
 			
 	}
@@ -286,14 +266,19 @@ public class HelperClass extends PageLocator {
 	public void refreshPreferedCenters(String location,String radius) throws Throwable
 	{
 		
-				
+		if(isElementDisplayed(Deny,"Deny")){
+			click(Deny,"Deny");
+		}
 		click(btnRefine,"Refine buutton");
 		type(frmLocation,location,"loation zipcode");
 		
 		type(frmSearchRadius,radius,"Radius in miles");
 			
 		click(BtnDone,"Done button");
-			
+		Thread.sleep(2000);
+		if(isElementDisplayed(Deny,"Deny")){
+			click(Deny,"Deny");
+		}	
 	}
 	
 	
@@ -309,10 +294,13 @@ public void selectCareCenter(int index)
 	// Navigate to Add emergency contacts screen
 	public void navigateToEmergenyContact() throws Throwable
 	{
-				
+		if(isElementDisplayed(Deny,"Deny")){
+			click(Deny,"Deny");
+		}		
 		click(btnNext,"Next button");
-			
+		
 	}
+
 	
 	//@author srinivas n 22nd April 2020
 	//relationship is : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other

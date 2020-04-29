@@ -109,6 +109,7 @@ public class PageLocator extends ActionEngine {
 	public static By dlgButtonOk = By.id("dialog_positive_button");
 	
 	//After click on Refine button app was displaying change location and radious below are elemtes related to change location and radious
+	public static By Deny = By.xpath("//*[contains(@text,'DENY')]");
 	public static By frmLocation = By.id("location");
 	public static By frmSearchRadius = By.id("search_radius");
 	public static By milespDropdown = By.xpath("//* [@class='android.widget.TextView' ] ");

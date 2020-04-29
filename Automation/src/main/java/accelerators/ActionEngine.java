@@ -534,18 +534,19 @@ public static Boolean isElementDisplayed(By locator, String locatorName) {
 	return flag;
 }
 
-
-
-
-
-
-
-
-public static void scrollTo(String selector, int typ) {
-	((FindsByAndroidUIAutomator<MobileElement>) driver)
-			.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + typ
-					+ ")).scrollIntoView(new UiSelector().text(\"" + selector + "\").instance(0))");
-
-}
+	/*MethodName: scrollTo(String text, int index)
+	 * Description: scroll up and down the application until particular text is visible at particular dcroll view index
+	 * input parameters: text : which is string Eg - "2020" for finding the year
+	 *					index : if there are three scroll view , mentions which scroll view need to be searched
+	 *Output parameters: Null
+	 *created By : Jagadish
+	 *created On : 21-04-2020  
+	 */
+	public static void scrollTo(String text, int index) {
+		((FindsByAndroidUIAutomator<MobileElement>) driver)
+				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + index
+						+ ")).scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))");
+	
+	}
 
 }
