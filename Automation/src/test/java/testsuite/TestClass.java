@@ -4,7 +4,6 @@ import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
 import org.testng.annotations.Test;
 
 
-public class TestClass extends HelperClass {
 
 public class TestClass extends HelperClass{
 	
@@ -14,25 +13,37 @@ public class TestClass extends HelperClass{
 		
 	}
 	
-	@Test
+	@Test (priority=1)
 	public void enrollTest() throws Throwable{
+		
+		//Setting UAT25
 		navigateToUat();
 		
+		//Navigate to enroll screen
 		navigateToEnroll();
 		
 		
-		//selectCompanyforenroll("ACME");
+	
+		//Seect company for enroll
+		selectCompanyforenroll("acme");
 		
-		selectCompanySearch("acme");
 		Thread.sleep(2000);
 		
-		enroll();
+		//enroll with type birthdate,firstname, lastname,homeaddress, zip, email,password and click on enrollbutton
 		
+		enroll();
+		// app was display apache error skip that error
 		 if(isElementDisplayed(Unauthorised,"Unauthorised"))
 	        {
 	            APacheError();
 	        }
+	}
+	
+	//Dashboard screen after login or enroll
+	@Test (priority=2)
+	public void myKidTest() throws Throwable{
 		
+		// selecting my kid option
 		mykid();
 
         //Selecting BackupDays
@@ -49,9 +60,10 @@ public class TestClass extends HelperClass{
 
         //Selecting the Chaild
         selectchild();
-        
+        Thread.sleep(2000);
+        selectchild();
         //selectchild();
-        SelectChild();
+       // SelectChild();
 
         //Selecting the reasons for Care
         CareReason("My regular care is unavailable.");
@@ -59,25 +71,35 @@ public class TestClass extends HelperClass{
         //Selecting In-Center
         CareType("In-center");
         
+	}
+	
+	
+	
+	
+	/*After select in-center app have two flows one for recommand another for A child care of my choosing
+	below method for A child care of my choosing
+	*/
+	@Test (priority=3)
+	public void childCareOfMyChoosingTest() throws Throwable{
         
-        
+	
         navigateToAboutYourCenter();
         addNetworkCenter("BussinessName","02541", "1234567890"," 1205");
 
         navigateToReviewYourClaim() ;
         
-        swipe(AndroidDriver, DIRECTION.DOWN);
+        
         navigateToYouAreAllSet();
         
         navigateBackToHome() ;
         
 	}
-	
+}
 
 
     //@Sangeetha and Vinay
-    @Test
-    public void test() throws Throwable {
+  //  @Test
+  /*  public void test() throws Throwable {
         //Written by Sangeetha Nulu and Vinay Gajula
 
         //Navigate to UAT25
@@ -134,12 +156,12 @@ public class TestClass extends HelperClass{
         //Selecting the next buttion
         next();
 
-       /* //Primary Contact
-        addPrimmaryContact( "9533769769","Mother");*/
+        //Primary Contact
+        addPrimmaryContact( "9533769769","Mother");
 
        //Primary Contact Next button
         Primarynext();
-/*
+
 
         //Backup Contact1
         addBackupContact("Vinay","gajula","9533679878","String address1","String address2","String city","Mother",false);
@@ -153,7 +175,7 @@ public class TestClass extends HelperClass{
         addHospitalInfo("hospitalName","address","address1","02451");
 
        //Insurance info
-        addInsuranceInfo("StarHealth","9754544553677377388");*/
+        addInsuranceInfo("StarHealth","9754544553677377388");
 
         //Hide Keyboard
         hideKeyboard();
@@ -185,4 +207,4 @@ public class TestClass extends HelperClass{
         //Final Step Billing
         billing();
     }
-}
+}*/
