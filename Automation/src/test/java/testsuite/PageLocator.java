@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import accelerators.ActionEngine;
 import io.appium.java_client.pagefactory.LocatorGroupStrategy;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
@@ -113,6 +111,7 @@ public class PageLocator extends ActionEngine {
 	public static By dlgButtonOk = By.id("dialog_positive_button");
 	
 	//After click on Refine button app was displaying change location and radious below are elemtes related to change location and radious
+	public static By Deny = By.xpath("//*[contains(@text,'DENY')]");
 	public static By frmLocation = By.id("location");
 	public static By frmSearchRadius = By.id("search_radius");
 	public static By milespDropdown = By.xpath("//* [@class='android.widget.TextView' ] ");
@@ -136,8 +135,8 @@ public class PageLocator extends ActionEngine {
 	public static By txtLastName = By.id("last_name");
 	public static By txtPhoneNumber = By.id("phone_number");
 	public static By txtAddressLine1 = By.id("address_line_1");
-	public static By txtAddressLine2 = By.id("address_line_1");
-	public static By txtCityState = By.id("address_line_1");
+	public static By txtAddressLine2 = By.id("address_line_2");
+	public static By txtCityState = By.id("city_state_zip");
 	public static By ddlRelationshipToChild = By.id("relationship_to_child");
 	public static By ddlSelectionRelationType = By.xpath("//*[@class='android.widget.TextView']");
 	public static By btnDDLSelectionDone = By.id("cta");
@@ -156,8 +155,8 @@ public class PageLocator extends ActionEngine {
 		public static By txtLastName2 = By.id("last_name");
 		public static By txtPhoneNumber2 = By.id("phone_number");
 		public static By txtAddressLine12 = By.id("address_line_1");
-		public static By txtAddressLine22 = By.id("address_line_1");
-		public static By txtCityState2 = By.id("address_line_1");
+		public static By txtAddressLine22 = By.id("address_line_2");
+		public static By txtCityState2 = By.id("city_state_zip");
 		public static By ddlRelationshipToChild2 = By.id("relationship_to_child");
 		public static By ddlSelectionRelationType2 = By.xpath("//*[@class='android.widget.TextView']");
 		public static By btnDDLSelectionDone2 = By.id("cta");
@@ -280,14 +279,13 @@ public class PageLocator extends ActionEngine {
 		public static By Login1 = By.id("sign_in");
 		
 		
+
 	//author Sreeranga
 	
 	//Select Use my backUp days
 	public static By  BackUpDays= By.id("use_my_backup_days");
 	//select BookNow Button
 	public static By BookNow = By.id("ctabutton");
-	
-	
 
 
 
@@ -323,5 +321,4 @@ public class PageLocator extends ActionEngine {
 	
 	
 }
-
 
