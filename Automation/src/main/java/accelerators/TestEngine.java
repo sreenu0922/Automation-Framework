@@ -100,7 +100,7 @@ import io.appium.java_client.remote.MobilePlatform;
 
             AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
             driver = (AndroidDriver);
-            driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
 
         }

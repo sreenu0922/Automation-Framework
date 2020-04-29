@@ -50,6 +50,8 @@ public class PageLocator extends ActionEngine {
 		public static By birthday = By.xpath("//*[contains(@resource-id,'birth_day')]");
 
     //Written by Vinay Gajula
+	public static By Unauthorised=By.id("done");
+	public static By Selectingmykid=By.id("my_kids");
     public static By SelectChild=By.id("child_name");
     public static By SelectDone=By.id("next_cta");
     public static String SelectReason="//*[contains(@text,'#')]";
@@ -59,8 +61,8 @@ public class PageLocator extends ActionEngine {
     public static By fellnext=By.id("next_cta");
     public static String Symptoms="//*[contains(@text,'#')]";
     public static String TypeofCare="//*[contains(@text,'#')]";
+	public static By Allowclick = By.xpath("//*[@text='ALLOW']");
 
-	
 	//@author by Bhavya
 	//created on : 20-04-2020
 	
@@ -123,6 +125,7 @@ public class PageLocator extends ActionEngine {
 	//Primary contacts
 	public static By txtYourPhoneNumber = By.id("primary_phone_number");
 	public static By ddlPrimaryContactRelationship = By.id("primary_contact_relationship");
+	public static By nextbutton = By.id("next");
 	public static By ddlRelationshipToClient = By.xpath("//* [@class='android.widget.TextView']");
 	public static By btnDone = By.id("done");
 	
@@ -142,6 +145,8 @@ public class PageLocator extends ActionEngine {
 	public static By btnNavigationDown = By.id("navigate_down");
 	public static By rdoCanPickupChild = By.id("canPickupChild");
 	public static By btnBackupContactDone1= By.id("backup_contact_done_cta");
+	public static By btnBackupContactDone1next= By.id("next_button");
+
 	
 	
 	//Backup contact2
@@ -170,6 +175,7 @@ public class PageLocator extends ActionEngine {
 	public static By txtPediatricianName = By.id("pediatrician_name");
 	public static By txtPediatricianPhoneNumber = By.id("pediatrician_phone_number");
 	public static By txtDateOfLastVisit = By.id("last_phy_exam_date");
+	public static By txtPediatriciannnext= By.id("last_phy_exam_date");
 	
 	//HOSPITAL INFO
 	public static By txtHospitalTitle = By.id("hospital_title");
@@ -271,7 +277,7 @@ public class PageLocator extends ActionEngine {
 		//verify password
 		public static By passwordfield=By.id("passwd");
 		//click on login
-		public static By login1 = By.xpath("//*[contains(@text,'LOGIN')]");
+		public static By Login1 = By.id("sign_in");
 		
 		
 	//author Sreeranga

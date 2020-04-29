@@ -1,8 +1,14 @@
 package testsuite;
 
 
+import java.time.Duration;
 import java.util.List;
 
+import com.sun.glass.events.SwipeGesture;
+import io.appium.java_client.*;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,12 +17,11 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.Random;
 
-import io.appium.java_client.FindsByAndroidUIAutomator;
-import io.appium.java_client.MobileElement;
+import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
 
 public class HelperClass extends PageLocator {
-	
-	
+
+
 
 	/*MethodName: scrollTo(String text, int index)
 	 * Description: scroll up and down the application until particular text is visible at particular dcroll view index
@@ -34,10 +39,72 @@ public class HelperClass extends PageLocator {
 	}
   
     //Written by Vinay Gajula
+
+	public void selectCompanyforenroll(String companyname) throws Throwable {
+		//click(companysearch , "company_search");
+		type(companysearch1, companyname, "companysearch");
+		Thread.sleep(5000);
+		WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
+		int leftX = dropDownLoc.getLocation().getX();
+		int rightX = leftX + dropDownLoc.getSize().getWidth();
+		int middleX = (rightX + leftX) / 2;
+		int upperY = dropDownLoc.getLocation().getY();
+		int lowerY = upperY + dropDownLoc.getSize().getHeight();
+		int middleY = (upperY + lowerY) / 2;
+
+		// AndroidDriver.hideKeyboard();
+		int x = leftX + 80;
+		int y = middleY + 160;
+		clickByCondindates(x, y);
+
+	}
+
+	public void navigateToNext() throws Throwable {
+		click(btnPediationNext,"nextbutton");
+		Thread.sleep(2000);
+
+	}
+
+	public void popuphandling() throws Throwable {
+		Thread.sleep(2000);
+		click(Allowclick,"Handling popup");
+		Thread.sleep(2000);
+	}
+
+	public void navigateToNext1() throws Throwable {
+		Thread.sleep(2000);
+		swipe(AndroidDriver, DIRECTION.DOWN);
+		swipe(AndroidDriver, DIRECTION.DOWN);
+
+/*		//swipeVertical(0.8,0.2,0.5, 2000);
+
+		Thread.sleep(5000);
+		type(txtHospitalZip, "02451", "cc number");*/
+
+		Thread.sleep(2000);
+		click(btnPediationNext,"nextbutton");
+
+
+	}
+
+	public void APacheError() throws Throwable {
+		click(Unauthorised, "Selecting done");
+	}
+
+
+	public void mykid() throws Throwable {
+		click(Selectingmykid, "Selecting the Child");
+	}
+
     public void SelectChild() throws Throwable {
         click(SelectChild, "Selecting the Child");
         click(SelectDone, "Clicking the Done Button");
     }
+
+	public void SelectingPhysical() throws Throwable {
+		click(chkPhysical, "Selecting the Child");
+	}
+
 
     public void CareReason(String selectReason) throws Throwable {
         click(By.xpath(SelectReason.replace("#", selectReason)), "Selecting the Reasons");
@@ -69,6 +136,7 @@ public class HelperClass extends PageLocator {
 	//select uat25
 	//click on uat25
 	public void navigateToUat() throws Throwable {
+		Thread.sleep(5000);
 		click(settingsicon ,"settingicon");
 		Thread.sleep(2000);
 		swipeVertical(0.8,0.1,0.9, 2000);
@@ -88,41 +156,23 @@ public class HelperClass extends PageLocator {
 	}
 	//@author by Bhavya
 	//created on : 21-04-2020
-	//select company serach as acme
-	public void selectCompanyforenroll(String companyname) throws Throwable {
-	//click(companysearch , "company_search");
-	Thread.sleep(2000);
-	type(companysearch, companyname ,"companysearch");
-	int x = driver.manage().window().getSize().getHeight();
-    int y = driver.manage().window().getSize().getWidth();
-    int s = (int) (y * 9.02 / 100);
-    Thread.sleep(5000);
-    clickByCondindates(285, 903);
-	
-	}
-	
-	//@author by Bhavya
-	//created on : 21-04-2020
 	//login flow with email and password
 	public void login()throws Throwable{
 		
 		click(Login ,"loginbutton");
 		Thread.sleep(2000);
-		click(companysearch1 , "company_search");
-		Thread.sleep(2000);
-		type(companysearch,"acme","companysearch");
+	}
+
+	public void loginsendkeys()throws Throwable {
 		Thread.sleep(10000);
-		type(emailfield,"bhavya444@care.com","d");
+		type(emailfield,"gajulavinay1@care.com","d");
 		Thread.sleep(2000);
 		type(passwordfield,"letmein1","");
 		Thread.sleep(2000);
-		click(login1 , "loginbutton1");
-		
-		
+		click(Login1 , "loginbutton");
+
 	}
-	
-	
-	
+
 	public void enroll() throws Throwable
 	{
 		
@@ -148,18 +198,17 @@ public class HelperClass extends PageLocator {
 	{
 		click(yesbutton, "yes");
 	}
-	
-	
+
 	public void billing() throws Throwable
 	{
-		
-		
-		sendkey((WebElement) creditcard, "4111 1111 1111 1111");
-		sendkey((WebElement)month, "0523");
-		sendkey((WebElement)cvv, "123");
-		sendkey((WebElement)zip1, "02451");
+		Thread.sleep(2000);
+		swipe(AndroidDriver, DIRECTION.DOWN);
+		type(creditcard, "4111 1111 1111 1111", "cc number");
+		type(month, "0524", "month and year");
+		type(cvv, "123", "cvv number");
+		type(zip1, "02451", "zip code");
 		click(submitrequest, "click on submit ");
-			
+
 	}
 	
 	//Author Sreeranga
@@ -207,7 +256,8 @@ public class HelperClass extends PageLocator {
 	 */
 	public void navigateToPreferredCenters() throws Throwable 
 	{
-		click(lsChoseCareCenterType1,"A Care@Work Backup Care center");		
+		click(lsChoseCareCenterType1,"A Care@Work Backup Care center");
+
 	}
 	
 	//@author srinivas n 22nd April 2020
@@ -271,12 +321,15 @@ public class HelperClass extends PageLocator {
 	
 	
 	//@author srinivas n 22nd April 2020
-public void selectCareCenter(int index)
-	
-	{
+public void selectCareCenter(int index) throws Throwable {
 		List<WebElement> elements  = driver.findElements(lstCareCenter);
 		elements.get(index).click();
 	}
+
+	public void next() throws Throwable {
+		click(btnNext,"Done button");
+	}
+
 	
 //@author srinivas n 22nd April 2020
 	// Navigate to Add emergency contacts screen
@@ -293,9 +346,12 @@ public void selectCareCenter(int index)
 		
 			type(txtYourPhoneNumber,phoneNumber,"Phone Number");
 			type(ddlPrimaryContactRelationship,relationship,"Relationship to child");
-		
+
 	}
-	
+	public void Primarynext() throws Throwable {
+		click(nextbutton,"Next button");
+		Thread.sleep(4000);
+	}
 	
 	
 	//@author srinivas n 22nd April 2020
@@ -316,6 +372,11 @@ public void selectCareCenter(int index)
 			click(btnBackupContactDone1,"Done");
 			
 		
+	}
+
+	public void addBackupContactnext() throws Throwable {
+		click(btnBackupContactDone1next,"Done");
+
 	}
 	
 	//@author srinivas n 22nd April 2020
@@ -344,7 +405,7 @@ public void selectCareCenter(int index)
 	}
 	
 	//@author srinivas n 22nd April 2020
-public void addHospitalInfo(String hospitalName,String address,String address1,String zipcode){
+public void addHospitalInfo(String hospitalName,String address,String address1){
 		
 		
 			type(txtHospitalName,hospitalName,"Hospital Name");
@@ -352,10 +413,9 @@ public void addHospitalInfo(String hospitalName,String address,String address1,S
 			type(txtHospitalAddressLine1,address,"Hospital Address Line1");
 		
 			type(txtHospitalAddressLine2,address1,"Hospital Address Line2");
-		
-			type(txtHospitalZip,zipcode,"Hospital Zip code");
-		
+
 	}
+
 //@author srinivas n 22nd April 2020
 public void addInsuranceInfo(String insuranceCompany,String policyNumber){
 	
