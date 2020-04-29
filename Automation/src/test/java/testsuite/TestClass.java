@@ -25,7 +25,7 @@ public class TestClass extends HelperClass {
         //Handing Apache Error
         APacheError();
 
-    //Selecting Mykid
+        //Selecting Mykid
         mykid();
 
         //Selecting BackupDays
@@ -77,7 +77,7 @@ public class TestClass extends HelperClass {
         //Adding Hospital Info
         addHospitalInfo("fernandez","Moula Ali","hyderabad","02451");
 
-       //Adding Insurance info
+        //Adding Insurance info
         addInsuranceInfo("StarHealth","87766554433");
 
 
