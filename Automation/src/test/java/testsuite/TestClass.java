@@ -38,7 +38,7 @@ public class TestClass extends HelperClass {
         clickno();
 
         //Selecting the date
-        selectdate( "Apr", "30", "2020");
+        selectdate( "May", "03", "2020");
 
         //Selecting the time
         selecttime("08:30 AM", "05:00 PM");
@@ -61,56 +61,41 @@ public class TestClass extends HelperClass {
         //Selecting the Tender loving Child Care Center
         selectCareCenter(3);
 
-        //Selecting the next buttion
-        next();
 
-       /* //Primary Contact
-        addPrimmaryContact( "9533769769","Mother");*/
+        //Adding Primary Contact
+        addPrimmaryContact( "9533769769","Mother");
 
-       //Primary Contact Next button
-        Primarynext();
-/*
+        //Adding Backup Contact1
+        addBkpContact("GAJULA","VINAY","9080099880","MOULA ALI","HYDERABAD","02451","Mother");
 
-        //Backup Contact1
-        addBackupContact("Vinay","gajula","9533679878","String address1","String address2","String city","Mother",false);
-        //Backup Contact2
-        addBackupContact("Vinay","gajula","9533679878","String address1","String address2","String city","Mother",false);
+        //Adding Backup Contact2
+        addBkpContact2("GAJULA","VINAY","9080099880","MOULA ALI","HYDERABAD","02451","Mother");
 
-        //Added Pediatrician
-        addPediatricianInfo("Sangeetha","9876987989","30-04-2020");
+        //Adding Pediatrician
+        addPediatricianInfo("Sangeetha","9876987989","04/25/2020");
 
-        //Hospital Info
-        addHospitalInfo("hospitalName","address","address1","02451");
+        //Adding Hospital Info
+        addHospitalInfo("fernandez","Moula Ali","hyderabad","02451");
 
-       //Insurance info
-        addInsuranceInfo("StarHealth","9754544553677377388");*/
+       //Adding Insurance info
+        addInsuranceInfo("StarHealth","87766554433");
 
-        //Hide Keyboard
-        hideKeyboard();
-        //Ped insurance next
-        navigateToNext1();
 
-        //To launch the keyboard
-        //launchKeyboard();
-
-        //Selecting Yes or No
+        //Selecting the question then click Yes or No
         selectQuestion("No button", false);
 
         //Select SpecialNeedInfo
         SelectingPhysical();
 
-        //Next Navigate
-        navigateToNext();
-
         //Selecting Questions
         selectQuestion("Medication",false,"false");
-        Thread.sleep(2000);
+
         selectQuestion("Medication1",false,"false");
-        Thread.sleep(2000);
+
         selectQuestion("Medication2",false,"false");
-        Thread.sleep(2000);
+
         selectQuestion("Medication2",false,"false");
-        Thread.sleep(2000);
+
 
         //Final Step Billing
         billing();

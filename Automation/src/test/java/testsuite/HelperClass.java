@@ -59,32 +59,10 @@ public class HelperClass extends PageLocator {
 
 	}
 
-	public void navigateToNext() throws Throwable {
-		click(btnPediationNext,"nextbutton");
-		Thread.sleep(2000);
-
-	}
-
 	public void popuphandling() throws Throwable {
 		Thread.sleep(2000);
 		click(Allowclick,"Handling popup");
 		Thread.sleep(2000);
-	}
-
-	public void navigateToNext1() throws Throwable {
-		Thread.sleep(2000);
-		swipe(AndroidDriver, DIRECTION.DOWN);
-		swipe(AndroidDriver, DIRECTION.DOWN);
-
-/*		//swipeVertical(0.8,0.2,0.5, 2000);
-
-		Thread.sleep(5000);
-		type(txtHospitalZip, "02451", "cc number");*/
-
-		Thread.sleep(2000);
-		click(btnPediationNext,"nextbutton");
-
-
 	}
 
 	public void APacheError() throws Throwable {
@@ -103,6 +81,8 @@ public class HelperClass extends PageLocator {
 
 	public void SelectingPhysical() throws Throwable {
 		click(chkPhysical, "Selecting the Child");
+		click(btnPediationNext,"nextbutton");
+		Thread.sleep(2000);
 	}
 
 
@@ -128,7 +108,40 @@ public class HelperClass extends PageLocator {
             click(By.xpath(TypeofCare.replace("#", typeofCare)), "Selecting the care");
 
     }
-	
+
+	public void addBkpContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String zip,String relationship) throws Throwable {
+		click(cboChooseBackupContact1,"selecting the button");
+		Thread.sleep(2000);
+		hideKeyboard();
+		type(bkpfirstname,firstName,"firstname");
+		type(bkpLastName, lastName,"firstname");
+		type(bkpPhoneNumber, phoneNumber,"firstname");
+		type(bkpAddress1, address1,"firstname");
+		type(bkpAddress2, address2,"firstname");
+		type(bkpZip, zip,"firstname");
+		type(bkpRelationShip, relationship,"firstname");
+
+		click(btnBackupContactDone1, "Done");
+
+	}
+
+	public void addBkpContact2(String firstName,String lastName,String phoneNumber,String address1,String address2,String zip,String relationship) throws Throwable{
+		click(cboChooseBackupContact2,"selecting the button");
+		Thread.sleep(2000);
+		hideKeyboard();
+		type(bkpfirstname,firstName,"firstname");
+		type(bkpLastName, lastName,"firstname");
+		type(bkpPhoneNumber, phoneNumber,"firstname");
+		type(bkpAddress1, address1,"firstname");
+		type(bkpAddress2, address2,"firstname");
+		type(bkpZip, zip,"firstname");
+		type(bkpRelationShip, relationship,"firstname");
+
+		click(btnBackupContactDone1, "Done");
+
+		click(nextbutton,"Next button");
+		Thread.sleep(2000);
+	}
 	
   //@author by Bhavya
 	//created on : 21-04-2020
@@ -164,10 +177,10 @@ public class HelperClass extends PageLocator {
 	}
 
 	public void loginsendkeys()throws Throwable {
-		Thread.sleep(10000);
-		type(emailfield,"gajulavinay1@care.com","d");
+		Thread.sleep(5000);
+		type(emailfield,"gajulavinay1@care.com","Email");
 		Thread.sleep(2000);
-		type(passwordfield,"letmein1","");
+		type(passwordfield,"letmein1","Password");
 		Thread.sleep(2000);
 		click(Login1 , "loginbutton");
 
@@ -324,13 +337,9 @@ public class HelperClass extends PageLocator {
 public void selectCareCenter(int index) throws Throwable {
 		List<WebElement> elements  = driver.findElements(lstCareCenter);
 		elements.get(index).click();
+	   click(btnNext,"Done button");
 	}
 
-	public void next() throws Throwable {
-		click(btnNext,"Done button");
-	}
-
-	
 //@author srinivas n 22nd April 2020
 	// Navigate to Add emergency contacts screen
 	public void navigateToEmergenyContact() throws Throwable
@@ -348,17 +357,12 @@ public void selectCareCenter(int index) throws Throwable {
 			type(ddlPrimaryContactRelationship,relationship,"Relationship to child");
 
 	}
-	public void Primarynext() throws Throwable {
-		click(nextbutton,"Next button");
-		Thread.sleep(4000);
-	}
-	
-	
+
 	//@author srinivas n 22nd April 2020
 	//"Relationship to child : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
 	//@param Boolean flag = true then select checkbox can pickup/drop off child
 	public void addBackupContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String city,String relationship,Boolean flag) throws Throwable{
-	
+	   click(cboChooseBackupContact1,"selecting the button");
 			type(txtFirstName,firstName,"FirstName");
 			type(txtLastName,lastName,"LastName");
 			type(txtPhoneNumber,phoneNumber,"Phone Number");
@@ -393,19 +397,21 @@ public void selectCareCenter(int index) throws Throwable {
 	
 	//@author srinivas n 22nd April 2020
 	//Date Of Last Visit:date format DD/MM/YYYY eg: 21/10/2019
-	public void addPediatricianInfo(String pediatricianName,String numeber,String Date){
-		
-		
-		type(txtPediatricianName,pediatricianName,"Pediatrician Name");
-		
-		type(txtPediatricianPhoneNumber,numeber,"Pediatrician Phone Number");
-		
-		type(txtDateOfLastVisit,Date,"Date Of Last Visit");
+	public void addPediatricianInfo(String pediatricianName,String number,String Date) throws Throwable {
+
+		Thread.sleep(2000);
+		hideKeyboard();
+		type(txtPediatricianName,pediatricianName,"Vinay Gajula");
+		type(txtPediatricianPhoneNumber,number,"9566778899");
+		type(txtDateOfLastVisit,Date,"05/01/2020");
+		Thread.sleep(2000);
+		swipe(AndroidDriver, DIRECTION.DOWN);
+
 		
 	}
 	
 	//@author srinivas n 22nd April 2020
-public void addHospitalInfo(String hospitalName,String address,String address1){
+public void addHospitalInfo(String hospitalName,String address,String address1,String zip) throws Throwable {
 		
 		
 			type(txtHospitalName,hospitalName,"Hospital Name");
@@ -414,14 +420,21 @@ public void addHospitalInfo(String hospitalName,String address,String address1){
 		
 			type(txtHospitalAddressLine2,address1,"Hospital Address Line2");
 
+			type(txtHospitalZip,zip,"zip");
+			Thread.sleep(2000);
+	        swipe(AndroidDriver, DIRECTION.DOWN);
+
 	}
 
 //@author srinivas n 22nd April 2020
-public void addInsuranceInfo(String insuranceCompany,String policyNumber){
+public void addInsuranceInfo(String insuranceCompany,String policyNumber) throws Throwable {
 	
 		type(txtInsuranceCompanyName,insuranceCompany,"Insurance Company Name");
 	
 		type(txtInsurancePolicyNumber,policyNumber,"Insurance Policy Number");
+
+	    click(btnPediationNext,"nextbutton");
+	     Thread.sleep(2000);
 	
 	}
 
@@ -558,9 +571,11 @@ public void selectQuestion(String titel,boolean flag,String description) throws 
 	{
 		click(btnYesButton,"Yes button");
 		addDescribe(description);
+		Thread.sleep(2000);
 	}	
 	else
 		click(btnNoButton,"No button");
+	   Thread.sleep(2000);
 	
 }
 
