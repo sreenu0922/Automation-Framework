@@ -209,7 +209,6 @@ public class HelperClass extends PageLocator {
 	{
 		click(lsChoseCareCenterType1,"A Care@Work Backup Care center");		
 	}
-	
 	//@author srinivas n 22nd April 2020
 	public void navigateToAboutYourCenter() throws Throwable 
 	{
