@@ -1,8 +1,5 @@
 package testsuite;
 
-
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -15,23 +12,6 @@ import io.appium.java_client.MobileElement;
 
 
 public class HelperClass extends PageLocator {
-	
-	
-
-	/*MethodName: scrollTo(String text, int index)
-	 * Description: scroll up and down the application until particular text is visible at particular dcroll view index
-	 * input parameters: text : which is string Eg - "2020" for finding the year
-	 *					index : if there are three scroll view , mentions which scroll view need to be searched
-	 *Output parameters: Null
-	 *created By : Jagadish
-	 *created On : 21-04-2020  
-	 */
-	public static void scrollTo(String text, int index) {
-		((FindsByAndroidUIAutomator<MobileElement>) driver)
-				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + index
-						+ ")).scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))");
-
-	}
   
     //Written by Vinay Gajula
     public void SelectChild() throws Throwable {
@@ -110,13 +90,21 @@ public class HelperClass extends PageLocator {
 	//select company serach as acme
 /*	public void selectCompanyforenroll(String companyname) throws Throwable {
 	//click(companysearch , "company_search");
-	Thread.sleep(2000);
-	type(companysearch, companyname ,"companysearch");
-	int x = driver.manage().window().getSize().getHeight();
-    int y = driver.manage().window().getSize().getWidth();
-    int s = (int) (y * 9.02 / 100);
-    Thread.sleep(5000);
-    clickByCondindates(285, 903);
+		Thread.sleep(2000);
+        type(companysearch, companyname, "companysearch");
+
+        WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
+        int leftX = dropDownLoc.getLocation().getX();
+        int rightX = leftX + dropDownLoc.getSize().getWidth();
+        int middleX = (rightX + leftX) / 2;
+        int upperY = dropDownLoc.getLocation().getY();
+        int lowerY = upperY + dropDownLoc.getSize().getHeight();
+        int middleY = (upperY + lowerY) / 2;
+
+        AndroidDriver.hideKeyboard();
+        int x = leftX + 80;
+        int y = middleY + 150;
+        clickByCondindates(x, y);
 	
 	}
 	
@@ -144,16 +132,17 @@ public class HelperClass extends PageLocator {
 	
 	public void enroll() throws Throwable
 	{
-	type(birthdate,"04/22/1992","select dob");
-	//selectdate("May", "27", "1990");
-	type(firstname, "sangeetha","firstname");
-	Thread.sleep(2000);
-	type(lastname, "nulu","lastname");
-	type(homeaddress, "P.O.Box 100","address");
-	type(zip, "02451","zip");
-	type(email, "sangeethan@gmail.cm","mail");
-	type(password, "123456789","pass");
-	click(enrollbutton, "clickonenrollbutton");
+		type(birthdate,"04/22/1992","select dob");
+		//selectdate("May", "27", "1990");
+		type(firstname, "sangeetha","firstname");
+		Thread.sleep(2000);
+		type(lastname, "nulu","lastname");
+		type(homeaddress, "P.O.Box 100","address");
+		type(zip, "02451","zip");
+		type(email, "jag3@gmail.com","mail");
+		type(password, "123456789","pass");
+		click(enrollbutton, "clickonenrollbutton");
+	
 	}
 	
 	public void clickno() throws Throwable
@@ -170,12 +159,12 @@ public class HelperClass extends PageLocator {
 	
 	public void billing() throws Throwable
 	{
-		
-		
-		sendkey((WebElement) creditcard, "4111 1111 1111 1111");
-		sendkey((WebElement)month, "0523");
-		sendkey((WebElement)cvv, "123");
-		sendkey((WebElement)zip1, "02451");
+		Thread.sleep(4000);
+		swipeVertical(0.8,0.2,0.5, 2000);
+		type(creditcard, "4111111111111111","details");
+		type(month, "0523","expirt");
+		type(cvv, "123","cvv");
+		type(zip1, "02451","zip");
 		click(submitrequest, "click on submit ");
 			
 	}
@@ -277,14 +266,19 @@ public class HelperClass extends PageLocator {
 	public void refreshPreferedCenters(String location,String radius) throws Throwable
 	{
 		
-				
+		if(isElementDisplayed(Deny,"Deny")){
+			click(Deny,"Deny");
+		}
 		click(btnRefine,"Refine buutton");
 		type(frmLocation,location,"loation zipcode");
 		
 		type(frmSearchRadius,radius,"Radius in miles");
 			
 		click(BtnDone,"Done button");
-			
+		Thread.sleep(2000);
+		if(isElementDisplayed(Deny,"Deny")){
+			click(Deny,"Deny");
+		}	
 	}
 	
 	
@@ -300,10 +294,13 @@ public void selectCareCenter(int index)
 	// Navigate to Add emergency contacts screen
 	public void navigateToEmergenyContact() throws Throwable
 	{
-				
+		if(isElementDisplayed(Deny,"Deny")){
+			click(Deny,"Deny");
+		}		
 		click(btnNext,"Next button");
-			
+		
 	}
+
 	
 	//@author srinivas n 22nd April 2020
 	//relationship is : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
@@ -330,6 +327,7 @@ public void selectCareCenter(int index)
 	//@author srinivas n 22nd April 2020
 	//"Relationship to child : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
 	//@param Boolean flag = true then select checkbox can pickup/drop off child
+
 	public void addBackupContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String zipcode,String relationship,Boolean flag) throws Throwable{
 	
 			type(txtFirstName,firstName,"FirstName");
@@ -339,6 +337,7 @@ public void selectCareCenter(int index)
 			type(txtAddressLine2,address2,"Address line 2");
 			type(txtCityState,zipcode,"City state");
 			type(ddlRelationshipToChild,relationship,"Relationship To Child");
+
 			if(flag)
 			click(rdoCanPickupChild,"Relationship to child");
 			
@@ -566,23 +565,14 @@ public void addDescribe(String description) throws Throwable
 				click(done, "done");
 			} else {
 				click(dateOk, "dateOk");
-				click(datecontinue, "datecontinue");
+				if(isElementDisplayed(datecontinue, "datecontinue")) {
+					click(datecontinue, "datecontinue");
+				}
 			}
 		}
 		
 		
 	}
-	
-	
-	
-//	public void selectdate(String month,String day,String year) throws Throwable
-//	{
-//		click(birthdate, "choosedate");
-//		scrollTo(year, 2);
-//		scrollTo(day, 2);
-//		scrollTo(month, 2);
-//		click(okdate, "selectdate");
-//	}
 	
 	
 	/*MethodName: selecttime(String from, String to)
@@ -611,13 +601,10 @@ public void addDescribe(String description) throws Throwable
 			click(boy, "clicked");
 			type(childfirstname, "testtest", "firstname");
 			type(childlastname, "dummy", "lastname");
-			click(birthday, "birthday");
-			scrollTo("2015", 0);
-			scrollTo("09", 1);
-			scrollTo("14", 2);
-			click(done, "done");
+			type(birthday, "03/21/2016","");
 			click(timenext,"next");
-		} else {
+		} 
+		if(isElementDisplayed(existingchild, "existingchild")){
 			click(existingchild, "existingchild");
 			click(done, "done");
 		}
