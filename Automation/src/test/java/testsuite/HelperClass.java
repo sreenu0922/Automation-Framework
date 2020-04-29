@@ -1,9 +1,8 @@
 package testsuite;
 
 
-import java.util.List;
 
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -13,6 +12,7 @@ import java.util.Random;
 
 import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileElement;
+
 
 public class HelperClass extends PageLocator {
 	
@@ -86,10 +86,29 @@ public class HelperClass extends PageLocator {
 	Thread.sleep(2000);
 	
 	}
+	
+	 public void selectCompanyforenroll(String companyname) throws Throwable {
+	        //click(companysearch , "company_search");
+	        Thread.sleep(2000);
+	        type(companysearch, companyname, "companysearch");
+
+	        WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
+	        int leftX = dropDownLoc.getLocation().getX();
+	        int rightX = leftX + dropDownLoc.getSize().getWidth();
+	        int middleX = (rightX + leftX) / 2;
+	        int upperY = dropDownLoc.getLocation().getY();
+	        int lowerY = upperY + dropDownLoc.getSize().getHeight();
+	        int middleY = (upperY + lowerY) / 2;
+
+	        AndroidDriver.hideKeyboard();
+	        int x = leftX + 80;
+	        int y = middleY + 150;
+	        clickByCondindates(x, y);
+	    }
 	//@author by Bhavya
 	//created on : 21-04-2020
 	//select company serach as acme
-	public void selectCompanyforenroll(String companyname) throws Throwable {
+/*	public void selectCompanyforenroll(String companyname) throws Throwable {
 	//click(companysearch , "company_search");
 		Thread.sleep(2000);
         type(companysearch, companyname, "companysearch");
@@ -109,7 +128,7 @@ public class HelperClass extends PageLocator {
 	
 	}
 	
-	//@author by Bhavya
+*/	//@author by Bhavya
 	//created on : 21-04-2020
 	//login flow with email and password
 	public void login()throws Throwable{
@@ -143,8 +162,8 @@ public class HelperClass extends PageLocator {
 		type(email, "jag3@gmail.com","mail");
 		type(password, "123456789","pass");
 		click(enrollbutton, "clickonenrollbutton");
-	}
 	
+	}
 	
 	public void clickno() throws Throwable
 	{
@@ -305,20 +324,32 @@ public void selectCareCenter(int index)
 	}
 	
 	
+	//@param number ==1 backup contact 1 other wise backup contact 2
+	//@author srinivas n 28th April 2020
+			
+	public void selectBackupContact(int number){
+		
+		if (number==1){
+			click(cboChooseBackupContact1,"Backup contact 1");
+		}else{
+			click(cboChooseBackupContact2,"Backup contact 2");
+		}
+	}
 	
 	//@author srinivas n 22nd April 2020
 	//"Relationship to child : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
 	//@param Boolean flag = true then select checkbox can pickup/drop off child
-	public void addBackupContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String city,String relationship,Boolean flag) throws Throwable{
-			
-			click(cboChooseBackupContact1,"backup contact1");
+
+	public void addBackupContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String zipcode,String relationship,Boolean flag) throws Throwable{
+	
 			type(txtFirstName,firstName,"FirstName");
 			type(txtLastName,lastName,"LastName");
 			type(txtPhoneNumber,phoneNumber,"Phone Number");
-			type(txtAddressLine1,address1,"Relationship to child");
-			type(txtAddressLine2,address2,"Phone Number");
-			type(txtCityState,city,"Relationship to child");
-			type(ddlRelationshipToChild,relationship,"Phone Number");
+			type(txtAddressLine1,address1,"Address line 1");
+			type(txtAddressLine2,address2,"Address line 2");
+			type(txtCityState,zipcode,"City state");
+			type(ddlRelationshipToChild,relationship,"Relationship To Child");
+
 			if(flag)
 			click(rdoCanPickupChild,"Relationship to child");
 			
@@ -591,5 +622,6 @@ public void addDescribe(String description) throws Throwable
 		}
 	}
 
+	
 }
 
