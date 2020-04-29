@@ -74,7 +74,7 @@ public class ActionEngine extends TestEngine {
 			return flag;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
+		} /*finally {
 
 			if (!flag) {
 				//Reporter.failureReport("Click", "Unable to click on " + locatorName);
@@ -84,7 +84,8 @@ public class ActionEngine extends TestEngine {
 
 			}
 			return flag;
-		}
+		}*/
+		return flag;
 	}
 
 	
@@ -244,6 +245,15 @@ public class ActionEngine extends TestEngine {
     }
 
 
+	public void hideKeyboard() {
+		AndroidDriver.hideKeyboard();
+	}
+
+	public void launchKeyboard() {
+		AndroidDriver.getKeyboard();
+	}
+
+
     //Author Vinay Gajula
        public void longPress(By locator) {
             Actions actions = new Actions(driver);
@@ -376,81 +386,79 @@ public class ActionEngine extends TestEngine {
  */
 
 public enum DIRECTION {
-    DOWN, UP, LEFT, RIGHT;
+	DOWN, UP, LEFT, RIGHT;
 }
 
-
-public static void swipe(MobileDriver driver, DIRECTION direction) {
-   
-	
-	org.openqa.selenium.Dimension size = driver.manage().window().getSize();
-
-    int startX = 0;
-    int endX = 0;
-    int startY = 0;
-    int endY = 0;
-
-    switch (direction) {
-        case RIGHT:
-            startY = (int) (size.height / 2);
-            startX = (int) (size.width * 0.90);
-            endX = (int) (size.width * 0.05);
-            new TouchAction(driver)
-          .press(PointOption.point(startX, startY))
-          .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
-          .moveTo(PointOption.point(endX, startY)).release().perform();
-             break;
-
-        case LEFT:
-            startY = (int) (size.height / 2);
-            startX = (int) (size.width * 0.05);
-            endX = (int) (size.width * 0.90);
-            new TouchAction(driver)
-            .press(PointOption.point( startX, startY ))
-            .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
-            .moveTo(PointOption.point(endX, startY))
-            .release()
-            .perform();
-
-            break;
-
-        case UP:
-        	
-        	startX = (size.width / 2);
-            endY = (int) (size.height * 0.70);
-            startY = (int) (size.height * 0.30);
-           
-            new TouchAction(driver)
-            .press(PointOption.point(startX, startY))
-            .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
-            .moveTo(PointOption.point(startX, endY))
-            .release()
-            .perform();
-                  
-            break;
+	public static void swipe(MobileDriver driver, DIRECTION direction) throws Throwable {
 
 
-        case DOWN:
-        	
-        	startX = (size.width / 2);
-            startY = (int) (size.height * 0.70);
-            endY = (int) (size.height * 0.30);
-                   
-            new TouchAction(driver)
-            .press(PointOption.point(startX, startY))
-            .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
-            .moveTo(PointOption.point(startX, endY))
-            .release()
-            .perform();
-                 
+		org.openqa.selenium.Dimension size = driver.manage().window().getSize();
 
-            break;
+		int startX = 0;
+		int endX = 0;
+		int startY = 0;
+		int endY = 0;
 
-    }
+		switch (direction) {
+			case RIGHT:
+				startY = (int) (size.height / 2);
+				startX = (int) (size.width * 0.90);
+				endX = (int) (size.width * 0.05);
+				new TouchAction(driver)
+						.press(PointOption.point(startX, startY))
+						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
+						.moveTo(PointOption.point(endX, startY)).release().perform();
+				break;
 
-    
-}
+			case LEFT:
+				startY = (int) (size.height / 2);
+				startX = (int) (size.width * 0.05);
+				endX = (int) (size.width * 0.90);
+				new TouchAction(driver)
+						.press(PointOption.point(startX, startY))
+						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
+						.moveTo(PointOption.point(endX, startY))
+						.release()
+						.perform();
 
+				break;
+
+			case UP:
+
+				startX = (size.width / 2);
+				endY = (int) (size.height * 0.70);
+				startY = (int) (size.height * 0.30);
+
+				new TouchAction(driver)
+						.press(PointOption.point(startX, startY))
+						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
+						.moveTo(PointOption.point(startX, endY))
+						.release()
+						.perform();
+
+				break;
+
+
+			case DOWN:
+
+				startX = (size.width / 2);
+				startY = (int) (size.height * 0.70);
+				endY = (int) (size.height * 0.30);
+
+				new TouchAction(driver)
+						.press(PointOption.point(startX, startY))
+						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
+						.moveTo(PointOption.point(startX, endY))
+						.release()
+						.perform();
+
+
+				break;
+
+		}
+
+
+	}
 
 
 @SuppressWarnings("finally")
