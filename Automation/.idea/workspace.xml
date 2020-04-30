@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="435aa32b-b9da-483d-93a9-eee603d2f573" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/HelperClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/HelperClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/TestClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,25 +145,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587387118341" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1588166145134">
+    <state width="1323" height="110" key="GridCell.Tab.0.bottom" timestamp="1588237516138">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
+    <state width="1323" height="110" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588237516138" />
     <state width="1358" height="187" key="GridCell.Tab.0.bottom/0.23.1440.805@0.23.1440.805" timestamp="1587121146630" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1588166145134">
+    <state width="1323" height="110" key="GridCell.Tab.0.center" timestamp="1588237516137">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
+    <state width="1323" height="110" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588237516137" />
     <state width="1358" height="187" key="GridCell.Tab.0.center/0.23.1440.805@0.23.1440.805" timestamp="1587121146629" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1588166145134">
+    <state width="1323" height="110" key="GridCell.Tab.0.left" timestamp="1588237516137">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
+    <state width="1323" height="110" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588237516137" />
     <state width="1358" height="187" key="GridCell.Tab.0.left/0.23.1440.805@0.23.1440.805" timestamp="1587121146628" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1588166145134">
+    <state width="1323" height="110" key="GridCell.Tab.0.right" timestamp="1588237516138">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
+    <state width="1323" height="110" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588237516138" />
     <state width="1358" height="187" key="GridCell.Tab.0.right/0.23.1440.805@0.23.1440.805" timestamp="1587121146629" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1588144935236">
       <screen x="0" y="0" width="1366" height="728" />
@@ -187,10 +189,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="18" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1588083920515" />
-    <state x="395" y="79" key="MultipleFileMergeDialog" timestamp="1588165578916">
+    <state x="395" y="79" key="MultipleFileMergeDialog" timestamp="1588232006009">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1588165578916" />
+    <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1588232006009" />
     <state x="389" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588083885170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
