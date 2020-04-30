@@ -59,7 +59,8 @@ public class PageLocator extends ActionEngine {
     public static By fellnext=By.id("next_cta");
     public static String Symptoms="//*[contains(@text,'#')]";
     public static String TypeofCare="//*[contains(@text,'#')]";
-
+    public static By Selectingmykid=By.id("my_kids");
+    public static By Unauthorised=By.id("done");
 	
 	//@author by Bhavya
 	//created on : 20-04-2020
@@ -264,14 +265,14 @@ public class PageLocator extends ActionEngine {
 		public static By companysearch = By.xpath("//*[contains(@resource-id,'company_search')]");
 		//verify login button
 		public static By Login = By.id("sign_in");
-		//again select acme
+		/*//again select acme
         public static By companysearch1 = By.xpath("//*[contains(@resource-id,'company_search')]");
-		//verify email
+		*///verify email
 		public static By emailfield= By.id("email");
 		//verify password
 		public static By passwordfield=By.id("passwd");
 		//click on login
-		public static By login1 = By.xpath("//*[contains(@text,'LOGIN')]");
+		public static By login1 = By.id("sign_in");
 		
 		
 	//author Sreeranga
@@ -315,7 +316,15 @@ public class PageLocator extends ActionEngine {
 	public static By zip1 = By.xpath("//*[contains(@resource-id,'cc_cvv_4')]");
 	public static By submitrequest = By.xpath("//*[contains(@resource-id,'submit_button')]");
 	
-	
+	public static By Allowclick = By.xpath("//*[@text='ALLOW']");
+	public static By bkpfirstname = By.id("first_name");
+	public static By bkpLastName = By.id("last_name");
+	public static By bkpPhoneNumber= By.id("phone_number");
+	public static By bkpAddress1 = By.id("address_line_1");
+	public static By bkpAddress2 = By.id("address_line_2");
+	public static By bkpZip = By.id("city_state_zip");
+	public static By bkpRelationShip = By.id("relationship_to_child");
+	public static By nextbutton = By.id("next");
 }
 
 

@@ -32,6 +32,8 @@ public class HelperClass extends PageLocator {
 						+ ")).scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))");
 
 	}
+	
+	
   
     //Written by Vinay Gajula
     public void SelectChild() throws Throwable {
@@ -61,6 +63,9 @@ public class HelperClass extends PageLocator {
             click(By.xpath(TypeofCare.replace("#", typeofCare)), "Selecting the care");
 
     }
+        public void APacheError() throws Throwable {
+    		click(Unauthorised, "Selecting done");
+    	}
 	
 	
   //@author by Bhavya
@@ -89,68 +94,90 @@ public class HelperClass extends PageLocator {
 	//@author by Bhavya
 	//created on : 21-04-2020
 	//select company serach as acme
-	public void selectCompanyforenroll(String companyname) throws Throwable {
-	//click(companysearch , "company_search");
-	Thread.sleep(2000);
-	type(companysearch, companyname ,"companysearch");
-	int x = driver.manage().window().getSize().getHeight();
-    int y = driver.manage().window().getSize().getWidth();
-    int s = (int) (y * 9.02 / 100);
-    Thread.sleep(5000);
-    clickByCondindates(285, 903);
+	
+	public void selectCompanySearch(String companyname) throws Throwable {
+
+		  type(companysearch, companyname, "companysearch");
+          Thread.sleep(5000);
+	        WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
+	        int leftX = dropDownLoc.getLocation().getX();
+	        int rightX = leftX + dropDownLoc.getSize().getWidth();
+	        int middleX = (rightX + leftX) / 2;
+	        int upperY = dropDownLoc.getLocation().getY();
+	        int lowerY = upperY + dropDownLoc.getSize().getHeight();
+	        int middleY = (upperY + lowerY) / 2;
+
+	       // AndroidDriver.hideKeyboard();
+	        int x = leftX + 80;
+	        int y = middleY + 100;
+	        clickByCondindates(x, y);
 	
 	}
-	
 	//@author by Bhavya
 	//created on : 21-04-2020
 	//login flow with email and password
-	public void login()throws Throwable{
+	
+	
+public void login(String useremail,String userpass)throws Throwable{
 		
 		click(Login ,"loginbutton");
 		Thread.sleep(2000);
-		click(companysearch1 , "company_search");
+		//click(companysearch , "company_search");
 		Thread.sleep(2000);
-		type(companysearch,"acme","companysearch");
+		selectCompanySearch("acme");
+		System.out.println("testing");
 		Thread.sleep(10000);
-		type(emailfield,"bhavya444@care.com","d");
+		type(emailfield,useremail,"email");
 		Thread.sleep(2000);
-		type(passwordfield,"letmein1","");
+		type(passwordfield, userpass,"password");
 		Thread.sleep(2000);
 		click(login1 , "loginbutton1");
 		
 		
+		
 	}
+	public void mykid() throws Throwable {
+		click(Selectingmykid, "Selecting the Child");
+	}
+	   //@author by sangeetha
+		//created on : 21-04-2020
+	// enroll method
+
+
 	
-	
-	
+
 	public void enroll() throws Throwable
 	{
-		
-		selectdate("may", "27", "1990");
-		sendkey((WebElement)firstname, "sangeetha");
+		type(birthdate,"04/22/1992","select dob");
+		//selectdate("May", "27", "1990");
+		type(firstname, "sangeetha","firstname");
 		Thread.sleep(2000);
-		sendkey((WebElement)lastname, "nulu");
-		sendkey((WebElement) homeaddress, "P.O.Box 100");
-		sendkey((WebElement)zip, "02451");
-		sendkey((WebElement)email, "sangeethan@gmail.cm");
-		sendkey((WebElement)password, "Letmein1");
+		type(lastname, "nulu","lastname");
+		type(homeaddress, "P.O.Box 100","address");
+		type(zip, "02451","zip");
+		type(email, "sangeethan@gmail.cm","mail");
+		type(password, "123456789","pass");
 		click(enrollbutton, "clickonenrollbutton");
 	}
-	
+	  //@author by sangeetha
+	  //created on : 21-04-2020
+	// code for clickno
 	
 	public void clickno() throws Throwable
 	{
 		click(nobutton, "no");
 	}
-
-
+	 //@author by sangeetha
+	 //created on : 21-04-2020
+	//code for clickyes
 	public void clickyes() throws Throwable
 	{
 		click(yesbutton, "yes");
 	}
+	//@author by sangeetha
+			//created on : 21-04-2020
 	
-	
-	public void billing() throws Throwable
+	/*public void billing() throws Throwable
 	{
 		
 		
@@ -160,6 +187,17 @@ public class HelperClass extends PageLocator {
 		sendkey((WebElement)zip1, "02451");
 		click(submitrequest, "click on submit ");
 			
+	}*/
+	public void billing() throws Throwable
+	{
+		Thread.sleep(4000);
+		swipeVertical(0.8,0.2,0.5, 2000);
+		type(creditcard, "4111 1111 1111 1111", "cc number");
+		type(month, "0524", "month and year");
+		type(cvv, "123", "cvv number");
+		type(zip1, "02451", "zip code");
+		click(submitrequest, "click on submit ");
+		
 	}
 	
 	//Author Sreeranga
@@ -306,14 +344,14 @@ public void selectCareCenter(int index)
 			type(txtFirstName,firstName,"FirstName");
 			type(txtLastName,lastName,"LastName");
 			type(txtPhoneNumber,phoneNumber,"Phone Number");
-			type(txtAddressLine1,relationship,"Relationship to child");
-			type(txtAddressLine2,phoneNumber,"Phone Number");
-			type(txtCityState,relationship,"Relationship to child");
-			type(ddlRelationshipToChild,phoneNumber,"Phone Number");
+			type(txtAddressLine1,address1,"Relationship to child");
+			type(txtAddressLine2,address2,"Phone Number");
+			type(txtCityState,city,"Relationship to child");
+			type(ddlRelationshipToChild,relationship,"Phone Number");
 			if(flag)
 			click(rdoCanPickupChild,"Relationship to child");
-			
 			click(btnBackupContactDone1,"Done");
+		
 			
 		
 	}
@@ -332,7 +370,7 @@ public void selectCareCenter(int index)
 	
 	//@author srinivas n 22nd April 2020
 	//Date Of Last Visit:date format DD/MM/YYYY eg: 21/10/2019
-	public void addPediatricianInfo(String pediatricianName,String numeber,String Date){
+	public void addPediatricianInfo(String pediatricianName,String numeber,String Date) throws Throwable {
 		
 		
 		type(txtPediatricianName,pediatricianName,"Pediatrician Name");
@@ -341,10 +379,13 @@ public void selectCareCenter(int index)
 		
 		type(txtDateOfLastVisit,Date,"Date Of Last Visit");
 		
+		Thread.sleep(2000);
+		swipe(AndroidDriver, DIRECTION.DOWN);
+		
 	}
 	
 	//@author srinivas n 22nd April 2020
-public void addHospitalInfo(String hospitalName,String address,String address1,String zipcode){
+public void addHospitalInfo(String hospitalName,String address,String address1,String zipcode) throws Throwable{
 		
 		
 			type(txtHospitalName,hospitalName,"Hospital Name");
@@ -354,14 +395,18 @@ public void addHospitalInfo(String hospitalName,String address,String address1,S
 			type(txtHospitalAddressLine2,address1,"Hospital Address Line2");
 		
 			type(txtHospitalZip,zipcode,"Hospital Zip code");
+			Thread.sleep(2000);
+			swipe(AndroidDriver, DIRECTION.DOWN);
 		
 	}
 //@author srinivas n 22nd April 2020
-public void addInsuranceInfo(String insuranceCompany,String policyNumber){
+public void addInsuranceInfo(String insuranceCompany,String policyNumber) throws Throwable{
 	
 		type(txtInsuranceCompanyName,insuranceCompany,"Insurance Company Name");
 	
 		type(txtInsurancePolicyNumber,policyNumber,"Insurance Policy Number");
+		click(btnPediationNext,"nextbutton");
+	     Thread.sleep(2000);
 	
 	}
 
@@ -592,6 +637,51 @@ public void addDescribe(String description) throws Throwable
 			click(existingchild, "existingchild");
 			click(done, "done");
 		}
+	}
+	
+	public void popuphandling() throws Throwable {
+		Thread.sleep(2000);
+		click(Allowclick,"Handling popup");
+		Thread.sleep(2000);
+	}
+	
+	public void addBkpContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String zip,String relationship) throws Throwable {
+		click(cboChooseBackupContact1,"selecting the button");
+		/*Thread.sleep(2000);
+		hideKeyboard();
+*/		type(bkpfirstname,firstName,"firstname");
+		type(bkpLastName, lastName,"firstname");
+		type(bkpPhoneNumber, phoneNumber,"firstname");
+		type(bkpAddress1, address1,"firstname");
+		type(bkpAddress2, address2,"firstname");
+		type(bkpZip, zip,"firstname");
+		type(bkpRelationShip, relationship,"firstname");
+
+		click(btnBackupContactDone1, "Done");
+
+	}
+	public void addBkpContact2(String firstName,String lastName,String phoneNumber,String address1,String address2,String zip,String relationship) throws Throwable{
+		click(cboChooseBackupContact2,"selecting the button");
+		/*Thread.sleep(2000);
+		hideKeyboard();*/
+		type(bkpfirstname,firstName,"firstname");
+		type(bkpLastName, lastName,"firstname");
+		type(bkpPhoneNumber, phoneNumber,"firstname");
+		type(bkpAddress1, address1,"firstname");
+		type(bkpAddress2, address2,"firstname");
+		type(bkpZip, zip,"firstname");
+		type(bkpRelationShip, relationship,"firstname");
+
+		click(btnBackupContactDone1, "Done");
+
+		click(nextbutton,"Next button");
+		Thread.sleep(2000);
+	}
+	public void SelectingPhysical() throws Throwable {
+		click(chkPhysical, "Selecting the Child");
+		click(btnPediationNext,"nextbutton");
+		Thread.sleep(2000);
+		
 	}
 
 }
