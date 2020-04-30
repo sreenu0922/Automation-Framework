@@ -114,12 +114,12 @@ public class HelperClass extends PageLocator {
 		Thread.sleep(2000);
 		hideKeyboard();
 		type(bkpfirstname,firstName,"firstname");
-		type(bkpLastName, lastName,"firstname");
-		type(bkpPhoneNumber, phoneNumber,"firstname");
-		type(bkpAddress1, address1,"firstname");
-		type(bkpAddress2, address2,"firstname");
-		type(bkpZip, zip,"firstname");
-		type(bkpRelationShip, relationship,"firstname");
+		type(bkpLastName, lastName,"lastname");
+		type(bkpPhoneNumber, phoneNumber,"phonenumber");
+		type(bkpAddress1, address1,"address1");
+		type(bkpAddress2, address2,"address2");
+		type(bkpZip, zip,"zip");
+		type(bkpRelationShip, relationship,"relationship");
 
 		click(btnBackupContactDone1, "Done");
 
