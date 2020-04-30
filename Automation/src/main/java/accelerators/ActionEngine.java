@@ -532,7 +532,7 @@ public static Boolean isElementDisplayed(By locator, String locatorName) {
 }
 
     //@author : Archana D
-	public void hideKeyboard() {
+	public static void hideKeyboard() {
 		AndroidDriver.hideKeyboard();
 		}
 		

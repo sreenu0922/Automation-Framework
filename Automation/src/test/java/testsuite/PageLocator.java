@@ -201,14 +201,14 @@ public class PageLocator extends ActionEngine {
 	
 	//Allergy information
 	
-	By chkMedications = By.xpath("(//*[@class='android.widget.CheckBox'])[1]");
-	By chkFood = By.xpath("(//*[@class='android.widget.CheckBox'])[2]");
-	By chkRespiratory = By.xpath("(//*[@class='android.widget.CheckBox'])[3]");
-	By chkBeesting = By.xpath("(//*[@class='android.widget.CheckBox'])[4]");
-	By chkOtherr = By.xpath("(//*[@class='android.widget.CheckBox'])[5]");
+	public static By chkMedications = By.xpath("(//*[@class='android.widget.CheckBox'])[1]");
+	public static By chkFood = By.xpath("(//*[@class='android.widget.CheckBox'])[2]");
+	public static By chkRespiratory = By.xpath("(//*[@class='android.widget.CheckBox'])[3]");
+	public static By chkBeesting = By.xpath("(//*[@class='android.widget.CheckBox'])[4]");
+	public static By chkOtherr = By.xpath("(//*[@class='android.widget.CheckBox'])[5]");
 	
-	By txtAllergyDetail = By.id("allergy_detail");
-	By txtReactionDetail = By.id("reaction_detail");
+	public static By txtAllergyDetail = By.id("allergy_detail");
+	public static By txtReactionDetail = By.id("reaction_detail");
 	
 	//Special needs information
 	public static By txtSpecialNeedsTitle = By.id("title");
@@ -320,8 +320,6 @@ public class PageLocator extends ActionEngine {
 	public static By cvv = By.xpath("//*[contains(@resource-id,'cc_cvv_3')]");
 	public static By zip1 = By.xpath("//*[contains(@resource-id,'cc_cvv_4')]");
 	public static By submitrequest = By.xpath("//*[contains(@resource-id,'submit_button')]");
-
-	public static By Deny = By.xpath("//*[contains(@text,'DENY')]");
 
 	
 }
