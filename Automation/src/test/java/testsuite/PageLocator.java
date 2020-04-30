@@ -70,19 +70,6 @@ public class PageLocator extends ActionEngine {
 	public static By bkpZip = By.id("city_state_zip");
 	public static By bkpRelationShip = By.id("relationship_to_child");
 
-	//@author by Bhavya
-	//created on : 20-04-2020
-
-	
-
-	public static By menu = By.xpath("//a[@aria-label='navigation menu']");
-	
-	
-	
-	
-	
-	
-
 	/*@author srinivas n 20th April 2020
 	 * adding elements for incenter care selection
 	 * 
@@ -262,29 +249,14 @@ public class PageLocator extends ActionEngine {
 	*	
 	*	Reuse above locators for question, Yes button, No button , Description and Next button
 	*/
-	
-	
-	public static By settingsicon = By.xpath("//*[contains(@resource-id,'settings')]");
-	public static By uat25 = By.xpath("//*[contains(@text,'uat25')]");
-	public static By enroll = By.xpath("//*[contains(@resource-id,'sign_up')]");
-	//sendkeys method by giving acme
-	public static By companysearch = By.xpath("//*[contains(@resource-id,'company_search')]");
-	//verify login button
-	public static By Login = By.id("sign_in");
-	//again select acme
-	public static By companysearch1 = By.xpath("//*[contains(@resource-id,'company_search')]");
-	//verify email
-	public static By emailfield= By.id("email");
-	//verify password
-	public static By passwordfield=By.id("passwd");
-	//click on login
-	public static By Login1 = By.id("sign_in");
-	public static By login1 = By.xpath("//*[contains(@text,'LOGIN')]");
 
+	//@author by Bhavya
+	//created on : 20-04-2020
 		//Verify Settings icon
 		//Verify Select uat25
 		//verify click on enroll
 		//verify acme from where do you work dropdown list
+
 		
 		public static By settingsicon = By.xpath("//*[contains(@resource-id,'settings')]");
 		public static By uat25 = By.xpath("//*[contains(@text,'uat25')]");
@@ -293,14 +265,12 @@ public class PageLocator extends ActionEngine {
 		public static By companysearch = By.xpath("//*[contains(@resource-id,'company_search')]");
 		//verify login button
 		public static By Login = By.id("sign_in");
-		//again select acme
-        public static By companysearch1 = By.xpath("//*[contains(@resource-id,'company_search')]");
 		//verify email
 		public static By emailfield= By.id("email");
 		//verify password
 		public static By passwordfield=By.id("passwd");
 		//click on login
-		public static By Login1 = By.id("sign_in");
+		public static By login1 = By.xpath("//*[contains(@text,'LOGIN')]");
 	
 
 	//author Sreeranga
@@ -342,6 +312,5 @@ public class PageLocator extends ActionEngine {
 	public static By zip1 = By.xpath("//*[contains(@resource-id,'cc_cvv_4')]");
 	public static By submitrequest = By.xpath("//*[contains(@resource-id,'submit_button')]");
 
-	
 }
 
