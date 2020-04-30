@@ -284,7 +284,7 @@ public class PageLocator extends ActionEngine {
 	public static By passwordfield=By.id("passwd");
 	//click on login
 	public static By Login1 = By.id("sign_in");
-
+	public static By login1 = By.xpath("//*[contains(@text,'LOGIN')]");
 
 	//author Sreeranga
 
