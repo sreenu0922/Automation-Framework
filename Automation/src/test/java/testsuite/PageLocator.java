@@ -61,6 +61,15 @@ public class PageLocator extends ActionEngine {
     public static String TypeofCare="//*[contains(@text,'#')]";
 	public static By Allowclick = By.xpath("//*[@text='ALLOW']");
 
+	//BkpContact1
+	public static By bkpfirstname = By.id("first_name");
+	public static By bkpLastName = By.id("last_name");
+	public static By bkpPhoneNumber= By.id("phone_number");
+	public static By bkpAddress1 = By.id("address_line_1");
+	public static By bkpAddress2 = By.id("address_line_2");
+	public static By bkpZip = By.id("city_state_zip");
+	public static By bkpRelationShip = By.id("relationship_to_child");
+
 	//@author by Bhavya
 	//created on : 20-04-2020
 

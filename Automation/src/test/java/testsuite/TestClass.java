@@ -3,6 +3,7 @@ package testsuite;
 import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
 import org.testng.annotations.Test;
 
+
 public class TestClass extends HelperClass{
 
 
@@ -102,27 +103,28 @@ public class TestClass extends HelperClass{
 	}
 
 
+
     //@Sangeetha and Vinay
-  //  @Test
-  /*  public void test() throws Throwable {
+    @Test
+    public void test() throws Throwable {
         //Written by Sangeetha Nulu and Vinay Gajula
 
         //Navigate to UAT25
         navigateToUat();
 
         //Clicking on login
-        //login();
+        login();
 
         //Select Company Name
         selectCompanyforenroll("acme");
 
         //Username and password
-        //loginsendkeys();
+        loginsendkeys();
 
         //Handing Apache Error
         APacheError();
 
-    //Selecting Mykid
+        //Selecting Mykid
         mykid();
 
         //Selecting BackupDays
@@ -135,7 +137,7 @@ public class TestClass extends HelperClass{
         clickno();
 
         //Selecting the date
-        selectdate( "Apr", "30", "2020");
+        selectdate( "May", "03", "2020");
 
         //Selecting the time
         selecttime("08:30 AM", "05:00 PM");
@@ -158,49 +160,60 @@ public class TestClass extends HelperClass{
         //Selecting the Tender loving Child Care Center
         selectCareCenter(3);
 
-        //Selecting the next buttion
+        //Clicking Next button
         next();
 
-        //Primary Contact
-        addPrimmaryContact( "9533769769","Mother");
 
-       //Primary Contact Next button
-        Primarynext();
+        //Adding Primary Contact
+        addPrimmaryContact( "9533679769","Mother");
 
+        //Adding Backup Contact1
+        addBkpContact("Vinay","Vanhi","9533679769","MOULA ALI","HYDERABAD","02451","Father");
 
-        //Backup Contact1
-        addBackupContact("Vinay","gajula","9533679878","String address1","String address2","String city","Mother",false);
-        //Backup Contact2
-        addBackupContact("Vinay","gajula","9533679878","String address1","String address2","String city","Mother",false);
+        //Adding Backup Contact2
+        addBkpContact2("Sangeetha","Nulu","9533679769","Hitech","HYDERABAD","02451","Mother");
 
-        //Added Pediatrician
-        addPediatricianInfo("Sangeetha","9876987989","30-04-2020");
+        //Adding Pediatrician
+        addPediatricianInfo("FamousDoctor","9533679769","04/25/2020");
 
-        //Hospital Info
-        addHospitalInfo("hospitalName","address","address1","02451");
+        //Swiping Down
+        Swipedown();
 
-       //Insurance info
-        addInsuranceInfo("StarHealth","9754544553677377388");
+        //Adding Hospital Info
+        addHospitalInfo("fernandez","Bogulkunta","Hyderabad","02451");
 
-        //Hide Keyboard
-        hideKeyboard();
-        //Ped insurance next
-        navigateToNext1();
+        //Swiping Down
+        Swipedown();
 
-        //To launch the keyboard
-        //launchKeyboard();
+        //Adding Insurance info
+        addInsuranceInfo("StarHealth","87766554433");
 
-        //Selecting Yes or No
+        //Navigate to next
+        navigateToAllergiesQuestion();
+
+        //Selecting the question then click Yes or No
         selectQuestion("No button", false);
 
         //Select SpecialNeedInfo
         SelectingPhysical();
 
-
-        //Next Navigate
-        navigateToNext();
+        //Navigate to next
+        navigateToAllergiesQuestion();
 
         //Selecting Questions
+
+
+        selectQuestion("Medication",false);
+
+        selectQuestion("Medication1",false);
+
+        selectQuestion("Medication2",false);
+
+        selectQuestion("Medication2",false);
+
+        //Final Step Billing
+        billing();
+
         selectQuestion("Medication",false,"false");
         Thread.sleep(2000);
         selectQuestion("Medication1",false,"false");
@@ -214,7 +227,7 @@ public class TestClass extends HelperClass{
         //Next Navigate
         navigateToNext();
     }
-*/
+
     @Test
     public void Test() throws Throwable {
          //@author :  Bhavya and Archana

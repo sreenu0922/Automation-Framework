@@ -148,12 +148,12 @@ public class HelperClass extends PageLocator {
 		Thread.sleep(2000);
 		hideKeyboard();
 		type(bkpfirstname,firstName,"firstname");
-		type(bkpLastName, lastName,"firstname");
-		type(bkpPhoneNumber, phoneNumber,"firstname");
-		type(bkpAddress1, address1,"firstname");
-		type(bkpAddress2, address2,"firstname");
-		type(bkpZip, zip,"firstname");
-		type(bkpRelationShip, relationship,"firstname");
+		type(bkpLastName, lastName,"lastname");
+		type(bkpPhoneNumber, phoneNumber,"phonenumber");
+		type(bkpAddress1, address1,"address1");
+		type(bkpAddress2, address2,"address2");
+		type(bkpZip, zip,"zip");
+		type(bkpRelationShip, relationship,"relationship");
 
 		click(btnBackupContactDone1, "Done");
 
@@ -282,7 +282,9 @@ public class HelperClass extends PageLocator {
 
 
 	//login flow with email and password
+
 	public void login(String useremail,String userpass)throws Throwable{
+
 
 		click(Login ,"loginbutton");
 		Thread.sleep(2000);
@@ -307,7 +309,12 @@ public class HelperClass extends PageLocator {
 		Thread.sleep(2000);
 		click(Login1 , "loginbutton");
 	}
-	
+
+	public static void Swipedown() throws Throwable {
+		Thread.sleep(2000);
+		swipe(AndroidDriver, DIRECTION.DOWN);
+	}
+
 //	public static void loginsendkeys()throws Throwable {
 //		Thread.sleep(5000);
 //		type(emailfield,"gajulavinay1@care.com","Email");
@@ -366,25 +373,12 @@ public class HelperClass extends PageLocator {
 
 	public static void billing() throws Throwable
 	{
-
-		sendkey((WebElement) creditcard, "4111 1111 1111 1111");
-		sendkey((WebElement)month, "0523");
-		sendkey((WebElement)cvv, "123");
-		sendkey((WebElement)zip1, "02451");
-
 		Thread.sleep(2000);
 		swipe(AndroidDriver, DIRECTION.DOWN);
 		type(creditcard, "4111 1111 1111 1111", "cc number");
 		type(month, "0524", "month and year");
 		type(cvv, "123", "cvv number");
 		type(zip1, "02451", "zip code");
-
-		Thread.sleep(4000);
-		swipeVertical(0.8,0.2,0.5, 2000);
-		type(creditcard, "4111111111111111","details");
-		type(month, "0523","expirt");
-		type(cvv, "123","cvv");
-		type(zip1, "02451","zip");
 
 		click(submitrequest, "click on submit ");
 
@@ -589,8 +583,9 @@ public class HelperClass extends PageLocator {
 	//@author srinivas n 22nd April 2020
 	//Date Of Last Visit:date format DD/MM/YYYY eg: 21/10/2019
 
-	public static void addPediatricianInfo(String pediatricianName,String numeber,String Date){
-
+	public static void addPediatricianInfo(String pediatricianName,String numeber,String Date) throws InterruptedException {
+		Thread.sleep(1000);
+		hideKeyboard();
 		type(txtPediatricianName,pediatricianName,"Pediatrician Name");
 
 		type(txtPediatricianPhoneNumber,numeber,"Pediatrician Phone Number");
@@ -636,6 +631,7 @@ public class HelperClass extends PageLocator {
 			type(txtHospitalName,hospitalName,"Hospital Name");
 			type(txtHospitalAddressLine1,address,"Hospital Address Line1");
 			type(txtHospitalAddressLine2,address1,"Hospital Address Line2");
+			type(txtHospitalZip,zip,"zip");
 	}
 
 
