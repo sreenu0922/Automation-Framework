@@ -63,6 +63,7 @@ public class PageLocator extends ActionEngine {
 
 	//@author by Bhavya
 	//created on : 20-04-2020
+
 	
 
 	public static By menu = By.xpath("//a[@aria-label='navigation menu']");
@@ -72,6 +73,7 @@ public class PageLocator extends ActionEngine {
 	
 	
 	
+
 	/*@author srinivas n 20th April 2020
 	 * adding elements for incenter care selection
 	 * 
@@ -318,7 +320,9 @@ public class PageLocator extends ActionEngine {
 	public static By cvv = By.xpath("//*[contains(@resource-id,'cc_cvv_3')]");
 	public static By zip1 = By.xpath("//*[contains(@resource-id,'cc_cvv_4')]");
 	public static By submitrequest = By.xpath("//*[contains(@resource-id,'submit_button')]");
-	
+
+	public static By Deny = By.xpath("//*[contains(@text,'DENY')]");
+
 	
 }
 

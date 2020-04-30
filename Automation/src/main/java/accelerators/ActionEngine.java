@@ -21,6 +21,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+import java.sql.DriverManager;
 import java.time.Duration;
 import java.util.List;
 
@@ -48,6 +49,7 @@ import org.openqa.selenium.interactions.touch.TouchActions;
 public class ActionEngine extends TestEngine {
     public static WebDriverWait wait;
 
+
     public static boolean flag = false;
     static boolean b = true;
 
@@ -56,24 +58,18 @@ public class ActionEngine extends TestEngine {
 	 * example -- Click
 	 */
 	@SuppressWarnings("finally")
-
+  public static boolean click(By locator, String locatorName) throws Throwable {
+	
 	//comment removed throws Throwable @srinivas
+	boolean flag = false;
 
-	public static boolean click(By locator, String locatorName)
-			 {
-		//explicityWait(locator, locatorName);
-	
-
-
-
-	
-		boolean flag = false;
 		try {
 			driver.findElement(locator).click();
 			flag = true;
 			return flag;
 		} catch (Exception e) {
 			e.printStackTrace();
+
 		} /*finally {
 
 			if (!flag) {
@@ -85,11 +81,9 @@ public class ActionEngine extends TestEngine {
 			}
 			return flag;
 		}*/
+
 		return flag;
 	}
-
-	
-	
 
 	//Jagadish
 	public static boolean ScrollToElement(By locator, String locatorName) throws Throwable {
@@ -163,7 +157,9 @@ public class ActionEngine extends TestEngine {
 	
 	//@author :bhavya for acme droppdown
 	
-	public void clickByCondindates(int x, int y) {
+	public static void clickByCondindates(int x, int y) {
+
+
 		TouchAction touchAction = new TouchAction((MobileDriver) driver);
 		touchAction.tap(PointOption.point(x, y)).perform();
 	}
@@ -245,14 +241,6 @@ public class ActionEngine extends TestEngine {
     }
 
 
-	public void hideKeyboard() {
-		AndroidDriver.hideKeyboard();
-	}
-
-	public void launchKeyboard() {
-		AndroidDriver.getKeyboard();
-	}
-
 
     //Author Vinay Gajula
        public void longPress(By locator) {
@@ -284,7 +272,8 @@ public class ActionEngine extends TestEngine {
 
 
     //Author Sreeranga
-	public void sendkey(WebElement w, String text) {
+
+	public static void sendkey(WebElement w, String text) {
 		try {
 			w.click();
 			w.clear();
@@ -542,6 +531,11 @@ public static Boolean isElementDisplayed(By locator, String locatorName) {
 	return flag;
 }
 
+    //@author : Archana D
+	public void hideKeyboard() {
+		AndroidDriver.hideKeyboard();
+		}
+		
 	/*MethodName: scrollTo(String text, int index)
 	 * Description: scroll up and down the application until particular text is visible at particular dcroll view index
 	 * input parameters: text : which is string Eg - "2020" for finding the year
@@ -550,11 +544,17 @@ public static Boolean isElementDisplayed(By locator, String locatorName) {
 	 *created By : Jagadish
 	 *created On : 21-04-2020  
 	 */
-	public static void scrollTo(String text, int index) {
+
+  public static void scrollTo(String text, int index) {
 		((FindsByAndroidUIAutomator<MobileElement>) driver)
 				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + index
 						+ ")).scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))");
-	
+	}
+
+	//@author : Archana D
+	public void launchKeyboard() {
+		AndroidDriver.getKeyboard();
+
 	}
 
 }
