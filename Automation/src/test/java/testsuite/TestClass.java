@@ -4,8 +4,12 @@ import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
 import org.testng.annotations.Test;
 
 
+<<<<<<< HEAD
 public class TestClass extends HelperClass {
 
+=======
+public class TestClass extends HelperClass{
+>>>>>>> 6a3974119b21c220cdb86cb0ef8cf41cb07075c6
 	
 	public void loginTest() throws Throwable{
 		navigateToUat();
@@ -13,25 +17,37 @@ public class TestClass extends HelperClass {
 		
 	}
 	
-	@Test
+	@Test (priority=1)
 	public void enrollTest() throws Throwable{
+		
+		//Setting UAT25
 		navigateToUat();
 		
+		//Navigate to enroll screen
 		navigateToEnroll();
 		
 		
-		//selectCompanyforenroll("ACME");
+	
+		//Seect company for enroll
+		selectCompanyforenroll("acme");
 		
-		selectCompanySearch("acme");
 		Thread.sleep(2000);
 		
-		enroll();
+		//enroll with type birthdate,firstname, lastname,homeaddress, zip, email,password and click on enrollbutton
 		
+		enroll();
+		// app was display apache error skip that error
 		 if(isElementDisplayed(Unauthorised,"Unauthorised"))
 	        {
 	            APacheError();
 	        }
+	}
+	
+	//Dashboard screen after login or enroll
+	@Test (priority=2)
+	public void myKidTest() throws Throwable{
 		
+		// selecting my kid option
 		mykid();
 
         //Selecting BackupDays
@@ -48,9 +64,10 @@ public class TestClass extends HelperClass {
 
         //Selecting the Chaild
         selectchild();
-        
+        Thread.sleep(2000);
+        selectchild();
         //selectchild();
-        SelectChild();
+       // SelectChild();
 
         //Selecting the reasons for Care
         CareReason("My regular care is unavailable.");
@@ -58,25 +75,35 @@ public class TestClass extends HelperClass {
         //Selecting In-Center
         CareType("In-center");
         
+	}
+	
+	
+	
+	
+	/*After select in-center app have two flows one for recommand another for A child care of my choosing
+	below method for A child care of my choosing
+	*/
+	@Test (priority=3)
+	public void childCareOfMyChoosingTest() throws Throwable{
         
-        
+	
         navigateToAboutYourCenter();
         addNetworkCenter("BussinessName","02541", "1234567890"," 1205");
 
         navigateToReviewYourClaim() ;
         
-        swipe(AndroidDriver, DIRECTION.DOWN);
+        
         navigateToYouAreAllSet();
         
         navigateBackToHome() ;
         
 	}
-	
+}
 
 
     //@Sangeetha and Vinay
-    @Test
-    public void test() throws Throwable {
+  //  @Test
+  /*  public void test() throws Throwable {
         //Written by Sangeetha Nulu and Vinay Gajula
 
         //Navigate to UAT25
@@ -94,7 +121,7 @@ public class TestClass extends HelperClass {
         //Handing Apache Error
         APacheError();
 
-    //Selecting Mykid
+        //Selecting Mykid
         mykid();
 
         //Selecting BackupDays
@@ -107,7 +134,7 @@ public class TestClass extends HelperClass {
         clickno();
 
         //Selecting the date
-        selectdate( "Apr", "30", "2020");
+        selectdate( "May", "03", "2020");
 
         //Selecting the time
         selecttime("08:30 AM", "05:00 PM");
@@ -130,44 +157,42 @@ public class TestClass extends HelperClass {
         //Selecting the Tender loving Child Care Center
         selectCareCenter(3);
 
-        //Selecting the next buttion
-        next();
 
-       /* //Primary Contact
-        addPrimmaryContact( "9533769769","Mother");*/
+        //Adding Primary Contact
+        addPrimmaryContact( "9533769769","Mother");
+
+        //Adding Backup Contact1
+        addBkpContact("GAJULA","VINAY","9080099880","MOULA ALI","HYDERABAD","02451","Mother");
+        //Primary Contact
+        addPrimmaryContact( "9533769769","Mother");
 
        //Primary Contact Next button
         Primarynext();
-/*
 
-        //Backup Contact1
-        addBackupContact("Vinay","gajula","9533679878","String address1","String address2","String city","Mother",false);
-        //Backup Contact2
-        addBackupContact("Vinay","gajula","9533679878","String address1","String address2","String city","Mother",false);
 
-        //Added Pediatrician
-        addPediatricianInfo("Sangeetha","9876987989","30-04-2020");
+        //Adding Backup Contact2
+        addBkpContact2("GAJULA","VINAY","9080099880","MOULA ALI","HYDERABAD","02451","Mother");
 
-        //Hospital Info
-        addHospitalInfo("hospitalName","address","address1","02451");
+        //Adding Pediatrician
+        addPediatricianInfo("Sangeetha","9876987989","04/25/2020");
 
+        //Adding Hospital Info
+        addHospitalInfo("fernandez","Moula Ali","hyderabad","02451");
+
+        //Adding Insurance info
+        addInsuranceInfo("StarHealth","87766554433");
        //Insurance info
-        addInsuranceInfo("StarHealth","9754544553677377388");*/
+        addInsuranceInfo("StarHealth","9754544553677377388");
 
-        //Hide Keyboard
-        hideKeyboard();
-        //Ped insurance next
-        navigateToNext1();
 
-        //To launch the keyboard
-        //launchKeyboard();
 
-        //Selecting Yes or No
+        //Selecting the question then click Yes or No
         selectQuestion("No button", false);
 
         //Select SpecialNeedInfo
         SelectingPhysical();
 
+<<<<<<< HEAD
         //Next Navigate
         navigateToNext();
     }
@@ -233,18 +258,20 @@ public class TestClass extends HelperClass {
         navigateBackToHome();
 
 
+=======
+>>>>>>> 6a3974119b21c220cdb86cb0ef8cf41cb07075c6
         //Selecting Questions
         selectQuestion("Medication",false,"false");
-        Thread.sleep(2000);
+
         selectQuestion("Medication1",false,"false");
-        Thread.sleep(2000);
+
         selectQuestion("Medication2",false,"false");
-        Thread.sleep(2000);
+
         selectQuestion("Medication2",false,"false");
-        Thread.sleep(2000);
+
 
         //Final Step Billing
         billing();
 
     }
-}
+}*/
