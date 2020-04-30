@@ -21,6 +21,9 @@ import java.util.Random;
 
 import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
 
+import static testsuite.PageLocator.emailfield;
+import static testsuite.PageLocator.settingsicon;
+
 
 public class HelperClass extends PageLocator {
 
@@ -185,7 +188,7 @@ public class HelperClass extends PageLocator {
 	//click on uat25
 	public static void navigateToUat() throws Throwable {
 		Thread.sleep(5000);
-		click(settingsicon ,"settingicon");
+		click(settingsicon,"settingicon");
 		Thread.sleep(5000);
 		swipeVertical(0.8,0.1,0.9, 2000);
 		Thread.sleep(2000);
@@ -285,8 +288,7 @@ public class HelperClass extends PageLocator {
 
 	public void login(String useremail,String userpass)throws Throwable{
 
-
-		click(Login ,"loginbutton");
+     	click(Login ,"loginbutton");
 		Thread.sleep(2000);
 		//click(companysearch , "company_search");
 		Thread.sleep(2000);

@@ -16,7 +16,7 @@ public class TestClass extends HelperClass{
 	
 	public void loginTest() throws Throwable{
 		navigateToUat();
-		//login();
+		login();
 		
 	}
 	
