@@ -66,22 +66,22 @@ public class TestClass extends HelperClass {
 
 
         //Adding Primary Contact
-        addPrimmaryContact( "9533769769","Mother");
+        addPrimmaryContact( "9533679769","Mother");
 
         //Adding Backup Contact1
-        addBkpContact("GAJULA","VINAY","9080099880","MOULA ALI","HYDERABAD","02451","Mother");
+        addBkpContact("Vinay","Vanhi","9533679769","MOULA ALI","HYDERABAD","02451","Father");
 
         //Adding Backup Contact2
-        addBkpContact2("GAJULA","VINAY","9080099880","MOULA ALI","HYDERABAD","02451","Mother");
+        addBkpContact2("Sangeetha","Nulu","9533679769","Hitech","HYDERABAD","02451","Mother");
 
         //Adding Pediatrician
-        addPediatricianInfo("Sangeetha","9876987989","04/25/2020");
+        addPediatricianInfo("FamousDoctor","9533679769","04/25/2020");
 
         //Swiping Down
         Swipedown();
 
         //Adding Hospital Info
-        addHospitalInfo("fernandez","Moula Ali","hyderabad","02451");
+        addHospitalInfo("fernandez","Bogulkunta","Hyderabad","02451");
 
         //Swiping Down
         Swipedown();
@@ -110,7 +110,6 @@ public class TestClass extends HelperClass {
         selectQuestion("Medication2",false);
 
         selectQuestion("Medication2",false);
-
 
         //Final Step Billing
         billing();

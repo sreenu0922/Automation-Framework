@@ -623,6 +623,7 @@ public class HelperClass extends PageLocator {
 			type(txtHospitalName,hospitalName,"Hospital Name");
 			type(txtHospitalAddressLine1,address,"Hospital Address Line1");
 			type(txtHospitalAddressLine2,address1,"Hospital Address Line2");
+			type(txtHospitalZip,zip,"zip");
 	}
 
 
