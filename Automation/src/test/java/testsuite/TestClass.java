@@ -4,6 +4,7 @@ import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
 import org.testng.annotations.Test;
 
 
+
 public class TestClass extends HelperClass{
 	
 	public void loginTest() throws Throwable{
@@ -116,7 +117,7 @@ public class TestClass extends HelperClass{
         //Handing Apache Error
         APacheError();
 
-        //Selecting Mykid
+    //Selecting Mykid
         mykid();
 
         //Selecting BackupDays
@@ -129,7 +130,7 @@ public class TestClass extends HelperClass{
         clickno();
 
         //Selecting the date
-        selectdate( "May", "03", "2020");
+        selectdate( "Apr", "30", "2020");
 
         //Selecting the time
         selecttime("08:30 AM", "05:00 PM");
@@ -152,12 +153,9 @@ public class TestClass extends HelperClass{
         //Selecting the Tender loving Child Care Center
         selectCareCenter(3);
 
+        //Selecting the next buttion
+        next();
 
-        //Adding Primary Contact
-        addPrimmaryContact( "9533769769","Mother");
-
-        //Adding Backup Contact1
-        addBkpContact("GAJULA","VINAY","9080099880","MOULA ALI","HYDERABAD","02451","Mother");
         //Primary Contact
         addPrimmaryContact( "9533769769","Mother");
 
@@ -165,37 +163,46 @@ public class TestClass extends HelperClass{
         Primarynext();
 
 
-        //Adding Backup Contact2
-        addBkpContact2("GAJULA","VINAY","9080099880","MOULA ALI","HYDERABAD","02451","Mother");
+        //Backup Contact1
+        addBackupContact("Vinay","gajula","9533679878","String address1","String address2","String city","Mother",false);
+        //Backup Contact2
+        addBackupContact("Vinay","gajula","9533679878","String address1","String address2","String city","Mother",false);
 
-        //Adding Pediatrician
-        addPediatricianInfo("Sangeetha","9876987989","04/25/2020");
+        //Added Pediatrician
+        addPediatricianInfo("Sangeetha","9876987989","30-04-2020");
 
-        //Adding Hospital Info
-        addHospitalInfo("fernandez","Moula Ali","hyderabad","02451");
+        //Hospital Info
+        addHospitalInfo("hospitalName","address","address1","02451");
 
-        //Adding Insurance info
-        addInsuranceInfo("StarHealth","87766554433");
        //Insurance info
         addInsuranceInfo("StarHealth","9754544553677377388");
 
+        //Hide Keyboard
+        hideKeyboard();
+        //Ped insurance next
+        navigateToNext1();
 
+        //To launch the keyboard
+        //launchKeyboard();
 
-        //Selecting the question then click Yes or No
+        //Selecting Yes or No
         selectQuestion("No button", false);
 
         //Select SpecialNeedInfo
         SelectingPhysical();
 
+        //Next Navigate
+        navigateToNext();
+
         //Selecting Questions
         selectQuestion("Medication",false,"false");
-
+        Thread.sleep(2000);
         selectQuestion("Medication1",false,"false");
-
+        Thread.sleep(2000);
         selectQuestion("Medication2",false,"false");
-
+        Thread.sleep(2000);
         selectQuestion("Medication2",false,"false");
-
+        Thread.sleep(2000);
 
         //Final Step Billing
         billing();
