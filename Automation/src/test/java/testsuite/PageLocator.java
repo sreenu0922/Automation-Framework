@@ -264,9 +264,22 @@ public class PageLocator extends ActionEngine {
 	*/
 	
 	
-	
-	
-
+	public static By settingsicon = By.xpath("//*[contains(@resource-id,'settings')]");
+	public static By uat25 = By.xpath("//*[contains(@text,'uat25')]");
+	public static By enroll = By.xpath("//*[contains(@resource-id,'sign_up')]");
+	//sendkeys method by giving acme
+	public static By companysearch = By.xpath("//*[contains(@resource-id,'company_search')]");
+	//verify login button
+	public static By Login = By.id("sign_in");
+	//again select acme
+	public static By companysearch1 = By.xpath("//*[contains(@resource-id,'company_search')]");
+	//verify email
+	public static By emailfield= By.id("email");
+	//verify password
+	public static By passwordfield=By.id("passwd");
+	//click on login
+	public static By Login1 = By.id("sign_in");
+	public static By login1 = By.xpath("//*[contains(@text,'LOGIN')]");
 
 		//Verify Settings icon
 		//Verify Select uat25
@@ -288,8 +301,7 @@ public class PageLocator extends ActionEngine {
 		public static By passwordfield=By.id("passwd");
 		//click on login
 		public static By Login1 = By.id("sign_in");
-		
-		
+	
 
 	//author Sreeranga
 	

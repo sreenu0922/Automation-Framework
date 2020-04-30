@@ -282,12 +282,22 @@ public class HelperClass extends PageLocator {
 
 
 	//login flow with email and password
-	public static void login()throws Throwable{
+
+	public void login(String useremail,String userpass)throws Throwable{
 
 
 		click(Login ,"loginbutton");
 		Thread.sleep(2000);
 		//click(companysearch , "company_search");
+		Thread.sleep(2000);
+		selectCompanySearch("acme");
+
+		type(emailfield,useremail,"email");
+		Thread.sleep(2000);
+		type(passwordfield, userpass,"password");
+		Thread.sleep(2000);
+		click(login1 , "loginbutton1");
+
 	}
 
 
@@ -438,15 +448,13 @@ public class HelperClass extends PageLocator {
 	//@author srinivas n 22nd April 2020
 	public static void navigateToReviewYourClaim() throws Throwable
 	{
-
 		click(btnNext1,"Next button in Tell us about your center");
-
 	}
-
 	//@author srinivas n 22nd April 2020
 	public static void navigateToYouAreAllSet() throws Throwable
 	{
 		//swipeVertical(0.8,0.1,0.9, 2000);
+		Thread.sleep(3000);
 		swipe(AndroidDriver, DIRECTION.DOWN);
 		click(chkConfirm,"Check mark for confirm");
 		click(btnSubmit,"Submit button in Review your claim");

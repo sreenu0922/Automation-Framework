@@ -42,7 +42,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 
-
 	public class TestEngine extends HtmlReportSupport {
 
     public static int stepNum = 0;
