@@ -481,8 +481,6 @@ public class ActionEngine extends TestEngine {
 
 	}
 
-
-
 	//Jagadish
 	public static void swipeVertical(double startPercentage, double finalPercentage, double anchorPercentage,
 									 int duration) throws Exception {

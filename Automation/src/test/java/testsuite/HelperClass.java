@@ -24,7 +24,6 @@ import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
 
 public class HelperClass extends PageLocator {
 
-
 	/*MethodName: scrollTo(String text, int index)
 	 * Description: scroll up and down the application until particular text is visible at particular dcroll view index
 	 * input parameters: text : which is string Eg - "2020" for finding the year
@@ -41,25 +40,6 @@ public class HelperClass extends PageLocator {
 
     //Written by Vinay Gajula
 
-//	public static void selectCompanyforenroll(String companyname) throws Throwable {
-//		//click(companysearch , "company_search");
-//		type(companysearch1, companyname, "companysearch");
-//		Thread.sleep(5000);
-//		WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
-//		int leftX = dropDownLoc.getLocation().getX();
-//		int rightX = leftX + dropDownLoc.getSize().getWidth();
-//		int middleX = (rightX + leftX) / 2;
-//		int upperY = dropDownLoc.getLocation().getY();
-//		int lowerY = upperY + dropDownLoc.getSize().getHeight();
-//		int middleY = (upperY + lowerY) / 2;
-//
-//		// AndroidDriver.hideKeyboard();
-//		int x = leftX + 80;
-//		int y = middleY + 160;
-//		clickByCondindates(x, y);
-//
-//	}
-
 	public static void navigateToNext() throws Throwable {
 		click(btnPediationNext,"nextbutton");
 		Thread.sleep(2000);
@@ -72,50 +52,18 @@ public class HelperClass extends PageLocator {
 		Thread.sleep(2000);
 	}
 
-	public static void navigateToNext1() throws Throwable {
-		Thread.sleep(2000);
-		swipe(AndroidDriver, DIRECTION.DOWN);
-		swipe(AndroidDriver, DIRECTION.DOWN);
-
-/*		//swipeVertical(0.8,0.2,0.5, 2000);
-
-		Thread.sleep(5000);
-		type(txtHospitalZip, "02451", "cc number");*/
-
-		Thread.sleep(2000);
-		click(btnPediationNext,"nextbutton");
-	}
-
 	public static void APacheError() throws Throwable {
 		click(Unauthorised, "Selecting done");
 	}
-
-
-//	public static void APacheError() throws Throwable {
-//		click(Unauthorised, "Selecting done");
-//	}
-//
-//
-//	public static void mykid() throws Throwable {
-//		click(Selectingmykid, "Selecting the Child");
-//	}
-//
-//    public static void SelectChild() throws Throwable {
-//        click(SelectChild, "Selecting the Child");
-//        click(SelectDone, "Clicking the Done Button");
-//    }
-
 
     public static void SelectChild() throws Throwable {
         click(SelectChild, "Selecting the Child");
         click(SelectDone, "Clicking the Done Button");
     }
 
-
 	public static void SelectingPhysical() throws Throwable {
 		click(chkPhysical, "Selecting the Child");
 	}
-
 
     public static void CareReason(String selectReason) throws Throwable {
         click(By.xpath(SelectReason.replace("#", selectReason)), "Selecting the Reasons");
@@ -139,7 +87,6 @@ public class HelperClass extends PageLocator {
 		click(By.xpath(TypeofCare.replace("#", typeofCare)), "Selecting the care");
 
     }
-
 
 	//@author by Bhavya
 
@@ -203,15 +150,12 @@ public class HelperClass extends PageLocator {
 
 	}
 
-	
-	
 	//@author by Bhavya
 	//created on : 21-04-2020
 
-
 	//select company serach as acme
 
-	public static void selectCompanySearch(String companyname) throws Throwable {
+	public static void selectCompanySearch(String companyname, int xcod, int ycod) throws Throwable {
 
 		type(companysearch, companyname, "companysearch");
 		Thread.sleep(5000);
@@ -224,73 +168,25 @@ public class HelperClass extends PageLocator {
 		int middleY = (upperY + lowerY) / 2;
 
 		// AndroidDriver.hideKeyboard();
-		int x = leftX + 80;
-		int y = middleY + 100;
+		int x = leftX + xcod;
+		int y = middleY + ycod;
 		clickByCondindates(x, y);
 
 	}
 
-	
-	 public static void selectCompanyforenroll(String companyname) throws Throwable {
-	        //click(companysearch , "company_search");
-	        Thread.sleep(2000);
-	        type(companysearch, companyname, "companysearch");
-
-	        WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
-	        int leftX = dropDownLoc.getLocation().getX();
-	        int rightX = leftX + dropDownLoc.getSize().getWidth();
-	        int middleX = (rightX + leftX) / 2;
-	        int upperY = dropDownLoc.getLocation().getY();
-	        int lowerY = upperY + dropDownLoc.getSize().getHeight();
-	        int middleY = (upperY + lowerY) / 2;
-
-	        AndroidDriver.hideKeyboard();
-	        int x = leftX + 80;
-	        int y = middleY + 150;
-	        clickByCondindates(x, y);
-	    }
-	//@author by Bhavya
-	//created on : 21-04-2020
-
-
-	//select company serach as acme
-/*	public static void selectCompanyforenroll(String companyname) throws Throwable {
-	//click(companysearch , "company_search");
-		Thread.sleep(2000);
-        type(companysearch, companyname, "companysearch");
-
-        WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
-        int leftX = dropDownLoc.getLocation().getX();
-        int rightX = leftX + dropDownLoc.getSize().getWidth();
-        int middleX = (rightX + leftX) / 2;
-        int upperY = dropDownLoc.getLocation().getY();
-        int lowerY = upperY + dropDownLoc.getSize().getHeight();
-        int middleY = (upperY + lowerY) / 2;
-
-        AndroidDriver.hideKeyboard();
-        int x = leftX + 80;
-        int y = middleY + 150;
-        clickByCondindates(x, y);
-	
-	}
-	
-*/	
-  
-  
 	//@author by Bhavya
 	//created on : 21-04-2020
 
 
 	//login flow with email and password
 
-	public void login(String useremail,String userpass)throws Throwable{
-
+	public void login(String useremail,String userpass, int xcod, int ycod)throws Throwable{
 
 		click(Login ,"loginbutton");
 		Thread.sleep(2000);
 		//click(companysearch , "company_search");
 		Thread.sleep(2000);
-		selectCompanySearch("acme");
+		selectCompanySearch("acme", xcod ,ycod);
 
 		type(emailfield,useremail,"email");
 		Thread.sleep(2000);
@@ -298,16 +194,6 @@ public class HelperClass extends PageLocator {
 		Thread.sleep(2000);
 		click(login1 , "loginbutton1");
 
-	}
-
-
-	public static void loginsendkeys()throws Throwable {
-		Thread.sleep(10000);
-		type(emailfield,"gajulavinay1@care.com","d");
-		Thread.sleep(2000);
-		type(passwordfield,"letmein1","");
-		Thread.sleep(2000);
-		click(Login1 , "loginbutton");
 	}
 
 	public static void Swipedown() throws Throwable {

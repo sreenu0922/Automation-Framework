@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 
 public class TestClass extends HelperClass{
 
-
     public String useremail = "bhavya444@care.com";
     public String userpass = "letmein1";
     public String bussinessName = "google";
@@ -32,7 +31,7 @@ public class TestClass extends HelperClass{
 		
 	
 		//Seect company for enroll
-		selectCompanyforenroll("acme");
+        selectCompanySearch("acme", 80, 100);
 		
 		Thread.sleep(2000);
 		
@@ -113,13 +112,7 @@ public class TestClass extends HelperClass{
         navigateToUat();
 
         //Clicking on login
-        login();
-
-        //Select Company Name
-        selectCompanyforenroll("acme");
-
-        //Username and password
-        loginsendkeys();
+        login(useremail,userpass, 80, 150);
 
         //Handing Apache Error
         APacheError();
@@ -212,20 +205,8 @@ public class TestClass extends HelperClass{
         selectQuestion("Medication2",false);
 
         //Final Step Billing
-        billing();
+        //billing();
 
-        selectQuestion("Medication",false,"false");
-        Thread.sleep(2000);
-        selectQuestion("Medication1",false,"false");
-        Thread.sleep(2000);
-        selectQuestion("Medication2",false,"false");
-        Thread.sleep(2000);
-        selectQuestion("Medication2",false,"false");
-        Thread.sleep(2000);
-
-
-        //Next Navigate
-        navigateToNext();
     }
 
     @Test
@@ -237,7 +218,7 @@ public class TestClass extends HelperClass{
         navigateToUat();
         Thread.sleep(3000);
         //Clicking on login
-        login(useremail,userpass);
+        login(useremail,userpass, 80, 100);
         if(isElementDisplayed(Unauthorised,"Unauthorised"))
         {
             APacheError();
