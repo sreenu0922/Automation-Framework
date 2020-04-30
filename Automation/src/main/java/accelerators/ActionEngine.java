@@ -47,23 +47,18 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.touch.TouchActions;
 
 public class ActionEngine extends TestEngine {
-    public static WebDriverWait wait;
+   
+	public static WebDriverWait wait;
 
     public static boolean flag = false;
     static boolean b = true;
 
-	/*
-	 * 
-	 * example -- Click
-	 */
-	@SuppressWarnings("finally")
 
 	//comment removed throws Throwable @srinivas
 
-
-	public static boolean click(By locator, String locatorName) throws Throwable {
-		// explicityWait(locator, locatorName);
-
+	public static boolean click(By locator, String locatorName){
+		
+		//explicityWait(locator, locatorName);
 		boolean flag = false;
 		try {
 			driver.findElement(locator).click();
@@ -71,17 +66,8 @@ public class ActionEngine extends TestEngine {
 			return flag;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-
-			/*if (!flag) {
-				Reporter.failureReport("Click", "Unable to click on " + locatorName);
-				return flag;
-			} else if (b && flag) {
-				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
-
-			}*/
-			return flag;
 		}
+		return flag;
 	}
 
 
@@ -158,7 +144,7 @@ public class ActionEngine extends TestEngine {
 	
 	//@author :bhavya for acme droppdown
 	
-	public void clickByCondindates(int x, int y) {
+	public static void clickByCondindates(int x, int y) {
 		TouchAction touchAction = new TouchAction((MobileDriver) driver);
 		touchAction.tap(PointOption.point(x, y)).perform();
 	}
@@ -241,14 +227,14 @@ public class ActionEngine extends TestEngine {
 
 
     //Author Vinay Gajula
-       public void longPress(By locator) {
+       public static void longPress(By locator) {
             Actions actions = new Actions(driver);
             MobileElement ele = ((MobileElement) driver.findElement(locator));
             actions.clickAndHold(ele).perform();
         }
 
     //Author Vinay Gajula
-    public void pressByCoordinates (int x, int y) {
+    public static void pressByCoordinates (int x, int y) {
         new TouchAction((PerformsTouchActions) driver).press(PointOption.point(x,y)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L))).release().perform();
 
     }
@@ -270,7 +256,7 @@ public class ActionEngine extends TestEngine {
 
 
     //Author Sreeranga
-	public void sendkey(WebElement w, String text) {
+	public static void sendkey(WebElement w, String text) {
 		try {
 			w.click();
 			w.clear();
@@ -372,81 +358,79 @@ public class ActionEngine extends TestEngine {
  */
 
 public enum DIRECTION {
-    DOWN, UP, LEFT, RIGHT;
+	DOWN, UP, LEFT, RIGHT;
 }
 
-
-public static void swipe(MobileDriver driver, DIRECTION direction) {
-   
-	
-	org.openqa.selenium.Dimension size = driver.manage().window().getSize();
-
-    int startX = 0;
-    int endX = 0;
-    int startY = 0;
-    int endY = 0;
-
-    switch (direction) {
-        case RIGHT:
-            startY = (int) (size.height / 2);
-            startX = (int) (size.width * 0.90);
-            endX = (int) (size.width * 0.05);
-            new TouchAction(driver)
-          .press(PointOption.point(startX, startY))
-          .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
-          .moveTo(PointOption.point(endX, startY)).release().perform();
-             break;
-
-        case LEFT:
-            startY = (int) (size.height / 2);
-            startX = (int) (size.width * 0.05);
-            endX = (int) (size.width * 0.90);
-            new TouchAction(driver)
-            .press(PointOption.point( startX, startY ))
-            .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
-            .moveTo(PointOption.point(endX, startY))
-            .release()
-            .perform();
-
-            break;
-
-        case UP:
-        	
-        	startX = (size.width / 2);
-            endY = (int) (size.height * 0.70);
-            startY = (int) (size.height * 0.30);
-           
-            new TouchAction(driver)
-            .press(PointOption.point(startX, startY))
-            .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
-            .moveTo(PointOption.point(startX, endY))
-            .release()
-            .perform();
-                  
-            break;
+	public static void swipe(MobileDriver driver, DIRECTION direction) throws Throwable {
 
 
-        case DOWN:
-        	
-        	startX = (size.width / 2);
-            startY = (int) (size.height * 0.70);
-            endY = (int) (size.height * 0.30);
-                   
-            new TouchAction(driver)
-            .press(PointOption.point(startX, startY))
-            .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
-            .moveTo(PointOption.point(startX, endY))
-            .release()
-            .perform();
-                 
+		org.openqa.selenium.Dimension size = driver.manage().window().getSize();
 
-            break;
+		int startX = 0;
+		int endX = 0;
+		int startY = 0;
+		int endY = 0;
 
-    }
+		switch (direction) {
+			case RIGHT:
+				startY = (int) (size.height / 2);
+				startX = (int) (size.width * 0.90);
+				endX = (int) (size.width * 0.05);
+				new TouchAction(driver)
+						.press(PointOption.point(startX, startY))
+						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
+						.moveTo(PointOption.point(endX, startY)).release().perform();
+				break;
 
-    
-}
+			case LEFT:
+				startY = (int) (size.height / 2);
+				startX = (int) (size.width * 0.05);
+				endX = (int) (size.width * 0.90);
+				new TouchAction(driver)
+						.press(PointOption.point(startX, startY))
+						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
+						.moveTo(PointOption.point(endX, startY))
+						.release()
+						.perform();
 
+				break;
+
+			case UP:
+
+				startX = (size.width / 2);
+				endY = (int) (size.height * 0.70);
+				startY = (int) (size.height * 0.30);
+
+				new TouchAction(driver)
+						.press(PointOption.point(startX, startY))
+						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
+						.moveTo(PointOption.point(startX, endY))
+						.release()
+						.perform();
+
+				break;
+
+
+			case DOWN:
+
+				startX = (size.width / 2);
+				startY = (int) (size.height * 0.70);
+				endY = (int) (size.height * 0.30);
+
+				new TouchAction(driver)
+						.press(PointOption.point(startX, startY))
+						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
+						.moveTo(PointOption.point(startX, endY))
+						.release()
+						.perform();
+
+
+				break;
+
+		}
+
+
+	}
 
 
 @SuppressWarnings("finally")
@@ -530,20 +514,29 @@ public static Boolean isElementDisplayed(By locator, String locatorName) {
 	return flag;
 }
 
-
-public static void scrollTo(String selector, int typ) {
-	((FindsByAndroidUIAutomator<MobileElement>) driver)
-			.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + typ
-					+ ")).scrollIntoView(new UiSelector().text(\"" + selector + "\").instance(0))");
-
-}
     //@author : Archana D
 	public void hideKeyboard() {
 		AndroidDriver.hideKeyboard();
+		}
+		
+	/*MethodName: scrollTo(String text, int index)
+	 * Description: scroll up and down the application until particular text is visible at particular dcroll view index
+	 * input parameters: text : which is string Eg - "2020" for finding the year
+	 *					index : if there are three scroll view , mentions which scroll view need to be searched
+	 *Output parameters: Null
+	 *created By : Jagadish
+	 *created On : 21-04-2020  
+	 */
+	
+	public static void scrollTo(String text, int index) {
+		((FindsByAndroidUIAutomator<MobileElement>) driver)
+				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + index
+						+ ")).scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))");
 	}
 
 	//@author : Archana D
 	public void launchKeyboard() {
 		AndroidDriver.getKeyboard();
 	}
+
 }

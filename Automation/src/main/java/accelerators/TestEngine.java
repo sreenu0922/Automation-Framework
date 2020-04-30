@@ -89,9 +89,12 @@ import io.appium.java_client.remote.MobilePlatform;
 
         if (browserType.equalsIgnoreCase("Android")) {
 
+
             String appPath = System.getProperty("user.dir")+apkPath;
+
+    
+
             DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
-            System.out.println(DeviceName);
             capabilitiesForAppium.setCapability("deviceName", DeviceName);
             capabilitiesForAppium.setCapability("platformName", AndroidplatformName);
             capabilitiesForAppium.setCapability("platformVersion", AndroidplatformVersion);
@@ -101,7 +104,7 @@ import io.appium.java_client.remote.MobilePlatform;
 
             AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
             driver = (AndroidDriver);
-            driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
         }
          /*
