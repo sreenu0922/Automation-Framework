@@ -1,6 +1,7 @@
 package testsuite;
 
 
+
 import java.time.Duration;
 import java.util.List;
 
@@ -10,6 +11,7 @@ import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -18,6 +20,7 @@ import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
+
 
 public class HelperClass extends PageLocator {
 
@@ -35,36 +38,41 @@ public class HelperClass extends PageLocator {
 				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + index
 						+ ")).scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))");
 	}
-  
 
     //Written by Vinay Gajula
 
-	public static void selectCompanyforenroll(String companyname) throws Throwable {
-		//click(companysearch , "company_search");
-		type(companysearch1, companyname, "companysearch");
-		Thread.sleep(5000);
-		WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
-		int leftX = dropDownLoc.getLocation().getX();
-		int rightX = leftX + dropDownLoc.getSize().getWidth();
-		int middleX = (rightX + leftX) / 2;
-		int upperY = dropDownLoc.getLocation().getY();
-		int lowerY = upperY + dropDownLoc.getSize().getHeight();
-		int middleY = (upperY + lowerY) / 2;
+//	public static void selectCompanyforenroll(String companyname) throws Throwable {
+//		//click(companysearch , "company_search");
+//		type(companysearch1, companyname, "companysearch");
+//		Thread.sleep(5000);
+//		WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
+//		int leftX = dropDownLoc.getLocation().getX();
+//		int rightX = leftX + dropDownLoc.getSize().getWidth();
+//		int middleX = (rightX + leftX) / 2;
+//		int upperY = dropDownLoc.getLocation().getY();
+//		int lowerY = upperY + dropDownLoc.getSize().getHeight();
+//		int middleY = (upperY + lowerY) / 2;
+//
+//		// AndroidDriver.hideKeyboard();
+//		int x = leftX + 80;
+//		int y = middleY + 160;
+//		clickByCondindates(x, y);
+//
+//	}
 
-		// AndroidDriver.hideKeyboard();
-		int x = leftX + 80;
-		int y = middleY + 160;
-		clickByCondindates(x, y);
+	public static void navigateToNext() throws Throwable {
+		click(btnPediationNext,"nextbutton");
+		Thread.sleep(2000);
 
 	}
 
-	public void popuphandling() throws Throwable {
+	public static void popuphandling() throws Throwable {
 		Thread.sleep(2000);
 		click(Allowclick,"Handling popup");
 		Thread.sleep(2000);
 	}
 
-	public void navigateToNext1() throws Throwable {
+	public static void navigateToNext1() throws Throwable {
 		Thread.sleep(2000);
 		swipe(AndroidDriver, DIRECTION.DOWN);
 		swipe(AndroidDriver, DIRECTION.DOWN);
@@ -76,44 +84,45 @@ public class HelperClass extends PageLocator {
 
 		Thread.sleep(2000);
 		click(btnPediationNext,"nextbutton");
-
-
 	}
 
-//	public void APacheError() throws Throwable {
+	public static void APacheError() throws Throwable {
+		click(Unauthorised, "Selecting done");
+	}
+
+
+//	public static void APacheError() throws Throwable {
 //		click(Unauthorised, "Selecting done");
 //	}
 //
 //
-//	public void mykid() throws Throwable {
+//	public static void mykid() throws Throwable {
 //		click(Selectingmykid, "Selecting the Child");
 //	}
 //
-//    public void SelectChild() throws Throwable {
+//    public static void SelectChild() throws Throwable {
 //        click(SelectChild, "Selecting the Child");
 //        click(SelectDone, "Clicking the Done Button");
 //    }
 
 
-    public void SelectChild() throws Throwable {
+    public static void SelectChild() throws Throwable {
         click(SelectChild, "Selecting the Child");
         click(SelectDone, "Clicking the Done Button");
     }
 
 
-	public void SelectingPhysical() throws Throwable {
+	public static void SelectingPhysical() throws Throwable {
 		click(chkPhysical, "Selecting the Child");
-		click(btnPediationNext,"nextbutton");
-		Thread.sleep(2000);
 	}
 
 
-    public void CareReason(String selectReason) throws Throwable {
+    public static void CareReason(String selectReason) throws Throwable {
         click(By.xpath(SelectReason.replace("#", selectReason)), "Selecting the Reasons");
     }
 
 	//If we select No_Button we need to use below method
-	public void Felt(String symptoms) throws Throwable {
+	public static void Felt(String symptoms) throws Throwable {
 		click(fell, "Selecting No Button");
 		click(By.xpath(Symptoms.replace("#", "symptoms")), "Selecting Reasons");
 		click(fellnext, "clicking the next button");
@@ -121,20 +130,20 @@ public class HelperClass extends PageLocator {
 	}
 
 	//If we select Yes_Button we need to use below method
-	public void Felt1() throws Throwable {
+	public static void Felt1() throws Throwable {
 		click(fell1, "Selecting Yes Button");
 		click(Returntoben,"Going to return to Benefits Page");
 
 	}
-	public void CareType (String typeofCare) throws Throwable {
+	public static void CareType (String typeofCare) throws Throwable {
 		click(By.xpath(TypeofCare.replace("#", typeofCare)), "Selecting the care");
 
-	}
+    }
 
 
 	//@author by Bhavya
 
-	public void addBkpContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String zip,String relationship) throws Throwable {
+	public static void addBkpContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String zip,String relationship) throws Throwable {
 		click(cboChooseBackupContact1,"selecting the button");
 		Thread.sleep(2000);
 		hideKeyboard();
@@ -150,7 +159,7 @@ public class HelperClass extends PageLocator {
 
 	}
 
-	public void addBkpContact2(String firstName,String lastName,String phoneNumber,String address1,String address2,String zip,String relationship) throws Throwable{
+	public static void addBkpContact2(String firstName,String lastName,String phoneNumber,String address1,String address2,String zip,String relationship) throws Throwable{
 		click(cboChooseBackupContact2,"selecting the button");
 		Thread.sleep(2000);
 		hideKeyboard();
@@ -187,7 +196,7 @@ public class HelperClass extends PageLocator {
 	//@author by Bhavya
 	//created on : 21-04-2020
 	//click on enroll
-	public void navigateToEnroll() throws Throwable {
+	public static void navigateToEnroll() throws Throwable {
 
 		click(enroll ,"enrollbutton");
 		Thread.sleep(5000);
@@ -202,7 +211,7 @@ public class HelperClass extends PageLocator {
 
 	//select company serach as acme
 
-	public void selectCompanySearch(String companyname) throws Throwable {
+	public static void selectCompanySearch(String companyname) throws Throwable {
 
 		type(companysearch, companyname, "companysearch");
 		Thread.sleep(5000);
@@ -221,17 +230,59 @@ public class HelperClass extends PageLocator {
 
 	}
 
+	
+	 public static void selectCompanyforenroll(String companyname) throws Throwable {
+	        //click(companysearch , "company_search");
+	        Thread.sleep(2000);
+	        type(companysearch, companyname, "companysearch");
 
+	        WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
+	        int leftX = dropDownLoc.getLocation().getX();
+	        int rightX = leftX + dropDownLoc.getSize().getWidth();
+	        int middleX = (rightX + leftX) / 2;
+	        int upperY = dropDownLoc.getLocation().getY();
+	        int lowerY = upperY + dropDownLoc.getSize().getHeight();
+	        int middleY = (upperY + lowerY) / 2;
 
+	        AndroidDriver.hideKeyboard();
+	        int x = leftX + 80;
+	        int y = middleY + 150;
+	        clickByCondindates(x, y);
+	    }
 	//@author by Bhavya
 	//created on : 21-04-2020
 
+
+	//select company serach as acme
+/*	public static void selectCompanyforenroll(String companyname) throws Throwable {
+	//click(companysearch , "company_search");
+		Thread.sleep(2000);
+        type(companysearch, companyname, "companysearch");
+
+        WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
+        int leftX = dropDownLoc.getLocation().getX();
+        int rightX = leftX + dropDownLoc.getSize().getWidth();
+        int middleX = (rightX + leftX) / 2;
+        int upperY = dropDownLoc.getLocation().getY();
+        int lowerY = upperY + dropDownLoc.getSize().getHeight();
+        int middleY = (upperY + lowerY) / 2;
+
+        AndroidDriver.hideKeyboard();
+        int x = leftX + 80;
+        int y = middleY + 150;
+        clickByCondindates(x, y);
+	
+	}
+	
+*/	
+  
+  
+	//@author by Bhavya
+	//created on : 21-04-2020
+
+
 	//login flow with email and password
 	public void login(String useremail,String userpass)throws Throwable{
-/*
-		click(Login ,"loginbutton");
-		Thread.sleep(2000);
-		click(companysearch , "company_search");*/
 
 		click(Login ,"loginbutton");
 		Thread.sleep(2000);
@@ -245,13 +296,19 @@ public class HelperClass extends PageLocator {
 		Thread.sleep(2000);
 		click(login1 , "loginbutton1");
 
-
-
-
-
 	}
 
-//	public void loginsendkeys()throws Throwable {
+
+	public static void loginsendkeys()throws Throwable {
+		Thread.sleep(10000);
+		type(emailfield,"gajulavinay1@care.com","d");
+		Thread.sleep(2000);
+		type(passwordfield,"letmein1","");
+		Thread.sleep(2000);
+		click(Login1 , "loginbutton");
+	}
+	
+//	public static void loginsendkeys()throws Throwable {
 //		Thread.sleep(5000);
 //		type(emailfield,"gajulavinay1@care.com","Email");
 //		Thread.sleep(2000);
@@ -263,7 +320,7 @@ public class HelperClass extends PageLocator {
 //		type(emailfield,useremail,"email");
 //	}
 
-//	public void loginsendkeys()throws Throwable {
+//	public static void loginsendkeys()throws Throwable {
 //		Thread.sleep(10000);
 //		type(emailfield,"gajulavinay1@care.com","d");
 //		Thread.sleep(2000);
@@ -275,72 +332,76 @@ public class HelperClass extends PageLocator {
 
 
 
-	public void enroll() throws Throwable
-	{
-		
-		selectdate("may", "27", "1990");
-		sendkey((WebElement)firstname, "sangeetha");
+
+	public static void enroll() throws Throwable{
+		type(birthdate,"04/22/1992","select dob");
+		//selectdate("May", "27", "1990");
+		type(firstname, "sangeetha","firstname");
 		Thread.sleep(2000);
-		sendkey((WebElement)lastname, "nulu");
-		sendkey((WebElement) homeaddress, "P.O.Box 100");
-		sendkey((WebElement)zip, "02451");
-		sendkey((WebElement)email, "sangeethan@gmail.cm");
-		sendkey((WebElement)password, "Letmein1");
+		type(lastname, "nulu","lastname");
+		type(homeaddress, "P.O.Box 100","address");
+		type(zip, "02451","zip");
+		type(email, "jag3@gmail.com","mail");
+		type(password, "123456789","pass");
 		click(enrollbutton, "clickonenrollbutton");
+	
 	}
 	
-	
-	public void clickno() throws Throwable
+	public static void clickno() throws Throwable
 	{
 		click(nobutton, "no");
 	}
 
 
-	public void clickyes() throws Throwable
+	public static void clickyes() throws Throwable
 	{
 		click(yesbutton, "yes");
 	}
 
-	public void APacheError() throws Throwable {
-		click(Unauthorised, "Selecting done");
-	}
-	public void mykid() throws Throwable {
+	
+	public static void mykid() throws Throwable {
 		click(Selectingmykid, "Selecting the Child");
 	}
 
 
-	public void billing() throws Throwable
+	public static void billing() throws Throwable
 	{
+
 		sendkey((WebElement) creditcard, "4111 1111 1111 1111");
 		sendkey((WebElement)month, "0523");
 		sendkey((WebElement)cvv, "123");
 		sendkey((WebElement)zip1, "02451");
+
 		Thread.sleep(2000);
 		swipe(AndroidDriver, DIRECTION.DOWN);
 		type(creditcard, "4111 1111 1111 1111", "cc number");
 		type(month, "0524", "month and year");
 		type(cvv, "123", "cvv number");
 		type(zip1, "02451", "zip code");
+
+		Thread.sleep(4000);
+		swipeVertical(0.8,0.2,0.5, 2000);
+		type(creditcard, "4111111111111111","details");
+		type(month, "0523","expirt");
+		type(cvv, "123","cvv");
+		type(zip1, "02451","zip");
+
 		click(submitrequest, "click on submit ");
 
 	}
 
 	//Author Sreeranga
 	// Navigate to use my backup days
-	public void navigatetousemybackupdays() throws Throwable {
+	public static void navigatetousemybackupdays() throws Throwable {
 		click(BackUpDays,"Backupdays");
 
 	}
 
 	// NAvigate to Book Now Button
-	public void navigatetoBookNow() throws Throwable {
-
+	public static void navigatetoBookNow() throws Throwable {
+		
 		click(BookNow , "BookNowButton");
-
 	}
-
-
-
 
 
 	/*
@@ -368,19 +429,20 @@ public class HelperClass extends PageLocator {
 	 * Question(String titel,boolean flag,String description)
 	 * describe
 	 */
-	public void navigateToPreferredCenters() throws Throwable
+
+	public static void navigateToPreferredCenters() throws Throwable
 	{
 		click(lsChoseCareCenterType1,"A Care@Work Backup Care center");
 	}
 
 	//@author srinivas n 22nd April 2020
-	public void navigateToAboutYourCenter() throws Throwable
+	public static void navigateToAboutYourCenter() throws Throwable
 	{
 		click(lsChooseCareCenterType2,"A child care center of my choosing");
 	}
 
 	//@author srinivas n 22nd April 2020
-	public void addNetworkCenter(String BussinessName,String Zipcode,String PhoneNumber,String Totaldailycost){
+	public static void addNetworkCenter(String BussinessName,String Zipcode,String PhoneNumber,String Totaldailycost){
 
 		type(txtBusineesName,BussinessName,"Bussiness Name");
 		type(txtZipcode,Zipcode,"Zipcode");
@@ -390,12 +452,12 @@ public class HelperClass extends PageLocator {
 	}
 
 	//@author srinivas n 22nd April 2020
-	public void navigateToReviewYourClaim() throws Throwable
+	public static void navigateToReviewYourClaim() throws Throwable
 	{
 		click(btnNext1,"Next button in Tell us about your center");
 	}
 	//@author srinivas n 22nd April 2020
-	public void navigateToYouAreAllSet() throws Throwable
+	public static void navigateToYouAreAllSet() throws Throwable
 	{
 		//swipeVertical(0.8,0.1,0.9, 2000);
 		Thread.sleep(3000);
@@ -406,7 +468,7 @@ public class HelperClass extends PageLocator {
 	}
 
 	//@author srinivas n 22nd April 2020
-	public void navigateBackToHome() throws Throwable
+	public static void navigateBackToHome() throws Throwable
 	{
 
 		click(btnGoBackToHome,"Go back to home button in You're all set");
@@ -417,9 +479,7 @@ public class HelperClass extends PageLocator {
 	//@author srinivas n 22nd April 2020
 	// Refresh preferred centers list based on location and radius
 
-	public void refreshPreferedCenters(String location,String radius) throws Throwable
-
-	{		
+	public static void refreshPreferedCenters(String location,String radius) throws Throwable{		
 		if(isElementDisplayed(Deny,"Deny")){
 			click(Deny,"Deny");
 		}
@@ -430,20 +490,21 @@ public class HelperClass extends PageLocator {
 		type(frmSearchRadius,radius,"Radius in miles");
 
 		click(BtnDone,"Done button");
-			
+		Thread.sleep(2000);
+		if(isElementDisplayed(Deny,"Deny")){
+			click(Deny,"Deny");
+		}	
 	}
 
 
 	//@author srinivas n 22nd April 2020
-	public void selectCareCenter(int index) throws Throwable {
+	public static void selectCareCenter(int index) throws Throwable {
 		List<WebElement> elements  = driver.findElements(lstCareCenter);
 		elements.get(index).click();
-	   click(btnNext,"Done button");
 	}
 
 
-	
-	public void next() throws Throwable {
+	public static void next() throws Throwable {
 		click(btnNext,"Done button");
 	}
 
@@ -451,34 +512,55 @@ public class HelperClass extends PageLocator {
 
 //@author srinivas n 22nd April 2020
 	// Navigate to Add emergency contacts screen
-	public void navigateToEmergenyContact() throws Throwable
+	public static void navigateToEmergenyContact() throws Throwable
 	{
-				
+		if(isElementDisplayed(Deny,"Deny")){
+			click(Deny,"Deny");
+		}		
 		click(btnNext,"Next button");
-			
+		
 	}
+
 	
 	//@author srinivas n 22nd April 2020
 	//relationship is : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
-	public void addPrimmaryContact(String phoneNumber,String relationship){
+	public static void addPrimmaryContact(String phoneNumber,String relationship){
 		
 			type(txtYourPhoneNumber,phoneNumber,"Phone Number");
 			type(ddlPrimaryContactRelationship,relationship,"Relationship to child");
 
 	}
-
+	public static void Primarynext() throws Throwable {
+		click(nextbutton,"Next button");
+		Thread.sleep(4000);
+	}
+	
+	//@param number ==1 backup contact 1 other wise backup contact 2
+	//@author srinivas n 28th April 2020
+			
+	public static void selectBackupContact(int number) throws Throwable{
+		
+		if (number==1){
+			click(cboChooseBackupContact1,"Backup contact 1");
+		}else{
+			click(cboChooseBackupContact2,"Backup contact 2");
+		}
+	}
+	
 	//@author srinivas n 22nd April 2020
 	//"Relationship to child : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
 	//@param Boolean flag = true then select checkbox can pickup/drop off child
-	public void addBackupContact(String firstName,String lastName,String phoneNumber,String address1,String address2,String city,String relationship,Boolean flag) throws Throwable{
-	   click(cboChooseBackupContact1,"selecting the button");
+
+	public static void addBackupContact(String firstName,String lastName,String phoneNumber,String address1, String address2,String zipcode,String relationship,Boolean flag) throws Throwable{
+	
 			type(txtFirstName,firstName,"FirstName");
 			type(txtLastName,lastName,"LastName");
 			type(txtPhoneNumber,phoneNumber,"Phone Number");
-			type(txtAddressLine1,relationship,"Relationship to child");
-			type(txtAddressLine2,phoneNumber,"Phone Number");
-			type(txtCityState,relationship,"Relationship to child");
-			type(ddlRelationshipToChild,phoneNumber,"Phone Number");
+			type(txtAddressLine1,address1,"Address line 1");
+			type(txtAddressLine2,address2,"Address line 2");
+			type(txtCityState,zipcode,"City state");
+			type(ddlRelationshipToChild,relationship,"Relationship To Child");
+
 			if(flag)
 			click(rdoCanPickupChild,"Relationship to child");
 
@@ -487,7 +569,7 @@ public class HelperClass extends PageLocator {
 
 	}
 
-	public void addBackupContactnext() throws Throwable {
+	public static void addBackupContactnext() throws Throwable {
 		click(btnBackupContactDone1next,"Done");
 
 }
@@ -495,7 +577,7 @@ public class HelperClass extends PageLocator {
 	//@author srinivas n 22nd April 2020
 	// navigate to pediatrician & insurance information
 
-	public void navigateToPediatrician() throws Throwable
+	public static void navigateToPediatrician() throws Throwable
 	{
 
 
@@ -507,8 +589,7 @@ public class HelperClass extends PageLocator {
 	//@author srinivas n 22nd April 2020
 	//Date Of Last Visit:date format DD/MM/YYYY eg: 21/10/2019
 
-	public void addPediatricianInfo(String pediatricianName,String numeber,String Date){
-
+	public static void addPediatricianInfo(String pediatricianName,String numeber,String Date){
 
 		type(txtPediatricianName,pediatricianName,"Pediatrician Name");
 
@@ -517,7 +598,7 @@ public class HelperClass extends PageLocator {
 		type(txtDateOfLastVisit,Date,"Date Of Last Visit");
 
 
-//	public void addPediatricianInfo(String pediatricianName,String number,String Date) throws Throwable {
+//	public static void addPediatricianInfo(String pediatricianName,String number,String Date) throws Throwable {
 //
 //		Thread.sleep(2000);
 //		hideKeyboard();
@@ -527,12 +608,16 @@ public class HelperClass extends PageLocator {
 //		Thread.sleep(2000);
 //		swipe(AndroidDriver, DIRECTION.DOWN);
 
+
 		
 	}
 
 	//@author srinivas n 22nd April 2020
+
+//public static void addHospitalInfo(String hospitalName,String address,String address1){
+
 //
-//	public void addHospitalInfo(String hospitalName,String address,String address1,String zipcode){
+//	public static void addHospitalInfo(String hospitalName,String address,String address1,String zipcode){
 //
 //
 //		type(txtHospitalName,hospitalName,"Hospital Name");
@@ -547,38 +632,24 @@ public class HelperClass extends PageLocator {
 
 
 			
-		public void addHospitalInfo(String hospitalName,String address,String address1,String zip) throws Throwable {
-		
-		
-
+		public static void addHospitalInfo(String hospitalName,String address,String address1,String zip) throws Throwable {
 			type(txtHospitalName,hospitalName,"Hospital Name");
 			type(txtHospitalAddressLine1,address,"Hospital Address Line1");
 			type(txtHospitalAddressLine2,address1,"Hospital Address Line2");
-
-			type(txtHospitalZip,zip,"zip");
-			Thread.sleep(2000);
-	        swipe(AndroidDriver, DIRECTION.DOWN);
-
 	}
 
 
-	//@author srinivas n 22nd April 2020
-	public void addInsuranceInfo(String insuranceCompany,String policyNumber) throws Throwable {
-	
 
+	//@author srinivas n 22nd April 2020
+	public static void addInsuranceInfo(String insuranceCompany,String policyNumber) throws Throwable {	
 		type(txtInsuranceCompanyName,insuranceCompany,"Insurance Company Name");
 		type(txtInsurancePolicyNumber,policyNumber,"Insurance Policy Number");
-
-	    click(btnPediationNext,"nextbutton");
-	     Thread.sleep(2000);
-	
-
 	}
 
 	//@author srinivas n 22nd April 2020
 	//Navigation for  history of allergies? question screen
 
-	public void navigateToAllergiesQuestion() throws Throwable
+	public static void navigateToAllergiesQuestion() throws Throwable
 	{
 		click(btnPediationNext,"Next button");
 	}
@@ -597,7 +668,7 @@ public class HelperClass extends PageLocator {
 
 
 
-	public void addAllergyInfo(int option,String allergyDetails, String reactionDetail) throws Throwable
+	public static void addAllergyInfo(int option,String allergyDetails, String reactionDetail) throws Throwable
 	{
 
 		switch(option){
@@ -641,7 +712,7 @@ public class HelperClass extends PageLocator {
 	}
 
 	//Special needs information 1-12 options available
-	public void selectSpecialNeedInfo(int option) throws Throwable
+	public static void selectSpecialNeedInfo(int option) throws Throwable
 	{
 		switch(option){
 
@@ -652,7 +723,6 @@ public class HelperClass extends PageLocator {
 				break;
 			case 2:
 				click(chkSpeech,"Speech therapy");
-
 
 				break;
 			case 3:
@@ -695,13 +765,19 @@ public class HelperClass extends PageLocator {
 		}
 
 
-
 		click(btnSpecialNeedNext,"Special Need Next");
-
 	}
 
 
-//	public void selectQuestion(String titel,boolean flag,String description) throws Throwable
+/*check this code**********	
+		if(flag) {
+			click(btnYesButton,"Yes button");
+			addDescribe(description);
+		}else
+			click(btnNoButton,"No button");
+*/
+
+//	public static void selectQuestion(String titel,boolean flag,String description) throws Throwable
 //	{
 //
 //		if(flag)
@@ -714,7 +790,7 @@ public class HelperClass extends PageLocator {
 //
 //	}
 
-//	public void addDescribe(String description) throws Throwable
+//	public static void addDescribe(String description) throws Throwable
 //	{
 //
 //		click(btnYesButton,"Yes button");
@@ -758,20 +834,17 @@ public class HelperClass extends PageLocator {
 				click(done, "done");
 			} else {
 				click(dateOk, "dateOk");
-				click(datecontinue, "datecontinue");
+				if(isElementDisplayed(datecontinue, "datecontinue")) {
+					click(datecontinue, "datecontinue");
+				}
 			}
 		}
-
 
 	}
 
 
-
-
 	
-	
-	
-//	public void selectdate(String month,String day,String year) throws Throwable
+//	public static void selectdate(String month,String day,String year) throws Throwable
 //	{
 //		click(birthdate, "choosedate");
 //		scrollTo(year, 2);
@@ -780,6 +853,7 @@ public class HelperClass extends PageLocator {
 //		click(okdate, "selectdate");
 //	}
 	
+
 
 	/*MethodName: selecttime(String from, String to)
 	  Description: Select the from and to time in datewheel picker by scrolling
@@ -807,17 +881,15 @@ public class HelperClass extends PageLocator {
 			click(boy, "clicked");
 			type(childfirstname, "testtest", "firstname");
 			type(childlastname, "dummy", "lastname");
-			click(birthday, "birthday");
-			scrollTo("2015", 0);
-			scrollTo("09", 1);
-			scrollTo("14", 2);
-			click(done, "done");
+			type(birthday, "03/21/2016","");
 			click(timenext,"next");
-		} else {
+		} 
+		if(isElementDisplayed(existingchild, "existingchild")){
 			click(existingchild, "existingchild");
 			click(done, "done");
 		}
 	}
 
+	
 }
 
