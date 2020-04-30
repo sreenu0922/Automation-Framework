@@ -159,7 +159,7 @@ public class ActionEngine extends TestEngine {
 
 	//@author :bhavya for acme droppdown
 
-	public void clickByCondindates(int x, int y) {
+	public static void clickByCondindates(int x, int y) {
 		TouchAction touchAction = new TouchAction((MobileDriver) driver);
 		touchAction.tap(PointOption.point(x, y)).perform();
 	}
@@ -241,7 +241,7 @@ public class ActionEngine extends TestEngine {
 	}
 
 //@vinay Gajula
-	public void hideKeyboard() {
+	public static void hideKeyboard() {
 		AndroidDriver.hideKeyboard();
 	}
 

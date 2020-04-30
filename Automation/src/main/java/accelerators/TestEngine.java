@@ -43,7 +43,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 
 
-public class TestEngine extends HtmlReportSupport {
+	public class TestEngine extends HtmlReportSupport {
 
     public static int stepNum = 0;
     public static int PassNum = 0;
@@ -89,19 +89,18 @@ public class TestEngine extends HtmlReportSupport {
 
         if (browserType.equalsIgnoreCase("Android")) {
 
+            String appPath = System.getProperty("user.dir")+apkPath;
             DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
-            System.out.println(DeviceName);
             capabilitiesForAppium.setCapability("deviceName", DeviceName);
             capabilitiesForAppium.setCapability("platformName", AndroidplatformName);
             capabilitiesForAppium.setCapability("platformVersion", AndroidplatformVersion);
             capabilitiesForAppium.setCapability("appPackage", appPackage);
             capabilitiesForAppium.setCapability("appActivity", appActivity);
-            capabilitiesForAppium.setCapability("app", apkPath);
+            capabilitiesForAppium.setCapability("app", appPath);
 
             AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
             driver = (AndroidDriver);
             driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-
 
         }
          /*
@@ -153,25 +152,25 @@ public class TestEngine extends HtmlReportSupport {
             }
         } else if (browserType.equalsIgnoreCase("AndroidChrome")) {
 
-            try {
-                DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
-                capabilitiesForAppium.setCapability("deviceName", DeviceName);
-                capabilitiesForAppium.setCapability(CapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
-                capabilitiesForAppium.setCapability("platformVersion", AndroidplatformVersion);
-                //capabilitiesForAppium.setCapability(MobileCapabilityType.BROWSER_NAME, BrowserType.CHROME);
-                capabilitiesForAppium.setCapability("appPackage", "com.android.chrome");
-                capabilitiesForAppium.setCapability("appActivity", "com.google.android.apps.chrome.Main");
-                AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
-                        capabilitiesForAppium);
-                driver = (AndroidDriver);
-                driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			try {
+				DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
+				capabilitiesForAppium.setCapability("deviceName", DeviceName);
+				capabilitiesForAppium.setCapability(CapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
+				capabilitiesForAppium.setCapability("platformVersion", AndroidplatformVersion);
+				//capabilitiesForAppium.setCapability(MobileCapabilityType.BROWSER_NAME, BrowserType.CHROME);
+				capabilitiesForAppium.setCapability("appPackage", "com.android.chrome");
+				capabilitiesForAppium.setCapability("appActivity", "com.google.android.apps.chrome.Main");
+				AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
+						capabilitiesForAppium);
+				driver = (AndroidDriver);
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
-            } catch (MalformedURLException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-
-        }
+		}
         /*
         Author Sravan Reddy
         */
@@ -216,125 +215,125 @@ public class TestEngine extends HtmlReportSupport {
         }else if (browserType == "Edge") {
             //Sangeetha
         }else if(browserType=="WinFirefox") {
-            //@author by Ranga
+			//@author by Ranga
 
-            System.setProperty("webdriver.gecko.driver", filePath());
-            WebDriver driver = new FirefoxDriver();
-            driver.get(url);
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+			System.setProperty("webdriver.gecko.driver", filePath());
+			WebDriver driver = new FirefoxDriver();
+			driver.get(url);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
-        }
-        else if(browserType=="Edge") {
-            //@author by sangeethanulu
-            System.setProperty("webdriver.edge.driver", filePath());
-            WebDriver driver = new EdgeDriver();
-            driver.get(url);
-            driver.manage().window().maximize();
+		}
+		else if(browserType=="Edge") {
+			//@author by sangeethanulu
+			System.setProperty("webdriver.edge.driver", filePath());
+			WebDriver driver = new EdgeDriver();
+			driver.get(url);
+			driver.manage().window().maximize();
 
-        }
-        else if(browserType.equalsIgnoreCase("safari")){
-            //@author: Archana Dasari
-            //enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver.
-            driver  = new SafariDriver();
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-            driver.get(url);
-        }
-        else if(browserType.equalsIgnoreCase("macChrome")) {
-            //@author: Archana Dasari
-            String driverPath = configProps.getProperty("macChromeDriverPath");
-            String browserPath = System.getProperty("user.dir")+driverPath;
-            System.setProperty("webdriver.chrome.driver", browserPath);
-            ChromeOptions chromeOptions=new ChromeOptions();
-            chromeOptions.setAcceptInsecureCerts(true);
-            driver = (new ChromeDriver(chromeOptions));
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-            driver.get(url);
-            driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-        }
-        else if(browserType.equalsIgnoreCase("macFirefox")){
-            //@author: Archana Dasari
-            String driverPath = configProps.getProperty("macFirefoxDriverPath");
-            String browserPath = System.getProperty("user.dir")+driverPath;
-            System.setProperty("webdriver.gecko.driver", browserPath);
-            driver = new FirefoxDriver();
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-            driver.get(url);
-            driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		}
+		else if(browserType.equalsIgnoreCase("safari")){
+			//@author: Archana Dasari
+			//enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver.
+			driver  = new SafariDriver();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+			driver.get(url);
+		}
+		else if(browserType.equalsIgnoreCase("macChrome")) {
+			//@author: Archana Dasari
+			String driverPath = configProps.getProperty("macChromeDriverPath");
+			String browserPath = System.getProperty("user.dir")+driverPath;
+			System.setProperty("webdriver.chrome.driver", browserPath);
+			ChromeOptions chromeOptions=new ChromeOptions();
+			chromeOptions.setAcceptInsecureCerts(true);
+			driver = (new ChromeDriver(chromeOptions));
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+			driver.get(url);
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		}
+		else if(browserType.equalsIgnoreCase("macFirefox")){
+			//@author: Archana Dasari
+			String driverPath = configProps.getProperty("macFirefoxDriverPath");
+			String browserPath = System.getProperty("user.dir")+driverPath;
+			System.setProperty("webdriver.gecko.driver", browserPath);
+			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+			driver.get(url);
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
-        }
-        else if ((browserType.equalsIgnoreCase("AndroidChrome")) | (browserType.equalsIgnoreCase("iOSSafari"))) {
+		}
+		else if ((browserType.equalsIgnoreCase("AndroidChrome")) | (browserType.equalsIgnoreCase("iOSSafari"))) {
             driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
             driver.get(url);
         }
-    }
+	}
 
-    public static String filePath() {
-        String strDirectoy = "";
-        if (browserType.equalsIgnoreCase("ie")) {
-            strDirectoy = "IE" + File.separator + "IE";
-        } else if (browserType.equalsIgnoreCase("firefox")) {
-            strDirectoy = "Firefox" + File.separator + "Firefox";
-        } else if (browserType.equalsIgnoreCase("chrome")) {
-            strDirectoy = "Chrome" + File.separator + "Chrome";
-        } else if (browserType.equalsIgnoreCase("edge")) {
-            strDirectoy = "Edge" + File.separator + "Edge";
-        } else if (browserType.equalsIgnoreCase("Android")) {
-            strDirectoy = "Android" + File.separator + "Android";
-        } else if (browserType.equalsIgnoreCase("iphone")) {
-            strDirectoy = "iPhone" + File.separator + "iPhone";
-        } else if (browserType.equalsIgnoreCase("AndroidChrome")) {
-            strDirectoy = "AndroidChrome" + File.separator + "AndroidChrome";
-        } else if (browserType.equalsIgnoreCase("iPhoneSafari")) {
-            strDirectoy = "iPhoneSafari" + File.separator + "iPhoneSafari";
-        }
+	public static String filePath() {
+		String strDirectoy = "";
+		if (browserType.equalsIgnoreCase("ie")) {
+			strDirectoy = "IE" + File.separator + "IE";
+		} else if (browserType.equalsIgnoreCase("firefox")) {
+			strDirectoy = "Firefox" + File.separator + "Firefox";
+		} else if (browserType.equalsIgnoreCase("chrome")) {
+			strDirectoy = "Chrome" + File.separator + "Chrome";
+		} else if (browserType.equalsIgnoreCase("edge")) {
+			strDirectoy = "Edge" + File.separator + "Edge";
+		} else if (browserType.equalsIgnoreCase("Android")) {
+			strDirectoy = "Android" + File.separator + "Android";
+		} else if (browserType.equalsIgnoreCase("iphone")) {
+			strDirectoy = "iPhone" + File.separator + "iPhone";
+		} else if (browserType.equalsIgnoreCase("AndroidChrome")) {
+			strDirectoy = "AndroidChrome" + File.separator + "AndroidChrome";
+		} else if (browserType.equalsIgnoreCase("iPhoneSafari")) {
+			strDirectoy = "iPhoneSafari" + File.separator + "iPhoneSafari";
+		}
 
-        if (strDirectoy != "") {
-            new File(configProps.getProperty("screenShotPath") + strDirectoy + "_" + timeStamp).mkdirs();
-        }
+		if (strDirectoy != "") {
+			new File(configProps.getProperty("screenShotPath") + strDirectoy + "_" + timeStamp).mkdirs();
+		}
 
-        File results = new File(configProps.getProperty("screenShotPath") + strDirectoy + "_" + timeStamp
-                + File.separator + "Screenshots");
-        if (!results.exists()) {
-            results.mkdir();
-            HtmlReportSupport.copyLogos();
-        }
+		File results = new File(configProps.getProperty("screenShotPath") + strDirectoy + "_" + timeStamp
+				+ File.separator + "Screenshots");
+		if (!results.exists()) {
+			results.mkdir();
+			HtmlReportSupport.copyLogos();
+		}
 
-        return configProps.getProperty("screenShotPath") + strDirectoy + "_" + timeStamp + File.separator;
+		return configProps.getProperty("screenShotPath") + strDirectoy + "_" + timeStamp + File.separator;
 
-    }
+	}
 
-    @AfterMethod(alwaysRun = true)
-    public static void tearDownMethod() throws Throwable {
-        try {
-            ReportStampSupport.calculateTestCaseExecutionTime();
-            closeDetailedReport();
-            if (FailNum != 0) {
-                failCounter = failCounter + 1;
-                testResults.put(HtmlReportSupport.tc_name, "FAIL");
-            } else {
-                testResults.put(HtmlReportSupport.tc_name, "PASS");
-                passCounter = passCounter + 1;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if ((browserType.toLowerCase().contains("iphone"))) {
+	@AfterMethod(alwaysRun = true)
+	public static void tearDownMethod() throws Throwable {
+		try {
+			ReportStampSupport.calculateTestCaseExecutionTime();
+			closeDetailedReport();
+			if (FailNum != 0) {
+				failCounter = failCounter + 1;
+				testResults.put(HtmlReportSupport.tc_name, "FAIL");
+			} else {
+				testResults.put(HtmlReportSupport.tc_name, "PASS");
+				passCounter = passCounter + 1;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if ((browserType.toLowerCase().contains("iphone"))) {
 
-                // Iosdriver.closeApp();
-            } else if (browserType.toLowerCase().contains("android")) {
-                // AndroidDriver2.closeApp();
+				// Iosdriver.closeApp();
+			} else if (browserType.toLowerCase().contains("android")) {
+				// AndroidDriver2.closeApp();
 
-            } else {
-                driver.quit();
-                /* driver.close(); */
-            }
+			} else {
+				driver.quit();
+				/* driver.close(); */
+			}
 
-        }
-    }
+		}
+	}
 
 
 }
