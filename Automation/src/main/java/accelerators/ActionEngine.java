@@ -70,7 +70,7 @@ public class ActionEngine extends TestEngine {
 			return flag;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} /*finally {
+		} finally {
 
 			if (!flag) {
 				Reporter.failureReport("Click", "Unable to click on " + locatorName);
@@ -79,13 +79,9 @@ public class ActionEngine extends TestEngine {
 				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
 
 			}
-			return flag;
-		}*/
+		}
 		return flag;
 	}
-
-
-
 
 	//Jagadish
 	public static boolean ScrollToElement(By locator, String locatorName) throws Throwable {
@@ -113,12 +109,12 @@ public class ActionEngine extends TestEngine {
 			e.printStackTrace();
 
 		} finally {
-			/*if (!flag) {
+			if (!flag) {
 				Reporter.failureReport("Click", "Unable to click on " + locatorName);
 				return flag;
 			} else if (b && flag) {
 				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
-			}*/
+			}
 
 		}
 		return flag;
@@ -140,7 +136,7 @@ public class ActionEngine extends TestEngine {
 				Reporter.failureReport("screenShot ", " Unable to get screenShot ");
 				System.out.println(" Unable to get TscreenShot");
 			} else if (b && flag) {
-				// Reporter.SuccessReport("screenShot ", " Able to get TscreenShot");
+				Reporter.SuccessReport("screenShot ", " Able to get TscreenShot");
 				System.out.println(" Able to get TscreenShot");
 			}
 		}
@@ -186,13 +182,13 @@ public class ActionEngine extends TestEngine {
 
 			return flag;
 		} finally {
-			/*if (!flag) {
+			if (!flag) {
 				Reporter.failureReport("WaitForElementPresent ",
 						"Falied to locate element " + locator);
 			} else if (b && flag) {
 				Reporter.SuccessReport("WaitForElementPresent ",
 						"Successfully located element " + locator);
-			}*/
+			}
 		}
 		return flag;
 
@@ -200,7 +196,7 @@ public class ActionEngine extends TestEngine {
 
 	//@author:Archana Dasari
 	//comment removed throws Throwable @srinivas
-	public static boolean type(By locator, String testdata, String locatorName)  {
+	public static boolean type(By locator, String testdata, String locatorName) throws Throwable {
 		explicityWait(locator, locatorName);
 		try {
 			WebElement we = driver.findElement(locator);
@@ -211,15 +207,13 @@ public class ActionEngine extends TestEngine {
 			e.printStackTrace();
 			return flag;
 		} finally {
-			/*if (!flag) {
+			if (!flag) {
 				Reporter.failureReport("Type ",
-						"Data typing action is not perform on " + locatorName
-								+ " with data is " + testdata);
+						"Data typing action is not perform on " + locatorName);
 			} else if (b && flag) {
 				Reporter.SuccessReport("Type ",
-						"Data typing action is performed on " + locatorName
-								+ " with data is " + testdata);
-			}*/
+						"Data typing action is performed on " + locatorName);
+			}
 		}
 		return flag;
 	}
@@ -290,8 +284,6 @@ public class ActionEngine extends TestEngine {
 		}
 	}
 
-
-
 	/*@author sangeethanulu
 
 	  SWITCH TO WINDOW BY TITLE
@@ -307,7 +299,6 @@ public class ActionEngine extends TestEngine {
 				driver.switchTo().window(windowTitle);
 				flag = true;
 			}
-
 
 		} catch (Exception e) {
 			System.out.println("Unable to switch window with title: " + windowTitle);
@@ -326,9 +317,6 @@ public class ActionEngine extends TestEngine {
 
 		}
 	}
-
-
-
 
 	/**
 	 * @author sangeethan
@@ -478,7 +466,6 @@ public class ActionEngine extends TestEngine {
 			}
 			return flag;
 		}
-
 	}
 
 	//Jagadish
@@ -494,7 +481,6 @@ public class ActionEngine extends TestEngine {
 				.waitAction(WaitOptions.waitOptions(Duration.ofMillis(duration)))
 				.moveTo(PointOption.point(anchor, endPoint)).release().perform();
 	}
-
 
 	public static Boolean isElementPresent(By locator, String locatorName) {
 		Boolean flag = false;
@@ -536,12 +522,10 @@ public class ActionEngine extends TestEngine {
 		return flag;
 	}
 
-
 	public static void scrollTo(String selector, int typ) {
 		((FindsByAndroidUIAutomator<MobileElement>) driver)
 				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + typ
 						+ ")).scrollIntoView(new UiSelector().text(\"" + selector + "\").instance(0))");
 
 	}
-
 }
