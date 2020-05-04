@@ -88,6 +88,9 @@ import io.appium.java_client.remote.MobilePlatform;
     public static void setupSuite() throws Throwable {
 
         if (browserType.equalsIgnoreCase("Android")) {
+        	 String apkPath = configProps.getProperty("apkPath");
+             String temp = System.getProperty("user.dir") + apkPath;
+             File apk = new File(temp);
 
             DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
             System.out.println(DeviceName);
@@ -96,7 +99,8 @@ import io.appium.java_client.remote.MobilePlatform;
             capabilitiesForAppium.setCapability("platformVersion", AndroidplatformVersion);
             capabilitiesForAppium.setCapability("appPackage", appPackage);
             capabilitiesForAppium.setCapability("appActivity", appActivity);
-            capabilitiesForAppium.setCapability("app", apkPath);
+            capabilitiesForAppium.setCapability("app", apk.getCanonicalPath());
+            capabilitiesForAppium.setCapability("newCommandTimeout", 8000);
 
             AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
             driver = (AndroidDriver);
