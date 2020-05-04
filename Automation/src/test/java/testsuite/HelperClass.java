@@ -589,8 +589,8 @@ public class HelperClass extends PageLocator {
 
 
 	public static void addPediatricianInfo(String pediatricianName,String numeber,String Date) throws Throwable {
-		Thread.sleep(1000);
-		hideKeyboard();
+		//Thread.sleep(1000);
+		//hideKeyboard();
 
 		type(txtPediatricianName,pediatricianName,"Pediatrician Name");
 
@@ -611,8 +611,8 @@ public class HelperClass extends PageLocator {
 
 
 		
-		Thread.sleep(2000);
-		swipe(AndroidDriver, DIRECTION.DOWN);
+		//Thread.sleep(2000);
+		//swipe(AndroidDriver, DIRECTION.DOWN);
 		
 	}
 
@@ -646,8 +646,8 @@ public class HelperClass extends PageLocator {
 
 		
 			type(txtHospitalZip,zip,"Hospital Zip code");
-			Thread.sleep(2000);
-			swipe(AndroidDriver, DIRECTION.DOWN);
+			//Thread.sleep(2000);
+			//swipe(AndroidDriver, DIRECTION.DOWN);
 		
 	}
 //@author srinivas n 22nd April 2020
@@ -659,8 +659,8 @@ public class HelperClass extends PageLocator {
 		type(txtInsuranceCompanyName,insuranceCompany,"Insurance Company Name");
 		type(txtInsurancePolicyNumber,policyNumber,"Insurance Policy Number");
 
-		click(btnPediationNext,"nextbutton");
-	    Thread.sleep(2000);
+		//click(btnPediationNext,"nextbutton");
+	   // Thread.sleep(2000);
 	
 
 
@@ -921,12 +921,12 @@ public class HelperClass extends PageLocator {
 		/*Thread.sleep(2000);
 		hideKeyboard();
 */		type(bkpfirstname,firstName,"firstname");
-		type(bkpLastName, lastName,"firstname");
-		type(bkpPhoneNumber, phoneNumber,"firstname");
-		type(bkpAddress1, address1,"firstname");
-		type(bkpAddress2, address2,"firstname");
-		type(bkpZip, zip,"firstname");
-		type(bkpRelationShip, relationship,"firstname");
+		type(bkpLastName, lastName,"lastname");
+		type(bkpPhoneNumber, phoneNumber,"phonenumber");
+		type(bkpAddress1, address1,"address1");
+		type(bkpAddress2, address2,"address2");
+		type(bkpZip, zip,"zip");
+		type(bkpRelationShip, relationship,"relationship");
 
 		click(btnBackupContactDone1, "Done");
 
@@ -936,22 +936,22 @@ public class HelperClass extends PageLocator {
 		/*Thread.sleep(2000);
 		hideKeyboard();*/
 		type(bkpfirstname,firstName,"firstname");
-		type(bkpLastName, lastName,"firstname");
-		type(bkpPhoneNumber, phoneNumber,"firstname");
-		type(bkpAddress1, address1,"firstname");
-		type(bkpAddress2, address2,"firstname");
-		type(bkpZip, zip,"firstname");
-		type(bkpRelationShip, relationship,"firstname");
+		type(bkpLastName, lastName,"lastname");
+		type(bkpPhoneNumber, phoneNumber,"phoneNumber");
+		type(bkpAddress1, address1,"address1");
+		type(bkpAddress2, address2,"address2");
+		type(bkpZip, zip,"zip");
+		type(bkpRelationShip, relationship,"relationship");
 
 		click(btnBackupContactDone1, "Done");
-
+		Thread.sleep(2000);
 		click(nextbutton,"Next button");
 		Thread.sleep(2000);
 	}
 	public void SelectingPhysical() throws Throwable {
 		click(chkPhysical, "Selecting the Child");
-		click(btnPediationNext,"nextbutton");
-		Thread.sleep(2000);
+		//click(btnPediationNext,"nextbutton");
+		//Thread.sleep(2000);
 		
 	}
 
