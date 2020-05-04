@@ -4,13 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import accelerators.ActionEngine;
 import io.appium.java_client.pagefactory.LocatorGroupStrategy;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
 public class PageLocator extends ActionEngine {
-
 
 	//When do you need care for -Jagadish
 		public static By choosedate = By.xpath("//*[contains(@resource-id,'choose_another_date')]");	
@@ -50,6 +47,8 @@ public class PageLocator extends ActionEngine {
 		public static By birthday = By.xpath("//*[contains(@resource-id,'birth_day')]");
 
     //Written by Vinay Gajula
+	public static By Unauthorised=By.id("done");
+	public static By Selectingmykid=By.id("my_kids");
     public static By SelectChild=By.id("child_name");
     public static By SelectDone=By.id("next_cta");
     public static String SelectReason="//*[contains(@text,'#')]";
@@ -59,20 +58,26 @@ public class PageLocator extends ActionEngine {
     public static By fellnext=By.id("next_cta");
     public static String Symptoms="//*[contains(@text,'#')]";
     public static String TypeofCare="//*[contains(@text,'#')]";
-    public static By Selectingmykid=By.id("my_kids");
-    public static By Unauthorised=By.id("done");
+
+   /* public static By Selectingmykid=By.id("my_kids");
+    public static By Unauthorised=By.id("done");*/
 	
 	//@author by Bhavya
 	//created on : 20-04-2020
 	
 
-	public static By menu = By.xpath("//a[@aria-label='navigation menu']");
-	
-	
-	
-	
-	
-	
+	/*public static By Allowclick = By.xpath("//*[@text='ALLOW']");
+
+	//BkpContact1
+	public static By bkpfirstname = By.id("first_name");
+	public static By bkpLastName = By.id("last_name");
+	public static By bkpPhoneNumber= By.id("phone_number");
+	public static By bkpAddress1 = By.id("address_line_1");
+	public static By bkpAddress2 = By.id("address_line_2");
+	public static By bkpZip = By.id("city_state_zip");
+	public static By bkpRelationShip = By.id("relationship_to_child");
+*/
+
 	/*@author srinivas n 20th April 2020
 	 * adding elements for incenter care selection
 	 * 
@@ -112,6 +117,7 @@ public class PageLocator extends ActionEngine {
 	public static By dlgButtonOk = By.id("dialog_positive_button");
 	
 	//After click on Refine button app was displaying change location and radious below are elemtes related to change location and radious
+	public static By Deny = By.xpath("//*[contains(@text,'DENY')]");
 	public static By frmLocation = By.id("location");
 	public static By frmSearchRadius = By.id("search_radius");
 	public static By milespDropdown = By.xpath("//* [@class='android.widget.TextView' ] ");
@@ -124,6 +130,7 @@ public class PageLocator extends ActionEngine {
 	//Primary contacts
 	public static By txtYourPhoneNumber = By.id("primary_phone_number");
 	public static By ddlPrimaryContactRelationship = By.id("primary_contact_relationship");
+	//public static By nextbutton = By.id("next");
 	public static By ddlRelationshipToClient = By.xpath("//* [@class='android.widget.TextView']");
 	public static By btnDone = By.id("done");
 	
@@ -134,8 +141,8 @@ public class PageLocator extends ActionEngine {
 	public static By txtLastName = By.id("last_name");
 	public static By txtPhoneNumber = By.id("phone_number");
 	public static By txtAddressLine1 = By.id("address_line_1");
-	public static By txtAddressLine2 = By.id("address_line_1");
-	public static By txtCityState = By.id("address_line_1");
+	public static By txtAddressLine2 = By.id("address_line_2");
+	public static By txtCityState = By.id("city_state_zip");
 	public static By ddlRelationshipToChild = By.id("relationship_to_child");
 	public static By ddlSelectionRelationType = By.xpath("//*[@class='android.widget.TextView']");
 	public static By btnDDLSelectionDone = By.id("cta");
@@ -143,6 +150,8 @@ public class PageLocator extends ActionEngine {
 	public static By btnNavigationDown = By.id("navigate_down");
 	public static By rdoCanPickupChild = By.id("canPickupChild");
 	public static By btnBackupContactDone1= By.id("backup_contact_done_cta");
+	public static By btnBackupContactDone1next= By.id("next_button");
+
 	
 	
 	//Backup contact2
@@ -152,8 +161,8 @@ public class PageLocator extends ActionEngine {
 		public static By txtLastName2 = By.id("last_name");
 		public static By txtPhoneNumber2 = By.id("phone_number");
 		public static By txtAddressLine12 = By.id("address_line_1");
-		public static By txtAddressLine22 = By.id("address_line_1");
-		public static By txtCityState2 = By.id("address_line_1");
+		public static By txtAddressLine22 = By.id("address_line_2");
+		public static By txtCityState2 = By.id("city_state_zip");
 		public static By ddlRelationshipToChild2 = By.id("relationship_to_child");
 		public static By ddlSelectionRelationType2 = By.xpath("//*[@class='android.widget.TextView']");
 		public static By btnDDLSelectionDone2 = By.id("cta");
@@ -171,6 +180,7 @@ public class PageLocator extends ActionEngine {
 	public static By txtPediatricianName = By.id("pediatrician_name");
 	public static By txtPediatricianPhoneNumber = By.id("pediatrician_phone_number");
 	public static By txtDateOfLastVisit = By.id("last_phy_exam_date");
+	public static By txtPediatriciannnext= By.id("last_phy_exam_date");
 	
 	//HOSPITAL INFO
 	public static By txtHospitalTitle = By.id("hospital_title");
@@ -195,14 +205,14 @@ public class PageLocator extends ActionEngine {
 	
 	//Allergy information
 	
-	By chkMedications = By.xpath("(//*[@class='android.widget.CheckBox'])[1]");
-	By chkFood = By.xpath("(//*[@class='android.widget.CheckBox'])[2]");
-	By chkRespiratory = By.xpath("(//*[@class='android.widget.CheckBox'])[3]");
-	By chkBeesting = By.xpath("(//*[@class='android.widget.CheckBox'])[4]");
-	By chkOtherr = By.xpath("(//*[@class='android.widget.CheckBox'])[5]");
+	public static By chkMedications = By.xpath("(//*[@class='android.widget.CheckBox'])[1]");
+	public static By chkFood = By.xpath("(//*[@class='android.widget.CheckBox'])[2]");
+	public static By chkRespiratory = By.xpath("(//*[@class='android.widget.CheckBox'])[3]");
+	public static By chkBeesting = By.xpath("(//*[@class='android.widget.CheckBox'])[4]");
+	public static By chkOtherr = By.xpath("(//*[@class='android.widget.CheckBox'])[5]");
 	
-	By txtAllergyDetail = By.id("allergy_detail");
-	By txtReactionDetail = By.id("reaction_detail");
+	public static By txtAllergyDetail = By.id("allergy_detail");
+	public static By txtReactionDetail = By.id("reaction_detail");
 	
 	//Special needs information
 	public static By txtSpecialNeedsTitle = By.id("title");
@@ -247,16 +257,14 @@ public class PageLocator extends ActionEngine {
 	*	
 	*	Reuse above locators for question, Yes button, No button , Description and Next button
 	*/
-	
-	
-	
-	
 
-
+	//@author by Bhavya
+	//created on : 20-04-2020
 		//Verify Settings icon
 		//Verify Select uat25
 		//verify click on enroll
 		//verify acme from where do you work dropdown list
+
 		
 		public static By settingsicon = By.xpath("//*[contains(@resource-id,'settings')]");
 		public static By uat25 = By.xpath("//*[contains(@text,'uat25')]");
@@ -265,24 +273,30 @@ public class PageLocator extends ActionEngine {
 		public static By companysearch = By.xpath("//*[contains(@resource-id,'company_search')]");
 		//verify login button
 		public static By Login = By.id("sign_in");
+
 		/*//again select acme
         public static By companysearch1 = By.xpath("//*[contains(@resource-id,'company_search')]");
 		*///verify email
+
 		public static By emailfield= By.id("email");
 		//verify password
 		public static By passwordfield=By.id("passwd");
 		//click on login
-		public static By login1 = By.id("sign_in");
+
+		//public static By login1 = By.id("sign_in");
 		
 		
+
+		public static By login1 = By.xpath("//*[contains(@text,'LOGIN')]");
+	
+
+
 	//author Sreeranga
 	
 	//Select Use my backUp days
 	public static By  BackUpDays= By.id("use_my_backup_days");
 	//select BookNow Button
 	public static By BookNow = By.id("ctabutton");
-	
-	
 
 
 
@@ -315,6 +329,7 @@ public class PageLocator extends ActionEngine {
 	public static By cvv = By.xpath("//*[contains(@resource-id,'cc_cvv_3')]");
 	public static By zip1 = By.xpath("//*[contains(@resource-id,'cc_cvv_4')]");
 	public static By submitrequest = By.xpath("//*[contains(@resource-id,'submit_button')]");
+
 	
 	public static By Allowclick = By.xpath("//*[@text='ALLOW']");
 	public static By bkpfirstname = By.id("first_name");
@@ -326,5 +341,7 @@ public class PageLocator extends ActionEngine {
 	public static By bkpRelationShip = By.id("relationship_to_child");
 	public static By nextbutton = By.id("next");
 }
+
+
 
 

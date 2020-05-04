@@ -73,7 +73,7 @@ public class HtmlReportSupport {
 			writer.write("<html> ");
 			writer.write("<head> ");
 			writer.write("<meta charset='UTF-8'> ");
-			writer.write("<title>DPC - Automation Execution Results Summary</title> on "+TestEngine.browserType);
+			writer.write("<title> " +configProps.getProperty("headerTitle") + "</title> on "+TestEngine.browserType);
 
 			writer.write("<style type='text/css'>");
 			writer.write("body {");
@@ -241,7 +241,7 @@ public class HtmlReportSupport {
 			writer.write("<img align ='left' src= ./Screenshots//" + config.getProperty("Client_logo")+ ".png></img>");
 			writer.write("</th>");
 			writer.write("<th class = 'Logos' colspan='2' > ");
-			writer.write("<img align ='right' src= .//Screenshots//enex.png></img>");
+			writer.write("<img align ='right' src= .//Screenshots//"+ config.getProperty("Company_logo")+".png></img>");
 			writer.write("</th> ");
 			writer.write("</tr> ");
 
@@ -260,7 +260,7 @@ public class HtmlReportSupport {
 
 			writer.write("<tr class='heading'> ");
 			writer.write("<th colspan='4' style='font-family:Copperplate Gothic Bold; font-size:1.4em;'> ");
-			writer.write("DPC -  Automation Execution Result Summary on "+TestEngine.browserType);
+			writer.write(""+configProps.getProperty("headerTitle") +TestEngine.browserType);
 			writer.write("</th> ");
 			writer.write("</tr> ");
 			writer.write("<tr class='subheading'> ");
@@ -374,7 +374,7 @@ public class HtmlReportSupport {
 			writer.write("<html> ");
 			writer.write("<head> ");
 			writer.write("<meta charset='UTF-8'> ");
-			writer.write("<title>DPC - Automation Execution Results Summary on "+TestEngine.browserType+ "</title>");
+			writer.write("<title>"+configProps.getProperty("headerTitle") + TestEngine.browserType+ "</title>");
 
 			writer.write("<style type='text/css'>");
 			writer.write("body {");
@@ -543,7 +543,7 @@ public class HtmlReportSupport {
 					+ ".png></img>");
 			writer.write("</th>");
 			writer.write("<th class = 'Logos' colspan='2' > ");
-			writer.write("<img align ='right' src= .//Screenshots//enex.png></img>");
+			writer.write("<img align ='right' src= .//Screenshots//wavelabs.png></img>");
 			writer.write("</th> ");
 			writer.write("</tr> ");
 
@@ -562,7 +562,7 @@ public class HtmlReportSupport {
 
 			writer.write("<tr class='heading'> ");
 			writer.write("<th colspan='4' style='font-family:Copperplate Gothic Bold; font-size:1.4em;'> ");
-			writer.write("DPC -  Automation Execution Result Summary ");
+			writer.write(""+configProps.getProperty("headerTitle"));
 			writer.write("</th> ");
 			writer.write("</tr> ");
 			writer.write("<tr class='subheading'> ");
@@ -996,10 +996,10 @@ public class HtmlReportSupport {
 			writer.write("<tr class='content'>");
 			writer.write("<th class ='Logos' colspan='2' >");
 			writer.write("<img align ='left' src= ./Screenshots//" + config.getProperty("Client_logo")
-					+ "></img>");
+					+ ".png></img>");
 			writer.write("</th>");
 			writer.write("<th class = 'Logos' colspan='2' > ");			
-			writer.write("<img align ='right' src= .//Screenshots//enex.png></img>");
+			writer.write("<img align ='right' src= .//Screenshots//"+ config.getProperty("Company_logo")+".png></img>");
 			writer.write("</th> ");
 			writer.write("</tr> ");
 			writer.write("</thead> ");
@@ -1254,7 +1254,7 @@ public class HtmlReportSupport {
 					+ ".png></img>");
 			writer.write("</th>");
 			writer.write("<th class = 'Logos' colspan='2' > ");			
-			writer.write("<img align ='right' src= .//Screenshots//enex.png></img>");
+			writer.write("<img align ='right' src= .//Screenshots//wavelabs.png></img>");
 			writer.write("</th> ");
 			writer.write("</tr> ");
 			writer.write("</thead> ");

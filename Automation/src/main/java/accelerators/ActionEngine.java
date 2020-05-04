@@ -79,12 +79,13 @@ public class ActionEngine extends TestEngine {
 				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
 
 			}
+
 			return flag;
 		}*/
+
+
 		return flag;
-	}
-
-
+		}
 
 
 	//Jagadish
@@ -113,16 +114,17 @@ public class ActionEngine extends TestEngine {
 			e.printStackTrace();
 
 		} finally {
-			/*if (!flag) {
+			if (!flag) {
 				Reporter.failureReport("Click", "Unable to click on " + locatorName);
 				return flag;
 			} else if (b && flag) {
 				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
-			}*/
 
-		}
+			}
+
+			}
 		return flag;
-	}
+		}
 
 
 	public static void screenShot(String fileName) throws Throwable {
@@ -140,7 +142,7 @@ public class ActionEngine extends TestEngine {
 				Reporter.failureReport("screenShot ", " Unable to get screenShot ");
 				System.out.println(" Unable to get TscreenShot");
 			} else if (b && flag) {
-				// Reporter.SuccessReport("screenShot ", " Able to get TscreenShot");
+				Reporter.SuccessReport("screenShot ", " Able to get TscreenShot");
 				System.out.println(" Able to get TscreenShot");
 			}
 		}
@@ -159,7 +161,11 @@ public class ActionEngine extends TestEngine {
 
 	//@author :bhavya for acme droppdown
 
-	public void clickByCondindates(int x, int y) {
+
+	
+
+	public static void clickByCondindates(int x, int y) {
+
 		TouchAction touchAction = new TouchAction((MobileDriver) driver);
 		touchAction.tap(PointOption.point(x, y)).perform();
 	}
@@ -186,13 +192,13 @@ public class ActionEngine extends TestEngine {
 
 			return flag;
 		} finally {
-			/*if (!flag) {
+			if (!flag) {
 				Reporter.failureReport("WaitForElementPresent ",
 						"Falied to locate element " + locator);
 			} else if (b && flag) {
 				Reporter.SuccessReport("WaitForElementPresent ",
 						"Successfully located element " + locator);
-			}*/
+			}
 		}
 		return flag;
 
@@ -200,7 +206,7 @@ public class ActionEngine extends TestEngine {
 
 	//@author:Archana Dasari
 	//comment removed throws Throwable @srinivas
-	public static boolean type(By locator, String testdata, String locatorName)  {
+	public static boolean type(By locator, String testdata, String locatorName) throws Throwable {
 		explicityWait(locator, locatorName);
 		try {
 			WebElement we = driver.findElement(locator);
@@ -211,15 +217,13 @@ public class ActionEngine extends TestEngine {
 			e.printStackTrace();
 			return flag;
 		} finally {
-			/*if (!flag) {
+			if (!flag) {
 				Reporter.failureReport("Type ",
-						"Data typing action is not perform on " + locatorName
-								+ " with data is " + testdata);
+						"Data typing action is not perform on " + locatorName);
 			} else if (b && flag) {
 				Reporter.SuccessReport("Type ",
-						"Data typing action is performed on " + locatorName
-								+ " with data is " + testdata);
-			}*/
+						"Data typing action is performed on " + locatorName);
+			}
 		}
 		return flag;
 	}
@@ -241,11 +245,14 @@ public class ActionEngine extends TestEngine {
 	}
 
 //@vinay Gajula
-	public void hideKeyboard() {
+
+	public static void hideKeyboard() {
+
+	
 		AndroidDriver.hideKeyboard();
 	}
 
-	public void launchKeyboard() {
+	public static void launchKeyboard() {
 		AndroidDriver.getKeyboard();
 	}
 
@@ -292,6 +299,9 @@ public class ActionEngine extends TestEngine {
 
 
 
+
+
+
 	/*@author sangeethanulu
 
 	  SWITCH TO WINDOW BY TITLE
@@ -307,6 +317,9 @@ public class ActionEngine extends TestEngine {
 				driver.switchTo().window(windowTitle);
 				flag = true;
 			}
+
+
+
 
 
 		} catch (Exception e) {
@@ -326,6 +339,9 @@ public class ActionEngine extends TestEngine {
 
 		}
 	}
+
+
+
 
 
 
@@ -405,6 +421,7 @@ public class ActionEngine extends TestEngine {
 						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
 						.moveTo(PointOption.point(endX, startY)).release().perform();
 				break;
+
 
 			case LEFT:
 				startY = (int) (size.height / 2);
@@ -513,10 +530,150 @@ public class ActionEngine extends TestEngine {
 			} else {
 				System.out.println("Element is present: " +locatorName);
 			}
+
+
+			/*case LEFT:
+				startY = (int) (size.height / 2);
+				startX = (int) (size.width * 0.05);
+				endX = (int) (size.width * 0.90);
+				new TouchAction(driver)
+						.press(PointOption.point(startX, startY))
+						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
+						.moveTo(PointOption.point(endX, startY))
+						.release()
+						.perform();
+
+				break;
+
+			case UP:
+
+				startX = (size.width / 2);
+				endY = (int) (size.height * 0.70);
+				startY = (int) (size.height * 0.30);
+
+				new TouchAction(driver)
+						.press(PointOption.point(startX, startY))
+						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
+						.moveTo(PointOption.point(startX, endY))
+						.release()
+						.perform();
+
+				break;
+
+
+			case DOWN:
+
+				startX = (size.width / 2);
+				startY = (int) (size.height * 0.70);
+				endY = (int) (size.height * 0.30);
+
+				new TouchAction(driver)
+						.press(PointOption.point(startX, startY))
+						.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2L)))
+						.moveTo(PointOption.point(startX, endY))
+						.release()
+						.perform();
+
+
+				break;*/
+
+		}
+		return flag;
+
+
+	}
+
+
+	/*@SuppressWarnings("finally")
+	public static boolean DoubleTab(By locator, String locatorName) throws Throwable {
+		// explicityWait(locator, locatorName);
+		boolean flag = false;
+		try {
+			WebElement we = driver.findElement(locator);
+			Actions actions = new Actions(driver);
+			actions.doubleClick(we).build().perform();
+			flag = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (!flag) {
+				Reporter.failureReport("Click", "Unable to click on " + locatorName);
+				return flag;
+			} else if (b && flag) {
+				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
+
+			}
+			return flag;
+
 		}
 
 		return flag;
+	}*/
+
+
+	/*public static Boolean isElementDisplayed(By locator, String locatorName) {
+		Boolean flag = false;
+		try {
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			MobileElement we = (MobileElement) driver.findElement(locator);
+			flag = we.isDisplayed();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			// e.printStackTrace();
+		} finally {
+			if (!flag) {
+				System.out.println("Element is not display: " +locatorName);
+			} else {
+				System.out.println("Element is display "+ locatorName);
+			}
+		}
+
+		return flag;
+*/
+	//Jagadish
+	/*public static void swipeVertical(double startPercentage, double finalPercentage, double anchorPercentage,
+									 int duration) throws Exception {
+		org.openqa.selenium.Dimension size = driver.manage().window().getSize();
+		int anchor = (int) (size.width * anchorPercentage);
+		int startPoint = (int) (size.height * startPercentage);
+		int endPoint = (int) (size.height * finalPercentage);
+		TouchAction action = new TouchAction((PerformsTouchActions) driver);
+
+		action.press(PointOption.point(anchor, startPoint))
+				.waitAction(WaitOptions.waitOptions(Duration.ofMillis(duration)))
+				.moveTo(PointOption.point(anchor, endPoint)).release().perform();
+
 	}
+*/
+	/*public static Boolean isElementPresent(By locator, String locatorName) {
+		Boolean flag = false;
+		try {
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			MobileElement we = (MobileElement) driver.findElement(locator);
+			flag = we.isEnabled();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			// e.printStackTrace();
+		} finally {
+			if (!flag) {
+				System.out.println("Element is not present: "+locatorName);
+			} else {
+				System.out.println("Element is present: " +locatorName);
+			}
+		}
+	}*/
+
+
+	/*public static void scrollTo(String selector, int typ) {
+		((FindsByAndroidUIAutomator<MobileElement>) driver)
+				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + typ
+						+ ")).scrollIntoView(new UiSelector().text(\"" + selector + "\").instance(0))");
+
+	}
+*/
+
+
+		
 
 	public static Boolean isElementDisplayed(By locator, String locatorName) {
 		Boolean flag = false;
@@ -538,12 +695,11 @@ public class ActionEngine extends TestEngine {
 		return flag;
 	}
 
-
 	public static void scrollTo(String selector, int typ) {
 		((FindsByAndroidUIAutomator<MobileElement>) driver)
 				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + typ
 						+ ")).scrollIntoView(new UiSelector().text(\"" + selector + "\").instance(0))");
 
 	}
-
 }
+
