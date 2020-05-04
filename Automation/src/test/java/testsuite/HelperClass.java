@@ -111,12 +111,12 @@ public class HelperClass extends PageLocator {
 		Thread.sleep(2000);
 		hideKeyboard();
 		type(bkpfirstname,firstName,"firstname");
-		type(bkpLastName, lastName,"firstname");
-		type(bkpPhoneNumber, phoneNumber,"firstname");
-		type(bkpAddress1, address1,"firstname");
-		type(bkpAddress2, address2,"firstname");
-		type(bkpZip, zip,"firstname");
-		type(bkpRelationShip, relationship,"firstname");
+		type(bkpLastName, lastName,"lastname");
+		type(bkpPhoneNumber, phoneNumber,"phonenumber");
+		type(bkpAddress1, address1,"address1");
+		type(bkpAddress2, address2,"address2");
+		type(bkpZip, zip,"zipcode");
+		type(bkpRelationShip, relationship,"relationship");
 
 		click(btnBackupContactDone1, "Done");
 
@@ -201,6 +201,31 @@ public class HelperClass extends PageLocator {
 		swipe(AndroidDriver, DIRECTION.DOWN);
 	}
 
+//	public static void loginsendkeys()throws Throwable {
+//		Thread.sleep(5000);
+//		type(emailfield,"gajulavinay1@care.com","Email");
+//		Thread.sleep(2000);
+//		type(passwordfield,"letmein1","Password");
+//
+//		Thread.sleep(2000);
+//		selectCompanySearch("acme");
+//
+//		type(emailfield,useremail,"email");
+//	}
+
+//	public static void loginsendkeys()throws Throwable {
+//		Thread.sleep(10000);
+//		type(emailfield,"gajulavinay1@care.com","d");
+//		Thread.sleep(2000);
+//		type(passwordfield, userpass,"password");
+//		Thread.sleep(2000);
+//		click(login1, "loginbutton1");
+//
+//	}
+
+
+
+
 	public static void enroll() throws Throwable{
 		type(birthdate,"04/22/1992","select dob");
 		//selectdate("May", "27", "1990");
@@ -217,13 +242,13 @@ public class HelperClass extends PageLocator {
 	
 	public static void clickno() throws Throwable
 	{
-		click(nobutton, "no");
+		click(nobutton, "No Button");
 	}
 
 
 	public static void clickyes() throws Throwable
 	{
-		click(yesbutton, "yes");
+		click(yesbutton, "Yes Button");
 	}
 
 	
@@ -360,7 +385,7 @@ public class HelperClass extends PageLocator {
 
 
 	public static void next() throws Throwable {
-		click(btnNext,"Done button");
+		click(btnNext,"Next button");
 	}
 
 	
@@ -483,7 +508,7 @@ public class HelperClass extends PageLocator {
 //	}
 
 
-
+			
 		public static void addHospitalInfo(String hospitalName,String address,String address1,String zip) throws Throwable {
 			type(txtHospitalName,hospitalName,"Hospital Name");
 			type(txtHospitalAddressLine1,address,"Hospital Address Line1");
