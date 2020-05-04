@@ -3,6 +3,7 @@ package testsuite;
 
 
 import java.time.Duration;
+import java.util.Hashtable;
 import java.util.List;
 
 import com.sun.glass.events.SwipeGesture;
@@ -20,7 +21,6 @@ import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
-
 
 public class HelperClass extends PageLocator {
 
@@ -297,7 +297,7 @@ public class HelperClass extends PageLocator {
 	}
 
 	//@author srinivas n 22nd April 2020
-	public static void addNetworkCenter(String BussinessName,String Zipcode,String PhoneNumber,String Totaldailycost){
+	public static void addNetworkCenter(String BussinessName,String Zipcode,String PhoneNumber,String Totaldailycost)throws Throwable{
 
 		type(txtBusineesName,BussinessName,"Bussiness Name");
 		type(txtZipcode,Zipcode,"Zipcode");
@@ -379,7 +379,7 @@ public class HelperClass extends PageLocator {
 	
 	//@author srinivas n 22nd April 2020
 	//relationship is : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
-	public static void addPrimmaryContact(String phoneNumber,String relationship){
+	public static void addPrimmaryContact(String phoneNumber,String relationship)throws Throwable{
 		
 			type(txtYourPhoneNumber,phoneNumber,"Phone Number");
 			type(ddlPrimaryContactRelationship,relationship,"Relationship to child");
@@ -434,17 +434,13 @@ public class HelperClass extends PageLocator {
 
 	public static void navigateToPediatrician() throws Throwable
 	{
-
-
 		click(btnBackupContactsNext,"Next button");
-
-
 	}
 
 	//@author srinivas n 22nd April 2020
 	//Date Of Last Visit:date format DD/MM/YYYY eg: 21/10/2019
 
-	public static void addPediatricianInfo(String pediatricianName,String numeber,String Date) throws InterruptedException {
+	public static void addPediatricianInfo(String pediatricianName,String numeber,String Date) throws Throwable {
 		Thread.sleep(1000);
 		hideKeyboard();
 		type(txtPediatricianName,pediatricianName,"Pediatrician Name");
@@ -747,6 +743,5 @@ public class HelperClass extends PageLocator {
 		}
 	}
 
-	
 }
 

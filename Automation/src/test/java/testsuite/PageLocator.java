@@ -9,7 +9,6 @@ import java.util.List;
 
 public class PageLocator extends ActionEngine {
 
-
 	//When do you need care for -Jagadish
 		public static By choosedate = By.xpath("//*[contains(@resource-id,'choose_another_date')]");	
 		public static  By month(String month) {
