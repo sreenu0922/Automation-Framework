@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.*;
 import support.ConfiguratorSupport;
 
 import java.io.File;
@@ -27,10 +28,6 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 import accelerators.TestEngine;
 
@@ -83,23 +80,31 @@ import io.appium.java_client.remote.MobilePlatform;
     public static RemoteWebDriver driver = null;
 
 
-    @BeforeSuite
-    public static void setupSuite() throws Throwable {
+    @BeforeTest(alwaysRun = true)
+    @Parameters({"port", "deviceName","version"})
+    public static void setupSuite(String port,String deviceName,String version) throws Throwable {
 
         if (browserType.equalsIgnoreCase("Android")) {
 
+                URL url = new URL("http://127.0.0.1:"+port+"/wd/hub");
             String appPath = System.getProperty("user.dir")+apkPath;
             DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
-            capabilitiesForAppium.setCapability("deviceName", DeviceName);
+            capabilitiesForAppium.setCapability("deviceName", deviceName);
+            System.out.println(deviceName);
             capabilitiesForAppium.setCapability("platformName", AndroidplatformName);
-            capabilitiesForAppium.setCapability("platformVersion", AndroidplatformVersion);
+            capabilitiesForAppium.setCapability("platformVersion", version);
             capabilitiesForAppium.setCapability("appPackage", appPackage);
             capabilitiesForAppium.setCapability("appActivity", appActivity);
             capabilitiesForAppium.setCapability("app", appPath);
 
-            AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
+            System.out.println(port);
+            AndroidDriver = new AndroidDriver(url, capabilitiesForAppium);
+
+            //AndroidDriver=new AndroidDriver<>(new URL("http://127.0.0.1:"+port+"/wd/hub"),capabilitiesForAppium);
+
+            //AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
             driver = (AndroidDriver);
-            driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(4000, TimeUnit.SECONDS);
 
         }
          /*

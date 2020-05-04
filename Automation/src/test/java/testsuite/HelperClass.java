@@ -201,31 +201,6 @@ public class HelperClass extends PageLocator {
 		swipe(AndroidDriver, DIRECTION.DOWN);
 	}
 
-//	public static void loginsendkeys()throws Throwable {
-//		Thread.sleep(5000);
-//		type(emailfield,"gajulavinay1@care.com","Email");
-//		Thread.sleep(2000);
-//		type(passwordfield,"letmein1","Password");
-//
-//		Thread.sleep(2000);
-//		selectCompanySearch("acme");
-//
-//		type(emailfield,useremail,"email");
-//	}
-
-//	public static void loginsendkeys()throws Throwable {
-//		Thread.sleep(10000);
-//		type(emailfield,"gajulavinay1@care.com","d");
-//		Thread.sleep(2000);
-//		type(passwordfield, userpass,"password");
-//		Thread.sleep(2000);
-//		click(login1, "loginbutton1");
-//
-//	}
-
-
-
-
 	public static void enroll() throws Throwable{
 		type(birthdate,"04/22/1992","select dob");
 		//selectdate("May", "27", "1990");
@@ -512,7 +487,7 @@ public class HelperClass extends PageLocator {
 //	}
 
 
-			
+
 		public static void addHospitalInfo(String hospitalName,String address,String address1,String zip) throws Throwable {
 			type(txtHospitalName,hospitalName,"Hospital Name");
 			type(txtHospitalAddressLine1,address,"Hospital Address Line1");
