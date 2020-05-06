@@ -21,7 +21,7 @@ public class TestClass extends HelperClass{
 		
 	}
 	
-	@Test (priority=1)
+	//@Test (priority=1)
 	public void enrollTest() throws Throwable{
 		
 		//Setting UAT25
@@ -46,7 +46,7 @@ public class TestClass extends HelperClass{
 	}
 	
 	//Dashboard screen after login or enroll
-	@Test (priority=2)
+	//@Test (priority=2)
 	public void myKidTest() throws Throwable{
 		
 		// selecting my kid option
@@ -85,7 +85,7 @@ public class TestClass extends HelperClass{
 	/*After select in-center app have two flows one for recommand another for A child care of my choosing
 	below method for A child care of my choosing
 	*/
-	@Test (priority=3)
+	//@Test (priority=3)
 	public void childCareOfMyChoosingTest() throws Throwable{
         
 	

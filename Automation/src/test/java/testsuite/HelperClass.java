@@ -157,6 +157,7 @@ public class HelperClass extends PageLocator {
 
 	public static void selectCompanySearch(String companyname, int xcod, int ycod) throws Throwable {
 
+		click(companysearch,  "companysearch");
 		type(companysearch, companyname, "companysearch");
 		Thread.sleep(5000);
 		WebElement dropDownLoc = driver.findElementByXPath("//*[contains(@resource-id,'company_search')]");
@@ -234,7 +235,7 @@ public class HelperClass extends PageLocator {
 		type(lastname, "nulu","lastname");
 		type(homeaddress, "P.O.Box 100","address");
 		type(zip, "02451","zip");
-		type(email, "jag3@gmail.com","mail");
+		type(email, "01jag3@gmail.com","mail");
 		type(password, "123456789","pass");
 		click(enrollbutton, "clickonenrollbutton");
 	
@@ -646,6 +647,23 @@ public class HelperClass extends PageLocator {
 		click(btnSpecialNeedNext,"Special Need Next");
 	}
 
+	
+	
+	  public static void enroll(String birthDate, String firstName, String lastName, String homeAddress, String zipcode, String emailid,
+				String passWord) throws Throwable {
+			// TODO Auto-generated method stub
+		  type(birthdate,birthDate,"select dob");
+			
+			type(firstname, firstName,"firstname");
+			Thread.sleep(2000);
+			type(lastname, lastName,"lastname");
+			type(homeaddress, homeAddress,"address");
+			type(zip, zipcode,"zip");
+			type(email, emailid,"mail");
+			type(password, passWord,"pass");
+			click(enrollbutton, "clickonenrollbutton");
+			
+		}
 
 /*check this code**********	
 		if(flag) {
