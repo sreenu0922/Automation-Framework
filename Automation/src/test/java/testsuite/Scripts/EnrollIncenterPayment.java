@@ -26,7 +26,7 @@ public class EnrollIncenterPayment extends HelperClass {
         clickno();
         selectdate(Integer.parseInt(data.get("days")));
         selecttime(data.get("fromtime"),data.get("totime"));
-        selectchild(data.get("childfirstname"), data.get("childlastname"), data.get("childbirthdate"), data.get("gender"));
+        selectchild(data.get("childfirstname"), data.get("childlastname"), data.get("childbirthday"), data.get("childtype"));
         CareReason(data.get("carereason"));
         CareType (data.get("caretype"));
         click(txRecommed,"reco");

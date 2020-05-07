@@ -352,7 +352,6 @@ public class HelperClass extends PageLocator {
 		}	
 	}
 
-
 	//@author srinivas n 22nd April 2020
 	public static void selectCareCenter(int index) throws Throwable {
 		List<WebElement> elements  = driver.findElements(lstCareCenter);
@@ -363,8 +362,6 @@ public class HelperClass extends PageLocator {
 	public static void next() throws Throwable {
 		click(btnNext,"Done button");
 	}
-
-	
 
 //@author srinivas n 22nd April 2020
 	// Navigate to Add emergency contacts screen
@@ -377,7 +374,6 @@ public class HelperClass extends PageLocator {
 		
 	}
 
-	
 	//@author srinivas n 22nd April 2020
 	//relationship is : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
 	public static void addPrimmaryContact(String phoneNumber,String relationship)throws Throwable{
@@ -408,7 +404,7 @@ public class HelperClass extends PageLocator {
 	//@param Boolean flag = true then select checkbox can pickup/drop off child
 
 	public static void addBackupContact(String firstName,String lastName,String phoneNumber,String address1, String address2,String zipcode,String relationship,Boolean flag) throws Throwable{
-	
+		    hideKeyboard();
 			type(txtFirstName,firstName,"FirstName");
 			type(txtLastName,lastName,"LastName");
 			type(txtPhoneNumber,phoneNumber,"Phone Number");
@@ -416,12 +412,9 @@ public class HelperClass extends PageLocator {
 			type(txtAddressLine2,address2,"Address line 2");
 			type(txtCityState,zipcode,"City state");
 			type(ddlRelationshipToChild,relationship,"Relationship To Child");
-
 			if(flag)
 			click(rdoCanPickupChild,"Relationship to child");
-
-		click(btnBackupContactDone1,"Done");
-
+			click(btnBackupContactDone1,"Done");
 
 	}
 
@@ -429,7 +422,6 @@ public class HelperClass extends PageLocator {
 		click(btnBackupContactDone1next,"Done");
 
 }
-
 	//@author srinivas n 22nd April 2020
 	// navigate to pediatrician & insurance information
 
@@ -444,46 +436,11 @@ public class HelperClass extends PageLocator {
 	public static void addPediatricianInfo(String pediatricianName,String numeber,String Date) throws Throwable {
 		Thread.sleep(1000);
 		hideKeyboard();
-		type(txtPediatricianName,pediatricianName,"Pediatrician Name");
-
-		type(txtPediatricianPhoneNumber,numeber,"Pediatrician Phone Number");
-
-		type(txtDateOfLastVisit,Date,"Date Of Last Visit");
-
-
-//	public static void addPediatricianInfo(String pediatricianName,String number,String Date) throws Throwable {
-//
-//		Thread.sleep(2000);
-//		hideKeyboard();
-//		type(txtPediatricianName,pediatricianName,"Vinay Gajula");
-//		type(txtPediatricianPhoneNumber,number,"9566778899");
-//		type(txtDateOfLastVisit,Date,"05/01/2020");
-//		Thread.sleep(2000);
-//		swipe(AndroidDriver, DIRECTION.DOWN);
-
-
-
+		type(txtPediatricianName, pediatricianName, "Pediatrician Name");
+		type(txtPediatricianPhoneNumber, numeber, "Pediatrician Phone Number");
+		type(txtDateOfLastVisit, Date, "Date Of Last Visit");
+		swipeVertical(0.8,0.1,0.9, 2000);
 	}
-
-	//@author srinivas n 22nd April 2020
-
-//public static void addHospitalInfo(String hospitalName,String address,String address1){
-
-//
-//	public static void addHospitalInfo(String hospitalName,String address,String address1,String zipcode){
-//
-//
-//		type(txtHospitalName,hospitalName,"Hospital Name");
-//
-//		type(txtHospitalAddressLine1,address,"Hospital Address Line1");
-//
-//		type(txtHospitalAddressLine2,address1,"Hospital Address Line2");
-//
-//		type(txtHospitalZip,zipcode,"Hospital Zip code");
-//
-//	}
-
-
 
 		public static void addHospitalInfo(String hospitalName,String address,String address1,String zip) throws Throwable {
 			type(txtHospitalName,hospitalName,"Hospital Name");
@@ -491,8 +448,6 @@ public class HelperClass extends PageLocator {
 			type(txtHospitalAddressLine2,address1,"Hospital Address Line2");
 			type(txtHospitalZip,zip,"zip");
 	}
-
-
 
 	//@author srinivas n 22nd April 2020
 	public static void addInsuranceInfo(String insuranceCompany,String policyNumber) throws Throwable {	
@@ -518,9 +473,6 @@ public class HelperClass extends PageLocator {
 		else
 			click(btnNoButton,"No button");
 	}
-
-
-
 
 	public static void addAllergyInfo(int option,String allergyDetails, String reactionDetail) throws Throwable
 	{
@@ -622,48 +574,6 @@ public class HelperClass extends PageLocator {
 		click(btnSpecialNeedNext,"Special Need Next");
 	}
 
-
-/*check this code**********	
-		if(flag) {
-			click(btnYesButton,"Yes button");
-			addDescribe(description);
-		}else
-			click(btnNoButton,"No button");
-*/
-
-//	public static void selectQuestion(String titel,boolean flag,String description) throws Throwable
-//	{
-//
-//		if(flag)
-//		{
-//			click(btnYesButton,"Yes button");
-//			addDescribe(description);
-//		}
-//		else
-//			click(btnNoButton,"No button");
-//
-//	}
-
-//	public static void addDescribe(String description) throws Throwable
-//	{
-//
-//		click(btnYesButton,"Yes button");
-//		addDescribe(description);
-//		Thread.sleep(2000);
-//	}	
-//	else
-//		click(btnNoButton,"No button");
-//	   Thread.sleep(2000);
-//	
-//}
-//
-//
-//		type(txtDescriptio,description,"type description");
-//
-//		click(btnDescriptionNext,"Next button");
-//
-//	}
-
 	/*MethodName: selectdate(String month, String day, String year)
 	  Description: Select the date, month and year in datewheel picker by scrolling
 	 * input parameters: month : provide the month as displayed in the application Eg; Apr
@@ -696,19 +606,6 @@ public class HelperClass extends PageLocator {
 
 	}
 
-
-	
-//	public static void selectdate(String month,String day,String year) throws Throwable
-//	{
-//		click(birthdate, "choosedate");
-//		scrollTo(year, 2);
-//		scrollTo(day, 2);
-//		scrollTo(month, 2);
-//		click(okdate, "selectdate");
-//	}
-	
-
-
 	/*MethodName: selecttime(String from, String to)
 	  Description: Select the from and to time in datewheel picker by scrolling
 	 * input parameters: from : provide the from date as displayed in the application Eg; 10:00 AM
@@ -731,6 +628,7 @@ public class HelperClass extends PageLocator {
 	 *created On : 21-04-2020
 	 */
 	public static void selectchild(String firstname, String lastname, String birthdate, String gender) throws Throwable {
+		hideKeyboard();
 		if (isElementDisplayed(boy, "childexist")) {
 			if(gender.equalsIgnoreCase("boy")) {
 				click(boy, "clicked");
