@@ -4,11 +4,14 @@ package accelerators;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobilePlatform;
 
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.*;
 import support.ConfiguratorSupport;
 
 import java.io.File;
@@ -30,10 +33,6 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 import accelerators.TestEngine;
 
@@ -59,8 +58,6 @@ public class TestEngine extends HtmlReportSupport {
     public static String groupNames = null;
 
     public static boolean flag = false;
-    //public static Logger log = Logger.getLogger("TestEngine.class.getName()");
-
     public static Map<String, String> testDescription = new LinkedHashMap<String, String>();
     public static Map<String, String> testResults = new LinkedHashMap<String, String>();
     public static String timeStamp = ReportStampSupport.timeStamp().replace(" ", "_").replace(":", "_").replace(".", "_");
@@ -90,7 +87,6 @@ public class TestEngine extends HtmlReportSupport {
     public static AppiumDriver AndroidDriver = null;
     public static AppiumDriver Iosdriver = null;
     public static RemoteWebDriver driver = null;
-
 
     @BeforeSuite
     public static void setupSuite(ITestContext ctx) throws Throwable {
@@ -233,17 +229,13 @@ public class TestEngine extends HtmlReportSupport {
 
         if (browserType == "WinChrome") {
             //Pravalika
-        }else if (browserType == "Edge") {
-            //Sangeetha
         }else if(browserType=="WinFirefox") {
 			//@author by Ranga
-
 			System.setProperty("webdriver.gecko.driver", filePath());
 			WebDriver driver = new FirefoxDriver();
 			driver.get(url);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-
 		}
 		else if(browserType=="Edge") {
 			//@author by sangeethanulu

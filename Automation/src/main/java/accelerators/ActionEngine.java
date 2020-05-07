@@ -21,7 +21,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Calendar;
 import java.util.List;
 
 import java.util.Random;
@@ -700,6 +702,22 @@ public class ActionEngine extends TestEngine {
 				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(" + typ
 						+ ")).scrollIntoView(new UiSelector().text(\"" + selector + "\").instance(0))");
 
+	}
+
+	//@author: Jagadish
+	public static String adddays(int days) {
+		Calendar c = Calendar.getInstance();
+		c.add(Calendar.DATE, days);
+		String day;
+		int day_temp = c.get(Calendar.DAY_OF_MONTH);
+		if (Integer.toString(day_temp).length() == 1) {
+			day = "0" + Integer.toString(day_temp);
+		} else {
+			day = Integer.toString(day_temp);
+		}
+		String month = new SimpleDateFormat("MMM").format(c.getTime());
+		String year = Integer.toString(c.get(Calendar.YEAR));
+		return month + "/" + day + "/" + year;
 	}
 }
 

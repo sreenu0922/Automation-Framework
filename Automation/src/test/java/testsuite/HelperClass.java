@@ -295,6 +295,7 @@ click(enrollbutton, "clickonenrollbutton");
 		swipe(AndroidDriver, DIRECTION.DOWN);
 	}
 
+
 //	public static void loginsendkeys()throws Throwable {
 //		Thread.sleep(5000);
 //		type(emailfield,"gajulavinay1@care.com","Email");
@@ -324,17 +325,26 @@ click(enrollbutton, "clickonenrollbutton");
 		type(birthdate,"04/22/1992","select dob");
 		//selectdate("May", "27", "1990");
 		type(firstname, "sangeetha","firstname");
+
+	public static void enroll(String birthDate, String firstName, String lastName, String homeAddress, String zipcode, String emailid,
+							  String passWord) throws Throwable {
+		// TODO Auto-generated method stub
+		type(birthdate,birthDate,"select dob");
+		type(firstname, firstName,"firstname");
+
 		Thread.sleep(2000);
-		type(lastname, "nulu","lastname");
-		type(homeaddress, "P.O.Box 100","address");
-		type(zip, "02451","zip");
-		type(email, "jag3@gmail.com","mail");
-		type(password, "123456789","pass");
+		type(lastname, lastName,"lastname");
+		type(homeaddress, homeAddress,"address");
+		type(zip, zipcode,"zip");
+		type(email, emailid,"mail");
+		type(password, passWord,"pass");
 		click(enrollbutton, "clickonenrollbutton");
+
 	
 	}*/
 
 	
+
 	public static void clickno() throws Throwable
 	{
 		click(nobutton, "no");
@@ -495,7 +505,6 @@ click(enrollbutton, "clickonenrollbutton");
 		}	
 	}
 
-
 	//@author srinivas n 22nd April 2020
 	public static void selectCareCenter(int index) throws Throwable {
 		List<WebElement> elements  = driver.findElements(lstCareCenter);
@@ -506,8 +515,6 @@ click(enrollbutton, "clickonenrollbutton");
 	public static void next() throws Throwable {
 		click(btnNext,"Done button");
 	}
-
-	
 
 //@author srinivas n 22nd April 2020
 	// Navigate to Add emergency contacts screen
@@ -520,7 +527,6 @@ click(enrollbutton, "clickonenrollbutton");
 		
 	}
 
-	
 	//@author srinivas n 22nd April 2020
 	//relationship is : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
 	public static void addPrimmaryContact(String phoneNumber,String relationship)throws Throwable{
@@ -550,8 +556,11 @@ click(enrollbutton, "clickonenrollbutton");
 	//"Relationship to child : Mother,Father,Parent, Grandfather,Grandmother, Aunt, Uncle, Neighbor, Stepmother, Stepfather and other
 	//@param Boolean flag = true then select checkbox can pickup/drop off child
 
+
 	public static void addBackupContact(String firstName,String lastName,String phoneNumber,String address1, String address2,String city,String zipcode,String relationship,Boolean flag) throws Throwable{
 	
+            hideKeyboard();
+
 			type(txtFirstName,firstName,"FirstName");
 			type(txtLastName,lastName,"LastName");
 			type(txtPhoneNumber,phoneNumber,"Phone Number");
@@ -571,12 +580,9 @@ click(enrollbutton, "clickonenrollbutton");
 			type(txtAddressLine2,address2,"Address line 2");
 			type(txtCityState,zipcode,"City state");
 			type(ddlRelationshipToChild,relationship,"Relationship To Child");
-
 			if(flag)
 			click(rdoCanPickupChild,"Relationship to child");
-
-		click(btnBackupContactDone1,"Done");
-
+			click(btnBackupContactDone1,"Done");
 
 
 	}
@@ -585,7 +591,6 @@ click(enrollbutton, "clickonenrollbutton");
 		click(btnBackupContactDone1next,"Done");
 
 }
-
 	//@author srinivas n 22nd April 2020
 	// navigate to pediatrician & insurance information
 
@@ -603,6 +608,7 @@ click(enrollbutton, "clickonenrollbutton");
 
 
 	public static void addPediatricianInfo(String pediatricianName,String numeber,String Date) throws Throwable {
+
 		//Thread.sleep(1000);
 		//hideKeyboard();
 
@@ -628,7 +634,7 @@ click(enrollbutton, "clickonenrollbutton");
 		//Thread.sleep(2000);
 		//swipe(AndroidDriver, DIRECTION.DOWN);
 		
-	}
+	
 
 	//@author srinivas n 22nd April 2020
 
@@ -652,11 +658,22 @@ click(enrollbutton, "clickonenrollbutton");
 
 
 			
+
+		Thread.sleep(1000);
+		hideKeyboard();
+		type(txtPediatricianName, pediatricianName, "Pediatrician Name");
+		type(txtPediatricianPhoneNumber, numeber, "Pediatrician Phone Number");
+		type(txtDateOfLastVisit, Date, "Date Of Last Visit");
+		swipeVertical(0.8,0.1,0.9, 2000);
+	}
+
+
 		public static void addHospitalInfo(String hospitalName,String address,String address1,String zip) throws Throwable {
 
 			type(txtHospitalName,hospitalName,"Hospital Name");
 			type(txtHospitalAddressLine1,address,"Hospital Address Line1");
 			type(txtHospitalAddressLine2,address1,"Hospital Address Line2");
+
 
 		
 			type(txtHospitalZip,zip,"Hospital Zip code");
@@ -665,6 +682,8 @@ click(enrollbutton, "clickonenrollbutton");
 		
 	}
 //@author srinivas n 22nd April 2020
+
+
 
 
 	//@author srinivas n 22nd April 2020
@@ -698,9 +717,6 @@ click(enrollbutton, "clickonenrollbutton");
 		else
 			click(btnNoButton,"No button");
 	}
-
-
-
 
 	public static void addAllergyInfo(int option,String allergyDetails, String reactionDetail) throws Throwable
 	{
@@ -802,48 +818,6 @@ click(enrollbutton, "clickonenrollbutton");
 		click(btnSpecialNeedNext,"Special Need Next");
 	}
 
-
-/*check this code**********	
-		if(flag) {
-			click(btnYesButton,"Yes button");
-			addDescribe(description);
-		}else
-			click(btnNoButton,"No button");
-*/
-
-//	public static void selectQuestion(String titel,boolean flag,String description) throws Throwable
-//	{
-//
-//		if(flag)
-//		{
-//			click(btnYesButton,"Yes button");
-//			addDescribe(description);
-//		}
-//		else
-//			click(btnNoButton,"No button");
-//
-//	}
-
-//	public static void addDescribe(String description) throws Throwable
-//	{
-//
-//		click(btnYesButton,"Yes button");
-//		addDescribe(description);
-//		Thread.sleep(2000);
-//	}	
-//	else
-//		click(btnNoButton,"No button");
-//	   Thread.sleep(2000);
-//	
-//}
-//
-//
-//		type(txtDescriptio,description,"type description");
-//
-//		click(btnDescriptionNext,"Next button");
-//
-//	}
-
 	/*MethodName: selectdate(String month, String day, String year)
 	  Description: Select the date, month and year in datewheel picker by scrolling
 	 * input parameters: month : provide the month as displayed in the application Eg; Apr
@@ -876,19 +850,6 @@ click(enrollbutton, "clickonenrollbutton");
 
 	}
 
-
-	
-//	public static void selectdate(String month,String day,String year) throws Throwable
-//	{
-//		click(birthdate, "choosedate");
-//		scrollTo(year, 2);
-//		scrollTo(day, 2);
-//		scrollTo(month, 2);
-//		click(okdate, "selectdate");
-//	}
-	
-
-
 	/*MethodName: selecttime(String from, String to)
 	  Description: Select the from and to time in datewheel picker by scrolling
 	 * input parameters: from : provide the from date as displayed in the application Eg; 10:00 AM
@@ -910,14 +871,19 @@ click(enrollbutton, "clickonenrollbutton");
 	 *created By : Jagadish
 	 *created On : 21-04-2020
 	 */
-	public static void selectchild() throws Throwable {
+	public static void selectchild(String firstname, String lastname, String birthdate, String gender) throws Throwable {
+		hideKeyboard();
 		if (isElementDisplayed(boy, "childexist")) {
-			click(boy, "clicked");
-			type(childfirstname, "testtest", "firstname");
-			type(childlastname, "dummy", "lastname");
-			type(birthday, "03/21/2016","");
+			if(gender.equalsIgnoreCase("boy")) {
+				click(boy, "clicked");
+			}else {
+				click(girl, "clicked");
+			}
+			type(childfirstname, firstname, "firstname");
+			type(childlastname, lastname, "lastname");
+			type(birthday, birthdate,"provide bday");
 			click(timenext,"next");
-		} 
+		}
 		if(isElementDisplayed(existingchild, "existingchild")){
 			click(existingchild, "existingchild");
 			click(done, "done");
@@ -967,6 +933,39 @@ click(enrollbutton, "clickonenrollbutton");
 		//click(btnPediationNext,"nextbutton");
 		//Thread.sleep(2000);
 		
+	}
+
+	//@author: jagadish
+	public static void selectdate(int days) throws Throwable {
+		String date1= adddays(days);
+		String[] parts = date1.split("/");
+		String month = parts[0];
+		String day = parts[1];
+		String year = parts[2];
+		if(isElementDisplayed(By.xpath(date.replace("#",month+" "+day)), "searching date exists")) {
+			click(By.xpath(date.replace("#",month+" "+day))," clickin on date");
+			click(datecontinue, "datecontinue");
+		}else {
+			if(isElementDisplayed(choosedate, "choosedate")) {
+				click(choosedate, "choosedate");
+			}
+			if((day.charAt(0))==0) {
+				day = Character.toString(day.charAt(1));
+				System.out.println(day);
+			}
+			scrollTo(year, 2);
+			scrollTo(day, 1);
+			scrollTo(month, 0);
+			if (isElementDisplayed(boy, "childexist")) {
+				click(done, "done");
+			} else {
+				click(dateOk, "dateOk");
+				if(isElementDisplayed(datecontinue, "datecontinue")) {
+					click(datecontinue, "datecontinue");
+				}
+			}
+		}
+
 	}
 
 }

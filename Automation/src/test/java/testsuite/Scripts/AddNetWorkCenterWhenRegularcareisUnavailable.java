@@ -17,15 +17,13 @@ public class AddNetWorkCenterWhenRegularcareisUnavailable extends HelperClass {
     public void TestAddNetWorkCenterWhenRegularcareisUnavailable(Hashtable<String, String> data) throws Throwable {
         //@author :  Bhavya and Archana
         //@scenario : Login->myKid->use my backup days->Add Chidren-> my regular care is unavailable->in centre->A child care of my choosing->____-> Payment
-
         try {
             TestEngine.testDescription
                     .put(HtmlReportSupport.tc_name, " TC-01 Case 1 : Add the NetworkCenter When regular care is unavailable");
             //Navigate to UAT25
             navigateToUat();
-            Thread.sleep(3000);
             //Clicking on login
-            login(data.get("useremail"), data.get("userpass"), 80, 100);
+            login(data.get("userEmail"), data.get("userPass"), Integer.parseInt(data.get("xcod")), Integer.parseInt(data.get("ycod")));
             if (isElementDisplayed(Unauthorised, "Unauthorised")) {
                 APacheError();
             }
@@ -38,19 +36,19 @@ public class AddNetWorkCenterWhenRegularcareisUnavailable extends HelperClass {
             //Clicking No Button
             clickno();
             //Selecting the date
-            selectdate("May", "03", "2020");
+            selectdate(data.get("month"), data.get("day"), data.get("year"));
             //Selecting the time
-            selecttime("08:30 AM", "05:00 PM");
+            selecttime(data.get("from"), data.get("to"));
             //Selecting the Chaild
             SelectChild();
             //Selecting the reasons for Care
-            CareReason("My regular care is unavailable.");
+            CareReason(data.get("careReason"));
             //Selecting In-Center
-            CareType("In-center");
+            CareType(data.get("careType"));
             //click on a child care of center of my choosing
             navigateToAboutYourCenter();
             //tell us about ur center
-            addNetworkCenter(data.get("bussinessName"), data.get("zipcode"), data.get("phoneNumber"), data.get("totaldailycost"));
+            addNetworkCenter(data.get("bussinessName"), data.get("zipCode"), data.get("phoneNumber"), data.get("totalDailyCost"));
             //click on next button
             navigateToReviewYourClaim();
             //click on ur all set
@@ -61,13 +59,13 @@ public class AddNetWorkCenterWhenRegularcareisUnavailable extends HelperClass {
         }
         catch (Exception e) {
             Reporter.failureReport("Add the NetWork Center when Regular care is unavailable ",
-                    "Failed with ");
+                    "Failed ");
             e.printStackTrace();
             flag = false;
         }finally {
             if (flag) {
                 Reporter.SuccessReport("Added the NetWork Center when Regular care is unavailable",
-                        "was  Sucessful with ");
+                        "was  Sucessful ");
             } else {
 
                 Reporter.failureReport("Added the NetWork Center when Regular care is unavailable",
