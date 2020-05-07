@@ -4,21 +4,27 @@ package accelerators;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobilePlatform;
 
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.*;
 import support.ConfiguratorSupport;
 
 import java.io.File;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+//import org.apache.log4j.Logger;
 
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.WebDriver;
@@ -27,10 +33,6 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 import accelerators.TestEngine;
 
@@ -41,17 +43,21 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
+import support.Reporter;
 
-	public class TestEngine extends HtmlReportSupport {
+public class TestEngine extends HtmlReportSupport {
 
     public static int stepNum = 0;
     public static int PassNum = 0;
     public static int FailNum = 0;
     public static int passCounter = 0;
     public static int failCounter = 0;
+    public static String method = "";
+    public static String testName = "";
+    public static ITestContext itc;
+    public static String groupNames = null;
 
     public static boolean flag = false;
-
     public static Map<String, String> testDescription = new LinkedHashMap<String, String>();
     public static Map<String, String> testResults = new LinkedHashMap<String, String>();
     public static String timeStamp = ReportStampSupport.timeStamp().replace(" ", "_").replace(":", "_").replace(".", "_");
@@ -82,9 +88,13 @@ import io.appium.java_client.remote.MobilePlatform;
     public static AppiumDriver Iosdriver = null;
     public static RemoteWebDriver driver = null;
 
-
     @BeforeSuite
-    public static void setupSuite() throws Throwable {
+    public static void setupSuite(ITestContext ctx) throws Throwable {
+        System.out.println("In Before sutie");
+        itc = ctx;
+        groupNames = ctx.getCurrentXmlTest().getIncludedGroups().toString();
+        System.out.println("+++++"+groupNames);
+        ReportStampSupport.calculateSuiteStartTime();
 
         if (browserType.equalsIgnoreCase("Android")) {
 
@@ -100,7 +110,6 @@ import io.appium.java_client.remote.MobilePlatform;
             AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
             driver = (AndroidDriver);
             driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-
         }
          /*
         Author Sravan Reddy
@@ -202,26 +211,31 @@ import io.appium.java_client.remote.MobilePlatform;
                 System.out.println("Failed launching app......");
             }
         }
-
+        try {
+            Reporter.reportCreater();
+            HtmlReportSupport.currentSuit = ctx.getCurrentXmlTest().getSuite()
+                    .getName();
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
     }
 
-
     @BeforeMethod(alwaysRun = true)
-    public void setBrowerDriver() throws Throwable {
+    public void setBrowerDriver(Method method) throws Throwable {
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd_MMM_yyyy hh mm ss SSS");
+        String formattedDate = sdf.format(date);
+        ReportStampSupport.calculateTestCaseStartTime();
 
         if (browserType == "WinChrome") {
             //Pravalika
-        }else if (browserType == "Edge") {
-            //Sangeetha
         }else if(browserType=="WinFirefox") {
 			//@author by Ranga
-
 			System.setProperty("webdriver.gecko.driver", filePath());
 			WebDriver driver = new FirefoxDriver();
 			driver.get(url);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-
 		}
 		else if(browserType=="Edge") {
 			//@author by sangeethanulu
@@ -268,6 +282,17 @@ import io.appium.java_client.remote.MobilePlatform;
             driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
             driver.get(url);
         }
+        HtmlReportSupport.tc_name = method.getName().toString() + "- "
+                + formattedDate;
+        String[] ts_Name = this.getClass().getName().toString().split("\\.");
+        /*HtmlReportSupport.packageName = ts_Name[0] + "." + ts_Name[1] + "."
+                + ts_Name[2];*/
+        HtmlReportSupport.testHeader(HtmlReportSupport.tc_name, browserType);
+        stepNum = 0;
+        PassNum = 0;
+        FailNum = 0;
+        testName = method.getName();
+        //logger.info("Current Test : "+testName);
 	}
 
 	public static String filePath() {
@@ -333,6 +358,28 @@ import io.appium.java_client.remote.MobilePlatform;
 
 		}
 	}
+
+    @AfterSuite(alwaysRun = true)
+    public void tearDown(ITestContext ctx) throws Throwable {
+        try{
+            ReportStampSupport.calculateSuiteExecutionTime();
+
+            HtmlReportSupport.createHtmlSummaryReport(browserType, url);
+            closeSummaryReport();
+            if (browserType.equalsIgnoreCase("iphone")) {
+                //Iosdriver.removeApp(bundleID);
+            }
+            /*driver.quit();*/
+        }catch(Exception e){
+            e.printStackTrace();
+        } /*finally {
+			if (browser.contains("Android")) {
+				RedPlanetUtils.stopAppium();
+			} else if (browser.contains("iPhone")) {
+				RedPlanetUtils.stopAppiumForIos();
+			}
+		}*/
+    }
 
 
 }

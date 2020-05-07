@@ -3,11 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="435aa32b-b9da-483d-93a9-eee603d2f573" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/Android/Android_2020-05-02_20_29_36_65/Screenshots/Minus.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/Android/Android_2020-05-02_20_29_36_65/Screenshots/Plus.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/Android/Android_2020-05-02_20_29_36_65/Screenshots/care@work.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/Android/Android_2020-05-02_20_29_36_65/Screenshots/failed.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/Android/Android_2020-05-02_20_29_36_65/Screenshots/passed.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/Android/Android_2020-05-02_20_29_36_65/Screenshots/warning.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/Android/Android_2020-05-02_20_29_36_65/Screenshots/wavelabs.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/Android/Android_2020-05-02_20_29_36_65/Screenshots/wavelabs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/Android/Android_2020-05-02_20_29_36_65/SummaryResults_2020-05-02_20_29_36_65.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/Android/Android_2020-05-02_20_29_36_65/TestAddNetWorkCenterWhenRegularcareisUnavailable- 02_May_2020 08 30 00 913_Results_2020-05-02_20_29_36_65.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accelerators/ActionEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accelerators/ActionEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accelerators/TestEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accelerators/TestEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Testdata/Testdata.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testdata/Testdata.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/HelperClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/HelperClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/PageLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/PageLocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/TestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/AddNetWorkCenterWhenRegularcareisUnavailable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/AddNetWorkCenterWhenRegularcareisUnavailable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/TestClass.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,20 +54,29 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/testsuite/Scripts" />
   </component>
-  <component name="RunManager" selected="TestNG.TestClass.test">
-    <configuration name="Sravan_Login.Login" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/testsuite/Scripts" />
+      <recent name="$PROJECT_DIR$/src/test/java/Testdata" />
+      <recent name="$PROJECT_DIR$/Logos" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/test/java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.ChildCareOfMyChoosing.enrollTest">
+    <configuration name="AddNetWorkCenterWhenRegularcareisUnavailable.TestAddNetWorkCenterWhenRegularcareisUnavailable (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="all.automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="testsuite.*" />
+          <option name="PATTERN" value="testsuite.Scripts.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="testsuite" />
-      <option name="MAIN_CLASS_NAME" value="testsuite.Sravan_Login" />
-      <option name="METHOD_NAME" value="Login" />
+      <option name="PACKAGE_NAME" value="testsuite.Scripts" />
+      <option name="MAIN_CLASS_NAME" value="testsuite.Scripts.AddNetWorkCenterWhenRegularcareisUnavailable" />
+      <option name="METHOD_NAME" value="TestAddNetWorkCenterWhenRegularcareisUnavailable" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -63,17 +84,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sravan_Login.facebook" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddNetWorkCenterWhenRegularcareisUnavailable.TestAddNetWorkCenterWhenRegularcareisUnavailable" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="all.automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="testsuite.*" />
+          <option name="PATTERN" value="testsuite.Scripts.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="testsuite" />
-      <option name="MAIN_CLASS_NAME" value="testsuite.Sravan_Login" />
-      <option name="METHOD_NAME" value="facebook" />
+      <option name="PACKAGE_NAME" value="testsuite.Scripts" />
+      <option name="MAIN_CLASS_NAME" value="testsuite.Scripts.AddNetWorkCenterWhenRegularcareisUnavailable" />
+      <option name="METHOD_NAME" value="TestAddNetWorkCenterWhenRegularcareisUnavailable" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -81,17 +102,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sravan_Login.iosWeb" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CareEndtoEnd.testEndtoEndCareScenario" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="all.automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="testsuite.*" />
+          <option name="PATTERN" value="testsuite.Scripts.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="testsuite" />
-      <option name="MAIN_CLASS_NAME" value="testsuite.Sravan_Login" />
-      <option name="METHOD_NAME" value="iosWeb" />
+      <option name="PACKAGE_NAME" value="testsuite.Scripts" />
+      <option name="MAIN_CLASS_NAME" value="testsuite.Scripts.CareEndtoEnd" />
+      <option name="METHOD_NAME" value="testEndtoEndCareScenario" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -99,18 +120,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClass.test" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ChildCareOfMyChoosing.enrollTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="all.automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="testsuite.*" />
+          <option name="PATTERN" value="testsuite.Scripts.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="testsuite" />
-      <option name="MAIN_CLASS_NAME" value="testsuite.TestClass" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="PACKAGE_NAME" value="testsuite.Scripts" />
+      <option name="MAIN_CLASS_NAME" value="testsuite.Scripts.ChildCareOfMyChoosing" />
+      <option name="METHOD_NAME" value="enrollTest" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/archana/Downloads/Automation-Framework/Automation/TestNg.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="all.automation" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/TestNg.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -119,10 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestClass.test" />
-        <item itemvalue="TestNG.Sravan_Login.iosWeb" />
-        <item itemvalue="TestNG.Sravan_Login.facebook" />
-        <item itemvalue="TestNG.Sravan_Login.Login" />
+        <item itemvalue="TestNG.ChildCareOfMyChoosing.enrollTest" />
+        <item itemvalue="TestNG.AddNetWorkCenterWhenRegularcareisUnavailable.TestAddNetWorkCenterWhenRegularcareisUnavailable" />
+        <item itemvalue="TestNG.AddNetWorkCenterWhenRegularcareisUnavailable.TestAddNetWorkCenterWhenRegularcareisUnavailable (1)" />
+        <item itemvalue="TestNG.CareEndtoEnd.testEndtoEndCareScenario" />
+        <item itemvalue="TestNG./Users/archana/Downloads/Automation-Framework/Automation/TestNg.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -148,45 +180,53 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587387118341" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1588166145134">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="174" key="GridCell.Tab.0.bottom" timestamp="1588838052811">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
+    <state width="1238" height="174" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1588838052811" />
     <state width="1358" height="187" key="GridCell.Tab.0.bottom/0.23.1440.805@0.23.1440.805" timestamp="1587121146630" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1588166145134">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="174" key="GridCell.Tab.0.center" timestamp="1588838052810">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
+    <state width="1238" height="174" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1588838052810" />
     <state width="1358" height="187" key="GridCell.Tab.0.center/0.23.1440.805@0.23.1440.805" timestamp="1587121146629" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1588166145134">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="174" key="GridCell.Tab.0.left" timestamp="1588838052809">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
+    <state width="1238" height="174" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1588838052809" />
     <state width="1358" height="187" key="GridCell.Tab.0.left/0.23.1440.805@0.23.1440.805" timestamp="1587121146628" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1588166145134">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="174" key="GridCell.Tab.0.right" timestamp="1588838052810">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
+    <state width="1238" height="174" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1588838052810" />
     <state width="1358" height="187" key="GridCell.Tab.0.right/0.23.1440.805@0.23.1440.805" timestamp="1587121146629" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1588144935236">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="218" key="GridCell.Tab.1.bottom" timestamp="1588430918027">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588144935236" />
+    <state width="1238" height="218" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1588430918027" />
     <state width="1358" height="187" key="GridCell.Tab.1.bottom/0.23.1440.805@0.23.1440.805" timestamp="1587121146631" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1588144935236">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="218" key="GridCell.Tab.1.center" timestamp="1588430918026">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588144935236" />
+    <state width="1238" height="218" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1588430918026" />
     <state width="1358" height="187" key="GridCell.Tab.1.center/0.23.1440.805@0.23.1440.805" timestamp="1587121146631" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1588144935236">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="218" key="GridCell.Tab.1.left" timestamp="1588430918026">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588144935236" />
+    <state width="1238" height="218" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1588430918026" />
     <state width="1358" height="187" key="GridCell.Tab.1.left/0.23.1440.805@0.23.1440.805" timestamp="1587121146630" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1588144935236">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="218" key="GridCell.Tab.1.right" timestamp="1588430918026">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588144935236" />
+    <state width="1238" height="218" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1588430918026" />
     <state width="1358" height="187" key="GridCell.Tab.1.right/0.23.1440.805@0.23.1440.805" timestamp="1587121146631" />
     <state x="213" y="18" key="Maven.ArtifactSearchDialog" timestamp="1588083920515">
       <screen x="0" y="0" width="1366" height="728" />
