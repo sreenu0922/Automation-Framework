@@ -201,45 +201,21 @@ public class HelperClass extends PageLocator {
 		swipe(AndroidDriver, DIRECTION.DOWN);
 	}
 
-//	public static void loginsendkeys()throws Throwable {
-//		Thread.sleep(5000);
-//		type(emailfield,"gajulavinay1@care.com","Email");
-//		Thread.sleep(2000);
-//		type(passwordfield,"letmein1","Password");
-//
-//		Thread.sleep(2000);
-//		selectCompanySearch("acme");
-//
-//		type(emailfield,useremail,"email");
-//	}
-
-//	public static void loginsendkeys()throws Throwable {
-//		Thread.sleep(10000);
-//		type(emailfield,"gajulavinay1@care.com","d");
-//		Thread.sleep(2000);
-//		type(passwordfield, userpass,"password");
-//		Thread.sleep(2000);
-//		click(login1, "loginbutton1");
-//
-//	}
-
-
-
-
-	public static void enroll() throws Throwable{
-		type(birthdate,"04/22/1992","select dob");
-		//selectdate("May", "27", "1990");
-		type(firstname, "sangeetha","firstname");
+	public static void enroll(String birthDate, String firstName, String lastName, String homeAddress, String zipcode, String emailid,
+							  String passWord) throws Throwable {
+		// TODO Auto-generated method stub
+		type(birthdate,birthDate,"select dob");
+		type(firstname, firstName,"firstname");
 		Thread.sleep(2000);
-		type(lastname, "nulu","lastname");
-		type(homeaddress, "P.O.Box 100","address");
-		type(zip, "02451","zip");
-		type(email, "jag3@gmail.com","mail");
-		type(password, "123456789","pass");
+		type(lastname, lastName,"lastname");
+		type(homeaddress, homeAddress,"address");
+		type(zip, zipcode,"zip");
+		type(email, emailid,"mail");
+		type(password, passWord,"pass");
 		click(enrollbutton, "clickonenrollbutton");
-	
+
 	}
-	
+
 	public static void clickno() throws Throwable
 	{
 		click(nobutton, "no");
@@ -486,7 +462,7 @@ public class HelperClass extends PageLocator {
 //		swipe(AndroidDriver, DIRECTION.DOWN);
 
 
-		
+
 	}
 
 	//@author srinivas n 22nd April 2020
@@ -508,7 +484,7 @@ public class HelperClass extends PageLocator {
 //	}
 
 
-			
+
 		public static void addHospitalInfo(String hospitalName,String address,String address1,String zip) throws Throwable {
 			type(txtHospitalName,hospitalName,"Hospital Name");
 			type(txtHospitalAddressLine1,address,"Hospital Address Line1");
@@ -754,18 +730,55 @@ public class HelperClass extends PageLocator {
 	 *created By : Jagadish
 	 *created On : 21-04-2020
 	 */
-	public static void selectchild() throws Throwable {
+	public static void selectchild(String firstname, String lastname, String birthdate, String gender) throws Throwable {
 		if (isElementDisplayed(boy, "childexist")) {
-			click(boy, "clicked");
-			type(childfirstname, "testtest", "firstname");
-			type(childlastname, "dummy", "lastname");
-			type(birthday, "03/21/2016","");
+			if(gender.equalsIgnoreCase("boy")) {
+				click(boy, "clicked");
+			}else {
+				click(girl, "clicked");
+			}
+			type(childfirstname, firstname, "firstname");
+			type(childlastname, lastname, "lastname");
+			type(birthday, birthdate,"provide bday");
 			click(timenext,"next");
-		} 
+		}
 		if(isElementDisplayed(existingchild, "existingchild")){
 			click(existingchild, "existingchild");
 			click(done, "done");
 		}
+	}
+
+	//@author: jagadish
+	public static void selectdate(int days) throws Throwable {
+		String date1= adddays(days);
+		String[] parts = date1.split("/");
+		String month = parts[0];
+		String day = parts[1];
+		String year = parts[2];
+		if(isElementDisplayed(By.xpath(date.replace("#",month+" "+day)), "searching date exists")) {
+			click(By.xpath(date.replace("#",month+" "+day))," clickin on date");
+			click(datecontinue, "datecontinue");
+		}else {
+			if(isElementDisplayed(choosedate, "choosedate")) {
+				click(choosedate, "choosedate");
+			}
+			if((day.charAt(0))==0) {
+				day = Character.toString(day.charAt(1));
+				System.out.println(day);
+			}
+			scrollTo(year, 2);
+			scrollTo(day, 1);
+			scrollTo(month, 0);
+			if (isElementDisplayed(boy, "childexist")) {
+				click(done, "done");
+			} else {
+				click(dateOk, "dateOk");
+				if(isElementDisplayed(datecontinue, "datecontinue")) {
+					click(datecontinue, "datecontinue");
+				}
+			}
+		}
+
 	}
 
 }
