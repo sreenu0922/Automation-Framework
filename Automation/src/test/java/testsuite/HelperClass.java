@@ -252,13 +252,27 @@ public class HelperClass extends PageLocator {
 	   //@author by sangeetha
 		//created on : 21-04-2020
 	// enroll method
+	public static void enroll(String birthDate, String firstName, String lastName, String homeAddress, String zipcode, String emailid,
+			  String passWord) throws Throwable {
+// TODO Auto-generated method stub
+type(birthdate,birthDate,"select dob");
 
+type(firstname, firstName,"firstname");
+Thread.sleep(2000);
+type(lastname, lastName,"lastname");
+type(homeaddress, homeAddress,"address");
+type(zip, zipcode,"zip");
+type(email, emailid,"mail");
+type(password, passWord,"pass");
+click(enrollbutton, "clickonenrollbutton");
+
+}
 
 	
 
-	public void enroll() throws Throwable
+	/*public void enroll(String selectdob,String firstname,String lastname,String address,String zip,String mail, ) throws Throwable
 	{
-		type(birthdate,"04/22/1992","select dob");
+		type(birthdate,"04/22/1992","selectdob");
 		//selectdate("May", "27", "1990");
 		type(firstname, "sangeetha","firstname");
 		Thread.sleep(2000);
@@ -268,7 +282,7 @@ public class HelperClass extends PageLocator {
 		type(email, "sangeethan@gmail.cm","mail");
 		type(password, "123456789","pass");
 		click(enrollbutton, "clickonenrollbutton");
-	}
+	}*/
 	  //@author by sangeetha
 	  //created on : 21-04-2020
 	// code for clickno
