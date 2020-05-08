@@ -12,7 +12,7 @@ import testsuite.HelperClass;
 import java.util.Hashtable;
 
 public class CareEndtoEnd extends HelperClass {
-    @Test(dataProvider = "getTestData")
+     @Test(dataProvider = "getTestData")
     public void testEndtoEndCareScenario(Hashtable<String, String> data) throws Throwable {
         //@author :  Vinay Gajula and Sangeetha
         
@@ -40,7 +40,7 @@ public class CareEndtoEnd extends HelperClass {
             //Selecting the date
             selectdate( data.get("month"),data.get("day"),data.get("year"));
             //Selecting the time
-            selecttime("08:30 AM", "05:00 PM");
+            selecttime(data.get("from"),data.get("to"));
             //Selecting the Child
             SelectChild();
             //Selecting the reasons for Care

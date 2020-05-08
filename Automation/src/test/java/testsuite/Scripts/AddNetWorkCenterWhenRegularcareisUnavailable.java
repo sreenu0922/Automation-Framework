@@ -25,7 +25,7 @@ public class AddNetWorkCenterWhenRegularcareisUnavailable extends HelperClass {
             navigateToUat();
             Thread.sleep(3000);
             //Clicking on login
-            login(data.get("useremail"), data.get("userpass"), 80, 100);
+            login(data.get("useremail"), data.get("userpass"), 80, 150);
             if (isElementDisplayed(Unauthorised, "Unauthorised")) {
                 APacheError();
             }

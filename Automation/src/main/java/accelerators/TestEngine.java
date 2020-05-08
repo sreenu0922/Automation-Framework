@@ -1,6 +1,7 @@
 package accelerators;
 
 
+import io.appium.java_client.android.Activity;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobilePlatform;
 
@@ -9,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.*;
 import support.ConfiguratorSupport;
 
 import java.io.File;
@@ -30,10 +32,6 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 import accelerators.TestEngine;
 
@@ -91,7 +89,64 @@ public class TestEngine extends HtmlReportSupport {
     public static AppiumDriver Iosdriver = null;
     public static RemoteWebDriver driver = null;
 
+   /* @BeforeTest(alwaysRun = true)
+    @Parameters({"port", "deviceName","version","apkname"})
+    public static void setupSuite(ITestContext ctx, String port, String deviceName, String version, String apkname, String pac, String Activity) throws Throwable {
+        System.out.println("In Before sutie");
+        itc = ctx;
+        groupNames = ctx.getCurrentXmlTest().getIncludedGroups().toString();
+        System.out.println("+++++"+groupNames);
+        ReportStampSupport.calculateSuiteStartTime();
 
+        if (browserType.equalsIgnoreCase("Android")) {
+            URL url = new URL("http://127.0.0.1:"+port+"/wd/hub");
+            String appPath = System.getProperty("user.dir")+apkPath+apkname;
+            DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
+            capabilitiesForAppium.setCapability("deviceName", deviceName);
+            capabilitiesForAppium.setCapability("platformName", AndroidplatformName);
+            capabilitiesForAppium.setCapability("platformVersion", version);
+             capabilitiesForAppium.setCapability("appPackage", pac);
+            capabilitiesForAppium.setCapability("appActivity", Activity);
+            capabilitiesForAppium.setCapability("app", appPath);
+            AndroidDriver = new AndroidDriver(url, capabilitiesForAppium);
+
+            //AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
+            driver = (AndroidDriver);
+            driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+        }
+        */
+        //Care to care
+    /* @BeforeTest(alwaysRun = true)
+    @Parameters({"port", "deviceName","version","apkname"})
+    public static void setupSuite(ITestContext ctx,String port,String deviceName,String version,String apkname) throws Throwable {
+        System.out.println("In Before sutie");
+        itc = ctx;
+        groupNames = ctx.getCurrentXmlTest().getIncludedGroups().toString();
+        System.out.println("+++++"+groupNames);
+        ReportStampSupport.calculateSuiteStartTime();
+
+        if (browserType.equalsIgnoreCase("Android")) {
+            URL url = new URL("http://127.0.0.1:"+port+"/wd/hub");
+            String appPath = System.getProperty("user.dir")+apkPath+apkname;
+            DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
+            capabilitiesForAppium.setCapability("deviceName", deviceName);
+            System.out.println(deviceName);
+            capabilitiesForAppium.setCapability("platformName", AndroidplatformName);
+            capabilitiesForAppium.setCapability("platformVersion", version);
+            System.out.println(version);
+            capabilitiesForAppium.setCapability("appPackage", appPackage);
+            capabilitiesForAppium.setCapability("appActivity", appActivity);
+            capabilitiesForAppium.setCapability("app", appPath);
+            System.out.println(port);
+            AndroidDriver = new AndroidDriver(url, capabilitiesForAppium);
+
+            //AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
+            driver = (AndroidDriver);
+            driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+        }
+
+*/
+    //Regular run
     @BeforeSuite
     public static void setupSuite(ITestContext ctx) throws Throwable {
         System.out.println("In Before sutie");
@@ -115,7 +170,8 @@ public class TestEngine extends HtmlReportSupport {
             driver = (AndroidDriver);
             driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
         }
-         /*
+
+    /*
         Author Sravan Reddy
         */
         else if (browserType.equalsIgnoreCase("iOS")) {
