@@ -68,15 +68,13 @@ public class HelperClass extends PageLocator {
     public static void CareReason(String selectReason) throws Throwable {
         click(By.xpath(SelectReason.replace("#", selectReason)), "Selecting the Reasons");
     }
-
-	//If we select No_Button we need to use below method
+    //If we select No_Button we need to use below method
 	public static void Felt(String symptoms) throws Throwable {
 		click(fell, "Selecting No Button");
 		click(By.xpath(Symptoms.replace("#", "symptoms")), "Selecting Reasons");
 		click(fellnext, "clicking the next button");
 
 	}
-
 	//If we select Yes_Button we need to use below method
 	public static void Felt1() throws Throwable {
 		click(fell1, "Selecting Yes Button");
@@ -221,17 +219,14 @@ public class HelperClass extends PageLocator {
 		click(nobutton, "no");
 	}
 
-
 	public static void clickyes() throws Throwable
 	{
 		click(yesbutton, "yes");
 	}
 
-	
 	public static void mykid() throws Throwable {
 		click(Selectingmykid, "Selecting the Child");
 	}
-
 
 	public static void billing() throws Throwable
 	{
@@ -241,9 +236,7 @@ public class HelperClass extends PageLocator {
 		type(month, "0524", "month and year");
 		type(cvv, "123", "cvv number");
 		type(zip1, "02451", "zip code");
-
 		click(submitrequest, "click on submit ");
-
 	}
 
 	//Author Sreeranga
@@ -258,7 +251,6 @@ public class HelperClass extends PageLocator {
 		
 		click(BookNow , "BookNowButton");
 	}
-
 
 	/*
 	 * @author srinivas n 22nd April 2020
@@ -326,9 +318,7 @@ public class HelperClass extends PageLocator {
 	//@author srinivas n 22nd April 2020
 	public static void navigateBackToHome() throws Throwable
 	{
-
 		click(btnGoBackToHome,"Go back to home button in You're all set");
-
 	}
 
 
@@ -389,7 +379,7 @@ public class HelperClass extends PageLocator {
 	
 	//@param number ==1 backup contact 1 other wise backup contact 2
 	//@author srinivas n 28th April 2020
-			
+
 	public static void selectBackupContact(int number) throws Throwable{
 		
 		if (number==1){
@@ -404,9 +394,10 @@ public class HelperClass extends PageLocator {
 	//@param Boolean flag = true then select checkbox can pickup/drop off child
 
 	public static void addBackupContact(String firstName,String lastName,String phoneNumber,String address1, String address2,String zipcode,String relationship,Boolean flag) throws Throwable{
+		    Thread.sleep(2000);
 		    hideKeyboard();
-			type(txtFirstName,firstName,"FirstName");
-			type(txtLastName,lastName,"LastName");
+		    type(txtFirstName,firstName,"FirstName");
+		    type(txtLastName,lastName,"LastName");
 			type(txtPhoneNumber,phoneNumber,"Phone Number");
 			type(txtAddressLine1,address1,"Address line 1");
 			type(txtAddressLine2,address2,"Address line 2");
@@ -434,9 +425,9 @@ public class HelperClass extends PageLocator {
 	//Date Of Last Visit:date format DD/MM/YYYY eg: 21/10/2019
 
 	public static void addPediatricianInfo(String pediatricianName,String numeber,String Date) throws Throwable {
-		Thread.sleep(1000);
-		hideKeyboard();
+		Thread.sleep(3000);
 		type(txtPediatricianName, pediatricianName, "Pediatrician Name");
+		hideKeyboard();
 		type(txtPediatricianPhoneNumber, numeber, "Pediatrician Phone Number");
 		type(txtDateOfLastVisit, Date, "Date Of Last Visit");
 		swipeVertical(0.8,0.1,0.9, 2000);
@@ -628,7 +619,6 @@ public class HelperClass extends PageLocator {
 	 *created On : 21-04-2020
 	 */
 	public static void selectchild(String firstname, String lastname, String birthdate, String gender) throws Throwable {
-		hideKeyboard();
 		if (isElementDisplayed(boy, "childexist")) {
 			if(gender.equalsIgnoreCase("boy")) {
 				click(boy, "clicked");
@@ -636,6 +626,7 @@ public class HelperClass extends PageLocator {
 				click(girl, "clicked");
 			}
 			type(childfirstname, firstname, "firstname");
+			hideKeyboard();
 			type(childlastname, lastname, "lastname");
 			type(birthday, birthdate,"provide bday");
 			click(timenext,"next");

@@ -41,7 +41,7 @@ public class ChildCareOfMyChoosing extends HelperClass {
 	        //Selecting the time
 	        selecttime(data.get("fromdate"), data.get("todate"));
 	        //Selecting the Chaild
-	        selectchild(data.get("firstname"), data.get("lastname"), data.get("birthdate"), data.get("gender"));
+			selectchild(data.get("childfirstname"), data.get("childlastname"), data.get("childbirthdate"), data.get("gender"));
 	        //Selecting the reasons for Care
 	        CareReason(data.get("careReason"));
 	        //Selecting In-Center

@@ -34,11 +34,8 @@ public class EnrollIncenterPayment extends HelperClass {
         selectCareCenter(Integer.parseInt(data.get("carecenter")));
         navigateToEmergenyContact();
         addPrimmaryContact(data.get("primarycontactno"),data.get("primarycontactrelation"));
-        selectBackupContact(1);
-        addBackupContact(data.get("backupcontact1firstname"),data.get("backupcontact1lastname"),data.get("backupcontact1no"),data.get("backupcontact1address1"),data.get("backupcontact1address2"),data.get("backupcontact1zip"),data.get("backupcontact1relation"),true);
-        selectBackupContact(2);
-        addBackupContact(data.get("backupcontact2firstname"),data.get("backupcontact2lastname"),data.get("backupcontact2no"),data.get("backupcontact2address1"),data.get("backupcontact2address2"),data.get("backupcontact2zip"),data.get("backupcontact2relation"),true);
-        navigateToPediatrician();
+        addBkpContact(data.get("firstName1"),data.get("lastName1"),data.get("phoneNumber1"),data.get("address11"),data.get("address21"),data.get("zip1"),data.get("relationship1"));
+        addBkpContact2(data.get("firstName2"),data.get("lastName2"),data.get("phoneNumber2"),data.get("address12"),data.get("address22"),data.get("zip2"),data.get("relationship2"));
         addPediatricianInfo(data.get("pediatricianname"),data.get("pediatricianno"),data.get("pediatricianvisit"));
         addHospitalInfo(data.get("hospitalname"),data.get("hospitaladdress1"),data.get("hospitaladdress2"),data.get("hospitalzip"));
         addInsuranceInfo(data.get("insurancename"),data.get("insuranceno"));
@@ -48,8 +45,6 @@ public class EnrollIncenterPayment extends HelperClass {
         selectQuestion(data.get("question2"),Boolean.parseBoolean(data.get("medication")));
         selectQuestion(data.get("question3"),Boolean.parseBoolean(data.get("medication")));
         selectQuestion(data.get("question4"),Boolean.parseBoolean(data.get("photos")));
-        //billing();
-
     }
 
     @DataProvider

@@ -245,7 +245,6 @@ public class ActionEngine extends TestEngine {
 		AndroidDriver.getKeyboard();
 	}
 
-
 	//Author Vinay Gajula
 	public void longPress(By locator) {
 		Actions actions = new Actions(driver);

@@ -17,7 +17,6 @@ public class CareEndtoEnd extends HelperClass {
     public void testEndtoEndCareScenario(Hashtable<String, String> data) throws Throwable {
         //@author :  Vinay Gajula and Sangeetha
          //@scenario : Login->myKid->use my backup days->Add Chidren-> my regular care is unavailable->in centre->A Care@Work Backup Care center->selectCareCenter-->addPrimmaryContact-->addBkpContact-->addBkpContact2-->addPediatricianInfo-->addHospitalInfo-->addInsuranceInfo-->navigateToAllergiesQuestion-->SelectingPhysical-->billing
-
         try {
             TestEngine.testDescription
                     .put(HtmlReportSupport.tc_name, " TC-02 Case 2 : Care Login to Payment End to End Scenario");
