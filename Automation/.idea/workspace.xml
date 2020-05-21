@@ -4,12 +4,6 @@
     <list default="true" id="435aa32b-b9da-483d-93a9-eee603d2f573" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ActionEngine.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accelerators/ActionEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accelerators/ActionEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Testdata/Testdata.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testdata/Testdata.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/HelperClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/HelperClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/CareEndtoEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/CareEndtoEnd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/ChildCareOfMyChoosing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/ChildCareOfMyChoosing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/EnrollIncenterPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/EnrollIncenterPayment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestEngine.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
