@@ -11,40 +11,41 @@ import support.CommonDataProvider;
 import support.HtmlReportSupport;
 import support.Reporter;
 import testsuite.HelperClass;
+import support.Logger;
 
 public class ChildCareOfMyChoosing extends HelperClass {
 	
 	@Test (dataProvider = "getTestData")
 		public void enrollTest(Hashtable<String, String> data) throws Throwable{
-
+		logInfoMessage("Test A child care of my choosing");
 		  try {
 	            TestEngine.testDescription
-	                    .put(HtmlReportSupport.tc_name, " TC-01 Case 2 : A child care of my choosing");
-	       //Setting UAT25
+	                    .put(HtmlReportSupport.tc_name, " TC-03 Case 3 : A child care of my choosing");
+	        Logger.logInfoMessage("Setting UAT25");
 			navigateToUat();
-			//Navigate to enroll screen
+			Logger.logInfoMessage("Navigate to enroll screen");
 			navigateToEnroll();
-			//Seect company for enroll
+			Logger.logInfoMessage("Seect company for enroll");
 	        selectCompanySearch(data.get("CompanyName"), Integer.parseInt(data.get("xcod")), Integer.parseInt(data.get("ycod")));
 	        enroll( data.get("birthdate"), data.get("firstname"), data.get("lastname"), data.get("homeaddress"), data.get("zip"), data.get("email"), data.get("password"));
 	        if (isElementDisplayed(Unauthorised, "Unauthorised")) {
 				  APacheError();
 	        }
-			// selecting my kid option
+	        Logger.logInfoMessage("selecting my kid option");
 			mykid();
-	        //Selecting BackupDays
+			Logger.logInfoMessage("Selecting BackupDays");
 	        navigatetousemybackupdays();
 	        navigatetoBookNow() ;
 	        clickno();
-	        //Selecting the date
+			Logger.logInfoMessage("Selecting the date");
 	        selectdate( data.get("Month"), data.get("date"), data.get("year"));
-	        //Selecting the time
+	        Logger.logInfoMessage("Selecting the time");
 	        selecttime(data.get("fromdate"), data.get("todate"));
-	        //Selecting the Chaild
+	        Logger.logInfoMessage("Selecting the Chaild");
 			selectchild(data.get("childfirstname"), data.get("childlastname"), data.get("childbirthdate"), data.get("gender"));
-	        //Selecting the reasons for Care
+			Logger.logInfoMessage("Selecting the reasons for Care");
 	        CareReason(data.get("careReason"));
-	        //Selecting In-Center
+	        Logger.logInfoMessage("Selecting In-Center");
 	        CareType(data.get("careType"));
 	        navigateToAboutYourCenter();
 	        addNetworkCenter(data.get("bussinessName"), data.get("zipcode"), data.get("phoneNumber"), data.get("totaldailycost"));
@@ -60,10 +61,11 @@ public class ChildCareOfMyChoosing extends HelperClass {
 	            flag = false;
 	        }finally {
 	            if (flag) {
-	                Reporter.SuccessReport("Added the NetWork Center when Regular care is unavailable",
-	                        "was  Sucessful ");
+					Logger.logInfoMessage("Added the NetWork Center when Regular care is unavailable Sucessfully");
+	                Reporter.SuccessReport("NetWork Center when Regular care is unavailable",
+	                        "Added Sucessfully");
 	            } else {
-
+					Logger.logInfoMessage("Failed to Add the NetWork Center when Regular care is unavailable");
 	                Reporter.failureReport("Added the NetWork Center when Regular care is unavailable",
 	                        "Failed to Add the NetWork Center when Regular care is unavailable");
 	                Assert.assertTrue(flag == true,

@@ -1,9 +1,12 @@
 package accelerators;
 
+import com.epam.reportportal.service.ReportPortal;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
+import org.apache.logging.log4j.core.config.Loggers;
+import support.Logger;
 import support.Reporter;
 
 import org.apache.commons.io.FileUtils;
@@ -23,12 +26,10 @@ import java.io.IOException;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Calendar;
-import java.util.List;
+import java.util.*;
 
-import java.util.Random;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.Set;
 
 
 import io.appium.java_client.FindsByAndroidUIAutomator;
@@ -52,6 +53,7 @@ public class ActionEngine extends TestEngine {
 
 	public static boolean flag = false;
 	static boolean b = true;
+    public static String apkPath = configProps.getProperty("apkPath");
 
 	/*
 	 *
@@ -73,13 +75,13 @@ public class ActionEngine extends TestEngine {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-
 			if (!flag) {
 				Reporter.failureReport("Click", "Unable to click on " + locatorName);
+				Logger.logInfoMessage("Unable to click on " + locatorName);
 				return flag;
 			} else if (b && flag) {
 				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
-
+				Logger.logInfoMessage("Successfully click on " + locatorName);
 			}
 		}
 		return flag;
@@ -112,10 +114,12 @@ public class ActionEngine extends TestEngine {
 
 		} finally {
 			if (!flag) {
-				Reporter.failureReport("Click", "Unable to click on " + locatorName);
+				Reporter.failureReport("scrollToelement", "Unable to scroll To element " + locatorName);
+				Logger.logInfoMessage("Unable to scroll To element " +locatorName);
 				return flag;
 			} else if (b && flag) {
-				Reporter.SuccessReport("Click", "Successfully click on " + locatorName);
+				Reporter.SuccessReport("scrollToelement", "Successfully scroll To element " + locatorName);
+				Logger.logInfoMessage("Successfully scroll To element " +locatorName);
 			}
 
 		}
@@ -136,24 +140,23 @@ public class ActionEngine extends TestEngine {
 		} finally {
 			if (!flag) {
 				Reporter.failureReport("screenShot ", " Unable to get screenShot ");
+				Logger.logInfoMessage("Unable to get TscreenShot");
 				System.out.println(" Unable to get TscreenShot");
 			} else if (b && flag) {
 				Reporter.SuccessReport("screenShot ", " Able to get TscreenShot");
 				System.out.println(" Able to get TscreenShot");
+				Logger.logInfoMessage("Able to get TscreenShot");
 			}
 		}
 	}
 
 	public static void fullScreenShot(String fileName) throws Exception {
-
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		Rectangle screenRectangle = new Rectangle(screenSize);
 		Robot robot = new Robot();
 		BufferedImage image = robot.createScreenCapture(screenRectangle);
 		ImageIO.write(image, "jpeg", new File(fileName));
 	}
-
-
 
 	//@author :bhavya for acme droppdown
 
@@ -212,9 +215,11 @@ public class ActionEngine extends TestEngine {
 			if (!flag) {
 				Reporter.failureReport("Type ",
 						"Data typing action is not perform on " + locatorName);
+				Logger.logInfoMessage("Data typing action is not perform on " +locatorName);
 			} else if (b && flag) {
 				Reporter.SuccessReport("Type ",
 						"Data typing action is performed on " + locatorName);
+				Logger.logInfoMessage("Data typing action is performed on " +locatorName);
 			}
 		}
 		return flag;
@@ -544,5 +549,14 @@ public class ActionEngine extends TestEngine {
 		String month = new SimpleDateFormat("MMM").format(c.getTime());
 		String year = Integer.toString(c.get(Calendar.YEAR));
 		return month + "/" + day + "/" + year;
+	}
+
+	public static void logInfoMessage(String inMessage) {
+		String consoleMessage = inMessage;
+		ReportPortal.emitLog(inMessage, "DEBUG", Calendar.getInstance().getTime());
+		org.testng.Reporter.log(inMessage);
+		/*if (BasePage.test != null) {
+			BasePage.test.log(Status.INFO, inMessage);
+		}*/
 	}
 }

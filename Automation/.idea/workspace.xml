@@ -2,8 +2,110 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="435aa32b-b9da-483d-93a9-eee603d2f573" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/Screenshots/Click_2020-06-03_13_21_52_0215353.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/Screenshots/Click_2020-06-03_13_21_52_0237600.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/Screenshots/Click_2020-06-03_13_21_52_0259762.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/Screenshots/Minus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/Screenshots/Plus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/Screenshots/care@work.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/Screenshots/failed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/Screenshots/passed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/Screenshots/warning.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/Screenshots/wavelabs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/Screenshots/wavelabs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/SummaryResults_2020-06-03_13_21_52_02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/TestAddNetWorkCenterWhenRegularcareisUnavailable- 03_Jun_2020 01 22 36 474_Results_2020-06-03_13_21_52_02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/enrollTest- 03_Jun_2020 01 25 59 166_Results_2020-06-03_13_21_52_02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/testEndtoEndCareScenario- 03_Jun_2020 01 25 22 081_Results_2020-06-03_13_21_52_02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_13_21_52_02/testEnrollIncenterPayment- 03_Jun_2020 01 26 34 222_Results_2020-06-03_13_21_52_02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_30_09_314/Screenshots/Minus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_30_09_314/Screenshots/Plus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_30_09_314/Screenshots/care@work.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_30_09_314/Screenshots/failed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_30_09_314/Screenshots/passed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_30_09_314/Screenshots/warning.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_30_09_314/Screenshots/wavelabs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_30_09_314/Screenshots/wavelabs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_30_09_314/SummaryResults_2020-06-03_14_30_09_314.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_30_09_314/testEndtoEndCareScenario- 03_Jun_2020 02 30 43 594_Results_2020-06-03_14_30_09_314.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_36_49_219/Screenshots/Minus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_36_49_219/Screenshots/Plus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_36_49_219/Screenshots/care@work.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_36_49_219/Screenshots/failed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_36_49_219/Screenshots/passed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_36_49_219/Screenshots/warning.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_36_49_219/Screenshots/wavelabs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_36_49_219/Screenshots/wavelabs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_36_49_219/SummaryResults_2020-06-03_14_36_49_219.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_36_49_219/enrollTest- 03_Jun_2020 02 37 26 950_Results_2020-06-03_14_36_49_219.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_41_06_829/Screenshots/Minus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_41_06_829/Screenshots/Plus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_41_06_829/Screenshots/care@work.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_41_06_829/Screenshots/failed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_41_06_829/Screenshots/passed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_41_06_829/Screenshots/warning.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_41_06_829/Screenshots/wavelabs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_41_06_829/Screenshots/wavelabs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_41_06_829/SummaryResults_2020-06-03_14_41_06_829.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_41_06_829/testEnrollIncenterPayment- 03_Jun_2020 02 41 55 540_Results_2020-06-03_14_41_06_829.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/Screenshots/Click_2020-06-03_14_47_46_6857424.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/Screenshots/Minus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/Screenshots/Plus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/Screenshots/care@work.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/Screenshots/failed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/Screenshots/passed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/Screenshots/warning.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/Screenshots/wavelabs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/Screenshots/wavelabs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/SummaryResults_2020-06-03_14_47_46_685.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/TestAddNetWorkCenterWhenRegularcareisUnavailable- 03_Jun_2020 02 48 23 149_Results_2020-06-03_14_47_46_685.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_14_47_46_685/testEndtoEndCareScenario- 03_Jun_2020 02 51 11 852_Results_2020-06-03_14_47_46_685.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_27_08_561/Screenshots/Minus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_27_08_561/Screenshots/Plus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_27_08_561/Screenshots/care@work.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_27_08_561/Screenshots/failed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_27_08_561/Screenshots/passed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_27_08_561/Screenshots/warning.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_27_08_561/Screenshots/wavelabs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_27_08_561/Screenshots/wavelabs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_27_08_561/SummaryResults_2020-06-03_15_27_08_561.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_27_08_561/TestAddNetWorkCenterWhenRegularcareisUnavailable- 03_Jun_2020 03 28 25 317_Results_2020-06-03_15_27_08_561.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_29_27_136/Screenshots/Minus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_29_27_136/Screenshots/Plus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_29_27_136/Screenshots/care@work.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_29_27_136/Screenshots/failed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_29_27_136/Screenshots/passed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_29_27_136/Screenshots/warning.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_29_27_136/Screenshots/wavelabs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_29_27_136/Screenshots/wavelabs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_29_27_136/SummaryResults_2020-06-03_15_29_27_136.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_29_27_136/TestAddNetWorkCenterWhenRegularcareisUnavailable- 03_Jun_2020 03 30 43 366_Results_2020-06-03_15_29_27_136.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_32_12_513/Screenshots/Minus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_32_12_513/Screenshots/Plus.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_32_12_513/Screenshots/care@work.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_32_12_513/Screenshots/failed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_32_12_513/Screenshots/passed.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_32_12_513/Screenshots/warning.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_32_12_513/Screenshots/wavelabs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_32_12_513/Screenshots/wavelabs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_32_12_513/SummaryResults_2020-06-03_15_32_12_513.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/Android/Android_2020-06-03_15_32_12_513/TestAddNetWorkCenterWhenRegularcareisUnavailable- 03_Jun_2020 03 33 15 926_Results_2020-06-03_15_32_12_513.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ActionEngine.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestNg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TestNg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all.automation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/all.automation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accelerators/ActionEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accelerators/ActionEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accelerators/TestEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accelerators/TestEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/support/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/support/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Testdata/Testdata.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testdata/Testdata.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/AddNetWorkCenterWhenRegularcareisUnavailable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/AddNetWorkCenterWhenRegularcareisUnavailable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/CareEndtoEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/CareEndtoEnd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/ChildCareOfMyChoosing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/ChildCareOfMyChoosing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/EnrollIncenterPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsuite/Scripts/EnrollIncenterPayment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestEngine.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,36 +141,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/testsuite/Scripts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test/java/testsuite/Scripts" />
       <recent name="$PROJECT_DIR$/src/test/java/Testdata" />
       <recent name="$PROJECT_DIR$/Logos" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.EnrollIncenterPayment.testEnrollIncenterPayment">
-    <configuration name="AddNetWorkCenterWhenRegularcareisUnavailable.TestAddNetWorkCenterWhenRegularcareisUnavailable (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="all.automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testsuite.Scripts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testsuite.Scripts" />
-      <option name="MAIN_CLASS_NAME" value="testsuite.Scripts.AddNetWorkCenterWhenRegularcareisUnavailable" />
-      <option name="METHOD_NAME" value="TestAddNetWorkCenterWhenRegularcareisUnavailable" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AddNetWorkCenterWhenRegularcareisUnavailable.TestAddNetWorkCenterWhenRegularcareisUnavailable" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="all.automation" />
       <extension name="coverage">
@@ -99,6 +183,23 @@
       <option name="MAIN_CLASS_NAME" value="testsuite.Scripts.CareEndtoEnd" />
       <option name="METHOD_NAME" value="testEndtoEndCareScenario" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChildCareOfMyChoosing" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="all.automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testsuite.Scripts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testsuite.Scripts" />
+      <option name="MAIN_CLASS_NAME" value="testsuite.Scripts.ChildCareOfMyChoosing" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -144,10 +245,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.EnrollIncenterPayment.testEnrollIncenterPayment" />
+        <item itemvalue="TestNG.ChildCareOfMyChoosing" />
         <item itemvalue="TestNG.CareEndtoEnd.testEndtoEndCareScenario" />
-        <item itemvalue="TestNG.ChildCareOfMyChoosing.enrollTest" />
         <item itemvalue="TestNG.AddNetWorkCenterWhenRegularcareisUnavailable.TestAddNetWorkCenterWhenRegularcareisUnavailable" />
-        <item itemvalue="TestNG.AddNetWorkCenterWhenRegularcareisUnavailable.TestAddNetWorkCenterWhenRegularcareisUnavailable (1)" />
+        <item itemvalue="TestNG.ChildCareOfMyChoosing.enrollTest" />
       </list>
     </recent_temporary>
   </component>
@@ -165,37 +266,46 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="118" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1587389354023">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="387" y="138" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1591098618787">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="413" y="118" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1587389354023" />
+    <state x="387" y="138" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1280.709@0.23.1280.709" timestamp="1591098618787" />
+    <state x="453" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1591097904686">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state x="453" y="90" key="#com.intellij.ide.util.MemberChooser/0.23.1280.709@0.23.1280.709" timestamp="1591097904686" />
+    <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590746827701">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.709@0.23.1280.709" timestamp="1590746827701" />
     <state x="413" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1587387118341">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587387118341" />
-    <state width="1238" height="174" key="GridCell.Tab.0.bottom" timestamp="1589353972580">
+    <state width="1238" height="174" key="GridCell.Tab.0.bottom" timestamp="1591253949059">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
-    <state width="1238" height="174" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1589353972580" />
+    <state width="1238" height="174" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1591253949059" />
     <state width="1358" height="187" key="GridCell.Tab.0.bottom/0.23.1440.805@0.23.1440.805" timestamp="1587121146630" />
-    <state width="1238" height="174" key="GridCell.Tab.0.center" timestamp="1589353972575">
+    <state width="1238" height="174" key="GridCell.Tab.0.center" timestamp="1591253949056">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
-    <state width="1238" height="174" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1589353972575" />
+    <state width="1238" height="174" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1591253949056" />
     <state width="1358" height="187" key="GridCell.Tab.0.center/0.23.1440.805@0.23.1440.805" timestamp="1587121146629" />
-    <state width="1238" height="174" key="GridCell.Tab.0.left" timestamp="1589353972574">
+    <state width="1238" height="174" key="GridCell.Tab.0.left" timestamp="1591253949055">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
-    <state width="1238" height="174" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1589353972574" />
+    <state width="1238" height="174" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1591253949055" />
     <state width="1358" height="187" key="GridCell.Tab.0.left/0.23.1440.805@0.23.1440.805" timestamp="1587121146628" />
-    <state width="1238" height="174" key="GridCell.Tab.0.right" timestamp="1589353972576">
+    <state width="1238" height="174" key="GridCell.Tab.0.right" timestamp="1591253949057">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588166145134" />
-    <state width="1238" height="174" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1589353972576" />
+    <state width="1238" height="174" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1591253949057" />
     <state width="1358" height="187" key="GridCell.Tab.0.right/0.23.1440.805@0.23.1440.805" timestamp="1587121146629" />
     <state width="1238" height="218" key="GridCell.Tab.1.bottom" timestamp="1588430918027">
       <screen x="0" y="23" width="1280" height="709" />
@@ -229,6 +339,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1588165578916" />
+    <state x="34" y="23" key="new project wizard" timestamp="1591253946433">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state x="34" y="23" key="new project wizard/0.23.1280.709@0.23.1280.709" timestamp="1591253946433" />
     <state x="389" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588083885170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

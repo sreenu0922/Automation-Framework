@@ -6,6 +6,7 @@ import io.appium.java_client.remote.MobilePlatform;
 
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -24,8 +25,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-//import org.apache.log4j.Logger;
-
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -43,6 +42,8 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import support.Reporter;
 
 public class TestEngine extends HtmlReportSupport {
@@ -62,7 +63,8 @@ public class TestEngine extends HtmlReportSupport {
     public static Map<String, String> testResults = new LinkedHashMap<String, String>();
     public static String timeStamp = ReportStampSupport.timeStamp().replace(" ", "_").replace(":", "_").replace(".", "_");
     public static ConfiguratorSupport configProps = new ConfiguratorSupport("config.properties");
-
+    public static Logger logger = LogManager.getLogger(TestEngine.class.getName());
+    //public static Logger logger = LogManager.getLogger("reportportal");
 
     //DeviceName is common for IOS and Android
     public static String DeviceName = configProps.getProperty("DeviceName");
@@ -90,6 +92,7 @@ public class TestEngine extends HtmlReportSupport {
 
     @BeforeSuite
     public static void setupSuite(ITestContext ctx) throws Throwable {
+
         System.out.println("In Before sutie");
         itc = ctx;
         groupNames = ctx.getCurrentXmlTest().getIncludedGroups().toString();
@@ -97,7 +100,7 @@ public class TestEngine extends HtmlReportSupport {
         ReportStampSupport.calculateSuiteStartTime();
 
         if (browserType.equalsIgnoreCase("Android")) {
-
+            logger.info("Starting browser : Android");
             String appPath = System.getProperty("user.dir")+apkPath;
             DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
             capabilitiesForAppium.setCapability("deviceName", DeviceName);
@@ -110,6 +113,7 @@ public class TestEngine extends HtmlReportSupport {
             AndroidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
             driver = (AndroidDriver);
             driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+
         }
          /*
         Author Sravan Reddy
@@ -117,8 +121,7 @@ public class TestEngine extends HtmlReportSupport {
         else if (browserType.equalsIgnoreCase("iOS")) {
             try {
                 //Sravan add for iOS
-                System.out.println("In iphone block");
-
+                logger.info("Starting browser : iOS");
                 String appPath = configProps.getProperty("iOSappPath");
                 String ipaPath = configProps.getProperty("iOSipaPath");
                 String temp = System.getProperty("user.dir") + ipaPath;
@@ -139,11 +142,13 @@ public class TestEngine extends HtmlReportSupport {
                 capabilitiesForAppium.setCapability("waitForAppScript", "target.elements().length > 0; $.delay(30000); $.acceptAlert();");
 
                 if ((DeviceName.contains("Simulator")) || ((UDID.length() == 0))) {
+                    logger.info("++++ Using Simulator ++++");
                     System.out.println("++++ Using Simulator ++++");
                     System.out.println("app Path " + app.getCanonicalPath());
                     capabilitiesForAppium.setCapability("app", app.getCanonicalPath());
 
                 } else {
+                    logger.info("+++++ Using Real Device +++++");
                     System.out.println("+++++ Using Real Device +++++");
                     capabilitiesForAppium.setCapability("udid", UDID);
                     System.out.println("ipa Path " + ipa.getCanonicalPath());
@@ -156,11 +161,11 @@ public class TestEngine extends HtmlReportSupport {
 
             } catch (Exception e) {
                 e.printStackTrace();
-                System.out.println("Failed launching app......");
+                logger.info("Failed launching app......");
             }
         } else if (browserType.equalsIgnoreCase("AndroidChrome")) {
-
 			try {
+			    logger.info("Starting browser : AndroidChrome");
 				DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
 				capabilitiesForAppium.setCapability("deviceName", DeviceName);
 				capabilitiesForAppium.setCapability(CapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
@@ -185,6 +190,7 @@ public class TestEngine extends HtmlReportSupport {
         else if (browserType.equalsIgnoreCase("iOSSafari")) {
             try {
                 //Sravan add for iOS
+                logger.info("In iphone browser block :iOSSafari");
                 System.out.println("In iphone browser block");
                 DesiredCapabilities capabilitiesForAppium = new DesiredCapabilities();
                 capabilitiesForAppium.setCapability("deviceName", iOSDeviceName);
@@ -200,7 +206,6 @@ public class TestEngine extends HtmlReportSupport {
                 capabilitiesForAppium.setCapability("locationServicesAuthorized", true);
                 capabilitiesForAppium.setCapability("waitForAppScript", "target.elements().length > 0; $.delay(30000); $.acceptAlert();");
 
-
                 Iosdriver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilitiesForAppium);
                 driver = Iosdriver;
                 // Iosdriver.resetApp();
@@ -208,6 +213,7 @@ public class TestEngine extends HtmlReportSupport {
 
             } catch (Exception e) {
                 e.printStackTrace();
+                logger.info("Failed launching app......");
                 System.out.println("Failed launching app......");
             }
         }
@@ -228,9 +234,11 @@ public class TestEngine extends HtmlReportSupport {
         ReportStampSupport.calculateTestCaseStartTime();
 
         if (browserType == "WinChrome") {
+            logger.info("Starting browser: WinChrome");
             //Pravalika
         }else if(browserType=="WinFirefox") {
 			//@author by Ranga
+            logger.info("Starting browser: WinFirefox");
 			System.setProperty("webdriver.gecko.driver", filePath());
 			WebDriver driver = new FirefoxDriver();
 			driver.get(url);
@@ -239,6 +247,7 @@ public class TestEngine extends HtmlReportSupport {
 		}
 		else if(browserType=="Edge") {
 			//@author by sangeethanulu
+            logger.info("Starting browser: Edge");
 			System.setProperty("webdriver.edge.driver", filePath());
 			WebDriver driver = new EdgeDriver();
 			driver.get(url);
@@ -248,6 +257,7 @@ public class TestEngine extends HtmlReportSupport {
 		else if(browserType.equalsIgnoreCase("safari")){
 			//@author: Archana Dasari
 			//enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver.
+            logger.info("Starting browser: Safari");
 			driver  = new SafariDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
@@ -255,6 +265,7 @@ public class TestEngine extends HtmlReportSupport {
 		}
 		else if(browserType.equalsIgnoreCase("macChrome")) {
 			//@author: Archana Dasari
+            logger.info("Starting browser: macChrome");
 			String driverPath = configProps.getProperty("macChromeDriverPath");
 			String browserPath = System.getProperty("user.dir")+driverPath;
 			System.setProperty("webdriver.chrome.driver", browserPath);
@@ -268,6 +279,7 @@ public class TestEngine extends HtmlReportSupport {
 		}
 		else if(browserType.equalsIgnoreCase("macFirefox")){
 			//@author: Archana Dasari
+            logger.info("Starting browser: macFirefox");
 			String driverPath = configProps.getProperty("macFirefoxDriverPath");
 			String browserPath = System.getProperty("user.dir")+driverPath;
 			System.setProperty("webdriver.gecko.driver", browserPath);
@@ -280,6 +292,7 @@ public class TestEngine extends HtmlReportSupport {
 		}
 		else if ((browserType.equalsIgnoreCase("AndroidChrome")) | (browserType.equalsIgnoreCase("iOSSafari"))) {
             driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
+            logger.info("Launching browser url:  ");
             driver.get(url);
         }
         HtmlReportSupport.tc_name = method.getName().toString() + "- "
@@ -292,7 +305,7 @@ public class TestEngine extends HtmlReportSupport {
         PassNum = 0;
         FailNum = 0;
         testName = method.getName();
-        //logger.info("Current Test : "+testName);
+        logger.info("Current Test : "+testName);
 	}
 
 	public static String filePath() {

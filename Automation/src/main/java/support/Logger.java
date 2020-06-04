@@ -1,9 +1,11 @@
 package support;
-import java.io.FilterOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintStream;
+import com.epam.reportportal.service.ReportPortal;
+import org.openqa.selenium.remote.server.commandhandler.Status;
+import org.testng.Reporter;
+
+import java.io.*;
 import java.lang.reflect.Field;
+import java.util.Calendar;
 
 
 /**
@@ -17,11 +19,12 @@ public class Logger extends PrintStream {
 	final StringBuilder buf;
 	final PrintStream underlying;
 
-	Logger(StringBuilder sb, OutputStream os, PrintStream ul) {
+	public Logger(StringBuilder sb, OutputStream os, PrintStream ul) {
 		super(os);
 		this.buf = sb;
 		this.underlying = ul;
 	}
+
 	public static Logger create(PrintStream toLog) {
 		try {
 			final StringBuilder sb = new StringBuilder();
@@ -41,4 +44,28 @@ public class Logger extends PrintStream {
 		}
 		return null;
 	}
+
+	/*public static void logInfoMessageWithScreenshot(String inMessage) {
+		String consoleMessage = inMessage;
+		if (ConfigFileReader.ConfigProperties.SCREENSHOT_ON_PASS) {
+			String screenpath = captureScreenshot("rp_screenshot");
+			File screenshot = new File(screenpath);
+			ReportPortal.emitLog(inMessage, "INFO", Calendar.getInstance().getTime(), screenshot);
+
+		*//*Reporter.log(inMessage);
+		if (BasePage.test != null) {
+			BasePage.test.log(Status.INFO, inMessage);
+		}*//*
+		}
+	}*/
+
+	public static void logInfoMessage(String inMessage) {
+		String consoleMessage = inMessage;
+		ReportPortal.emitLog(inMessage, "DEBUG", Calendar.getInstance().getTime());
+		Reporter.log(inMessage);
+		/*if (BasePage.test != null) {
+			BasePage.test.log(Status.INFO, inMessage);
+		}*/
+	}
 }
+
