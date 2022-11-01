@@ -1,5 +1,5 @@
 package accelerators;
-//Sri
+
 import support.ConfiguratorSupport;
 
 import java.io.File;
