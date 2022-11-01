@@ -1,5 +1,5 @@
 package accelerators;
-//srini
+
 import support.ConfiguratorSupport;
 
 import java.io.File;
